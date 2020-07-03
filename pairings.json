@@ -1,0 +1,407 @@
+{
+    "01_gift.png": [
+        "kitipi1.wav",
+        "kitipi2.wav",
+        "kitipi3.wav"
+    ],
+    "02_pallet.png": [
+        "pitito1.wav",
+        "pitito2.wav",
+        "pitito3.wav"
+    ],
+    "03_box.png": [
+        "kikita1.wav",
+        "kikita2.wav",
+        "kikita3.wav"
+    ],
+    "04_ladder.png": [
+        "kitoti1.wav",
+        "kitoti2.wav",
+        "kitoti3.wav"
+    ],
+    "05_megaphone.png": [
+        "titopo1.wav",
+        "titopo2.wav",
+        "titopo3.wav"
+    ],
+    "06_tent.png": [
+        "titoka1.wav",
+        "titoka2.wav",
+        "titoka3.wav"
+    ],
+    "07_suitcase.png": [
+        "pitapi1.wav",
+        "pitapi2.wav",
+        "pitapi3.wav"
+    ],
+    "08_bell.png": [
+        "tipako1.wav",
+        "tipako2.wav",
+        "tipako3.wav"
+    ],
+    "09_plane.png": [
+        "tipata1.wav",
+        "tipata2.wav",
+        "tipata3.wav"
+    ],
+    "100_bicycle.png": [
+        "tokiti1.wav",
+        "tokiti2.wav",
+        "tokiti3.wav"
+    ],
+    "10_backpack.png": [
+        "tokiko1.wav",
+        "tokiko2.wav",
+        "tokiko3.wav"
+    ],
+    "11_compass.png": [
+        "pokika1.wav",
+        "pokika2.wav",
+        "pokika3.wav"
+    ],
+    "12_pie.png": [
+        "kopopi1.wav",
+        "kopopi2.wav",
+        "kopopi3.wav"
+    ],
+    "13_toast.png": [
+        "pokoto1.wav",
+        "pokoto2.wav",
+        "pokoto3.wav"
+    ],
+    "14_coffee.png": [
+        "kopota1.wav",
+        "kopota2.wav",
+        "kopota3.wav"
+    ],
+    "15_barrel.png": [
+        "kokapi1.wav",
+        "kokapi2.wav",
+        "kokapi3.wav"
+    ],
+    "16_icecream.png": [
+        "kotako1.wav",
+        "kotako2.wav",
+        "kotako3.wav"
+    ],
+    "17_cracker.png": [
+        "popata1.wav",
+        "popata2.wav",
+        "popata3.wav"
+    ],
+    "18_donut.png": [
+        "papipi1.wav",
+        "papipi2.wav",
+        "papipi3.wav"
+    ],
+    "19_burger.png": [
+        "tatito1.wav",
+        "tatito2.wav",
+        "tatito3.wav"
+    ],
+    "20_pizza.png": [
+        "papika1.wav",
+        "papika2.wav",
+        "papika3.wav"
+    ],
+    "21_cheese.png": [
+        "kakoki1.wav",
+        "kakoki2.wav",
+        "kakoki3.wav"
+    ],
+    "22_egg.png": [
+        "patoko1.wav",
+        "patoko2.wav",
+        "patoko3.wav"
+    ],
+    "23_lemon.png": [
+        "takopa1.wav",
+        "takopa2.wav",
+        "takopa3.wav"
+    ],
+    "24_banana.png": [
+        "tapapi1.wav",
+        "tapapi2.wav",
+        "tapapi3.wav"
+    ],
+    "25_apple.png": [
+        "kapako1.wav",
+        "kapako2.wav",
+        "kapako3.wav"
+    ],
+    "26_pineapple.png": [
+        "pakapa1.wav",
+        "pakapa2.wav",
+        "pakapa3.wav"
+    ],
+    "27_kiwi.png": [
+        "pipiki1.wav",
+        "pipiki2.wav",
+        "pipiki3.wav"
+    ],
+    "28_grape.png": [
+        "pipito1.wav",
+        "pipito2.wav",
+        "pipito3.wav"
+    ],
+    "29_cherry.png": [
+        "tikipa1.wav",
+        "tikipa2.wav",
+        "tikipa3.wav"
+    ],
+    "30_mushroom.png": [
+        "kikopi1.wav",
+        "kikopi2.wav",
+        "kikopi3.wav"
+    ],
+    "31_tomato.png": [
+        "kipoto1.wav",
+        "kipoto2.wav",
+        "kipoto3.wav"
+    ],
+    "32_greenpepper.png": [
+        "tipoka1.wav",
+        "tipoka2.wav",
+        "tipoka3.wav"
+    ],
+    "33_watermelon.png": [
+        "kipaki1.wav",
+        "kipaki2.wav",
+        "kipaki3.wav"
+    ],
+    "34_knife.png": [
+        "titato1.wav",
+        "titato2.wav",
+        "titato3.wav"
+    ],
+    "35_skillet.png": [
+        "pipapa1.wav",
+        "pipapa2.wav",
+        "pipapa3.wav"
+    ],
+    "36_microwave.png": [
+        "kokiti1.wav",
+        "kokiti2.wav",
+        "kokiti3.wav"
+    ],
+    "37_mug.png": [
+        "kokiko1.wav",
+        "kokiko2.wav",
+        "kokiko3.wav"
+    ],
+    "38_plate.png": [
+        "kotipa1.wav",
+        "kotipa2.wav",
+        "kotipa3.wav"
+    ],
+    "39_fork.png": [
+        "kototi1.wav",
+        "kototi2.wav",
+        "kototi3.wav"
+    ],
+    "40_spoon.png": [
+        "pototo1.wav",
+        "pototo2.wav",
+        "pototo3.wav"
+    ],
+    "41_piano.png": [
+        "tokota1.wav",
+        "tokota2.wav",
+        "tokota3.wav"
+    ],
+    "42_harp.png": [
+        "potaki1.wav",
+        "potaki2.wav",
+        "potaki3.wav"
+    ],
+    "43_guitar.png": [
+        "pokato1.wav",
+        "pokato2.wav",
+        "pokato3.wav"
+    ],
+    "44_envelope.png": [
+        "totaka1.wav",
+        "totaka2.wav",
+        "totaka3.wav"
+    ],
+    "45_scissors.png": [
+        "tapiti1.wav",
+        "tapiti2.wav",
+        "tapiti3.wav"
+    ],
+    "46_paper.png": [
+        "takiko1.wav",
+        "takiko2.wav",
+        "takiko3.wav"
+    ],
+    "47_notebook.png": [
+        "pakipa1.wav",
+        "pakipa2.wav",
+        "pakipa3.wav"
+    ],
+    "48_brush.png": [
+        "tatopi1.wav",
+        "tatopi2.wav",
+        "tatopi3.wav"
+    ],
+    "49_calculator.png": [
+        "katoko1.wav",
+        "katoko2.wav",
+        "katoko3.wav"
+    ],
+    "50_ruler.png": [
+        "tapopa1.wav",
+        "tapopa2.wav",
+        "tapopa3.wav"
+    ],
+    "51_pencil.png": [
+        "pakaki1.wav",
+        "pakaki2.wav",
+        "pakaki3.wav"
+    ],
+    "52_newspaper.png": [
+        "patapo1.wav",
+        "patapo2.wav",
+        "patapo3.wav"
+    ],
+    "53_hammer.png": [
+        "kapapa1.wav",
+        "kapapa2.wav",
+        "kapapa3.wav"
+    ],
+    "54_toiletpaper.png": [
+        "pikiki1.wav",
+        "pikiki2.wav",
+        "pikiki3.wav"
+    ],
+    "55_toilet.png": [
+        "pipiko1.wav",
+        "pipiko2.wav",
+        "pipiko3.wav"
+    ],
+    "56_towel.png": [
+        "tipipa1.wav",
+        "tipipa2.wav",
+        "tipipa3.wav"
+    ],
+    "57_flashlight.png": [
+        "kipoki1.wav",
+        "kipoki2.wav",
+        "kipoki3.wav"
+    ],
+    "58_nail.png": [
+        "tipoko1.wav",
+        "tipoko2.wav",
+        "tipoko3.wav"
+    ],
+    "59_umbrella.png": [
+        "pipopa1.wav",
+        "pipopa2.wav",
+        "pipopa3.wav"
+    ],
+    "60_firewood.png": [
+        "pikati1.wav",
+        "pikati2.wav",
+        "pikati3.wav"
+    ],
+    "61_key.png": [
+        "pitako1.wav",
+        "pitako2.wav",
+        "pitako3.wav"
+    ],
+    "62_screwdriver.png": [
+        "pitapa1.wav",
+        "pitapa2.wav",
+        "pitapa3.wav"
+    ],
+    "63_chair.png": [
+        "popiti1.wav",
+        "popiti2.wav",
+        "popiti3.wav"
+    ],
+    "64_shovel.png": [
+        "totipo1.wav",
+        "totipo2.wav",
+        "totipo3.wav"
+    ],
+    "65_wrench.png": [
+        "kopipa1.wav",
+        "kopipa2.wav",
+        "kopipa3.wav"
+    ],
+    "66_safe.png": [
+        "tokoki1.wav",
+        "tokoki2.wav",
+        "tokoki3.wav"
+    ],
+    "67_laptop.png": [
+        "pokopo1.wav",
+        "pokopo2.wav",
+        "pokopo3.wav"
+    ],
+    "68_heart.png": [
+        "kotoka1.wav",
+        "kotoka2.wav",
+        "kotoka3.wav"
+    ],
+    "69_tooth.png": [
+        "kopati1.wav",
+        "kopati2.wav",
+        "kopati3.wav"
+    ],
+    "70_hand.png": [
+        "kotato1.wav",
+        "kotato2.wav",
+        "kotato3.wav"
+    ],
+    "71_eye.png": [
+        "topata1.wav",
+        "topata2.wav",
+        "topata3.wav"
+    ],
+    "72_nose.png": [
+        "takiti1.wav",
+        "takiti2.wav",
+        "takiti3.wav"
+    ],
+    "73_car.png": [
+        "tatiko1.wav",
+        "tatiko2.wav",
+        "tatiko3.wav"
+    ],
+    "74_boat.png": [
+        "kakita1.wav",
+        "kakita2.wav",
+        "kakita3.wav"
+    ],
+    "75_chicken.png": [
+        "patoti1.wav",
+        "patoti2.wav",
+        "patoti3.wav"
+    ],
+    "76_rabbit.png": [
+        "takopo1.wav",
+        "takopo2.wav",
+        "takopo3.wav"
+    ],
+    "77_bear.png": [
+        "kakoka1.wav",
+        "kakoka2.wav",
+        "kakoka3.wav"
+    ],
+    "78_cow.png": [
+        "katapi1.wav",
+        "katapi2.wav",
+        "katapi3.wav"
+    ],
+    "79_pig.png": [
+        "tatato1.wav",
+        "tatato2.wav",
+        "tatato3.wav"
+    ],
+    "80_dog.png": [
+        "kakapa1.wav",
+        "kakapa2.wav",
+        "kakapa3.wav"
+    ]
+}
