@@ -11,7 +11,9 @@ pairings = {}
 for i in range(0, len(words)):
     word = words[i]
     word = word.rstrip('\n')
-    pairings[images[i]] = [word+"1.wav", word+"2.wav", word+"3.wav"]
+    pairings[word+"1.wav"] = images[i]
+    pairings[word+"2.wav"] = images[i]
+    pairings[word+"3.wav"] = images[i]
     
-with open("pairings.json", 'w') as pairFile:
+with open("audioToImagePairing.json", 'w') as pairFile:
     json.dump(pairings, pairFile, indent=4)
