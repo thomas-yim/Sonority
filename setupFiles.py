@@ -28,18 +28,22 @@ def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
                 if len(tempAudio) > 1:
                     audioInd = random.randint(0, len(tempAudio)-1)
                 elif len(tempAudio) == 1:
-                    imageInd = 0
+                    audioInd = 0
                     break
-            audio.append("trainaudio/" + tempAudio[audioInd])
-            for image in images:
-                if image[0:2] == tempAudio[audioInd][0:2]:
-                    imageLoc.append("pngimages/" + image)
-                    break
+            if (tempAudio[audioInd] not in currentBlock) and (tempAudio[audioInd] not in previousBlock):
+                currentBlock.append(tempAudio[audioInd])
                 
-            del tempAudio[audioInd]
-            
-            if len(tempAudio) == 0:
-                tempAudio = trainingAudio.copy()
+                audio.append("trainaudio/" + tempAudio[audioInd])
+                for image in images:
+                    if image[0:2] == tempAudio[audioInd][0:2]:
+                        imageLoc.append("pngimages/" + image)
+                        break
+                    
+                del tempAudio[audioInd]
+                
+                if len(tempAudio) == 0:
+                    tempAudio = trainingAudio.copy()
+        previousBlock = currentBlock
                                 
         trainData = {"audio":audio, "imageLoc":imageLoc}
         trainColumns = ["audio", "imageLoc"]
@@ -69,11 +73,11 @@ def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
                 falseIndex = trueIndex + 3
                 
             if random.random() > 0.5:
-                truePos.append((0.5,0))
-                falsePos.append((-0.5,0))
+                truePos.append(0.5)
+                falsePos.append(-0.5)
             else:
-                truePos.append((-0.5,0))
-                falsePos.append((0.5,0))
+                truePos.append(-0.5)
+                falsePos.append(0.5)
             testAudioTrue.append(audio[trueIndex])
             testImagesTrue.append(imageLoc[trueIndex])
 
@@ -90,8 +94,6 @@ def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
         
         trainConditions.append(os.path.join(toFolder, trainConditionName))
         testConditions.append(os.path.join(toFolder, testConditionName))
-        
-        previousBlock = currentBlock
     
     return trainConditions, testConditions
 
@@ -160,7 +162,7 @@ if setupWorks:
             incorrect = "trainingaudio/" + incorrect
         else:
             correct = "novelaudio/" + correct
-            incorrect = "novelaudio" + incorrect
+            incorrect = "novelaudio/" + incorrect
             
         correctAudioFiles.append(correct)
         incorrectAudioFiles.append(incorrect)
