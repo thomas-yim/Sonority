@@ -5,51 +5,78 @@ import random
 import pandas as pd
 from correctAnswers import correctAudio
 
-def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
+
+def findImage(audioFile):
+    for image in images:
+        if image[0:2] == audioFile[0:2]:
+            location = "pngimages/" + image
+            return location
+"""
+This will set up the condition files for the first blocks of the training files
+and then link them all to one loop condition file.
+It will return the lists of block and test files
+"""
+def setupTrain1(trainingAudio, wordsPerBlock, numBlocks, ranking):
     trainConditions = []
     testConditions = []
 
-    tempAudio = trainingAudio.copy()
+    #This will be used to make sure a word is the right answer once.
+    tempTrueAudio = trainingAudio.copy()
+    tempFalseAudio = trainingAudio.copy()
+    
     images = os.listdir("pngimages/.")
     
+    #This array is to check if the word was used in the previous block
+    #We want to space out the words
+    beforePreviousBlock = []
     previousBlock = []
+
     for i in range(1, numBlocks + 1):
         currentBlock = []
-        trainConditionName = phase + "Block" + str(i) + ".xlsx"
-        testConditionName = phase + "Block" + str(i) + "Test.xlsx"
-        audio = []
+        
+        trainConditionName = "train1Block" + str(i) + ".xlsx"
+        testConditionName = "train1Block" + str(i) + "Test.xlsx"
+        
+        blockAudioTrue = []
+        blockAudioFalse = []
+        blockAudio = []
         imageLoc = []
-        for j in range(0, wordsPerBlock):
-            if len(tempAudio) > 1:
-                audioInd = random.randint(0, len(tempAudio)-1)
-            elif len(tempAudio) == 1:
-                audioInd = 0
-            while tempAudio[audioInd] in previousBlock or tempAudio[audioInd] in currentBlock:
-                if len(tempAudio) > 1:
-                    audioInd = random.randint(0, len(tempAudio)-1)
-                elif len(tempAudio) == 1:
-                    audioInd = 0
-                    break
-            if (tempAudio[audioInd] not in currentBlock) and (tempAudio[audioInd] not in previousBlock):
-                currentBlock.append(tempAudio[audioInd])
-                
-                audio.append("trainaudio/" + tempAudio[audioInd])
-                for image in images:
-                    if image[0:2] == tempAudio[audioInd][0:2]:
-                        imageLoc.append("pngimages/" + image)
-                        break
+        
+        for j in range(0, int(wordsPerBlock/2)):
+            trueInd = random.randint(0, int(len(tempTrueAudio)-1))
+            while tempTrueAudio[trueInd] in previousBlock or tempTrueAudio[trueInd] in currentBlock or tempTrueAudio[trueInd] in beforePreviousBlock:
+                trueInd = random.randint(0, int(len(tempTrueAudio)-1))
+            trueAudio = tempTrueAudio[trueInd]
+            currentBlock.append(trueAudio)
+            blockAudioTrue.append(trueAudio)
+            blockAudio.append("trainingaudio/" + correctAudio(ranking, trueAudio))
+            imageLoc.append(findImage(tempTrueAudio[trueInd]))
                     
-                del tempAudio[audioInd]
+            del tempTrueAudio[trueInd]
+            
+            falseInd = random.randint(0, int(len(tempFalseAudio)-1))
+            while tempFalseAudio[falseInd] in previousBlock or tempFalseAudio[falseInd] in currentBlock or tempFalseAudio[falseInd] == trueAudio or tempFalseAudio[falseInd] in beforePreviousBlock:
+                falseInd = random.randint(0, int(len(tempFalseAudio)-1))
+            currentBlock.append(tempFalseAudio[falseInd])
+            blockAudioFalse.append(tempFalseAudio[falseInd])
+            blockAudio.append("trainingaudio/" + correctAudio(ranking, tempFalseAudio[falseInd]))
+            imageLoc.append(findImage(tempFalseAudio[falseInd]))
+                    
+            del tempFalseAudio[falseInd]
+            
+            if len(tempTrueAudio) == 0:
+                tempTrueAudio = trainingAudio.copy()
+                tempFalseAudio = trainingAudio.copy()
                 
-                if len(tempAudio) == 0:
-                    tempAudio = trainingAudio.copy()
+        beforePreviousBlock = previousBlock    
         previousBlock = currentBlock
                                 
-        trainData = {"audio":audio, "imageLoc":imageLoc}
+        trainData = {"audio":blockAudio, "imageLoc":imageLoc}
         trainColumns = ["audio", "imageLoc"]
         traindf = pd.DataFrame(trainData, columns=trainColumns)
         traindf.to_excel(os.path.join(toFolder, trainConditionName), index=False)
         
+        #This next part will be setting up the test within the block
         testAudioTrue = []
         testImagesTrue = []
         truePos = []
@@ -58,31 +85,36 @@ def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
         testImagesFalse = []
         falsePos = []
         
-        if phase == "train1":
-            numQuestions = int(wordsPerBlock/2)
-        else:
-            numQuestions = wordsPerBlock
-        for k in range(0, numQuestions):
-            if phase == "train1":
-                trueIndex = k*2
-            else:
-                trueIndex = k
-            if trueIndex + 3 >= wordsPerBlock:
-                falseIndex = (trueIndex + 3)%(wordsPerBlock)
-            else:
-                falseIndex = trueIndex + 3
+        questionAudio = blockAudio.copy()
+        questionImages = imageLoc.copy()
+            
+        for k in range(0, int(wordsPerBlock/2)):
+            trueIndex = random.randint(0, len(blockAudioTrue)-1)
+            trueAudio = blockAudioTrue[trueIndex]
+            testAudioTrue.append("trainingimages/" + trueAudio)
+            
+            imageLocation = findImage(trueAudio)
                 
-            if random.random() > 0.5:
+            testImagesTrue.append(imageLocation)
+            del blockAudioTrue[trueIndex]
+        
+            
+            falseIndex = random.randint(0, len(blockAudioFalse)-1)
+            falseAudio = blockAudioFalse[falseIndex]            
+            testAudioFalse.append("trainingimages/" + falseAudio)
+            
+            imageLocation = findImage(falseAudio)
+                
+            testImagesFalse.append(imageLocation)
+            del blockAudioFalse[falseIndex]
+            
+                
+            if random.randint(0,1) == 1:
                 truePos.append(0.5)
                 falsePos.append(-0.5)
             else:
                 truePos.append(-0.5)
                 falsePos.append(0.5)
-            testAudioTrue.append(audio[trueIndex])
-            testImagesTrue.append(imageLoc[trueIndex])
-
-            testAudioFalse.append(audio[falseIndex])
-            testImagesFalse.append(imageLoc[falseIndex])
             
         testData = {"audioTrue": testAudioTrue, "imageTrue": testImagesTrue,
                     "audioFalse": testAudioFalse, "imageFalse": testImagesFalse,
@@ -97,7 +129,57 @@ def setupBlock(phase, trainingAudio, wordsPerBlock, numBlocks):
     
     return trainConditions, testConditions
 
-trainingAudio = os.listdir('trainaudio/.')
+def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
+    images = os.listdir("pngimages/.")    
+    
+    firstAudioFiles = []
+    secondAudioFiles = []
+    whichAudioCorrect = []
+    relatedImages = []
+    audioCopy = uniqueAudio.copy()
+
+    
+    for i in range(0, totalQuestions):
+        if len(audioCopy) > 1:
+            randomIndex = random.randint(0, len(audioCopy)-1)
+        else:
+            randomIndex = 0
+        file = audioCopy[randomIndex]
+        del audioCopy[randomIndex]
+        
+        if len(audioCopy) == 0:
+            audioCopy = uniqueAudio.copy()
+        
+        possibilities = [file + "1.wav", file + "2.wav", file + "3.wav"]
+        correct = correctAudio(ranking, file)
+        possibilities.remove(correct)
+        incorrectIndex = random.randint(0,1)
+        incorrect = possibilities[incorrectIndex]
+        del possibilities[incorrectIndex]
+        
+        if incorrect in pastList1 or incorrect in pastList2:
+            incorrect = possibilities[0]
+        elif incorrect in firstAudioFiles or incorrect in secondAudioFiles:
+            incorrect = possibilities[0]
+        
+        correspImage = findImage(correct)
+            
+        
+        #This is how we randomize the presentation of the audio. There is no random for start time in builder (or coder for that matter)
+        if random.randint(0,1) == 0:
+            firstAudioFiles.append(audioFolder + correct)
+            secondAudioFiles.append(audioFolder + incorrect)
+            whichAudioCorrect.append(1)
+        else:
+            firstAudioFiles.append(audioFolder + incorrect)
+            secondAudioFiles.append(audioFolder + correct)
+            whichAudioCorrect.append(2)
+
+        relatedImages.append(correspImage)
+        
+    return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect
+    
+
 wordCount = 81
 novelCount = 54
 trainingCount = 27
@@ -106,7 +188,14 @@ train1wordsPerBlock = 6
 train2blocks = 3
 train2wordsPerBlock = 9
 toFolder = "autoConditions/"
-random.seed(30)
+trainingAudioFilenames = os.listdir('trainingaudio/.')
+novelAudioFilenames = os.listdir('novelaudio/.')
+#Get a list of all the unique audio in the form number_word. No wav or stress location
+uniqueTrainAudio = list(dict.fromkeys([x[0:-5] for x in trainingAudioFilenames]))
+uniqueNovelAudio = list(dict.fromkeys([y[0:-5] for y in novelAudioFilenames]))
+
+#IMPORTANT!!! if this is set then it will randomize the same way every time.
+random.seed(31)
 
 setupWorks = True
 if ((novelCount + trainingCount) != wordCount):
@@ -123,61 +212,45 @@ if setupWorks:
     thirdVowel = input("What is the vowel to be stressed third? ")
     
     ranking = [firstVowel, secondVowel, thirdVowel]
-    
-    train1conditions, train1TestConditions = setupBlock("train1", trainingAudio, train1wordsPerBlock, train1blocks)
+
+    train1conditions, train1TestConditions = setupTrain1(uniqueTrainAudio, train1wordsPerBlock, train1blocks, ranking)
     dfTrain1 = pd.DataFrame({"condFiles":train1conditions, "testFiles":train1TestConditions},
                                 columns=['condFiles', "testFiles"])
     dfTrain1.to_excel(os.path.join(toFolder, "train1LoopCondition.xlsx"), index=False)
-    train2conditions, train2TestConditions = setupBlock("train2", trainingAudio, train2wordsPerBlock, train2blocks)
+    """
+    train2conditions, train2TestConditions = setupBlock("train2", uniqueTrainAudio, train2wordsPerBlock, train2blocks, ranking)
     dfTrain2 = pd.DataFrame({"condFiles":train2conditions, "testFiles":train2TestConditions},
                                 columns=['condFiles', 'testFiles'])
     dfTrain2.to_excel(os.path.join(toFolder, "train2LoopCondition.xlsx"), index=False)
+    """
+    firstAudio, secondAudio, images, correctLabels = setupTest('trainingaudio/',uniqueTrainAudio, 2*trainingCount, [], [])
+    test1Data = {"firstAudio": firstAudio,
+                "secondAudio": secondAudio,
+                "imageLoc": images,
+                "whichAudio": correctLabels}
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+    test1Df = pd.DataFrame(test1Data, columns=columns)
+    test1Df.to_excel(os.path.join(toFolder,"test1Conditions.xlsx"), index = False)
     
+    firstAudio, secondAudio, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, [], [])
+    test2Data = {"firstAudio": firstAudio,
+                "secondAudio": secondAudio,
+                "imageLoc": images,
+                "whichAudio": correctLabels}
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+    test2Df = pd.DataFrame(test2Data, columns=columns)
+    test2Df.to_excel(os.path.join(toFolder,"test2Conditions.xlsx"), index = False)
     
-    with open("wordlist.txt", "r") as wordfile:
-        words = wordfile.readlines()
-        
-    images = os.listdir("pngimages/.")
-    
-    correctAudioFiles = []
-    incorrectAudioFiles = []
-    relatedImages = []
-    for i in range(0, len(words)):
-        if i+1 < 10:
-            number = "0" + str(i+1)
-        else:
-            number = str(i+1)
-        file = number + "_" + words[i].strip("\n")
-        possibilities = [file + "1.wav", file + "2.wav", file + "3.wav"]
-        correct = correctAudio(ranking, possibilities[0])
-        possibilities.remove(correct)
-        incorrect = possibilities[random.randint(0,1)]
-        for image in images:
-            if image[0:2] == correct[0:2]:
-                correspImage = "pngimages/" + image
-                break
-            
-        if i < 27:
-            correct = "trainingaudio/" + correct
-            incorrect = "trainingaudio/" + incorrect
-        else:
-            correct = "novelaudio/" + correct
-            incorrect = "novelaudio/" + incorrect
-            
-        correctAudioFiles.append(correct)
-        incorrectAudioFiles.append(incorrect)
-        relatedImages.append(correspImage)
-        
-    testData = {"correctAudio": correctAudioFiles,
-                "incorrectAudio": incorrectAudioFiles,
-                "imageLoc": relatedImages}
-    columns = ["correctAudio", "incorrectAudio", "imageLoc"]
-    testDf = pd.DataFrame(testData, columns=columns)
-    testDf.to_excel(os.path.join(toFolder,"testConditions.xlsx"), index = False)
-    
-    
-        
+    firstAudio, secondAudio, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, firstAudio, secondAudio)
+    test3Data = {"firstAudio": firstAudio,
+                "secondAudio": secondAudio,
+                "imageLoc": images,
+                "whichAudio": correctLabels}
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+    test3Df = pd.DataFrame(test3Data, columns=columns)
+    test3Df.to_excel(os.path.join(toFolder,"test3Conditions.xlsx"), index = False)
+
+
     
 else:
     print("This setup doesn't work")
-

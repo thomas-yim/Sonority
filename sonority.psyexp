@@ -85,9 +85,9 @@
         <Param name="sound" updates="set every repeat" val="$audioTrue" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
@@ -152,9 +152,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="6.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -172,7 +172,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
@@ -196,7 +196,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -221,12 +221,30 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Next part will automaticall start in 3 minutes.&amp;#10;&amp;#10;In this next segment, you will be presented with 27 words presented in 3 blocks of &amp;#10;9." valType="str"/>
+        <Param name="text" updates="constant" val="Next part will automaticall start in 3 minutes.&amp;#10;&amp;#10;Press any button to start" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <KeyboardComponent name="key_resp_3">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_3" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="train2">
       <SoundComponent name="stimulitrain2">
@@ -240,7 +258,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
@@ -264,7 +282,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -282,7 +300,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
@@ -297,9 +315,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="6" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -355,90 +373,38 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
     </Routine>
-    <Routine name="currentBlock">
-      <TextComponent name="text">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="text" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$condFiles" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-    </Routine>
-    <Routine name="testInstr">
-      <TextComponent name="text_2">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="text_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You are now entering the test portion of the experiment.&amp;#10;Select the pronunciation that sounds most correct to you." valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-    </Routine>
-    <Routine name="test">
-      <SoundComponent name="audioCorrect">
+    <Routine name="test1">
+      <SoundComponent name="test1AudioFirst">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="hamming" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="audioCorrect" valType="code"/>
+        <Param name="name" updates="None" val="test1AudioFirst" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="sound" updates="set every repeat" val="$correctAudio" valType="str"/>
+        <Param name="sound" updates="set every repeat" val="$firstAudio" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
-      <SoundComponent name="audioIncorrect">
+      <SoundComponent name="test1AudioSecond">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="hamming" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="audioIncorrect" valType="code"/>
+        <Param name="name" updates="None" val="test1AudioSecond" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="sound" updates="set every repeat" val="$incorrectAudio" valType="str"/>
+        <Param name="sound" updates="set every repeat" val="$secondAudio" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
         <Param name="volume" updates="constant" val="1" valType="code"/>
       </SoundComponent>
-      <ImageComponent name="image">
+      <ImageComponent name="test1Image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -448,7 +414,7 @@
         <Param name="image" updates="set every repeat" val="$imageLoc" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="image" valType="code"/>
+        <Param name="name" updates="None" val="test1Image" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -463,20 +429,350 @@
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <KeyboardComponent name="key_resp_2">
+      <KeyboardComponent name="test1Response">
         <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="name" updates="None" val="test1Response" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="4.0" valType="code"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="8" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="testTrainInstr">
+      <TextComponent name="test1Instr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="test1Instr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.5)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instructions For Test1 Go Here" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="skipTest1Instr">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="skipTest1Instr" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="oneWarningTest1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="oneWarningTest1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.5)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="540" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="60" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Less than 1 minute left" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="twoWarningTest1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="twoWarningTest1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.5)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="480" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="60" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Less than 2 minutes left" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="test2">
+      <SoundComponent name="test2AudioFirst">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test2AudioFirst" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$firstAudio" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <SoundComponent name="test2AudioSecond">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test2AudioSecond" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$secondAudio" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <ImageComponent name="test2Image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$imageLoc" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="test2Image" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="test2Response">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test2Response" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="8" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="testNovel2Instr">
+      <TextComponent name="test3Instr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="test3Instr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instructions For Test3 Go Here&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="skipTest3Instr">
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="skipTest3Instr" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="testNovel1Instr">
+      <TextComponent name="test2Instr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="test2Instr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instructions For Test2 Go Here" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="skipTest2Instr">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="skipTest2Instr" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="600" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="test3">
+      <SoundComponent name="test3AudioFirst">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test3AudioFirst" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$firstAudio" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <SoundComponent name="test3AudioSecond">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test3AudioSecond" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$secondAudio" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <ImageComponent name="test3Image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$imageLoc" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="test3Image" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="test3Response">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test3Response" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="8" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -492,7 +788,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="train1blocks" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -531,7 +827,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="train2blocks" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -562,19 +858,47 @@
     <Routine name="trainquestions2"/>
     <LoopTerminator name="blocktest2"/>
     <LoopTerminator name="train2blocks"/>
-    <Routine name="testInstr"/>
-    <LoopInitiator loopType="TrialHandler" name="testLoop">
+    <Routine name="testTrainInstr"/>
+    <LoopInitiator loopType="TrialHandler" name="test1Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('correctAudio', 'trainingaudio/01_kitipi1.wav'), ('incorrectAudio', 'trainingaudio/01_kitipi3.wav'), ('imageLoc', 'pngimages/01_gift.png')]), OrderedDict([('correctAudio', 'trainingaudio/02_pitito3.wav'), ('incorrectAudio', 'trainingaudio/02_pitito2.wav'), ('imageLoc', 'pngimages/02_pallet.png')]), OrderedDict([('correctAudio', 'trainingaudio/03_kikita3.wav'), ('incorrectAudio', 'trainingaudio/03_kikita1.wav'), ('imageLoc', 'pngimages/03_box.png')]), OrderedDict([('correctAudio', 'trainingaudio/04_kitoti2.wav'), ('incorrectAudio', 'trainingaudio/04_kitoti3.wav'), ('imageLoc', 'pngimages/04_ladder.png')]), OrderedDict([('correctAudio', 'trainingaudio/05_titopo2.wav'), ('incorrectAudio', 'trainingaudio/05_titopo3.wav'), ('imageLoc', 'pngimages/05_megaphone.png')]), OrderedDict([('correctAudio', 'trainingaudio/06_titoka3.wav'), ('incorrectAudio', 'trainingaudio/06_titoka1.wav'), ('imageLoc', 'pngimages/06_tent.png')]), OrderedDict([('correctAudio', 'trainingaudio/07_pitapi2.wav'), ('incorrectAudio', 'trainingaudio/07_pitapi3.wav'), ('imageLoc', 'pngimages/07_suitcase.png')]), OrderedDict([('correctAudio', 'trainingaudio/08_tipako2.wav'), ('incorrectAudio', 'trainingaudio/08_tipako3.wav'), ('imageLoc', 'pngimages/08_bell.png')]), OrderedDict([('correctAudio', 'trainingaudio/09_tipata2.wav'), ('incorrectAudio', 'trainingaudio/09_tipata3.wav'), ('imageLoc', 'pngimages/09_plane.png')]), OrderedDict([('correctAudio', 'trainingaudio/10_tokiti1.wav'), ('incorrectAudio', 'trainingaudio/10_tokiti2.wav'), ('imageLoc', 'pngimages/100_bicycle.png')]), OrderedDict([('correctAudio', 'trainingaudio/11_tokiko1.wav'), ('incorrectAudio', 'trainingaudio/11_tokiko2.wav'), ('imageLoc', 'pngimages/11_compass.png')]), OrderedDict([('correctAudio', 'trainingaudio/12_pokika3.wav'), ('incorrectAudio', 'trainingaudio/12_pokika1.wav'), ('imageLoc', 'pngimages/12_pie.png')]), OrderedDict([('correctAudio', 'trainingaudio/13_kopopi1.wav'), ('incorrectAudio', 'trainingaudio/13_kopopi3.wav'), ('imageLoc', 'pngimages/13_toast.png')]), OrderedDict([('correctAudio', 'trainingaudio/14_pokoto1.wav'), ('incorrectAudio', 'trainingaudio/14_pokoto3.wav'), ('imageLoc', 'pngimages/14_coffee.png')]), OrderedDict([('correctAudio', 'trainingaudio/15_kopota3.wav'), ('incorrectAudio', 'trainingaudio/15_kopota2.wav'), ('imageLoc', 'pngimages/15_barrel.png')]), OrderedDict([('correctAudio', 'trainingaudio/16_kokapi2.wav'), ('incorrectAudio', 'trainingaudio/16_kokapi1.wav'), ('imageLoc', 'pngimages/16_icecream.png')]), OrderedDict([('correctAudio', 'trainingaudio/17_kotako2.wav'), ('incorrectAudio', 'trainingaudio/17_kotako1.wav'), ('imageLoc', 'pngimages/17_cracker.png')]), OrderedDict([('correctAudio', 'trainingaudio/18_popata2.wav'), ('incorrectAudio', 'trainingaudio/18_popata1.wav'), ('imageLoc', 'pngimages/18_donut.png')]), OrderedDict([('correctAudio', 'trainingaudio/19_papipi1.wav'), ('incorrectAudio', 'trainingaudio/19_papipi3.wav'), ('imageLoc', 'pngimages/19_burger.png')]), OrderedDict([('correctAudio', 'trainingaudio/20_tatito1.wav'), ('incorrectAudio', 'trainingaudio/20_tatito2.wav'), ('imageLoc', 'pngimages/20_pizza.png')]), OrderedDict([('correctAudio', 'trainingaudio/21_papika1.wav'), ('incorrectAudio', 'trainingaudio/21_papika2.wav'), ('imageLoc', 'pngimages/21_cheese.png')]), OrderedDict([('correctAudio', 'trainingaudio/22_kakoki1.wav'), ('incorrectAudio', 'trainingaudio/22_kakoki3.wav'), ('imageLoc', 'pngimages/22_egg.png')]), OrderedDict([('correctAudio', 'trainingaudio/23_patoko1.wav'), ('incorrectAudio', 'trainingaudio/23_patoko2.wav'), ('imageLoc', 'pngimages/23_lemon.png')]), OrderedDict([('correctAudio', 'trainingaudio/24_takopa1.wav'), ('incorrectAudio', 'trainingaudio/24_takopa2.wav'), ('imageLoc', 'pngimages/24_banana.png')]), OrderedDict([('correctAudio', 'trainingaudio/25_tapapi1.wav'), ('incorrectAudio', 'trainingaudio/25_tapapi2.wav'), ('imageLoc', 'pngimages/25_apple.png')]), OrderedDict([('correctAudio', 'trainingaudio/26_kapako1.wav'), ('incorrectAudio', 'trainingaudio/26_kapako3.wav'), ('imageLoc', 'pngimages/26_pineapple.png')]), OrderedDict([('correctAudio', 'trainingaudio/27_pakapa1.wav'), ('incorrectAudio', 'trainingaudio/27_pakapa2.wav'), ('imageLoc', 'pngimages/27_kiwi.png')]), OrderedDict([('correctAudio', 'novelaudio/28_pipiki1.wav'), ('incorrectAudio', 'novelaudio28_pipiki2.wav'), ('imageLoc', 'pngimages/28_grape.png')]), OrderedDict([('correctAudio', 'novelaudio/29_pipito3.wav'), ('incorrectAudio', 'novelaudio29_pipito2.wav'), ('imageLoc', 'pngimages/29_cherry.png')]), OrderedDict([('correctAudio', 'novelaudio/30_tikipa3.wav'), ('incorrectAudio', 'novelaudio30_tikipa2.wav'), ('imageLoc', 'pngimages/30_mushroom.png')]), OrderedDict([('correctAudio', 'novelaudio/31_kikopi2.wav'), ('incorrectAudio', 'novelaudio31_kikopi1.wav'), ('imageLoc', 'pngimages/31_tomato.png')]), OrderedDict([('correctAudio', 'novelaudio/32_kipoto2.wav'), ('incorrectAudio', 'novelaudio32_kipoto3.wav'), ('imageLoc', 'pngimages/32_greenpepper.png')]), OrderedDict([('correctAudio', 'novelaudio/33_tipoka3.wav'), ('incorrectAudio', 'novelaudio33_tipoka1.wav'), ('imageLoc', 'pngimages/33_watermelon.png')]), OrderedDict([('correctAudio', 'novelaudio/34_kipaki2.wav'), ('incorrectAudio', 'novelaudio34_kipaki1.wav'), ('imageLoc', 'pngimages/34_knife.png')]), OrderedDict([('correctAudio', 'novelaudio/35_titato2.wav'), ('incorrectAudio', 'novelaudio35_titato1.wav'), ('imageLoc', 'pngimages/35_skillet.png')]), OrderedDict([('correctAudio', 'novelaudio/36_pipapa2.wav'), ('incorrectAudio', 'novelaudio36_pipapa1.wav'), ('imageLoc', 'pngimages/36_microwave.png')]), OrderedDict([('correctAudio', 'novelaudio/37_kokiti1.wav'), ('incorrectAudio', 'novelaudio37_kokiti2.wav'), ('imageLoc', 'pngimages/37_mug.png')]), OrderedDict([('correctAudio', 'novelaudio/38_kokiko1.wav'), ('incorrectAudio', 'novelaudio38_kokiko3.wav'), ('imageLoc', 'pngimages/38_plate.png')]), OrderedDict([('correctAudio', 'novelaudio/39_kotipa3.wav'), ('incorrectAudio', 'novelaudio39_kotipa1.wav'), ('imageLoc', 'pngimages/39_fork.png')]), OrderedDict([('correctAudio', 'novelaudio/40_kototi1.wav'), ('incorrectAudio', 'novelaudio40_kototi2.wav'), ('imageLoc', 'pngimages/40_spoon.png')]), OrderedDict([('correctAudio', 'novelaudio/41_pototo1.wav'), ('incorrectAudio', 'novelaudio41_pototo3.wav'), ('imageLoc', 'pngimages/41_piano.png')]), OrderedDict([('correctAudio', 'novelaudio/42_tokota3.wav'), ('incorrectAudio', 'novelaudio42_tokota1.wav'), ('imageLoc', 'pngimages/42_harp.png')]), OrderedDict([('correctAudio', 'novelaudio/43_potaki2.wav'), ('incorrectAudio', 'novelaudio43_potaki1.wav'), ('imageLoc', 'pngimages/43_guitar.png')]), OrderedDict([('correctAudio', 'novelaudio/44_pokato2.wav'), ('incorrectAudio', 'novelaudio44_pokato1.wav'), ('imageLoc', 'pngimages/44_envelope.png')]), OrderedDict([('correctAudio', 'novelaudio/45_totaka2.wav'), ('incorrectAudio', 'novelaudio45_totaka3.wav'), ('imageLoc', 'pngimages/45_scissors.png')]), OrderedDict([('correctAudio', 'novelaudio/46_tapiti1.wav'), ('incorrectAudio', 'novelaudio46_tapiti3.wav'), ('imageLoc', 'pngimages/46_paper.png')]), OrderedDict([('correctAudio', 'novelaudio/47_takiko1.wav'), ('incorrectAudio', 'novelaudio47_takiko2.wav'), ('imageLoc', 'pngimages/47_notebook.png')]), OrderedDict([('correctAudio', 'novelaudio/48_pakipa1.wav'), ('incorrectAudio', 'novelaudio48_pakipa3.wav'), ('imageLoc', 'pngimages/48_brush.png')]), OrderedDict([('correctAudio', 'novelaudio/49_tatopi1.wav'), ('incorrectAudio', 'novelaudio49_tatopi2.wav'), ('imageLoc', 'pngimages/49_calculator.png')]), OrderedDict([('correctAudio', 'novelaudio/50_katoko1.wav'), ('incorrectAudio', 'novelaudio50_katoko3.wav'), ('imageLoc', 'pngimages/50_ruler.png')]), OrderedDict([('correctAudio', 'novelaudio/51_tapopa1.wav'), ('incorrectAudio', 'novelaudio51_tapopa3.wav'), ('imageLoc', 'pngimages/51_pencil.png')]), OrderedDict([('correctAudio', 'novelaudio/52_pakaki1.wav'), ('incorrectAudio', 'novelaudio52_pakaki2.wav'), ('imageLoc', 'pngimages/52_newspaper.png')]), OrderedDict([('correctAudio', 'novelaudio/53_patapo1.wav'), ('incorrectAudio', 'novelaudio53_patapo3.wav'), ('imageLoc', 'pngimages/53_hammer.png')]), OrderedDict([('correctAudio', 'novelaudio/54_kapapa1.wav'), ('incorrectAudio', 'novelaudio54_kapapa3.wav'), ('imageLoc', 'pngimages/54_toiletpaper.png')]), OrderedDict([('correctAudio', 'novelaudio/55_pikiki1.wav'), ('incorrectAudio', 'novelaudio55_pikiki2.wav'), ('imageLoc', 'pngimages/55_toilet.png')]), OrderedDict([('correctAudio', 'novelaudio/56_pipiko3.wav'), ('incorrectAudio', 'novelaudio56_pipiko2.wav'), ('imageLoc', 'pngimages/56_towel.png')]), OrderedDict([('correctAudio', 'novelaudio/57_tipipa3.wav'), ('incorrectAudio', 'novelaudio57_tipipa2.wav'), ('imageLoc', 'pngimages/57_flashlight.png')]), OrderedDict([('correctAudio', 'novelaudio/58_kipoki2.wav'), ('incorrectAudio', 'novelaudio58_kipoki1.wav'), ('imageLoc', 'pngimages/58_nail.png')]), OrderedDict([('correctAudio', 'novelaudio/59_tipoko2.wav'), ('incorrectAudio', 'novelaudio59_tipoko3.wav'), ('imageLoc', 'pngimages/59_umbrella.png')]), OrderedDict([('correctAudio', 'novelaudio/60_pipopa3.wav'), ('incorrectAudio', 'novelaudio60_pipopa2.wav'), ('imageLoc', 'pngimages/60_firewood.png')]), OrderedDict([('correctAudio', 'novelaudio/61_pikati2.wav'), ('incorrectAudio', 'novelaudio61_pikati1.wav'), ('imageLoc', 'pngimages/61_key.png')]), OrderedDict([('correctAudio', 'novelaudio/62_pitako2.wav'), ('incorrectAudio', 'novelaudio62_pitako3.wav'), ('imageLoc', 'pngimages/62_screwdriver.png')]), OrderedDict([('correctAudio', 'novelaudio/63_pitapa2.wav'), ('incorrectAudio', 'novelaudio63_pitapa1.wav'), ('imageLoc', 'pngimages/63_chair.png')]), OrderedDict([('correctAudio', 'novelaudio/64_popiti1.wav'), ('incorrectAudio', 'novelaudio64_popiti2.wav'), ('imageLoc', 'pngimages/64_shovel.png')]), OrderedDict([('correctAudio', 'novelaudio/65_totipo1.wav'), ('incorrectAudio', 'novelaudio65_totipo2.wav'), ('imageLoc', 'pngimages/65_wrench.png')]), OrderedDict([('correctAudio', 'novelaudio/66_kopipa3.wav'), ('incorrectAudio', 'novelaudio66_kopipa2.wav'), ('imageLoc', 'pngimages/66_safe.png')]), OrderedDict([('correctAudio', 'novelaudio/67_tokoki1.wav'), ('incorrectAudio', 'novelaudio67_tokoki2.wav'), ('imageLoc', 'pngimages/67_laptop.png')]), OrderedDict([('correctAudio', 'novelaudio/68_pokopo1.wav'), ('incorrectAudio', 'novelaudio68_pokopo2.wav'), ('imageLoc', 'pngimages/68_heart.png')]), OrderedDict([('correctAudio', 'novelaudio/69_kotoka3.wav'), ('incorrectAudio', 'novelaudio69_kotoka1.wav'), ('imageLoc', 'pngimages/69_tooth.png')]), OrderedDict([('correctAudio', 'novelaudio/70_kopati2.wav'), ('incorrectAudio', 'novelaudio70_kopati1.wav'), ('imageLoc', 'pngimages/70_hand.png')]), OrderedDict([('correctAudio', 'novelaudio/71_kotato2.wav'), ('incorrectAudio', 'novelaudio71_kotato3.wav'), ('imageLoc', 'pngimages/71_eye.png')]), OrderedDict([('correctAudio', 'novelaudio/72_topata2.wav'), ('incorrectAudio', 'novelaudio72_topata3.wav'), ('imageLoc', 'pngimages/72_nose.png')]), OrderedDict([('correctAudio', 'novelaudio/73_takiti1.wav'), ('incorrectAudio', 'novelaudio73_takiti2.wav'), ('imageLoc', 'pngimages/73_car.png')]), OrderedDict([('correctAudio', 'novelaudio/74_tatiko1.wav'), ('incorrectAudio', 'novelaudio74_tatiko2.wav'), ('imageLoc', 'pngimages/74_boat.png')]), OrderedDict([('correctAudio', 'novelaudio/75_kakita1.wav'), ('incorrectAudio', 'novelaudio75_kakita3.wav'), ('imageLoc', 'pngimages/75_chicken.png')]), OrderedDict([('correctAudio', 'novelaudio/76_patoti1.wav'), ('incorrectAudio', 'novelaudio76_patoti2.wav'), ('imageLoc', 'pngimages/76_rabbit.png')]), OrderedDict([('correctAudio', 'novelaudio/77_takopo1.wav'), ('incorrectAudio', 'novelaudio77_takopo3.wav'), ('imageLoc', 'pngimages/77_bear.png')]), OrderedDict([('correctAudio', 'novelaudio/78_kakoka1.wav'), ('incorrectAudio', 'novelaudio78_kakoka3.wav'), ('imageLoc', 'pngimages/78_cow.png')]), OrderedDict([('correctAudio', 'novelaudio/79_katapi1.wav'), ('incorrectAudio', 'novelaudio79_katapi3.wav'), ('imageLoc', 'pngimages/79_pig.png')]), OrderedDict([('correctAudio', 'novelaudio/80_tatato1.wav'), ('incorrectAudio', 'novelaudio80_tatato3.wav'), ('imageLoc', 'pngimages/80_dog.png')]), OrderedDict([('correctAudio', 'novelaudio/81_kakapa1.wav'), ('incorrectAudio', 'novelaudio81_kakapa3.wav'), ('imageLoc', 'pngimages/81_cat.png')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="autoConditions\testConditions.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('firstAudio', '17_kotako3.wav'), ('secondAudio', '17_kotako2.wav'), ('imageLoc', 'pngimages/17_cracker.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '25_tapapi3.wav'), ('secondAudio', '25_tapapi1.wav'), ('imageLoc', 'pngimages/25_apple.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '14_pokoto1.wav'), ('secondAudio', '14_pokoto2.wav'), ('imageLoc', 'pngimages/14_coffee.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '27_pakapa1.wav'), ('secondAudio', '27_pakapa2.wav'), ('imageLoc', 'pngimages/27_kiwi.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '01_kitipi1.wav'), ('secondAudio', '01_kitipi2.wav'), ('imageLoc', 'pngimages/01_gift.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '05_titopo2.wav'), ('secondAudio', '05_titopo3.wav'), ('imageLoc', 'pngimages/05_megaphone.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '12_pokika1.wav'), ('secondAudio', '12_pokika3.wav'), ('imageLoc', 'pngimages/12_pie.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '16_kotapi2.wav'), ('secondAudio', '16_kotapi3.wav'), ('imageLoc', 'pngimages/16_icecream.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '03_kikita3.wav'), ('secondAudio', '03_kikita1.wav'), ('imageLoc', 'pngimages/03_box.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '21_papika3.wav'), ('secondAudio', '21_papika1.wav'), ('imageLoc', 'pngimages/21_cheese.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '07_pitapi2.wav'), ('secondAudio', '07_pitapi3.wav'), ('imageLoc', 'pngimages/07_suitcase.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '15_kopota3.wav'), ('secondAudio', '15_kopota1.wav'), ('imageLoc', 'pngimages/15_barrel.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '20_tatito3.wav'), ('secondAudio', '20_tatito1.wav'), ('imageLoc', 'pngimages/20_pizza.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '22_kakoki2.wav'), ('secondAudio', '22_kakoki1.wav'), ('imageLoc', 'pngimages/22_egg.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '10_tokiti1.wav'), ('secondAudio', '10_tokiti3.wav'), ('imageLoc', 'pngimages/10_backpack.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '02_pitito1.wav'), ('secondAudio', '02_pitito3.wav'), ('imageLoc', 'pngimages/02_pallet.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '04_kitoti2.wav'), ('secondAudio', '04_kitoti3.wav'), ('imageLoc', 'pngimages/04_ladder.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '23_patoko3.wav'), ('secondAudio', '23_patoko1.wav'), ('imageLoc', 'pngimages/23_lemon.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '09_tipata1.wav'), ('secondAudio', '09_tipata2.wav'), ('imageLoc', 'pngimages/09_plane.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '13_kopopi3.wav'), ('secondAudio', '13_kopopi1.wav'), ('imageLoc', 'pngimages/13_toast.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '06_titoka3.wav'), ('secondAudio', '06_titoka1.wav'), ('imageLoc', 'pngimages/06_tent.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '11_tokiko2.wav'), ('secondAudio', '11_tokiko1.wav'), ('imageLoc', 'pngimages/11_compass.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '26_kapako1.wav'), ('secondAudio', '26_kapako3.wav'), ('imageLoc', 'pngimages/26_pineapple.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '18_popata2.wav'), ('secondAudio', '18_popata1.wav'), ('imageLoc', 'pngimages/18_donut.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '08_tipako2.wav'), ('secondAudio', '08_tipako1.wav'), ('imageLoc', 'pngimages/08_bell.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '24_takopa1.wav'), ('secondAudio', '24_takopa2.wav'), ('imageLoc', 'pngimages/24_banana.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '19_papipi1.wav'), ('secondAudio', '19_papipi2.wav'), ('imageLoc', 'pngimages/19_burger.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '11_tokiko1.wav'), ('secondAudio', '11_tokiko3.wav'), ('imageLoc', 'pngimages/11_compass.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '18_popata3.wav'), ('secondAudio', '18_popata2.wav'), ('imageLoc', 'pngimages/18_donut.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '06_titoka3.wav'), ('secondAudio', '06_titoka2.wav'), ('imageLoc', 'pngimages/06_tent.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '13_kopopi1.wav'), ('secondAudio', '13_kopopi2.wav'), ('imageLoc', 'pngimages/13_toast.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '08_tipako3.wav'), ('secondAudio', '08_tipako2.wav'), ('imageLoc', 'pngimages/08_bell.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '07_pitapi2.wav'), ('secondAudio', '07_pitapi1.wav'), ('imageLoc', 'pngimages/07_suitcase.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '12_pokika3.wav'), ('secondAudio', '12_pokika2.wav'), ('imageLoc', 'pngimages/12_pie.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '19_papipi3.wav'), ('secondAudio', '19_papipi1.wav'), ('imageLoc', 'pngimages/19_burger.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '27_pakapa1.wav'), ('secondAudio', '27_pakapa3.wav'), ('imageLoc', 'pngimages/27_kiwi.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '24_takopa3.wav'), ('secondAudio', '24_takopa1.wav'), ('imageLoc', 'pngimages/24_banana.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '21_papika2.wav'), ('secondAudio', '21_papika1.wav'), ('imageLoc', 'pngimages/21_cheese.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '01_kitipi3.wav'), ('secondAudio', '01_kitipi1.wav'), ('imageLoc', 'pngimages/01_gift.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '02_pitito2.wav'), ('secondAudio', '02_pitito3.wav'), ('imageLoc', 'pngimages/02_pallet.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '16_kotapi2.wav'), ('secondAudio', '16_kotapi1.wav'), ('imageLoc', 'pngimages/16_icecream.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '22_kakoki1.wav'), ('secondAudio', '22_kakoki3.wav'), ('imageLoc', 'pngimages/22_egg.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '17_kotako2.wav'), ('secondAudio', '17_kotako1.wav'), ('imageLoc', 'pngimages/17_cracker.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '05_titopo2.wav'), ('secondAudio', '05_titopo1.wav'), ('imageLoc', 'pngimages/05_megaphone.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '03_kikita2.wav'), ('secondAudio', '03_kikita3.wav'), ('imageLoc', 'pngimages/03_box.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '23_patoko1.wav'), ('secondAudio', '23_patoko2.wav'), ('imageLoc', 'pngimages/23_lemon.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '04_kitoti2.wav'), ('secondAudio', '04_kitoti1.wav'), ('imageLoc', 'pngimages/04_ladder.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '09_tipata2.wav'), ('secondAudio', '09_tipata3.wav'), ('imageLoc', 'pngimages/09_plane.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '20_tatito1.wav'), ('secondAudio', '20_tatito2.wav'), ('imageLoc', 'pngimages/20_pizza.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '26_kapako2.wav'), ('secondAudio', '26_kapako1.wav'), ('imageLoc', 'pngimages/26_pineapple.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '15_kopota2.wav'), ('secondAudio', '15_kopota3.wav'), ('imageLoc', 'pngimages/15_barrel.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '10_tokiti2.wav'), ('secondAudio', '10_tokiti1.wav'), ('imageLoc', 'pngimages/10_backpack.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '25_tapapi2.wav'), ('secondAudio', '25_tapapi1.wav'), ('imageLoc', 'pngimages/25_apple.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '14_pokoto3.wav'), ('secondAudio', '14_pokoto1.wav'), ('imageLoc', 'pngimages/14_coffee.png'), ('whichAudio', 2)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="autoConditions\test1Conditions.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="test1Loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="test1"/>
+    <LoopTerminator name="test1Loop"/>
+    <Routine name="testNovel1Instr"/>
+    <LoopInitiator loopType="TrialHandler" name="test2Loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('firstAudio', '49_tatopi1.wav'), ('secondAudio', '49_tatopi3.wav'), ('imageLoc', 'pngimages/49_calculator.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '71_kotato1.wav'), ('secondAudio', '71_kotato2.wav'), ('imageLoc', 'pngimages/71_eye.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '80_tatato1.wav'), ('secondAudio', '80_tatato3.wav'), ('imageLoc', 'pngimages/80_dog.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '36_pipapa2.wav'), ('secondAudio', '36_pipapa1.wav'), ('imageLoc', 'pngimages/36_microwave.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '57_tipipa2.wav'), ('secondAudio', '57_tipipa3.wav'), ('imageLoc', 'pngimages/57_flashlight.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '51_tapopa2.wav'), ('secondAudio', '51_tapopa1.wav'), ('imageLoc', 'pngimages/51_pencil.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '76_patoti1.wav'), ('secondAudio', '76_patoti3.wav'), ('imageLoc', 'pngimages/76_rabbit.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '58_kipoki3.wav'), ('secondAudio', '58_kipoki2.wav'), ('imageLoc', 'pngimages/58_nail.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '32_kipoto3.wav'), ('secondAudio', '32_kipoto2.wav'), ('imageLoc', 'pngimages/32_greenpepper.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '81_kakapa3.wav'), ('secondAudio', '81_kakapa1.wav'), ('imageLoc', 'pngimages/81_cat.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '60_pipopa2.wav'), ('secondAudio', '60_pipopa3.wav'), ('imageLoc', 'pngimages/60_firewood.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '44_pokato3.wav'), ('secondAudio', '44_pokato2.wav'), ('imageLoc', 'pngimages/44_envelope.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '37_kokiti2.wav'), ('secondAudio', '37_kokiti1.wav'), ('imageLoc', 'pngimages/37_mug.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '64_popiti1.wav'), ('secondAudio', '64_popiti2.wav'), ('imageLoc', 'pngimages/64_shovel.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '74_tatiko1.wav'), ('secondAudio', '74_tatiko3.wav'), ('imageLoc', 'pngimages/74_boat.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '70_kopati2.wav'), ('secondAudio', '70_kopati3.wav'), ('imageLoc', 'pngimages/70_hand.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '30_tikipa3.wav'), ('secondAudio', '30_tikipa2.wav'), ('imageLoc', 'pngimages/30_mushroom.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '39_kotipa1.wav'), ('secondAudio', '39_kotipa3.wav'), ('imageLoc', 'pngimages/39_fork.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '43_potaki3.wav'), ('secondAudio', '43_potaki2.wav'), ('imageLoc', 'pngimages/43_guitar.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '78_kakoka3.wav'), ('secondAudio', '78_kakoka1.wav'), ('imageLoc', 'pngimages/78_cow.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '29_pipito2.wav'), ('secondAudio', '29_pipito3.wav'), ('imageLoc', 'pngimages/29_cherry.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '75_kakita3.wav'), ('secondAudio', '75_kakita1.wav'), ('imageLoc', 'pngimages/75_chicken.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '38_kokiko1.wav'), ('secondAudio', '38_kokiko2.wav'), ('imageLoc', 'pngimages/38_plate.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '61_pikati2.wav'), ('secondAudio', '61_pikati1.wav'), ('imageLoc', 'pngimages/61_key.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '67_tokoki1.wav'), ('secondAudio', '67_tokoki2.wav'), ('imageLoc', 'pngimages/67_laptop.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '41_pototo1.wav'), ('secondAudio', '41_pototo2.wav'), ('imageLoc', 'pngimages/41_piano.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '77_takopo3.wav'), ('secondAudio', '77_takopo1.wav'), ('imageLoc', 'pngimages/77_bear.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '69_kotoka3.wav'), ('secondAudio', '69_kotoka2.wav'), ('imageLoc', 'pngimages/69_tooth.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '33_tipoka3.wav'), ('secondAudio', '33_tipoka2.wav'), ('imageLoc', 'pngimages/33_watermelon.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '79_katapi3.wav'), ('secondAudio', '79_katapi1.wav'), ('imageLoc', 'pngimages/79_pig.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '46_tapiti1.wav'), ('secondAudio', '46_tapiti3.wav'), ('imageLoc', 'pngimages/46_paper.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '47_takiko2.wav'), ('secondAudio', '47_takiko1.wav'), ('imageLoc', 'pngimages/47_notebook.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '54_kapapa3.wav'), ('secondAudio', '54_kapapa1.wav'), ('imageLoc', 'pngimages/54_toiletpaper.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '35_titato2.wav'), ('secondAudio', '35_titato1.wav'), ('imageLoc', 'pngimages/35_skillet.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '59_tipoko2.wav'), ('secondAudio', '59_tipoko1.wav'), ('imageLoc', 'pngimages/59_umbrella.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '68_pokopo3.wav'), ('secondAudio', '68_pokopo1.wav'), ('imageLoc', 'pngimages/68_heart.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '31_kikopi2.wav'), ('secondAudio', '31_kikopi3.wav'), ('imageLoc', 'pngimages/31_tomato.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '55_pikiki1.wav'), ('secondAudio', '55_pikiki2.wav'), ('imageLoc', 'pngimages/55_toilet.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '72_topata3.wav'), ('secondAudio', '72_topata2.wav'), ('imageLoc', 'pngimages/72_nose.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '28_pipiki1.wav'), ('secondAudio', '28_pipiki3.wav'), ('imageLoc', 'pngimages/28_grape.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '73_takiti2.wav'), ('secondAudio', '73_takiti1.wav'), ('imageLoc', 'pngimages/73_car.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '56_pipiko3.wav'), ('secondAudio', '56_pipiko1.wav'), ('imageLoc', 'pngimages/56_towel.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '65_totipo3.wav'), ('secondAudio', '65_totipo1.wav'), ('imageLoc', 'pngimages/65_wrench.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '40_kototi1.wav'), ('secondAudio', '40_kototi2.wav'), ('imageLoc', 'pngimages/40_spoon.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '45_totaka1.wav'), ('secondAudio', '45_totaka2.wav'), ('imageLoc', 'pngimages/45_scissors.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '52_pakaki3.wav'), ('secondAudio', '52_pakaki1.wav'), ('imageLoc', 'pngimages/52_newspaper.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '63_pitapa1.wav'), ('secondAudio', '63_pitapa2.wav'), ('imageLoc', 'pngimages/63_chair.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '53_patapo3.wav'), ('secondAudio', '53_patapo1.wav'), ('imageLoc', 'pngimages/53_hammer.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '42_tokota2.wav'), ('secondAudio', '42_tokota3.wav'), ('imageLoc', 'pngimages/42_harp.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '50_katoko1.wav'), ('secondAudio', '50_katoko2.wav'), ('imageLoc', 'pngimages/50_ruler.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '66_kopipa2.wav'), ('secondAudio', '66_kopipa3.wav'), ('imageLoc', 'pngimages/66_safe.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '48_pakipa2.wav'), ('secondAudio', '48_pakipa1.wav'), ('imageLoc', 'pngimages/48_brush.png'), ('whichAudio', 2)]), OrderedDict([('firstAudio', '62_pitako2.wav'), ('secondAudio', '62_pitako1.wav'), ('imageLoc', 'pngimages/62_screwdriver.png'), ('whichAudio', 1)]), OrderedDict([('firstAudio', '34_kipaki2.wav'), ('secondAudio', '34_kipaki3.wav'), ('imageLoc', 'pngimages/34_knife.png'), ('whichAudio', 1)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="autoConditions\test2Conditions.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="testLoop" valType="code"/>
+      <Param name="name" updates="None" val="test2Loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="test"/>
-    <LoopTerminator name="testLoop"/>
+    <Routine name="test2"/>
+    <LoopTerminator name="test2Loop"/>
+    <Routine name="testNovel2Instr"/>
+    <LoopInitiator loopType="TrialHandler" name="test3Loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="test3Loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="test3"/>
+    <LoopTerminator name="test3Loop"/>
   </Flow>
 </PsychoPy2experiment>

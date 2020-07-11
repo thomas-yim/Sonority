@@ -1,0 +1,1052 @@
+2.0228 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+8.9538 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1200]. Using actual size
+11.9894 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000013D22D853C8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000013D230E0DA0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1200]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.9895 	EXP 	window1: recordFrameIntervals = False
+12.1447 	EXP 	window1: recordFrameIntervals = True
+12.3286 	EXP 	window1: recordFrameIntervals = False
+12.9275 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.0910 	EXP 	Sound stimulitrain1 set volume 1.000
+13.0951 	EXP 	Created imagetrain1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagetrain1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.0953 	EXP 	Sound stimulitest1 set volume 1.000
+13.0973 	EXP 	Created correct = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='correct', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.0995 	EXP 	Created incorrect = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='incorrect', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.1349 	EXP 	Created notice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='notice', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.1350 	EXP 	Sound stimulitrain2 set volume 1.000
+13.1374 	EXP 	Created imagetrain2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagetrain2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.1375 	EXP 	Sound stimulitest2 set volume 1.000
+13.1394 	EXP 	Created correct2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='correct2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.1417 	EXP 	Created incorrect2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='incorrect2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.1639 	EXP 	Created test1Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='test1Instr', opacity=1.0, ori=0, pos=array([0. , 0.5]), rgb=array([255., 255., 255.]), text='Instructions For Test1 Go Here', units='height', win=Window(...), wrapWidth=1)
+13.1806 	EXP 	Created oneWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='oneWarningTest1', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=array([255., 255., 255.]), text='Less than 1 minute left', units='height', win=Window(...), wrapWidth=1)
+13.1933 	EXP 	Created twoWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='twoWarningTest1', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=array([255., 255., 255.]), text='Less than 2 minutes left', units='height', win=Window(...), wrapWidth=1)
+13.1935 	EXP 	Sound test1AudioFirst set volume 1.000
+13.1937 	EXP 	Sound test1AudioSecond set volume 1.000
+13.1970 	EXP 	Created test1Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test1Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.2050 	EXP 	Created test2Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='test2Instr', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Instructions For Test2 Go Here', units='height', win=Window(...), wrapWidth=1)
+13.2052 	EXP 	Sound test2AudioFirst set volume 1.000
+13.2052 	EXP 	Sound test2AudioSecond set volume 1.000
+13.2076 	EXP 	Created test2Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test2Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.2191 	EXP 	Created test3Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='test3Instr', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Instructions For Test3 Go Here\n', units='height', win=Window(...), wrapWidth=1)
+13.2192 	EXP 	Sound test3AudioFirst set volume 1.000
+13.2193 	EXP 	Sound test3AudioSecond set volume 1.000
+13.2212 	EXP 	Created test3Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test3Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.2659 	EXP 	instructions: autoDraw = True
+16.6048 	EXP 	Imported autoConditions\train1LoopCondition.xlsx as conditions, 9 conditions, 2 params
+16.6060 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+16.6083 	EXP 	New trial (rep=0, index=0): OrderedDict([('condFiles', 'autoConditions/train1Block1.xlsx'), ('testFiles', 'autoConditions/train1Block1Test.xlsx')])
+16.6340 	EXP 	Imported autoConditions/train1Block1.xlsx as conditions, 6 conditions, 2 params
+16.6344 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+16.6348 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/18_popata2.wav'), ('imageLoc', 'pngimages/18_donut.png')])
+16.6852 	DATA 	Keypress: space
+16.6907 	EXP 	instructions: autoDraw = False
+16.6907 	EXP 	imagetrain1: image = 'pngimages/18_donut.png'
+16.6907 	EXP 	imagetrain1: autoDraw = True
+17.5423 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/27_pakapa1.wav'), ('imageLoc', 'pngimages/27_kiwi.png')])
+17.5685 	EXP 	imagetrain1: autoDraw = False
+17.5685 	EXP 	imagetrain1: image = 'pngimages/27_kiwi.png'
+17.5685 	EXP 	imagetrain1: autoDraw = True
+18.5216 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/10_tokiti1.wav'), ('imageLoc', 'pngimages/10_backpack.png')])
+18.5789 	EXP 	imagetrain1: autoDraw = False
+18.5789 	EXP 	imagetrain1: image = 'pngimages/10_backpack.png'
+18.5789 	EXP 	imagetrain1: autoDraw = True
+19.5221 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/22_kakoki1.wav'), ('imageLoc', 'pngimages/22_egg.png')])
+19.6358 	EXP 	imagetrain1: autoDraw = False
+19.6358 	EXP 	imagetrain1: image = 'pngimages/22_egg.png'
+19.6358 	EXP 	imagetrain1: autoDraw = True
+20.5199 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/01_kitipi1.wav'), ('imageLoc', 'pngimages/01_gift.png')])
+20.5726 	EXP 	imagetrain1: autoDraw = False
+20.5726 	EXP 	imagetrain1: image = 'pngimages/01_gift.png'
+20.5726 	EXP 	imagetrain1: autoDraw = True
+21.5203 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/24_takopa1.wav'), ('imageLoc', 'pngimages/24_banana.png')])
+21.6078 	EXP 	imagetrain1: autoDraw = False
+21.6078 	EXP 	imagetrain1: image = 'pngimages/24_banana.png'
+21.6078 	EXP 	imagetrain1: autoDraw = True
+22.5430 	EXP 	Imported autoConditions/train1Block1Test.xlsx as conditions, 3 conditions, 6 params
+22.5433 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+22.5438 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/24_takopa1.wav'), ('imageTrue', 'pngimages/24_banana.png'), ('audioFalse', 'trainingaudio/27_pakapa1.wav'), ('imageFalse', 'pngimages/27_kiwi.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+22.5968 	EXP 	imagetrain1: autoDraw = False
+22.5968 	EXP 	correct: pos = array([0.5, 0. ])
+22.5968 	EXP 	correct: image = 'pngimages/24_banana.png'
+22.5968 	EXP 	incorrect: pos = array([-0.5,  0. ])
+22.5968 	EXP 	incorrect: image = 'pngimages/27_kiwi.png'
+22.5968 	EXP 	correct: autoDraw = True
+22.5968 	EXP 	incorrect: autoDraw = True
+25.1940 	DATA 	Keypress: s
+25.6953 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/18_popata2.wav'), ('imageTrue', 'pngimages/18_donut.png'), ('audioFalse', 'trainingaudio/22_kakoki1.wav'), ('imageFalse', 'pngimages/22_egg.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+25.7320 	DATA 	Keypress: f
+25.7370 	EXP 	correct: autoDraw = False
+25.7370 	EXP 	incorrect: autoDraw = False
+25.7370 	EXP 	correct: pos = array([0.5, 0. ])
+25.7370 	EXP 	correct: image = 'pngimages/18_donut.png'
+25.7370 	EXP 	incorrect: pos = array([-0.5,  0. ])
+25.7370 	EXP 	incorrect: image = 'pngimages/22_egg.png'
+25.7370 	EXP 	correct: autoDraw = True
+25.7370 	EXP 	incorrect: autoDraw = True
+27.7469 	DATA 	Keypress: j
+27.7642 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/10_tokiti1.wav'), ('imageTrue', 'pngimages/10_backpack.png'), ('audioFalse', 'trainingaudio/01_kitipi1.wav'), ('imageFalse', 'pngimages/01_gift.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+27.7908 	EXP 	correct: autoDraw = False
+27.7908 	EXP 	incorrect: autoDraw = False
+27.7908 	EXP 	correct: pos = array([-0.5,  0. ])
+27.7908 	EXP 	correct: image = 'pngimages/10_backpack.png'
+27.7908 	EXP 	incorrect: pos = array([0.5, 0. ])
+27.7908 	EXP 	incorrect: image = 'pngimages/01_gift.png'
+27.7908 	EXP 	correct: autoDraw = True
+27.7908 	EXP 	incorrect: autoDraw = True
+29.1142 	DATA 	Keypress: f
+29.1318 	EXP 	New trial (rep=0, index=1): OrderedDict([('condFiles', 'autoConditions/train1Block2.xlsx'), ('testFiles', 'autoConditions/train1Block2Test.xlsx')])
+29.1398 	EXP 	Imported autoConditions/train1Block2.xlsx as conditions, 6 conditions, 2 params
+29.1401 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+29.1403 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/17_kotako2.wav'), ('imageLoc', 'pngimages/17_cracker.png')])
+29.1577 	EXP 	correct: autoDraw = False
+29.1577 	EXP 	incorrect: autoDraw = False
+29.1577 	EXP 	imagetrain1: image = 'pngimages/17_cracker.png'
+29.1577 	EXP 	imagetrain1: autoDraw = True
+30.1464 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/02_pitito3.wav'), ('imageLoc', 'pngimages/02_pallet.png')])
+30.1674 	EXP 	imagetrain1: autoDraw = False
+30.1674 	EXP 	imagetrain1: autoDraw = False
+30.1674 	EXP 	imagetrain1: image = 'pngimages/02_pallet.png'
+30.1674 	EXP 	imagetrain1: autoDraw = True
+30.5124 	DATA 	Keypress: f
+31.1638 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/23_patoko1.wav'), ('imageLoc', 'pngimages/23_lemon.png')])
+31.1890 	EXP 	imagetrain1: autoDraw = False
+31.1890 	EXP 	imagetrain1: autoDraw = False
+31.1890 	EXP 	imagetrain1: image = 'pngimages/23_lemon.png'
+31.1890 	EXP 	imagetrain1: autoDraw = True
+32.1812 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/11_tokiko1.wav'), ('imageLoc', 'pngimages/11_compass.png')])
+32.2043 	EXP 	imagetrain1: autoDraw = False
+32.2043 	EXP 	imagetrain1: autoDraw = False
+32.2043 	EXP 	imagetrain1: image = 'pngimages/11_compass.png'
+32.2043 	EXP 	imagetrain1: autoDraw = True
+33.1993 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/03_kikita3.wav'), ('imageLoc', 'pngimages/03_box.png')])
+33.2176 	EXP 	imagetrain1: autoDraw = False
+33.2176 	EXP 	imagetrain1: autoDraw = False
+33.2176 	EXP 	imagetrain1: image = 'pngimages/03_box.png'
+33.2176 	EXP 	imagetrain1: autoDraw = True
+34.2160 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/06_titoka3.wav'), ('imageLoc', 'pngimages/06_tent.png')])
+34.2384 	EXP 	imagetrain1: autoDraw = False
+34.2384 	EXP 	imagetrain1: autoDraw = False
+34.2384 	EXP 	imagetrain1: image = 'pngimages/06_tent.png'
+34.2384 	EXP 	imagetrain1: autoDraw = True
+35.2425 	EXP 	Imported autoConditions/train1Block2Test.xlsx as conditions, 3 conditions, 6 params
+35.2427 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+35.2430 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/02_pitito3.wav'), ('imageTrue', 'pngimages/02_pallet.png'), ('audioFalse', 'trainingaudio/06_titoka3.wav'), ('imageFalse', 'pngimages/06_tent.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+35.2637 	EXP 	imagetrain1: autoDraw = False
+35.2637 	EXP 	imagetrain1: autoDraw = False
+35.2637 	EXP 	correct: pos = array([0.5, 0. ])
+35.2637 	EXP 	correct: image = 'pngimages/02_pallet.png'
+35.2637 	EXP 	incorrect: pos = array([-0.5,  0. ])
+35.2637 	EXP 	incorrect: image = 'pngimages/06_tent.png'
+35.2637 	EXP 	correct: autoDraw = True
+35.2637 	EXP 	incorrect: autoDraw = True
+36.2549 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/11_tokiko1.wav'), ('imageTrue', 'pngimages/11_compass.png'), ('audioFalse', 'trainingaudio/03_kikita3.wav'), ('imageFalse', 'pngimages/03_box.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+36.2772 	EXP 	correct: autoDraw = False
+36.2772 	EXP 	incorrect: autoDraw = False
+36.2772 	EXP 	correct: pos = array([-0.5,  0. ])
+36.2772 	EXP 	correct: image = 'pngimages/11_compass.png'
+36.2772 	EXP 	incorrect: pos = array([0.5, 0. ])
+36.2772 	EXP 	incorrect: image = 'pngimages/03_box.png'
+36.2772 	EXP 	correct: autoDraw = True
+36.2772 	EXP 	incorrect: autoDraw = True
+38.5564 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/23_patoko1.wav'), ('imageTrue', 'pngimages/23_lemon.png'), ('audioFalse', 'trainingaudio/17_kotako2.wav'), ('imageFalse', 'pngimages/17_cracker.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+38.5765 	DATA 	Keypress: j
+38.5812 	EXP 	correct: autoDraw = False
+38.5812 	EXP 	incorrect: autoDraw = False
+38.5812 	EXP 	correct: pos = array([-0.5,  0. ])
+38.5812 	EXP 	correct: image = 'pngimages/23_lemon.png'
+38.5812 	EXP 	incorrect: pos = array([0.5, 0. ])
+38.5812 	EXP 	incorrect: image = 'pngimages/17_cracker.png'
+38.5812 	EXP 	correct: autoDraw = True
+38.5812 	EXP 	incorrect: autoDraw = True
+40.1909 	EXP 	New trial (rep=0, index=2): OrderedDict([('condFiles', 'autoConditions/train1Block3.xlsx'), ('testFiles', 'autoConditions/train1Block3Test.xlsx')])
+40.2048 	EXP 	Imported autoConditions/train1Block3.xlsx as conditions, 6 conditions, 2 params
+40.2053 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+40.2058 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/08_tipako2.wav'), ('imageLoc', 'pngimages/08_bell.png')])
+40.2285 	DATA 	Keypress: j
+40.2322 	EXP 	correct: autoDraw = False
+40.2322 	EXP 	incorrect: autoDraw = False
+40.2322 	EXP 	imagetrain1: image = 'pngimages/08_bell.png'
+40.2322 	EXP 	imagetrain1: autoDraw = True
+41.2221 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/25_tapapi1.wav'), ('imageLoc', 'pngimages/25_apple.png')])
+41.2451 	EXP 	imagetrain1: autoDraw = False
+41.2451 	EXP 	imagetrain1: autoDraw = False
+41.2451 	EXP 	imagetrain1: image = 'pngimages/25_apple.png'
+41.2451 	EXP 	imagetrain1: autoDraw = True
+42.2402 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/19_papipi1.wav'), ('imageLoc', 'pngimages/19_burger.png')])
+42.2658 	EXP 	imagetrain1: autoDraw = False
+42.2658 	EXP 	imagetrain1: autoDraw = False
+42.2658 	EXP 	imagetrain1: image = 'pngimages/19_burger.png'
+42.2658 	EXP 	imagetrain1: autoDraw = True
+43.2569 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/21_papika1.wav'), ('imageLoc', 'pngimages/21_cheese.png')])
+43.2938 	EXP 	imagetrain1: autoDraw = False
+43.2938 	EXP 	imagetrain1: autoDraw = False
+43.2938 	EXP 	imagetrain1: image = 'pngimages/21_cheese.png'
+43.2938 	EXP 	imagetrain1: autoDraw = True
+44.2909 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/12_pokika3.wav'), ('imageLoc', 'pngimages/12_pie.png')])
+44.3494 	EXP 	imagetrain1: autoDraw = False
+44.3494 	EXP 	imagetrain1: autoDraw = False
+44.3494 	EXP 	imagetrain1: image = 'pngimages/12_pie.png'
+44.3494 	EXP 	imagetrain1: autoDraw = True
+45.3415 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/15_kopota3.wav'), ('imageLoc', 'pngimages/15_barrel.png')])
+45.4138 	EXP 	imagetrain1: autoDraw = False
+45.4138 	EXP 	imagetrain1: autoDraw = False
+45.4138 	EXP 	imagetrain1: image = 'pngimages/15_barrel.png'
+45.4138 	EXP 	imagetrain1: autoDraw = True
+46.4181 	EXP 	Imported autoConditions/train1Block3Test.xlsx as conditions, 3 conditions, 6 params
+46.4184 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+46.4187 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/12_pokika3.wav'), ('imageTrue', 'pngimages/12_pie.png'), ('audioFalse', 'trainingaudio/08_tipako2.wav'), ('imageFalse', 'pngimages/08_bell.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+46.4596 	EXP 	imagetrain1: autoDraw = False
+46.4596 	EXP 	imagetrain1: autoDraw = False
+46.4596 	EXP 	correct: pos = array([0.5, 0. ])
+46.4596 	EXP 	correct: image = 'pngimages/12_pie.png'
+46.4596 	EXP 	incorrect: pos = array([-0.5,  0. ])
+46.4596 	EXP 	incorrect: image = 'pngimages/08_bell.png'
+46.4596 	EXP 	correct: autoDraw = True
+46.4596 	EXP 	incorrect: autoDraw = True
+48.2805 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/25_tapapi1.wav'), ('imageTrue', 'pngimages/25_apple.png'), ('audioFalse', 'trainingaudio/15_kopota3.wav'), ('imageFalse', 'pngimages/15_barrel.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+48.3397 	DATA 	Keypress: j
+48.3450 	EXP 	correct: autoDraw = False
+48.3450 	EXP 	incorrect: autoDraw = False
+48.3450 	EXP 	correct: pos = array([0.5, 0. ])
+48.3450 	EXP 	correct: image = 'pngimages/25_apple.png'
+48.3450 	EXP 	incorrect: pos = array([-0.5,  0. ])
+48.3450 	EXP 	incorrect: image = 'pngimages/15_barrel.png'
+48.3450 	EXP 	correct: autoDraw = True
+48.3450 	EXP 	incorrect: autoDraw = True
+49.7492 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/21_papika1.wav'), ('imageTrue', 'pngimages/21_cheese.png'), ('audioFalse', 'trainingaudio/19_papipi1.wav'), ('imageFalse', 'pngimages/19_burger.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+49.7808 	DATA 	Keypress: j
+49.7856 	EXP 	correct: autoDraw = False
+49.7856 	EXP 	incorrect: autoDraw = False
+49.7856 	EXP 	correct: pos = array([-0.5,  0. ])
+49.7856 	EXP 	correct: image = 'pngimages/21_cheese.png'
+49.7856 	EXP 	incorrect: pos = array([0.5, 0. ])
+49.7856 	EXP 	incorrect: image = 'pngimages/19_burger.png'
+49.7856 	EXP 	correct: autoDraw = True
+49.7856 	EXP 	incorrect: autoDraw = True
+51.0827 	DATA 	Keypress: j
+51.1002 	EXP 	New trial (rep=0, index=3): OrderedDict([('condFiles', 'autoConditions/train1Block4.xlsx'), ('testFiles', 'autoConditions/train1Block4Test.xlsx')])
+51.1075 	EXP 	Imported autoConditions/train1Block4.xlsx as conditions, 6 conditions, 2 params
+51.1077 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+51.1081 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/13_kopopi1.wav'), ('imageLoc', 'pngimages/13_toast.png')])
+51.1318 	EXP 	correct: autoDraw = False
+51.1318 	EXP 	incorrect: autoDraw = False
+51.1318 	EXP 	imagetrain1: image = 'pngimages/13_toast.png'
+51.1318 	EXP 	imagetrain1: autoDraw = True
+52.1314 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/14_pokoto1.wav'), ('imageLoc', 'pngimages/14_coffee.png')])
+52.1570 	EXP 	imagetrain1: autoDraw = False
+52.1570 	EXP 	imagetrain1: autoDraw = False
+52.1570 	EXP 	imagetrain1: image = 'pngimages/14_coffee.png'
+52.1570 	EXP 	imagetrain1: autoDraw = True
+53.1483 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/07_pitapi2.wav'), ('imageLoc', 'pngimages/07_suitcase.png')])
+53.1645 	EXP 	imagetrain1: autoDraw = False
+53.1645 	EXP 	imagetrain1: autoDraw = False
+53.1645 	EXP 	imagetrain1: image = 'pngimages/07_suitcase.png'
+53.1645 	EXP 	imagetrain1: autoDraw = True
+54.1660 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/20_tatito1.wav'), ('imageLoc', 'pngimages/20_pizza.png')])
+54.2021 	EXP 	imagetrain1: autoDraw = False
+54.2021 	EXP 	imagetrain1: autoDraw = False
+54.2021 	EXP 	imagetrain1: image = 'pngimages/20_pizza.png'
+54.2021 	EXP 	imagetrain1: autoDraw = True
+55.2004 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/04_kitoti2.wav'), ('imageLoc', 'pngimages/04_ladder.png')])
+55.2244 	EXP 	imagetrain1: autoDraw = False
+55.2244 	EXP 	imagetrain1: autoDraw = False
+55.2244 	EXP 	imagetrain1: image = 'pngimages/04_ladder.png'
+55.2244 	EXP 	imagetrain1: autoDraw = True
+56.2172 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/09_tipata2.wav'), ('imageLoc', 'pngimages/09_plane.png')])
+56.2537 	EXP 	imagetrain1: autoDraw = False
+56.2537 	EXP 	imagetrain1: autoDraw = False
+56.2537 	EXP 	imagetrain1: image = 'pngimages/09_plane.png'
+56.2537 	EXP 	imagetrain1: autoDraw = True
+57.2599 	EXP 	Imported autoConditions/train1Block4Test.xlsx as conditions, 3 conditions, 6 params
+57.2601 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+57.2604 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/14_pokoto1.wav'), ('imageTrue', 'pngimages/14_coffee.png'), ('audioFalse', 'trainingaudio/20_tatito1.wav'), ('imageFalse', 'pngimages/20_pizza.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+57.2914 	EXP 	imagetrain1: autoDraw = False
+57.2914 	EXP 	imagetrain1: autoDraw = False
+57.2914 	EXP 	correct: pos = array([-0.5,  0. ])
+57.2914 	EXP 	correct: image = 'pngimages/14_coffee.png'
+57.2914 	EXP 	incorrect: pos = array([0.5, 0. ])
+57.2914 	EXP 	incorrect: image = 'pngimages/20_pizza.png'
+57.2914 	EXP 	correct: autoDraw = True
+57.2914 	EXP 	incorrect: autoDraw = True
+58.4414 	DATA 	Keypress: j
+58.4644 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/13_kopopi1.wav'), ('imageTrue', 'pngimages/13_toast.png'), ('audioFalse', 'trainingaudio/04_kitoti2.wav'), ('imageFalse', 'pngimages/04_ladder.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+58.5156 	EXP 	correct: autoDraw = False
+58.5156 	EXP 	incorrect: autoDraw = False
+58.5156 	EXP 	correct: pos = array([0.5, 0. ])
+58.5156 	EXP 	correct: image = 'pngimages/13_toast.png'
+58.5156 	EXP 	incorrect: pos = array([-0.5,  0. ])
+58.5156 	EXP 	incorrect: image = 'pngimages/04_ladder.png'
+58.5156 	EXP 	correct: autoDraw = True
+58.5156 	EXP 	incorrect: autoDraw = True
+59.6911 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/07_pitapi2.wav'), ('imageTrue', 'pngimages/07_suitcase.png'), ('audioFalse', 'trainingaudio/09_tipata2.wav'), ('imageFalse', 'pngimages/09_plane.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+59.7494 	DATA 	Keypress: j
+59.7544 	EXP 	correct: autoDraw = False
+59.7544 	EXP 	incorrect: autoDraw = False
+59.7544 	EXP 	correct: pos = array([-0.5,  0. ])
+59.7544 	EXP 	correct: image = 'pngimages/07_suitcase.png'
+59.7544 	EXP 	incorrect: pos = array([0.5, 0. ])
+59.7544 	EXP 	incorrect: image = 'pngimages/09_plane.png'
+59.7544 	EXP 	correct: autoDraw = True
+59.7544 	EXP 	incorrect: autoDraw = True
+60.9417 	EXP 	New trial (rep=0, index=4): OrderedDict([('condFiles', 'autoConditions/train1Block5.xlsx'), ('testFiles', 'autoConditions/train1Block5Test.xlsx')])
+60.9492 	EXP 	Imported autoConditions/train1Block5.xlsx as conditions, 6 conditions, 2 params
+60.9495 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+60.9498 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/16_kotapi2.wav'), ('imageLoc', 'pngimages/16_icecream.png')])
+60.9670 	DATA 	Keypress: j
+60.9705 	EXP 	correct: autoDraw = False
+60.9705 	EXP 	incorrect: autoDraw = False
+60.9705 	EXP 	imagetrain1: image = 'pngimages/16_icecream.png'
+60.9705 	EXP 	imagetrain1: autoDraw = True
+61.9559 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/26_kapako1.wav'), ('imageLoc', 'pngimages/26_pineapple.png')])
+61.9911 	EXP 	imagetrain1: autoDraw = False
+61.9911 	EXP 	imagetrain1: autoDraw = False
+61.9911 	EXP 	imagetrain1: image = 'pngimages/26_pineapple.png'
+61.9911 	EXP 	imagetrain1: autoDraw = True
+62.1387 	DATA 	Keypress: j
+62.9901 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/05_titopo2.wav'), ('imageLoc', 'pngimages/05_megaphone.png')])
+63.0206 	EXP 	imagetrain1: autoDraw = False
+63.0206 	EXP 	imagetrain1: autoDraw = False
+63.0206 	EXP 	imagetrain1: image = 'pngimages/05_megaphone.png'
+63.0206 	EXP 	imagetrain1: autoDraw = True
+64.0074 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/17_kotako2.wav'), ('imageLoc', 'pngimages/17_cracker.png')])
+64.0216 	EXP 	imagetrain1: autoDraw = False
+64.0216 	EXP 	imagetrain1: autoDraw = False
+64.0216 	EXP 	imagetrain1: image = 'pngimages/17_cracker.png'
+64.0216 	EXP 	imagetrain1: autoDraw = True
+65.0081 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/15_kopota3.wav'), ('imageLoc', 'pngimages/15_barrel.png')])
+65.0539 	EXP 	imagetrain1: autoDraw = False
+65.0539 	EXP 	imagetrain1: autoDraw = False
+65.0539 	EXP 	imagetrain1: image = 'pngimages/15_barrel.png'
+65.0539 	EXP 	imagetrain1: autoDraw = True
+66.0424 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/24_takopa1.wav'), ('imageLoc', 'pngimages/24_banana.png')])
+66.0949 	EXP 	imagetrain1: autoDraw = False
+66.0949 	EXP 	imagetrain1: autoDraw = False
+66.0949 	EXP 	imagetrain1: image = 'pngimages/24_banana.png'
+66.0949 	EXP 	imagetrain1: autoDraw = True
+67.1017 	EXP 	Imported autoConditions/train1Block5Test.xlsx as conditions, 3 conditions, 6 params
+67.1019 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+67.1022 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/05_titopo2.wav'), ('imageTrue', 'pngimages/05_megaphone.png'), ('audioFalse', 'trainingaudio/24_takopa1.wav'), ('imageFalse', 'pngimages/24_banana.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+67.1455 	EXP 	imagetrain1: autoDraw = False
+67.1455 	EXP 	imagetrain1: autoDraw = False
+67.1455 	EXP 	correct: pos = array([0.5, 0. ])
+67.1455 	EXP 	correct: image = 'pngimages/05_megaphone.png'
+67.1455 	EXP 	incorrect: pos = array([-0.5,  0. ])
+67.1455 	EXP 	incorrect: image = 'pngimages/24_banana.png'
+67.1455 	EXP 	correct: autoDraw = True
+67.1455 	EXP 	incorrect: autoDraw = True
+68.1483 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/16_kotapi2.wav'), ('imageTrue', 'pngimages/16_icecream.png'), ('audioFalse', 'trainingaudio/26_kapako1.wav'), ('imageFalse', 'pngimages/26_pineapple.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+68.1836 	EXP 	correct: autoDraw = False
+68.1836 	EXP 	incorrect: autoDraw = False
+68.1836 	EXP 	correct: pos = array([-0.5,  0. ])
+68.1836 	EXP 	correct: image = 'pngimages/16_icecream.png'
+68.1836 	EXP 	incorrect: pos = array([0.5, 0. ])
+68.1836 	EXP 	incorrect: image = 'pngimages/26_pineapple.png'
+68.1836 	EXP 	correct: autoDraw = True
+68.1836 	EXP 	incorrect: autoDraw = True
+69.9168 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/15_kopota3.wav'), ('imageTrue', 'pngimages/15_barrel.png'), ('audioFalse', 'trainingaudio/17_kotako2.wav'), ('imageFalse', 'pngimages/17_cracker.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+69.9589 	DATA 	Keypress: j
+69.9640 	EXP 	correct: autoDraw = False
+69.9640 	EXP 	incorrect: autoDraw = False
+69.9640 	EXP 	correct: pos = array([0.5, 0. ])
+69.9640 	EXP 	correct: image = 'pngimages/15_barrel.png'
+69.9640 	EXP 	incorrect: pos = array([-0.5,  0. ])
+69.9640 	EXP 	incorrect: image = 'pngimages/17_cracker.png'
+69.9640 	EXP 	correct: autoDraw = True
+69.9640 	EXP 	incorrect: autoDraw = True
+71.6856 	DATA 	Keypress: j
+71.7066 	EXP 	New trial (rep=0, index=5): OrderedDict([('condFiles', 'autoConditions/train1Block6.xlsx'), ('testFiles', 'autoConditions/train1Block6Test.xlsx')])
+71.7396 	EXP 	Imported autoConditions/train1Block6.xlsx as conditions, 6 conditions, 2 params
+71.7402 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+71.7409 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/09_tipata2.wav'), ('imageLoc', 'pngimages/09_plane.png')])
+71.7748 	EXP 	correct: autoDraw = False
+71.7748 	EXP 	incorrect: autoDraw = False
+71.7748 	EXP 	imagetrain1: image = 'pngimages/09_plane.png'
+71.7748 	EXP 	imagetrain1: autoDraw = True
+72.7642 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/19_papipi1.wav'), ('imageLoc', 'pngimages/19_burger.png')])
+72.7788 	EXP 	imagetrain1: autoDraw = False
+72.7788 	EXP 	imagetrain1: autoDraw = False
+72.7788 	EXP 	imagetrain1: image = 'pngimages/19_burger.png'
+72.7788 	EXP 	imagetrain1: autoDraw = True
+73.7692 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/10_tokiti1.wav'), ('imageLoc', 'pngimages/10_backpack.png')])
+73.8081 	EXP 	imagetrain1: autoDraw = False
+73.8081 	EXP 	imagetrain1: autoDraw = False
+73.8081 	EXP 	imagetrain1: image = 'pngimages/10_backpack.png'
+73.8081 	EXP 	imagetrain1: autoDraw = True
+74.8041 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/25_tapapi1.wav'), ('imageLoc', 'pngimages/25_apple.png')])
+74.8435 	EXP 	imagetrain1: autoDraw = False
+74.8435 	EXP 	imagetrain1: autoDraw = False
+74.8435 	EXP 	imagetrain1: image = 'pngimages/25_apple.png'
+74.8435 	EXP 	imagetrain1: autoDraw = True
+75.8350 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/11_tokiko1.wav'), ('imageLoc', 'pngimages/11_compass.png')])
+75.8653 	EXP 	imagetrain1: autoDraw = False
+75.8653 	EXP 	imagetrain1: autoDraw = False
+75.8653 	EXP 	imagetrain1: image = 'pngimages/11_compass.png'
+75.8653 	EXP 	imagetrain1: autoDraw = True
+76.8525 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/06_titoka3.wav'), ('imageLoc', 'pngimages/06_tent.png')])
+76.8750 	EXP 	imagetrain1: autoDraw = False
+76.8750 	EXP 	imagetrain1: autoDraw = False
+76.8750 	EXP 	imagetrain1: image = 'pngimages/06_tent.png'
+76.8750 	EXP 	imagetrain1: autoDraw = True
+77.8790 	EXP 	Imported autoConditions/train1Block6Test.xlsx as conditions, 3 conditions, 6 params
+77.8792 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+77.8796 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/06_titoka3.wav'), ('imageTrue', 'pngimages/06_tent.png'), ('audioFalse', 'trainingaudio/19_papipi1.wav'), ('imageFalse', 'pngimages/19_burger.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+77.9024 	EXP 	imagetrain1: autoDraw = False
+77.9024 	EXP 	imagetrain1: autoDraw = False
+77.9024 	EXP 	correct: pos = array([-0.5,  0. ])
+77.9024 	EXP 	correct: image = 'pngimages/06_tent.png'
+77.9024 	EXP 	incorrect: pos = array([0.5, 0. ])
+77.9024 	EXP 	incorrect: image = 'pngimages/19_burger.png'
+77.9024 	EXP 	correct: autoDraw = True
+77.9024 	EXP 	incorrect: autoDraw = True
+79.8270 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/25_tapapi1.wav'), ('imageTrue', 'pngimages/25_apple.png'), ('audioFalse', 'trainingaudio/10_tokiti1.wav'), ('imageFalse', 'pngimages/10_backpack.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+79.8516 	DATA 	Keypress: j
+79.8566 	EXP 	correct: autoDraw = False
+79.8566 	EXP 	incorrect: autoDraw = False
+79.8566 	EXP 	correct: pos = array([-0.5,  0. ])
+79.8566 	EXP 	correct: image = 'pngimages/25_apple.png'
+79.8566 	EXP 	incorrect: pos = array([0.5, 0. ])
+79.8566 	EXP 	incorrect: image = 'pngimages/10_backpack.png'
+79.8566 	EXP 	correct: autoDraw = True
+79.8566 	EXP 	incorrect: autoDraw = True
+81.0259 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/09_tipata2.wav'), ('imageTrue', 'pngimages/09_plane.png'), ('audioFalse', 'trainingaudio/11_tokiko1.wav'), ('imageFalse', 'pngimages/11_compass.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+81.0756 	DATA 	Keypress: j
+81.0806 	EXP 	correct: autoDraw = False
+81.0806 	EXP 	incorrect: autoDraw = False
+81.0806 	EXP 	correct: pos = array([0.5, 0. ])
+81.0806 	EXP 	correct: image = 'pngimages/09_plane.png'
+81.0806 	EXP 	incorrect: pos = array([-0.5,  0. ])
+81.0806 	EXP 	incorrect: image = 'pngimages/11_compass.png'
+81.0806 	EXP 	correct: autoDraw = True
+81.0806 	EXP 	incorrect: autoDraw = True
+82.2620 	EXP 	New trial (rep=0, index=6): OrderedDict([('condFiles', 'autoConditions/train1Block7.xlsx'), ('testFiles', 'autoConditions/train1Block7Test.xlsx')])
+82.2804 	EXP 	Imported autoConditions/train1Block7.xlsx as conditions, 6 conditions, 2 params
+82.2808 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+82.2812 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/18_popata2.wav'), ('imageLoc', 'pngimages/18_donut.png')])
+82.2943 	DATA 	Keypress: j
+82.2979 	EXP 	correct: autoDraw = False
+82.2979 	EXP 	incorrect: autoDraw = False
+82.2979 	EXP 	imagetrain1: image = 'pngimages/18_donut.png'
+82.2979 	EXP 	imagetrain1: autoDraw = True
+83.2908 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/22_kakoki1.wav'), ('imageLoc', 'pngimages/22_egg.png')])
+83.3286 	EXP 	imagetrain1: autoDraw = False
+83.3286 	EXP 	imagetrain1: autoDraw = False
+83.3286 	EXP 	imagetrain1: image = 'pngimages/22_egg.png'
+83.3286 	EXP 	imagetrain1: autoDraw = True
+84.3237 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/14_pokoto1.wav'), ('imageLoc', 'pngimages/14_coffee.png')])
+84.3385 	EXP 	imagetrain1: autoDraw = False
+84.3385 	EXP 	imagetrain1: autoDraw = False
+84.3385 	EXP 	imagetrain1: image = 'pngimages/14_coffee.png'
+84.3385 	EXP 	imagetrain1: autoDraw = True
+85.3249 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/13_kopopi1.wav'), ('imageLoc', 'pngimages/13_toast.png')])
+85.3395 	EXP 	imagetrain1: autoDraw = False
+85.3395 	EXP 	imagetrain1: autoDraw = False
+85.3395 	EXP 	imagetrain1: image = 'pngimages/13_toast.png'
+85.3395 	EXP 	imagetrain1: autoDraw = True
+86.3258 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/08_tipako2.wav'), ('imageLoc', 'pngimages/08_bell.png')])
+86.3403 	EXP 	imagetrain1: autoDraw = False
+86.3403 	EXP 	imagetrain1: autoDraw = False
+86.3403 	EXP 	imagetrain1: image = 'pngimages/08_bell.png'
+86.3403 	EXP 	imagetrain1: autoDraw = True
+87.3270 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/23_patoko1.wav'), ('imageLoc', 'pngimages/23_lemon.png')])
+87.3418 	EXP 	imagetrain1: autoDraw = False
+87.3418 	EXP 	imagetrain1: autoDraw = False
+87.3418 	EXP 	imagetrain1: image = 'pngimages/23_lemon.png'
+87.3418 	EXP 	imagetrain1: autoDraw = True
+88.3361 	EXP 	Imported autoConditions/train1Block7Test.xlsx as conditions, 3 conditions, 6 params
+88.3364 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+88.3367 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/23_patoko1.wav'), ('imageTrue', 'pngimages/23_lemon.png'), ('audioFalse', 'trainingaudio/13_kopopi1.wav'), ('imageFalse', 'pngimages/13_toast.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+88.3592 	EXP 	imagetrain1: autoDraw = False
+88.3592 	EXP 	imagetrain1: autoDraw = False
+88.3592 	EXP 	correct: pos = array([0.5, 0. ])
+88.3592 	EXP 	correct: image = 'pngimages/23_lemon.png'
+88.3592 	EXP 	incorrect: pos = array([-0.5,  0. ])
+88.3592 	EXP 	incorrect: image = 'pngimages/13_toast.png'
+88.3592 	EXP 	correct: autoDraw = True
+88.3592 	EXP 	incorrect: autoDraw = True
+89.5492 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/08_tipako2.wav'), ('imageTrue', 'pngimages/08_bell.png'), ('audioFalse', 'trainingaudio/22_kakoki1.wav'), ('imageFalse', 'pngimages/22_egg.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+89.5831 	DATA 	Keypress: j
+89.5883 	EXP 	correct: autoDraw = False
+89.5883 	EXP 	incorrect: autoDraw = False
+89.5883 	EXP 	correct: pos = array([0.5, 0. ])
+89.5883 	EXP 	correct: image = 'pngimages/08_bell.png'
+89.5883 	EXP 	incorrect: pos = array([-0.5,  0. ])
+89.5883 	EXP 	incorrect: image = 'pngimages/22_egg.png'
+89.5883 	EXP 	correct: autoDraw = True
+89.5883 	EXP 	incorrect: autoDraw = True
+90.3797 	DATA 	Keypress: j
+90.5824 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/18_popata2.wav'), ('imageTrue', 'pngimages/18_donut.png'), ('audioFalse', 'trainingaudio/14_pokoto1.wav'), ('imageFalse', 'pngimages/14_coffee.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+90.6030 	EXP 	correct: autoDraw = False
+90.6030 	EXP 	incorrect: autoDraw = False
+90.6030 	EXP 	correct: pos = array([-0.5,  0. ])
+90.6030 	EXP 	correct: image = 'pngimages/18_donut.png'
+90.6030 	EXP 	incorrect: pos = array([0.5, 0. ])
+90.6030 	EXP 	incorrect: image = 'pngimages/14_coffee.png'
+90.6030 	EXP 	correct: autoDraw = True
+90.6030 	EXP 	incorrect: autoDraw = True
+91.4971 	DATA 	Keypress: j
+91.5842 	EXP 	New trial (rep=0, index=7): OrderedDict([('condFiles', 'autoConditions/train1Block8.xlsx'), ('testFiles', 'autoConditions/train1Block8Test.xlsx')])
+91.5927 	EXP 	Imported autoConditions/train1Block8.xlsx as conditions, 6 conditions, 2 params
+91.5929 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+91.5932 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/05_titopo2.wav'), ('imageLoc', 'pngimages/05_megaphone.png')])
+91.6074 	EXP 	correct: autoDraw = False
+91.6074 	EXP 	incorrect: autoDraw = False
+91.6074 	EXP 	imagetrain1: image = 'pngimages/05_megaphone.png'
+91.6074 	EXP 	imagetrain1: autoDraw = True
+92.5983 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/21_papika1.wav'), ('imageLoc', 'pngimages/21_cheese.png')])
+92.6244 	EXP 	imagetrain1: autoDraw = False
+92.6244 	EXP 	imagetrain1: autoDraw = False
+92.6244 	EXP 	imagetrain1: image = 'pngimages/21_cheese.png'
+92.6244 	EXP 	imagetrain1: autoDraw = True
+93.6155 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/12_pokika3.wav'), ('imageLoc', 'pngimages/12_pie.png')])
+93.6697 	EXP 	imagetrain1: autoDraw = False
+93.6697 	EXP 	imagetrain1: autoDraw = False
+93.6697 	EXP 	imagetrain1: image = 'pngimages/12_pie.png'
+93.6697 	EXP 	imagetrain1: autoDraw = True
+94.6661 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/01_kitipi1.wav'), ('imageLoc', 'pngimages/01_gift.png')])
+94.6805 	EXP 	imagetrain1: autoDraw = False
+94.6805 	EXP 	imagetrain1: autoDraw = False
+94.6805 	EXP 	imagetrain1: image = 'pngimages/01_gift.png'
+94.6805 	EXP 	imagetrain1: autoDraw = True
+95.6669 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/07_pitapi2.wav'), ('imageLoc', 'pngimages/07_suitcase.png')])
+95.6813 	EXP 	imagetrain1: autoDraw = False
+95.6813 	EXP 	imagetrain1: autoDraw = False
+95.6813 	EXP 	imagetrain1: image = 'pngimages/07_suitcase.png'
+95.6813 	EXP 	imagetrain1: autoDraw = True
+96.6675 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/02_pitito3.wav'), ('imageLoc', 'pngimages/02_pallet.png')])
+96.6821 	EXP 	imagetrain1: autoDraw = False
+96.6821 	EXP 	imagetrain1: autoDraw = False
+96.6821 	EXP 	imagetrain1: image = 'pngimages/02_pallet.png'
+96.6821 	EXP 	imagetrain1: autoDraw = True
+97.6777 	EXP 	Imported autoConditions/train1Block8Test.xlsx as conditions, 3 conditions, 6 params
+97.6779 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+97.6782 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/12_pokika3.wav'), ('imageTrue', 'pngimages/12_pie.png'), ('audioFalse', 'trainingaudio/02_pitito3.wav'), ('imageFalse', 'pngimages/02_pallet.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+97.7192 	EXP 	imagetrain1: autoDraw = False
+97.7192 	EXP 	imagetrain1: autoDraw = False
+97.7192 	EXP 	correct: pos = array([-0.5,  0. ])
+97.7192 	EXP 	correct: image = 'pngimages/12_pie.png'
+97.7192 	EXP 	incorrect: pos = array([0.5, 0. ])
+97.7192 	EXP 	incorrect: image = 'pngimages/02_pallet.png'
+97.7192 	EXP 	correct: autoDraw = True
+97.7192 	EXP 	incorrect: autoDraw = True
+98.7572 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/01_kitipi1.wav'), ('imageTrue', 'pngimages/01_gift.png'), ('audioFalse', 'trainingaudio/21_papika1.wav'), ('imageFalse', 'pngimages/21_cheese.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+98.7889 	DATA 	Keypress: j
+98.7939 	EXP 	correct: autoDraw = False
+98.7939 	EXP 	incorrect: autoDraw = False
+98.7939 	EXP 	correct: pos = array([-0.5,  0. ])
+98.7939 	EXP 	correct: image = 'pngimages/01_gift.png'
+98.7939 	EXP 	incorrect: pos = array([0.5, 0. ])
+98.7939 	EXP 	incorrect: image = 'pngimages/21_cheese.png'
+98.7939 	EXP 	correct: autoDraw = True
+98.7939 	EXP 	incorrect: autoDraw = True
+100.4728 	DATA 	Keypress: j
+100.4907 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/07_pitapi2.wav'), ('imageTrue', 'pngimages/07_suitcase.png'), ('audioFalse', 'trainingaudio/05_titopo2.wav'), ('imageFalse', 'pngimages/05_megaphone.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+100.5114 	EXP 	correct: autoDraw = False
+100.5114 	EXP 	incorrect: autoDraw = False
+100.5114 	EXP 	correct: pos = array([-0.5,  0. ])
+100.5114 	EXP 	correct: image = 'pngimages/07_suitcase.png'
+100.5114 	EXP 	incorrect: pos = array([0.5, 0. ])
+100.5114 	EXP 	incorrect: image = 'pngimages/05_megaphone.png'
+100.5114 	EXP 	correct: autoDraw = True
+100.5114 	EXP 	incorrect: autoDraw = True
+100.8393 	DATA 	Keypress: j
+101.5088 	EXP 	New trial (rep=0, index=8): OrderedDict([('condFiles', 'autoConditions/train1Block9.xlsx'), ('testFiles', 'autoConditions/train1Block9Test.xlsx')])
+101.5167 	EXP 	Imported autoConditions/train1Block9.xlsx as conditions, 6 conditions, 2 params
+101.5170 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+101.5174 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/04_kitoti2.wav'), ('imageLoc', 'pngimages/04_ladder.png')])
+101.5321 	EXP 	correct: autoDraw = False
+101.5321 	EXP 	incorrect: autoDraw = False
+101.5321 	EXP 	imagetrain1: image = 'pngimages/04_ladder.png'
+101.5321 	EXP 	imagetrain1: autoDraw = True
+102.5227 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/27_pakapa1.wav'), ('imageLoc', 'pngimages/27_kiwi.png')])
+102.5373 	EXP 	imagetrain1: autoDraw = False
+102.5373 	EXP 	imagetrain1: autoDraw = False
+102.5373 	EXP 	imagetrain1: image = 'pngimages/27_kiwi.png'
+102.5373 	EXP 	imagetrain1: autoDraw = True
+103.5240 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/26_kapako1.wav'), ('imageLoc', 'pngimages/26_pineapple.png')])
+103.5489 	EXP 	imagetrain1: autoDraw = False
+103.5489 	EXP 	imagetrain1: autoDraw = False
+103.5489 	EXP 	imagetrain1: image = 'pngimages/26_pineapple.png'
+103.5489 	EXP 	imagetrain1: autoDraw = True
+104.5404 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/20_tatito1.wav'), ('imageLoc', 'pngimages/20_pizza.png')])
+104.5632 	EXP 	imagetrain1: autoDraw = False
+104.5632 	EXP 	imagetrain1: autoDraw = False
+104.5632 	EXP 	imagetrain1: image = 'pngimages/20_pizza.png'
+104.5632 	EXP 	imagetrain1: autoDraw = True
+105.5589 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/16_kotapi2.wav'), ('imageLoc', 'pngimages/16_icecream.png')])
+105.5728 	EXP 	imagetrain1: autoDraw = False
+105.5728 	EXP 	imagetrain1: autoDraw = False
+105.5728 	EXP 	imagetrain1: image = 'pngimages/16_icecream.png'
+105.5728 	EXP 	imagetrain1: autoDraw = True
+106.5590 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/03_kikita3.wav'), ('imageLoc', 'pngimages/03_box.png')])
+106.5738 	EXP 	imagetrain1: autoDraw = False
+106.5738 	EXP 	imagetrain1: autoDraw = False
+106.5738 	EXP 	imagetrain1: image = 'pngimages/03_box.png'
+106.5738 	EXP 	imagetrain1: autoDraw = True
+107.5696 	EXP 	Imported autoConditions/train1Block9Test.xlsx as conditions, 3 conditions, 6 params
+107.5701 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+107.5708 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/26_kapako1.wav'), ('imageTrue', 'pngimages/26_pineapple.png'), ('audioFalse', 'trainingaudio/16_kotapi2.wav'), ('imageFalse', 'pngimages/16_icecream.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+107.6012 	EXP 	imagetrain1: autoDraw = False
+107.6012 	EXP 	imagetrain1: autoDraw = False
+107.6012 	EXP 	correct: pos = array([-0.5,  0. ])
+107.6012 	EXP 	correct: image = 'pngimages/26_pineapple.png'
+107.6012 	EXP 	incorrect: pos = array([0.5, 0. ])
+107.6012 	EXP 	incorrect: image = 'pngimages/16_icecream.png'
+107.6012 	EXP 	correct: autoDraw = True
+107.6012 	EXP 	incorrect: autoDraw = True
+108.6151 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/27_pakapa1.wav'), ('imageTrue', 'pngimages/27_kiwi.png'), ('audioFalse', 'trainingaudio/20_tatito1.wav'), ('imageFalse', 'pngimages/20_pizza.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+108.6433 	DATA 	Keypress: j
+108.6484 	EXP 	correct: autoDraw = False
+108.6484 	EXP 	incorrect: autoDraw = False
+108.6484 	EXP 	correct: pos = array([-0.5,  0. ])
+108.6484 	EXP 	correct: image = 'pngimages/27_kiwi.png'
+108.6484 	EXP 	incorrect: pos = array([0.5, 0. ])
+108.6484 	EXP 	incorrect: image = 'pngimages/20_pizza.png'
+108.6484 	EXP 	correct: autoDraw = True
+108.6484 	EXP 	incorrect: autoDraw = True
+109.7323 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/03_kikita3.wav'), ('imageTrue', 'pngimages/03_box.png'), ('audioFalse', 'trainingaudio/04_kitoti2.wav'), ('imageFalse', 'pngimages/04_ladder.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+109.7527 	DATA 	Keypress: j
+109.7578 	EXP 	correct: autoDraw = False
+109.7578 	EXP 	incorrect: autoDraw = False
+109.7578 	EXP 	correct: pos = array([-0.5,  0. ])
+109.7578 	EXP 	correct: image = 'pngimages/03_box.png'
+109.7578 	EXP 	incorrect: pos = array([0.5, 0. ])
+109.7578 	EXP 	incorrect: image = 'pngimages/04_ladder.png'
+109.7578 	EXP 	correct: autoDraw = True
+109.7578 	EXP 	incorrect: autoDraw = True
+110.4971 	DATA 	Keypress: j
+110.7598 	EXP 	correct: autoDraw = False
+110.7598 	EXP 	incorrect: autoDraw = False
+110.7598 	EXP 	notice: autoDraw = True
+116.0091 	EXP 	Imported autoConditions\train2LoopCondition.xlsx as conditions, 3 conditions, 2 params
+116.0094 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+116.0096 	EXP 	New trial (rep=0, index=0): OrderedDict([('condFiles', 'autoConditions/train2Block1.xlsx'), ('testFiles', 'autoConditions/train2Block1Test.xlsx')])
+116.0168 	EXP 	Imported autoConditions/train2Block1.xlsx as conditions, 9 conditions, 2 params
+116.0171 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+116.0174 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/07_pitapi2.wav'), ('imageLoc', 'pngimages/07_suitcase.png')])
+116.0265 	DATA 	Keypress: f
+116.0302 	EXP 	notice: autoDraw = False
+116.0302 	EXP 	imagetrain2: image = 'pngimages/07_suitcase.png'
+116.0302 	EXP 	imagetrain2: autoDraw = True
+117.0187 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/15_kopota3.wav'), ('imageLoc', 'pngimages/15_barrel.png')])
+117.0617 	EXP 	imagetrain2: autoDraw = False
+117.0617 	EXP 	imagetrain2: autoDraw = False
+117.0617 	EXP 	imagetrain2: image = 'pngimages/15_barrel.png'
+117.0617 	EXP 	imagetrain2: autoDraw = True
+118.0525 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/21_papika1.wav'), ('imageLoc', 'pngimages/21_cheese.png')])
+118.0836 	EXP 	imagetrain2: autoDraw = False
+118.0836 	EXP 	imagetrain2: autoDraw = False
+118.0836 	EXP 	imagetrain2: image = 'pngimages/21_cheese.png'
+118.0836 	EXP 	imagetrain2: autoDraw = True
+119.0693 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/18_popata2.wav'), ('imageLoc', 'pngimages/18_donut.png')])
+119.0857 	EXP 	imagetrain2: autoDraw = False
+119.0857 	EXP 	imagetrain2: autoDraw = False
+119.0857 	EXP 	imagetrain2: image = 'pngimages/18_donut.png'
+119.0857 	EXP 	imagetrain2: autoDraw = True
+120.0710 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/01_kitipi1.wav'), ('imageLoc', 'pngimages/01_gift.png')])
+120.0869 	EXP 	imagetrain2: autoDraw = False
+120.0869 	EXP 	imagetrain2: autoDraw = False
+120.0869 	EXP 	imagetrain2: image = 'pngimages/01_gift.png'
+120.0869 	EXP 	imagetrain2: autoDraw = True
+121.0883 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/06_titoka3.wav'), ('imageLoc', 'pngimages/06_tent.png')])
+121.1139 	EXP 	imagetrain2: autoDraw = False
+121.1139 	EXP 	imagetrain2: autoDraw = False
+121.1139 	EXP 	imagetrain2: image = 'pngimages/06_tent.png'
+121.1139 	EXP 	imagetrain2: autoDraw = True
+122.1063 	EXP 	New trial (rep=0, index=6): OrderedDict([('audio', 'trainingaudio/19_papipi1.wav'), ('imageLoc', 'pngimages/19_burger.png')])
+122.1207 	EXP 	imagetrain2: autoDraw = False
+122.1207 	EXP 	imagetrain2: autoDraw = False
+122.1207 	EXP 	imagetrain2: image = 'pngimages/19_burger.png'
+122.1207 	EXP 	imagetrain2: autoDraw = True
+123.1065 	EXP 	New trial (rep=0, index=7): OrderedDict([('audio', 'trainingaudio/04_kitoti2.wav'), ('imageLoc', 'pngimages/04_ladder.png')])
+123.1207 	EXP 	imagetrain2: autoDraw = False
+123.1207 	EXP 	imagetrain2: autoDraw = False
+123.1207 	EXP 	imagetrain2: image = 'pngimages/04_ladder.png'
+123.1207 	EXP 	imagetrain2: autoDraw = True
+124.1077 	EXP 	New trial (rep=0, index=8): OrderedDict([('audio', 'trainingaudio/20_tatito1.wav'), ('imageLoc', 'pngimages/20_pizza.png')])
+124.1326 	EXP 	imagetrain2: autoDraw = False
+124.1326 	EXP 	imagetrain2: autoDraw = False
+124.1326 	EXP 	imagetrain2: image = 'pngimages/20_pizza.png'
+124.1326 	EXP 	imagetrain2: autoDraw = True
+125.1341 	EXP 	Imported autoConditions/train2Block1Test.xlsx as conditions, 9 conditions, 6 params
+125.1344 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+125.1347 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/18_popata2.wav'), ('imageTrue', 'pngimages/18_donut.png'), ('audioFalse', 'trainingaudio/06_titoka3.wav'), ('imageFalse', 'pngimages/06_tent.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+125.1546 	EXP 	imagetrain2: autoDraw = False
+125.1546 	EXP 	imagetrain2: autoDraw = False
+125.1546 	EXP 	correct2: pos = array([0.5, 0. ])
+125.1546 	EXP 	correct2: image = 'pngimages/18_donut.png'
+125.1546 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+125.1546 	EXP 	incorrect2: image = 'pngimages/06_tent.png'
+125.1546 	EXP 	correct2: autoDraw = True
+125.1546 	EXP 	incorrect2: autoDraw = True
+126.5471 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/20_tatito1.wav'), ('imageTrue', 'pngimages/20_pizza.png'), ('audioFalse', 'trainingaudio/19_papipi1.wav'), ('imageFalse', 'pngimages/19_burger.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+126.5774 	DATA 	Keypress: j
+126.5825 	EXP 	correct2: autoDraw = False
+126.5825 	EXP 	incorrect2: autoDraw = False
+126.5825 	EXP 	correct2: pos = array([-0.5,  0. ])
+126.5825 	EXP 	correct2: image = 'pngimages/20_pizza.png'
+126.5825 	EXP 	incorrect2: pos = array([0.5, 0. ])
+126.5825 	EXP 	incorrect2: image = 'pngimages/19_burger.png'
+126.5825 	EXP 	correct2: autoDraw = True
+126.5825 	EXP 	incorrect2: autoDraw = True
+127.7642 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/21_papika1.wav'), ('imageTrue', 'pngimages/21_cheese.png'), ('audioFalse', 'trainingaudio/01_kitipi1.wav'), ('imageFalse', 'pngimages/01_gift.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+127.7965 	DATA 	Keypress: j
+127.8015 	EXP 	correct2: autoDraw = False
+127.8015 	EXP 	incorrect2: autoDraw = False
+127.8015 	EXP 	correct2: pos = array([-0.5,  0. ])
+127.8015 	EXP 	correct2: image = 'pngimages/21_cheese.png'
+127.8015 	EXP 	incorrect2: pos = array([0.5, 0. ])
+127.8015 	EXP 	incorrect2: image = 'pngimages/01_gift.png'
+127.8015 	EXP 	correct2: autoDraw = True
+127.8015 	EXP 	incorrect2: autoDraw = True
+128.9149 	EXP 	New trial (rep=0, index=3): OrderedDict([('audioTrue', 'trainingaudio/15_kopota3.wav'), ('imageTrue', 'pngimages/15_barrel.png'), ('audioFalse', 'trainingaudio/04_kitoti2.wav'), ('imageFalse', 'pngimages/04_ladder.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+128.9839 	DATA 	Keypress: j
+128.9896 	EXP 	correct2: autoDraw = False
+128.9896 	EXP 	incorrect2: autoDraw = False
+128.9896 	EXP 	correct2: pos = array([-0.5,  0. ])
+128.9896 	EXP 	correct2: image = 'pngimages/15_barrel.png'
+128.9896 	EXP 	incorrect2: pos = array([0.5, 0. ])
+128.9896 	EXP 	incorrect2: image = 'pngimages/04_ladder.png'
+128.9896 	EXP 	correct2: autoDraw = True
+128.9896 	EXP 	incorrect2: autoDraw = True
+130.1323 	EXP 	New trial (rep=0, index=4): OrderedDict([('audioTrue', 'trainingaudio/07_pitapi2.wav'), ('imageTrue', 'pngimages/07_suitcase.png'), ('audioFalse', 'trainingaudio/06_titoka3.wav'), ('imageFalse', 'pngimages/06_tent.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+130.1656 	DATA 	Keypress: j
+130.1701 	EXP 	correct2: autoDraw = False
+130.1701 	EXP 	incorrect2: autoDraw = False
+130.1701 	EXP 	correct2: pos = array([0.5, 0. ])
+130.1701 	EXP 	correct2: image = 'pngimages/07_suitcase.png'
+130.1701 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+130.1701 	EXP 	incorrect2: image = 'pngimages/06_tent.png'
+130.1701 	EXP 	correct2: autoDraw = True
+130.1701 	EXP 	incorrect2: autoDraw = True
+131.3160 	DATA 	Keypress: j
+131.3327 	EXP 	New trial (rep=0, index=5): OrderedDict([('audioTrue', 'trainingaudio/20_tatito1.wav'), ('imageTrue', 'pngimages/20_pizza.png'), ('audioFalse', 'trainingaudio/01_kitipi1.wav'), ('imageFalse', 'pngimages/01_gift.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+131.3651 	EXP 	correct2: autoDraw = False
+131.3651 	EXP 	incorrect2: autoDraw = False
+131.3651 	EXP 	correct2: pos = array([-0.5,  0. ])
+131.3651 	EXP 	correct2: image = 'pngimages/20_pizza.png'
+131.3651 	EXP 	incorrect2: pos = array([0.5, 0. ])
+131.3651 	EXP 	incorrect2: image = 'pngimages/01_gift.png'
+131.3651 	EXP 	correct2: autoDraw = True
+131.3651 	EXP 	incorrect2: autoDraw = True
+132.5173 	EXP 	New trial (rep=0, index=6): OrderedDict([('audioTrue', 'trainingaudio/07_pitapi2.wav'), ('imageTrue', 'pngimages/07_suitcase.png'), ('audioFalse', 'trainingaudio/21_papika1.wav'), ('imageFalse', 'pngimages/21_cheese.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+132.5463 	DATA 	Keypress: j
+132.5514 	EXP 	correct2: autoDraw = False
+132.5514 	EXP 	incorrect2: autoDraw = False
+132.5514 	EXP 	correct2: pos = array([0.5, 0. ])
+132.5514 	EXP 	correct2: image = 'pngimages/07_suitcase.png'
+132.5514 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+132.5514 	EXP 	incorrect2: image = 'pngimages/21_cheese.png'
+132.5514 	EXP 	correct2: autoDraw = True
+132.5514 	EXP 	incorrect2: autoDraw = True
+133.6853 	EXP 	New trial (rep=0, index=7): OrderedDict([('audioTrue', 'trainingaudio/04_kitoti2.wav'), ('imageTrue', 'pngimages/04_ladder.png'), ('audioFalse', 'trainingaudio/18_popata2.wav'), ('imageFalse', 'pngimages/18_donut.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+133.7061 	DATA 	Keypress: j
+133.7113 	EXP 	correct2: autoDraw = False
+133.7113 	EXP 	incorrect2: autoDraw = False
+133.7113 	EXP 	correct2: pos = array([-0.5,  0. ])
+133.7113 	EXP 	correct2: image = 'pngimages/04_ladder.png'
+133.7113 	EXP 	incorrect2: pos = array([0.5, 0. ])
+133.7113 	EXP 	incorrect2: image = 'pngimages/18_donut.png'
+133.7113 	EXP 	correct2: autoDraw = True
+133.7113 	EXP 	incorrect2: autoDraw = True
+134.8532 	EXP 	New trial (rep=0, index=8): OrderedDict([('audioTrue', 'trainingaudio/15_kopota3.wav'), ('imageTrue', 'pngimages/15_barrel.png'), ('audioFalse', 'trainingaudio/19_papipi1.wav'), ('imageFalse', 'pngimages/19_burger.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+134.9024 	DATA 	Keypress: j
+134.9076 	EXP 	correct2: autoDraw = False
+134.9076 	EXP 	incorrect2: autoDraw = False
+134.9076 	EXP 	correct2: pos = array([-0.5,  0. ])
+134.9076 	EXP 	correct2: image = 'pngimages/15_barrel.png'
+134.9076 	EXP 	incorrect2: pos = array([0.5, 0. ])
+134.9076 	EXP 	incorrect2: image = 'pngimages/19_burger.png'
+134.9076 	EXP 	correct2: autoDraw = True
+134.9076 	EXP 	incorrect2: autoDraw = True
+136.1877 	EXP 	New trial (rep=0, index=1): OrderedDict([('condFiles', 'autoConditions/train2Block2.xlsx'), ('testFiles', 'autoConditions/train2Block2Test.xlsx')])
+136.1963 	EXP 	Imported autoConditions/train2Block2.xlsx as conditions, 9 conditions, 2 params
+136.1965 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+136.1968 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/25_tapapi1.wav'), ('imageLoc', 'pngimages/25_apple.png')])
+136.2079 	DATA 	Keypress: j
+136.2116 	EXP 	correct2: autoDraw = False
+136.2116 	EXP 	incorrect2: autoDraw = False
+136.2116 	EXP 	imagetrain2: image = 'pngimages/25_apple.png'
+136.2116 	EXP 	imagetrain2: autoDraw = True
+137.2013 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/08_tipako2.wav'), ('imageLoc', 'pngimages/08_bell.png')])
+137.2162 	EXP 	imagetrain2: autoDraw = False
+137.2162 	EXP 	imagetrain2: autoDraw = False
+137.2162 	EXP 	imagetrain2: image = 'pngimages/08_bell.png'
+137.2162 	EXP 	imagetrain2: autoDraw = True
+137.3183 	DATA 	Keypress: j
+138.2031 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/09_tipata2.wav'), ('imageLoc', 'pngimages/09_plane.png')])
+138.2319 	EXP 	imagetrain2: autoDraw = False
+138.2319 	EXP 	imagetrain2: autoDraw = False
+138.2319 	EXP 	imagetrain2: image = 'pngimages/09_plane.png'
+138.2319 	EXP 	imagetrain2: autoDraw = True
+139.2194 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/13_kopopi1.wav'), ('imageLoc', 'pngimages/13_toast.png')])
+139.2342 	EXP 	imagetrain2: autoDraw = False
+139.2342 	EXP 	imagetrain2: autoDraw = False
+139.2342 	EXP 	imagetrain2: image = 'pngimages/13_toast.png'
+139.2342 	EXP 	imagetrain2: autoDraw = True
+140.2202 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/03_kikita3.wav'), ('imageLoc', 'pngimages/03_box.png')])
+140.2350 	EXP 	imagetrain2: autoDraw = False
+140.2350 	EXP 	imagetrain2: autoDraw = False
+140.2350 	EXP 	imagetrain2: image = 'pngimages/03_box.png'
+140.2350 	EXP 	imagetrain2: autoDraw = True
+141.2214 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/10_tokiti1.wav'), ('imageLoc', 'pngimages/10_backpack.png')])
+141.2358 	EXP 	imagetrain2: autoDraw = False
+141.2358 	EXP 	imagetrain2: autoDraw = False
+141.2358 	EXP 	imagetrain2: image = 'pngimages/10_backpack.png'
+141.2358 	EXP 	imagetrain2: autoDraw = True
+142.2235 	EXP 	New trial (rep=0, index=6): OrderedDict([('audio', 'trainingaudio/11_tokiko1.wav'), ('imageLoc', 'pngimages/11_compass.png')])
+142.2430 	EXP 	imagetrain2: autoDraw = False
+142.2430 	EXP 	imagetrain2: autoDraw = False
+142.2430 	EXP 	imagetrain2: image = 'pngimages/11_compass.png'
+142.2430 	EXP 	imagetrain2: autoDraw = True
+143.2433 	EXP 	New trial (rep=0, index=7): OrderedDict([('audio', 'trainingaudio/24_takopa1.wav'), ('imageLoc', 'pngimages/24_banana.png')])
+143.3197 	EXP 	imagetrain2: autoDraw = False
+143.3197 	EXP 	imagetrain2: autoDraw = False
+143.3197 	EXP 	imagetrain2: image = 'pngimages/24_banana.png'
+143.3197 	EXP 	imagetrain2: autoDraw = True
+144.3072 	EXP 	New trial (rep=0, index=8): OrderedDict([('audio', 'trainingaudio/17_kotako2.wav'), ('imageLoc', 'pngimages/17_cracker.png')])
+144.3217 	EXP 	imagetrain2: autoDraw = False
+144.3217 	EXP 	imagetrain2: autoDraw = False
+144.3217 	EXP 	imagetrain2: image = 'pngimages/17_cracker.png'
+144.3217 	EXP 	imagetrain2: autoDraw = True
+145.3181 	EXP 	Imported autoConditions/train2Block2Test.xlsx as conditions, 9 conditions, 6 params
+145.3184 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+145.3187 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/25_tapapi1.wav'), ('imageTrue', 'pngimages/25_apple.png'), ('audioFalse', 'trainingaudio/13_kopopi1.wav'), ('imageFalse', 'pngimages/13_toast.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+145.3405 	EXP 	imagetrain2: autoDraw = False
+145.3405 	EXP 	imagetrain2: autoDraw = False
+145.3405 	EXP 	correct2: pos = array([0.5, 0. ])
+145.3405 	EXP 	correct2: image = 'pngimages/25_apple.png'
+145.3405 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+145.3405 	EXP 	incorrect2: image = 'pngimages/13_toast.png'
+145.3405 	EXP 	correct2: autoDraw = True
+145.3405 	EXP 	incorrect2: autoDraw = True
+146.8801 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/11_tokiko1.wav'), ('imageTrue', 'pngimages/11_compass.png'), ('audioFalse', 'trainingaudio/24_takopa1.wav'), ('imageFalse', 'pngimages/24_banana.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+146.9185 	DATA 	Keypress: j
+146.9235 	EXP 	correct2: autoDraw = False
+146.9235 	EXP 	incorrect2: autoDraw = False
+146.9235 	EXP 	correct2: pos = array([0.5, 0. ])
+146.9235 	EXP 	correct2: image = 'pngimages/11_compass.png'
+146.9235 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+146.9235 	EXP 	incorrect2: image = 'pngimages/24_banana.png'
+146.9235 	EXP 	correct2: autoDraw = True
+146.9235 	EXP 	incorrect2: autoDraw = True
+147.9642 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/09_tipata2.wav'), ('imageTrue', 'pngimages/09_plane.png'), ('audioFalse', 'trainingaudio/10_tokiti1.wav'), ('imageFalse', 'pngimages/10_backpack.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+148.0130 	DATA 	Keypress: j
+148.0182 	EXP 	correct2: autoDraw = False
+148.0182 	EXP 	incorrect2: autoDraw = False
+148.0182 	EXP 	correct2: pos = array([-0.5,  0. ])
+148.0182 	EXP 	correct2: image = 'pngimages/09_plane.png'
+148.0182 	EXP 	incorrect2: pos = array([0.5, 0. ])
+148.0182 	EXP 	incorrect2: image = 'pngimages/10_backpack.png'
+148.0182 	EXP 	correct2: autoDraw = True
+148.0182 	EXP 	incorrect2: autoDraw = True
+148.6289 	DATA 	Keypress: j
+149.6154 	EXP 	New trial (rep=0, index=3): OrderedDict([('audioTrue', 'trainingaudio/17_kotako2.wav'), ('imageTrue', 'pngimages/17_cracker.png'), ('audioFalse', 'trainingaudio/08_tipako2.wav'), ('imageFalse', 'pngimages/08_bell.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+149.6318 	DATA 	Keypress: j
+149.6365 	EXP 	correct2: autoDraw = False
+149.6365 	EXP 	incorrect2: autoDraw = False
+149.6365 	EXP 	correct2: pos = array([-0.5,  0. ])
+149.6365 	EXP 	correct2: image = 'pngimages/17_cracker.png'
+149.6365 	EXP 	incorrect2: pos = array([0.5, 0. ])
+149.6365 	EXP 	incorrect2: image = 'pngimages/08_bell.png'
+149.6365 	EXP 	correct2: autoDraw = True
+149.6365 	EXP 	incorrect2: autoDraw = True
+150.8997 	EXP 	New trial (rep=0, index=4): OrderedDict([('audioTrue', 'trainingaudio/03_kikita3.wav'), ('imageTrue', 'pngimages/03_box.png'), ('audioFalse', 'trainingaudio/09_tipata2.wav'), ('imageFalse', 'pngimages/09_plane.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+150.9308 	DATA 	Keypress: j
+150.9362 	EXP 	correct2: autoDraw = False
+150.9362 	EXP 	incorrect2: autoDraw = False
+150.9362 	EXP 	correct2: pos = array([-0.5,  0. ])
+150.9362 	EXP 	correct2: image = 'pngimages/03_box.png'
+150.9362 	EXP 	incorrect2: pos = array([0.5, 0. ])
+150.9362 	EXP 	incorrect2: image = 'pngimages/09_plane.png'
+150.9362 	EXP 	correct2: autoDraw = True
+150.9362 	EXP 	incorrect2: autoDraw = True
+152.0832 	EXP 	New trial (rep=0, index=5): OrderedDict([('audioTrue', 'trainingaudio/17_kotako2.wav'), ('imageTrue', 'pngimages/17_cracker.png'), ('audioFalse', 'trainingaudio/25_tapapi1.wav'), ('imageFalse', 'pngimages/25_apple.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+152.1032 	DATA 	Keypress: j
+152.1080 	EXP 	correct2: autoDraw = False
+152.1080 	EXP 	incorrect2: autoDraw = False
+152.1080 	EXP 	correct2: pos = array([-0.5,  0. ])
+152.1080 	EXP 	correct2: image = 'pngimages/17_cracker.png'
+152.1080 	EXP 	incorrect2: pos = array([0.5, 0. ])
+152.1080 	EXP 	incorrect2: image = 'pngimages/25_apple.png'
+152.1080 	EXP 	correct2: autoDraw = True
+152.1080 	EXP 	incorrect2: autoDraw = True
+153.2176 	DATA 	Keypress: j
+153.2355 	EXP 	New trial (rep=0, index=6): OrderedDict([('audioTrue', 'trainingaudio/03_kikita3.wav'), ('imageTrue', 'pngimages/03_box.png'), ('audioFalse', 'trainingaudio/24_takopa1.wav'), ('imageFalse', 'pngimages/24_banana.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+153.3015 	EXP 	correct2: autoDraw = False
+153.3015 	EXP 	incorrect2: autoDraw = False
+153.3015 	EXP 	correct2: pos = array([-0.5,  0. ])
+153.3015 	EXP 	correct2: image = 'pngimages/03_box.png'
+153.3015 	EXP 	incorrect2: pos = array([0.5, 0. ])
+153.3015 	EXP 	incorrect2: image = 'pngimages/24_banana.png'
+153.3015 	EXP 	correct2: autoDraw = True
+153.3015 	EXP 	incorrect2: autoDraw = True
+154.4188 	EXP 	New trial (rep=0, index=7): OrderedDict([('audioTrue', 'trainingaudio/13_kopopi1.wav'), ('imageTrue', 'pngimages/13_toast.png'), ('audioFalse', 'trainingaudio/08_tipako2.wav'), ('imageFalse', 'pngimages/08_bell.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+154.4348 	DATA 	Keypress: j
+154.4397 	EXP 	correct2: autoDraw = False
+154.4397 	EXP 	incorrect2: autoDraw = False
+154.4397 	EXP 	correct2: pos = array([0.5, 0. ])
+154.4397 	EXP 	correct2: image = 'pngimages/13_toast.png'
+154.4397 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+154.4397 	EXP 	incorrect2: image = 'pngimages/08_bell.png'
+154.4397 	EXP 	correct2: autoDraw = True
+154.4397 	EXP 	incorrect2: autoDraw = True
+155.9376 	EXP 	New trial (rep=0, index=8): OrderedDict([('audioTrue', 'trainingaudio/11_tokiko1.wav'), ('imageTrue', 'pngimages/11_compass.png'), ('audioFalse', 'trainingaudio/10_tokiti1.wav'), ('imageFalse', 'pngimages/10_backpack.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+155.9561 	DATA 	Keypress: j
+155.9609 	EXP 	correct2: autoDraw = False
+155.9609 	EXP 	incorrect2: autoDraw = False
+155.9609 	EXP 	correct2: pos = array([-0.5,  0. ])
+155.9609 	EXP 	correct2: image = 'pngimages/11_compass.png'
+155.9609 	EXP 	incorrect2: pos = array([0.5, 0. ])
+155.9609 	EXP 	incorrect2: image = 'pngimages/10_backpack.png'
+155.9609 	EXP 	correct2: autoDraw = True
+155.9609 	EXP 	incorrect2: autoDraw = True
+157.0207 	DATA 	Keypress: j
+157.0386 	EXP 	New trial (rep=0, index=2): OrderedDict([('condFiles', 'autoConditions/train2Block3.xlsx'), ('testFiles', 'autoConditions/train2Block3Test.xlsx')])
+157.0470 	EXP 	Imported autoConditions/train2Block3.xlsx as conditions, 9 conditions, 2 params
+157.0473 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+157.0475 	EXP 	New trial (rep=0, index=0): OrderedDict([('audio', 'trainingaudio/16_kotapi2.wav'), ('imageLoc', 'pngimages/16_icecream.png')])
+157.0588 	EXP 	correct2: autoDraw = False
+157.0588 	EXP 	incorrect2: autoDraw = False
+157.0588 	EXP 	imagetrain2: image = 'pngimages/16_icecream.png'
+157.0588 	EXP 	imagetrain2: autoDraw = True
+158.0531 	EXP 	New trial (rep=0, index=1): OrderedDict([('audio', 'trainingaudio/02_pitito3.wav'), ('imageLoc', 'pngimages/02_pallet.png')])
+158.0665 	EXP 	imagetrain2: autoDraw = False
+158.0665 	EXP 	imagetrain2: autoDraw = False
+158.0665 	EXP 	imagetrain2: image = 'pngimages/02_pallet.png'
+158.0665 	EXP 	imagetrain2: autoDraw = True
+159.0528 	EXP 	New trial (rep=0, index=2): OrderedDict([('audio', 'trainingaudio/26_kapako1.wav'), ('imageLoc', 'pngimages/26_pineapple.png')])
+159.0761 	EXP 	imagetrain2: autoDraw = False
+159.0761 	EXP 	imagetrain2: autoDraw = False
+159.0761 	EXP 	imagetrain2: image = 'pngimages/26_pineapple.png'
+159.0761 	EXP 	imagetrain2: autoDraw = True
+160.0748 	EXP 	New trial (rep=0, index=3): OrderedDict([('audio', 'trainingaudio/22_kakoki1.wav'), ('imageLoc', 'pngimages/22_egg.png')])
+160.1290 	EXP 	imagetrain2: autoDraw = False
+160.1290 	EXP 	imagetrain2: autoDraw = False
+160.1290 	EXP 	imagetrain2: image = 'pngimages/22_egg.png'
+160.1290 	EXP 	imagetrain2: autoDraw = True
+161.1224 	EXP 	New trial (rep=0, index=4): OrderedDict([('audio', 'trainingaudio/14_pokoto1.wav'), ('imageLoc', 'pngimages/14_coffee.png')])
+161.1390 	EXP 	imagetrain2: autoDraw = False
+161.1390 	EXP 	imagetrain2: autoDraw = False
+161.1390 	EXP 	imagetrain2: image = 'pngimages/14_coffee.png'
+161.1390 	EXP 	imagetrain2: autoDraw = True
+162.1395 	EXP 	New trial (rep=0, index=5): OrderedDict([('audio', 'trainingaudio/05_titopo2.wav'), ('imageLoc', 'pngimages/05_megaphone.png')])
+162.1541 	EXP 	imagetrain2: autoDraw = False
+162.1541 	EXP 	imagetrain2: autoDraw = False
+162.1541 	EXP 	imagetrain2: image = 'pngimages/05_megaphone.png'
+162.1541 	EXP 	imagetrain2: autoDraw = True
+163.1398 	EXP 	New trial (rep=0, index=6): OrderedDict([('audio', 'trainingaudio/23_patoko1.wav'), ('imageLoc', 'pngimages/23_lemon.png')])
+163.1541 	EXP 	imagetrain2: autoDraw = False
+163.1541 	EXP 	imagetrain2: autoDraw = False
+163.1541 	EXP 	imagetrain2: image = 'pngimages/23_lemon.png'
+163.1541 	EXP 	imagetrain2: autoDraw = True
+164.1411 	EXP 	New trial (rep=0, index=7): OrderedDict([('audio', 'trainingaudio/27_pakapa1.wav'), ('imageLoc', 'pngimages/27_kiwi.png')])
+164.1549 	EXP 	imagetrain2: autoDraw = False
+164.1549 	EXP 	imagetrain2: autoDraw = False
+164.1549 	EXP 	imagetrain2: image = 'pngimages/27_kiwi.png'
+164.1549 	EXP 	imagetrain2: autoDraw = True
+165.1420 	EXP 	New trial (rep=0, index=8): OrderedDict([('audio', 'trainingaudio/12_pokika3.wav'), ('imageLoc', 'pngimages/12_pie.png')])
+165.1773 	EXP 	imagetrain2: autoDraw = False
+165.1773 	EXP 	imagetrain2: autoDraw = False
+165.1773 	EXP 	imagetrain2: image = 'pngimages/12_pie.png'
+165.1773 	EXP 	imagetrain2: autoDraw = True
+166.1846 	EXP 	Imported autoConditions/train2Block3Test.xlsx as conditions, 9 conditions, 6 params
+166.1850 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+166.1855 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioTrue', 'trainingaudio/02_pitito3.wav'), ('imageTrue', 'pngimages/02_pallet.png'), ('audioFalse', 'trainingaudio/12_pokika3.wav'), ('imageFalse', 'pngimages/12_pie.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+166.2253 	EXP 	imagetrain2: autoDraw = False
+166.2253 	EXP 	imagetrain2: autoDraw = False
+166.2253 	EXP 	correct2: pos = array([0.5, 0. ])
+166.2253 	EXP 	correct2: image = 'pngimages/02_pallet.png'
+166.2253 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+166.2253 	EXP 	incorrect2: image = 'pngimages/12_pie.png'
+166.2253 	EXP 	correct2: autoDraw = True
+166.2253 	EXP 	incorrect2: autoDraw = True
+168.0480 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioTrue', 'trainingaudio/16_kotapi2.wav'), ('imageTrue', 'pngimages/16_icecream.png'), ('audioFalse', 'trainingaudio/05_titopo2.wav'), ('imageFalse', 'pngimages/05_megaphone.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+168.0651 	DATA 	Keypress: j
+168.0697 	EXP 	correct2: autoDraw = False
+168.0697 	EXP 	incorrect2: autoDraw = False
+168.0697 	EXP 	correct2: pos = array([0.5, 0. ])
+168.0697 	EXP 	correct2: image = 'pngimages/16_icecream.png'
+168.0697 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+168.0697 	EXP 	incorrect2: image = 'pngimages/05_megaphone.png'
+168.0697 	EXP 	correct2: autoDraw = True
+168.0697 	EXP 	incorrect2: autoDraw = True
+169.1313 	EXP 	New trial (rep=0, index=2): OrderedDict([('audioTrue', 'trainingaudio/27_pakapa1.wav'), ('imageTrue', 'pngimages/27_kiwi.png'), ('audioFalse', 'trainingaudio/26_kapako1.wav'), ('imageFalse', 'pngimages/26_pineapple.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+169.1591 	DATA 	Keypress: j
+169.1639 	EXP 	correct2: autoDraw = False
+169.1639 	EXP 	incorrect2: autoDraw = False
+169.1639 	EXP 	correct2: pos = array([0.5, 0. ])
+169.1639 	EXP 	correct2: image = 'pngimages/27_kiwi.png'
+169.1639 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+169.1639 	EXP 	incorrect2: image = 'pngimages/26_pineapple.png'
+169.1639 	EXP 	correct2: autoDraw = True
+169.1639 	EXP 	incorrect2: autoDraw = True
+170.1670 	DATA 	Keypress: j
+170.5983 	DATA 	Keypress: j
+170.6147 	EXP 	New trial (rep=0, index=3): OrderedDict([('audioTrue', 'trainingaudio/22_kakoki1.wav'), ('imageTrue', 'pngimages/22_egg.png'), ('audioFalse', 'trainingaudio/14_pokoto1.wav'), ('imageFalse', 'pngimages/14_coffee.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+170.6607 	EXP 	correct2: autoDraw = False
+170.6607 	EXP 	incorrect2: autoDraw = False
+170.6607 	EXP 	correct2: pos = array([-0.5,  0. ])
+170.6607 	EXP 	correct2: image = 'pngimages/22_egg.png'
+170.6607 	EXP 	incorrect2: pos = array([0.5, 0. ])
+170.6607 	EXP 	incorrect2: image = 'pngimages/14_coffee.png'
+170.6607 	EXP 	correct2: autoDraw = True
+170.6607 	EXP 	incorrect2: autoDraw = True
+171.5812 	DATA 	Keypress: j
+172.0343 	DATA 	Keypress: j
+172.0501 	EXP 	New trial (rep=0, index=4): OrderedDict([('audioTrue', 'trainingaudio/23_patoko1.wav'), ('imageTrue', 'pngimages/23_lemon.png'), ('audioFalse', 'trainingaudio/12_pokika3.wav'), ('imageFalse', 'pngimages/12_pie.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+172.1084 	EXP 	correct2: autoDraw = False
+172.1084 	EXP 	incorrect2: autoDraw = False
+172.1084 	EXP 	correct2: pos = array([0.5, 0. ])
+172.1084 	EXP 	correct2: image = 'pngimages/23_lemon.png'
+172.1084 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+172.1084 	EXP 	incorrect2: image = 'pngimages/12_pie.png'
+172.1084 	EXP 	correct2: autoDraw = True
+172.1084 	EXP 	incorrect2: autoDraw = True
+173.2353 	EXP 	New trial (rep=0, index=5): OrderedDict([('audioTrue', 'trainingaudio/22_kakoki1.wav'), ('imageTrue', 'pngimages/22_egg.png'), ('audioFalse', 'trainingaudio/05_titopo2.wav'), ('imageFalse', 'pngimages/05_megaphone.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+173.2688 	DATA 	Keypress: j
+173.2739 	EXP 	correct2: autoDraw = False
+173.2739 	EXP 	incorrect2: autoDraw = False
+173.2739 	EXP 	correct2: pos = array([-0.5,  0. ])
+173.2739 	EXP 	correct2: image = 'pngimages/22_egg.png'
+173.2739 	EXP 	incorrect2: pos = array([0.5, 0. ])
+173.2739 	EXP 	incorrect2: image = 'pngimages/05_megaphone.png'
+173.2739 	EXP 	correct2: autoDraw = True
+173.2739 	EXP 	incorrect2: autoDraw = True
+174.3685 	DATA 	Keypress: j
+174.3862 	EXP 	New trial (rep=0, index=6): OrderedDict([('audioTrue', 'trainingaudio/02_pitito3.wav'), ('imageTrue', 'pngimages/02_pallet.png'), ('audioFalse', 'trainingaudio/16_kotapi2.wav'), ('imageFalse', 'pngimages/16_icecream.png'), ('truePos', 0.5), ('falsePos', -0.5)])
+174.4041 	EXP 	correct2: autoDraw = False
+174.4041 	EXP 	incorrect2: autoDraw = False
+174.4041 	EXP 	correct2: pos = array([0.5, 0. ])
+174.4041 	EXP 	correct2: image = 'pngimages/02_pallet.png'
+174.4041 	EXP 	incorrect2: pos = array([-0.5,  0. ])
+174.4041 	EXP 	incorrect2: image = 'pngimages/16_icecream.png'
+174.4041 	EXP 	correct2: autoDraw = True
+174.4041 	EXP 	incorrect2: autoDraw = True
+175.5027 	DATA 	Keypress: j
+175.5205 	EXP 	New trial (rep=0, index=7): OrderedDict([('audioTrue', 'trainingaudio/23_patoko1.wav'), ('imageTrue', 'pngimages/23_lemon.png'), ('audioFalse', 'trainingaudio/26_kapako1.wav'), ('imageFalse', 'pngimages/26_pineapple.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+175.5530 	EXP 	correct2: autoDraw = False
+175.5530 	EXP 	incorrect2: autoDraw = False
+175.5530 	EXP 	correct2: pos = array([-0.5,  0. ])
+175.5530 	EXP 	correct2: image = 'pngimages/23_lemon.png'
+175.5530 	EXP 	incorrect2: pos = array([0.5, 0. ])
+175.5530 	EXP 	incorrect2: image = 'pngimages/26_pineapple.png'
+175.5530 	EXP 	correct2: autoDraw = True
+175.5530 	EXP 	incorrect2: autoDraw = True
+176.6043 	EXP 	New trial (rep=0, index=8): OrderedDict([('audioTrue', 'trainingaudio/27_pakapa1.wav'), ('imageTrue', 'pngimages/27_kiwi.png'), ('audioFalse', 'trainingaudio/14_pokoto1.wav'), ('imageFalse', 'pngimages/14_coffee.png'), ('truePos', -0.5), ('falsePos', 0.5)])
+176.6259 	DATA 	Keypress: j
+176.6307 	EXP 	correct2: autoDraw = False
+176.6307 	EXP 	incorrect2: autoDraw = False
+176.6307 	EXP 	correct2: pos = array([-0.5,  0. ])
+176.6307 	EXP 	correct2: image = 'pngimages/27_kiwi.png'
+176.6307 	EXP 	incorrect2: pos = array([0.5, 0. ])
+176.6307 	EXP 	incorrect2: image = 'pngimages/14_coffee.png'
+176.6307 	EXP 	correct2: autoDraw = True
+176.6307 	EXP 	incorrect2: autoDraw = True
+177.7767 	DATA 	Keypress: j
+177.7819 	EXP 	correct2: autoDraw = False
+177.7819 	EXP 	incorrect2: autoDraw = False
+177.7819 	EXP 	test1Instr: autoDraw = True
+181.6232 	DATA 	Keypress: j
+181.6509 	EXP 	Imported autoConditions\test1Conditions.xlsx as conditions, 54 conditions, 4 params
+181.6513 	EXP 	Created sequence: sequential, trialTypes=54, nReps=1, seed=None
+181.6516 	EXP 	New trial (rep=0, index=0): OrderedDict([('firstAudio', '17_kotako3.wav'), ('secondAudio', '17_kotako2.wav'), ('imageLoc', 'pngimages/17_cracker.png'), ('whichAudio', 2)])
+181.8518 	EXP 	window1: mouseVisible = True
