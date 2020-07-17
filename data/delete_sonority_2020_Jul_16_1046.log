@@ -1,0 +1,130 @@
+2.3116 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+8.3589 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1200]. Using actual size
+12.4289 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015CD84B3E48>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000015CD8280B38>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1200]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.4291 	EXP 	window1: recordFrameIntervals = False
+12.5918 	EXP 	window1: recordFrameIntervals = True
+12.7760 	EXP 	window1: recordFrameIntervals = False
+13.1810 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.3310 	EXP 	Sound stimulitrain1 set volume 1.000
+13.3344 	EXP 	Created imagetrain1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagetrain1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3345 	EXP 	Sound stimulitest1 set volume 1.000
+13.3365 	EXP 	Created correct = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='correct', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3385 	EXP 	Created incorrect = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='incorrect', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3736 	EXP 	Created notice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='notice', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.3737 	EXP 	Sound stimulitrain2 set volume 1.000
+13.3761 	EXP 	Created imagetrain2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagetrain2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3762 	EXP 	Sound stimulitest2 set volume 1.000
+13.3783 	EXP 	Created correct2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='correct2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3799 	EXP 	Created incorrect2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='incorrect2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3937 	EXP 	Created test1Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='test1Instr', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Instructions For Test1 Go Here', units='height', win=Window(...), wrapWidth=1)
+13.4041 	EXP 	Created oneWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='oneWarningTest1', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=array([255., 255., 255.]), text='Less than 1 minute left', units='height', win=Window(...), wrapWidth=1)
+13.4123 	EXP 	Created twoWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='twoWarningTest1', opacity=1.0, ori=0, pos=array([ 0. , -0.5]), rgb=array([255., 255., 255.]), text='Less than 2 minutes left', units='height', win=Window(...), wrapWidth=1)
+13.4207 	EXP 	Created threeWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='threeWarningTest1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Less than 3 minutes left', units='height', win=Window(...), wrapWidth=1)
+13.4262 	EXP 	Created fourWarningTest1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fourWarningTest1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Less than four minutes left', units='height', win=Window(...), wrapWidth=1)
+13.4263 	EXP 	Sound test1Audio1 set volume 1.000
+13.4264 	EXP 	Sound test1Audio2 set volume 1.000
+13.4282 	EXP 	Created test1Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test1Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.4472 	EXP 	Created test2Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='test2Instr', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Instructions For Test2 Go Here', units='height', win=Window(...), wrapWidth=1)
+13.4475 	EXP 	Sound test2Audio1 set volume 1.000
+13.4477 	EXP 	Sound test2Audio2 set volume 1.000
+13.4515 	EXP 	Created test2Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test2Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.4659 	EXP 	Created test3Instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='test3Instr', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Instructions For Test3 Go Here\n', units='height', win=Window(...), wrapWidth=1)
+13.4661 	EXP 	Sound test3Audio1 set volume 1.000
+13.4662 	EXP 	Sound test3Audio2 set volume 1.000
+13.4683 	EXP 	Created test3Image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='test3Image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.4857 	EXP 	Created postTestText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='postTestText', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.4858 	EXP 	Sound postTestAudio1 set volume 1.000
+13.5096 	EXP 	Created fSound = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sound.png', interpolate=True, mask=None, maskParams=None, name='fSound', opacity=1.0, ori=0.0, pos=array([-0.5, -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.5339 	EXP 	Created fMute = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='mute.png', interpolate=True, mask=None, maskParams=None, name='fMute', opacity=1.0, ori=0.0, pos=array([-0.5, -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.5341 	EXP 	Sound postTestAudio2 set volume 1.000
+13.5569 	EXP 	Created xMute1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, image='mute.png', interpolate=True, mask=None, maskParams=None, name='xMute1', opacity=1.0, ori=0.0, pos=array([ 0. , -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.5806 	EXP 	Created xSound = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image='Sound.png', interpolate=True, mask=None, maskParams=None, name='xSound', opacity=1.0, ori=0.0, pos=array([ 0. , -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.6035 	EXP 	Created xMute2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, image='mute.png', interpolate=True, mask=None, maskParams=None, name='xMute2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.6036 	EXP 	Sound postTestAudio3 set volume 1.000
+13.6045 	EXP 	Created jMute1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, image=None, interpolate=True, mask=None, maskParams=None, name='jMute1', opacity=1.0, ori=0.0, pos=array([ 0.5, -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.6058 	EXP 	Created jSound = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, image=None, interpolate=True, mask=None, maskParams=None, name='jSound', opacity=1.0, ori=0.0, pos=array([ 0.5, -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.6071 	EXP 	Created jMute2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-11.0, flipHoriz=False, flipVert=False, image=None, interpolate=True, mask=None, maskParams=None, name='jMute2', opacity=1.0, ori=0.0, pos=array([ 0.5, -0.3]), size=array([0.2, 0.2]), texRes=128, units='height', win=Window(...))
+13.6490 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-12.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255., 255.]), text='Does the middle audio (X) match with F or J?', units='height', win=Window(...), wrapWidth=1)
+13.6996 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.7414 	EXP 	instructions: autoDraw = True
+17.0074 	EXP 	Imported autoConditions\train1LoopCondition.xlsx as conditions, 9 conditions, 2 params
+17.0077 	EXP 	Created sequence: sequential, trialTypes=9, nReps=0, seed=None
+17.0108 	DATA 	Keypress: n
+17.0154 	EXP 	instructions: autoDraw = False
+17.0154 	EXP 	notice: autoDraw = True
+17.9178 	EXP 	Imported autoConditions\train2LoopCondition.xlsx as conditions, 3 conditions, 2 params
+17.9181 	EXP 	Created sequence: sequential, trialTypes=3, nReps=0, seed=None
+17.9210 	DATA 	Keypress: n
+17.9258 	EXP 	notice: autoDraw = False
+17.9258 	EXP 	test1Instr: autoDraw = True
+18.6583 	DATA 	Keypress: n
+18.7012 	EXP 	Imported autoConditions\test1Conditions.xlsx as conditions, 54 conditions, 4 params
+18.7016 	EXP 	Created sequence: sequential, trialTypes=54, nReps=0, seed=None
+18.7106 	EXP 	test1Instr: autoDraw = False
+18.7106 	EXP 	oneWarningTest1: autoDraw = False
+18.7106 	EXP 	twoWarningTest1: autoDraw = False
+18.7106 	EXP 	threeWarningTest1: autoDraw = False
+18.7106 	EXP 	fourWarningTest1: autoDraw = False
+18.7106 	EXP 	test2Instr: autoDraw = True
+19.2139 	EXP 	Imported autoConditions\test2Conditions.xlsx as conditions, 54 conditions, 4 params
+19.2142 	EXP 	Created sequence: random, trialTypes=54, nReps=0, seed=None
+19.2269 	DATA 	Keypress: n
+19.2318 	EXP 	test2Instr: autoDraw = False
+19.2318 	EXP 	test3Instr: autoDraw = True
+19.7282 	EXP 	Imported autoConditions\test3Conditions.xlsx as conditions, 54 conditions, 4 params
+19.7288 	EXP 	Created sequence: sequential, trialTypes=54, nReps=0, seed=None
+19.7328 	DATA 	Keypress: n
+19.7379 	EXP 	test3Instr: autoDraw = False
+19.7379 	EXP 	postTestText: autoDraw = True
+20.6920 	DATA 	Keypress: n
+20.7405 	EXP 	Imported postTestConditions.xlsx as conditions, 12 conditions, 4 params
+20.7408 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+20.7412 	EXP 	New trial (rep=0, index=0): OrderedDict([('audioA', 'postTest/82_tipiko1.wav'), ('audioB', 'postTest/82_tipiko1.wav'), ('audioC', 'postTest/82_tipiko3.wav'), ('correctLabel', 'audioA')])
+20.7904 	EXP 	postTestText: autoDraw = False
+20.7904 	EXP 	postTestText: autoDraw = False
+20.7904 	EXP 	fSound: autoDraw = True
+20.7904 	EXP 	xMute1: autoDraw = True
+20.7904 	EXP 	jMute1: autoDraw = True
+20.7904 	EXP 	text_2: autoDraw = True
+21.7524 	EXP 	fMute: autoDraw = True
+21.7524 	EXP 	xSound: autoDraw = True
+21.7908 	EXP 	fSound: autoDraw = False
+21.7908 	EXP 	xMute1: autoDraw = False
+22.7414 	EXP 	xMute2: autoDraw = True
+22.7414 	EXP 	jSound: autoDraw = True
+22.7601 	EXP 	xSound: autoDraw = False
+22.7909 	EXP 	jMute1: autoDraw = False
+23.7408 	EXP 	jSound: autoDraw = False
+23.7408 	EXP 	jMute2: autoDraw = True
+30.7552 	EXP 	xMute2: autoDraw = False
+30.7552 	EXP 	jMute2: autoDraw = False
+30.7735 	EXP 	fMute: autoDraw = False
+30.7891 	EXP 	New trial (rep=0, index=1): OrderedDict([('audioA', 'postTest/83_pitita3.wav'), ('audioB', 'postTest/83_pitita3.wav'), ('audioC', 'postTest/83_pitita2.wav'), ('correctLabel', 'audioA')])
+30.8003 	EXP 	text_2: autoDraw = False
+30.8003 	EXP 	fSound: autoDraw = False
+30.8003 	EXP 	fMute: autoDraw = False
+30.8003 	EXP 	xMute1: autoDraw = False
+30.8003 	EXP 	xSound: autoDraw = False
+30.8003 	EXP 	xMute2: autoDraw = False
+30.8003 	EXP 	jMute1: autoDraw = False
+30.8003 	EXP 	jSound: autoDraw = False
+30.8003 	EXP 	jMute2: autoDraw = False
+30.8003 	EXP 	text_2: autoDraw = False
+30.8003 	EXP 	fSound: autoDraw = True
+30.8003 	EXP 	xMute1: autoDraw = True
+30.8003 	EXP 	jMute1: autoDraw = True
+30.8003 	EXP 	text_2: autoDraw = True
+31.7881 	EXP 	fMute: autoDraw = True
+31.7881 	EXP 	xSound: autoDraw = True
+31.8031 	EXP 	fSound: autoDraw = False
+31.8031 	EXP 	xMute1: autoDraw = False
+32.7854 	EXP 	xMute2: autoDraw = True
+32.7854 	EXP 	jSound: autoDraw = True
+32.8075 	EXP 	xSound: autoDraw = False
+32.8075 	EXP 	jMute1: autoDraw = False
+33.7891 	EXP 	jSound: autoDraw = False
+33.7891 	EXP 	jMute2: autoDraw = True
+35.7736 	DATA 	Mouse: Left button down, pos=(1576,232)
+35.8759 	DATA 	Mouse:  Left button up, pos=(1576,232)
+36.1687 	DATA 	Keypress: escape
+36.4706 	EXP 	window1: mouseVisible = True

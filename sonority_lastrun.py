@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 13, 2020, at 18:56
+    on July 16, 2020, at 17:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -220,18 +220,72 @@ test1Clock = core.Clock()
 test1Audio1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='test1Audio1')
 test1Audio1.setVolume(1)
+test1Audio1Sound = visual.ImageStim(
+    win=win,
+    name='test1Audio1Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+test1Audio1Mute = visual.ImageStim(
+    win=win,
+    name='test1Audio1Mute', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 test1Audio2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='test1Audio2')
 test1Audio2.setVolume(1)
+test1Audio2Mute1 = visual.ImageStim(
+    win=win,
+    name='test1Audio2Mute1', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+test1Audio2Sound = visual.ImageStim(
+    win=win,
+    name='test1Audio2Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+test1Audio2Mute2 = visual.ImageStim(
+    win=win,
+    name='test1Audio2Mute2', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
 test1Response = keyboard.Keyboard()
 test1Image = visual.ImageStim(
     win=win,
     name='test1Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=True, depth=-8.0)
+test1F = visual.TextStim(win=win, name='test1F',
+    text='F',
+    font='Arial',
+    pos=(-0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-9.0);
+test1J = visual.TextStim(win=win, name='test1J',
+    text='J',
+    font='Arial',
+    pos=(0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-10.0);
 
 # Initialize components for Routine "testNovel1Instr"
 testNovel1InstrClock = core.Clock()
@@ -249,18 +303,72 @@ test2Clock = core.Clock()
 test2Audio1 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
     name='test2Audio1')
 test2Audio1.setVolume(1)
+test2Audio1Sound = visual.ImageStim(
+    win=win,
+    name='test2Audio1Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+test1Audio2Mute = visual.ImageStim(
+    win=win,
+    name='test1Audio2Mute', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 test2Audio2 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
     name='test2Audio2')
 test2Audio2.setVolume(1)
+test2Audio2Mute1 = visual.ImageStim(
+    win=win,
+    name='test2Audio2Mute1', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+test2Audio2Sound = visual.ImageStim(
+    win=win,
+    name='test2Audio2Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+test2Audio2Mute2 = visual.ImageStim(
+    win=win,
+    name='test2Audio2Mute2', 
+    image='mute.png', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+test2Response = keyboard.Keyboard()
 test2Image = visual.ImageStim(
     win=win,
     name='test2Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
-test2Response = keyboard.Keyboard()
+    texRes=128, interpolate=True, depth=-8.0)
+test2F = visual.TextStim(win=win, name='test2F',
+    text='F',
+    font='Arial',
+    pos=(-0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-9.0);
+test2J = visual.TextStim(win=win, name='test2J',
+    text='J',
+    font='Arial',
+    pos=(0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-10.0);
 
 # Initialize components for Routine "testNovel2Instr"
 testNovel2InstrClock = core.Clock()
@@ -278,18 +386,72 @@ test3Clock = core.Clock()
 test3Audio1 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
     name='test3Audio1')
 test3Audio1.setVolume(1)
+test3Audio1Sound = visual.ImageStim(
+    win=win,
+    name='test3Audio1Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+test3Audio1Mute = visual.ImageStim(
+    win=win,
+    name='test3Audio1Mute', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 test3Audio2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='test3Audio2')
 test3Audio2.setVolume(1)
+test3Audio2Mute1 = visual.ImageStim(
+    win=win,
+    name='test3Audio2Mute1', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+test3Audio2Sound = visual.ImageStim(
+    win=win,
+    name='test3Audio2Sound', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+test3Audio2Mute2 = visual.ImageStim(
+    win=win,
+    name='test3Audio2Mute2', 
+    image='sin', mask=None,
+    ori=0, pos=(0.3, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+test3Response = keyboard.Keyboard()
 test3Image = visual.ImageStim(
     win=win,
     name='test3Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
-test3Response = keyboard.Keyboard()
+    texRes=128, interpolate=True, depth=-8.0)
+test3F = visual.TextStim(win=win, name='test3F',
+    text='F',
+    font='Arial',
+    pos=(-0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-9.0);
+test3J = visual.TextStim(win=win, name='test3J',
+    text='J',
+    font='Arial',
+    pos=(0.3, -0.1), height=0.2, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-10.0);
 
 # Initialize components for Routine "postTestInstr"
 postTestInstrClock = core.Clock()
@@ -307,14 +469,109 @@ postTestResponse = keyboard.Keyboard()
 postTestAudio1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='postTestAudio1')
 postTestAudio1.setVolume(1)
+fSound = visual.ImageStim(
+    win=win,
+    name='fSound', 
+    image='sound.png', mask=None,
+    ori=0, pos=(-0.5, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+fMute = visual.ImageStim(
+    win=win,
+    name='fMute', 
+    image='mute.png', mask=None,
+    ori=0, pos=(-0.5, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
 postTestAudio2 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
     name='postTestAudio2')
 postTestAudio2.setVolume(1)
+xMute1 = visual.ImageStim(
+    win=win,
+    name='xMute1', 
+    image='mute.png', mask=None,
+    ori=0, pos=(0, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-5.0)
+xSound = visual.ImageStim(
+    win=win,
+    name='xSound', 
+    image='Sound.png', mask=None,
+    ori=0, pos=(0, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-6.0)
+xMute2 = visual.ImageStim(
+    win=win,
+    name='xMute2', 
+    image='mute.png', mask=None,
+    ori=0, pos=(0, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-7.0)
+postTestAudio3 = sound.Sound('A', secs=1.0, stereo=True, hamming=False,
+    name='postTestAudio3')
+postTestAudio3.setVolume(1)
+jMute1 = visual.ImageStim(
+    win=win,
+    name='jMute1', 
+    image='mute.png', mask=None,
+    ori=0, pos=(0.5, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-9.0)
+jSound = visual.ImageStim(
+    win=win,
+    name='jSound', 
+    image='sound.png', mask=None,
+    ori=0, pos=(0.5, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-10.0)
+jMute2 = visual.ImageStim(
+    win=win,
+    name='jMute2', 
+    image='mute.png', mask=None,
+    ori=0, pos=(0.5, -0.3), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-11.0)
+textInstructionsPostTest = visual.TextStim(win=win, name='textInstructionsPostTest',
+    text='Does the middle audio (X) match in stress with F or J? (Press F or J)',
+    font='Arial',
+    pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-12.0);
+fText = visual.TextStim(win=win, name='fText',
+    text='F',
+    font='Arial',
+    pos=(-0.5, 0), height=0.3, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-13.0);
+xText = visual.TextStim(win=win, name='xText',
+    text='X',
+    font='Arial',
+    pos=(0, 0), height=0.3, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-14.0);
+jText = visual.TextStim(win=win, name='jText',
+    text='J',
+    font='Arial',
+    pos=(0.5, 0), height=0.3, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-15.0);
 
 # Initialize components for Routine "thankuser"
 thankuserClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Thank you for participatin!\n\nPress any button to end this experiment',
+    text='Thank you for participating!\n\nPress any button to end this experiment',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -1359,14 +1616,19 @@ for thisTest1Loop in test1Loop:
     # update component parameters for each repeat
     test1Audio1.setSound(firstAudio, secs=1, hamming=True)
     test1Audio1.setVolume(1, log=False)
+    test1Audio1Sound.setImage('sound.png')
+    test1Audio1Mute.setImage('mute.png')
     test1Audio2.setSound(secondAudio, secs=1, hamming=True)
     test1Audio2.setVolume(1, log=False)
+    test1Audio2Mute1.setImage('mute.png')
+    test1Audio2Sound.setImage('sound.png')
+    test1Audio2Mute2.setImage('mute.png')
     test1Response.keys = []
     test1Response.rt = []
     _test1Response_allKeys = []
     test1Image.setImage(imageLoc)
     # keep track of which components have finished
-    test1Components = [test1Audio1, test1Audio2, test1Response, test1Image]
+    test1Components = [test1Audio1, test1Audio1Sound, test1Audio1Mute, test1Audio2, test1Audio2Mute1, test1Audio2Sound, test1Audio2Mute2, test1Response, test1Image, test1F, test1J]
     for thisComponent in test1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1403,6 +1665,40 @@ for thisTest1Loop in test1Loop:
                 test1Audio1.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(test1Audio1, 'tStopRefresh')  # time at next scr refresh
                 test1Audio1.stop()
+        
+        # *test1Audio1Sound* updates
+        if test1Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio1Sound.frameNStart = frameN  # exact frame index
+            test1Audio1Sound.tStart = t  # local t and not account for scr refresh
+            test1Audio1Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio1Sound, 'tStartRefresh')  # time at next scr refresh
+            test1Audio1Sound.setAutoDraw(True)
+        if test1Audio1Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio1Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio1Sound.tStop = t  # not accounting for scr refresh
+                test1Audio1Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio1Sound, 'tStopRefresh')  # time at next scr refresh
+                test1Audio1Sound.setAutoDraw(False)
+        
+        # *test1Audio1Mute* updates
+        if test1Audio1Mute.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio1Mute.frameNStart = frameN  # exact frame index
+            test1Audio1Mute.tStart = t  # local t and not account for scr refresh
+            test1Audio1Mute.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio1Mute, 'tStartRefresh')  # time at next scr refresh
+            test1Audio1Mute.setAutoDraw(True)
+        if test1Audio1Mute.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio1Mute.tStartRefresh + 9-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio1Mute.tStop = t  # not accounting for scr refresh
+                test1Audio1Mute.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio1Mute, 'tStopRefresh')  # time at next scr refresh
+                test1Audio1Mute.setAutoDraw(False)
         # start/stop test1Audio2
         if test1Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
@@ -1418,6 +1714,57 @@ for thisTest1Loop in test1Loop:
                 test1Audio2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(test1Audio2, 'tStopRefresh')  # time at next scr refresh
                 test1Audio2.stop()
+        
+        # *test1Audio2Mute1* updates
+        if test1Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio2Mute1.frameNStart = frameN  # exact frame index
+            test1Audio2Mute1.tStart = t  # local t and not account for scr refresh
+            test1Audio2Mute1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio2Mute1, 'tStartRefresh')  # time at next scr refresh
+            test1Audio2Mute1.setAutoDraw(True)
+        if test1Audio2Mute1.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio2Mute1.tStop = t  # not accounting for scr refresh
+                test1Audio2Mute1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio2Mute1, 'tStopRefresh')  # time at next scr refresh
+                test1Audio2Mute1.setAutoDraw(False)
+        
+        # *test1Audio2Sound* updates
+        if test1Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio2Sound.frameNStart = frameN  # exact frame index
+            test1Audio2Sound.tStart = t  # local t and not account for scr refresh
+            test1Audio2Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio2Sound, 'tStartRefresh')  # time at next scr refresh
+            test1Audio2Sound.setAutoDraw(True)
+        if test1Audio2Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio2Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio2Sound.tStop = t  # not accounting for scr refresh
+                test1Audio2Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio2Sound, 'tStopRefresh')  # time at next scr refresh
+                test1Audio2Sound.setAutoDraw(False)
+        
+        # *test1Audio2Mute2* updates
+        if test1Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio2Mute2.frameNStart = frameN  # exact frame index
+            test1Audio2Mute2.tStart = t  # local t and not account for scr refresh
+            test1Audio2Mute2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio2Mute2, 'tStartRefresh')  # time at next scr refresh
+            test1Audio2Mute2.setAutoDraw(True)
+        if test1Audio2Mute2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 8-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio2Mute2.tStop = t  # not accounting for scr refresh
+                test1Audio2Mute2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio2Mute2, 'tStopRefresh')  # time at next scr refresh
+                test1Audio2Mute2.setAutoDraw(False)
         
         # *test1Response* updates
         waitOnFlip = False
@@ -1466,6 +1813,40 @@ for thisTest1Loop in test1Loop:
                 win.timeOnFlip(test1Image, 'tStopRefresh')  # time at next scr refresh
                 test1Image.setAutoDraw(False)
         
+        # *test1F* updates
+        if test1F.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test1F.frameNStart = frameN  # exact frame index
+            test1F.tStart = t  # local t and not account for scr refresh
+            test1F.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1F, 'tStartRefresh')  # time at next scr refresh
+            test1F.setAutoDraw(True)
+        if test1F.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1F.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test1F.tStop = t  # not accounting for scr refresh
+                test1F.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1F, 'tStopRefresh')  # time at next scr refresh
+                test1F.setAutoDraw(False)
+        
+        # *test1J* updates
+        if test1J.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test1J.frameNStart = frameN  # exact frame index
+            test1J.tStart = t  # local t and not account for scr refresh
+            test1J.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1J, 'tStartRefresh')  # time at next scr refresh
+            test1J.setAutoDraw(True)
+        if test1J.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1J.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test1J.tStop = t  # not accounting for scr refresh
+                test1J.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1J, 'tStopRefresh')  # time at next scr refresh
+                test1J.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -1490,9 +1871,19 @@ for thisTest1Loop in test1Loop:
     test1Audio1.stop()  # ensure sound has stopped at end of routine
     test1Loop.addData('test1Audio1.started', test1Audio1.tStartRefresh)
     test1Loop.addData('test1Audio1.stopped', test1Audio1.tStopRefresh)
+    test1Loop.addData('test1Audio1Sound.started', test1Audio1Sound.tStartRefresh)
+    test1Loop.addData('test1Audio1Sound.stopped', test1Audio1Sound.tStopRefresh)
+    test1Loop.addData('test1Audio1Mute.started', test1Audio1Mute.tStartRefresh)
+    test1Loop.addData('test1Audio1Mute.stopped', test1Audio1Mute.tStopRefresh)
     test1Audio2.stop()  # ensure sound has stopped at end of routine
     test1Loop.addData('test1Audio2.started', test1Audio2.tStartRefresh)
     test1Loop.addData('test1Audio2.stopped', test1Audio2.tStopRefresh)
+    test1Loop.addData('test1Audio2Mute1.started', test1Audio2Mute1.tStartRefresh)
+    test1Loop.addData('test1Audio2Mute1.stopped', test1Audio2Mute1.tStopRefresh)
+    test1Loop.addData('test1Audio2Sound.started', test1Audio2Sound.tStartRefresh)
+    test1Loop.addData('test1Audio2Sound.stopped', test1Audio2Sound.tStopRefresh)
+    test1Loop.addData('test1Audio2Mute2.started', test1Audio2Mute2.tStartRefresh)
+    test1Loop.addData('test1Audio2Mute2.stopped', test1Audio2Mute2.tStopRefresh)
     # check responses
     if test1Response.keys in ['', [], None]:  # No response was made
         test1Response.keys = None
@@ -1503,6 +1894,10 @@ for thisTest1Loop in test1Loop:
     test1Loop.addData('test1Response.stopped', test1Response.tStopRefresh)
     test1Loop.addData('test1Image.started', test1Image.tStartRefresh)
     test1Loop.addData('test1Image.stopped', test1Image.tStopRefresh)
+    test1Loop.addData('test1F.started', test1F.tStartRefresh)
+    test1Loop.addData('test1F.stopped', test1F.tStopRefresh)
+    test1Loop.addData('test1J.started', test1J.tStartRefresh)
+    test1Loop.addData('test1J.stopped', test1J.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 0 repeats of 'test1Loop'
@@ -1620,7 +2015,7 @@ thisExp.addData('skipTest2Instr.stopped', skipTest2Instr.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=0, method='random', 
+test2Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('autoConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -1644,14 +2039,18 @@ for thisTest2Loop in test2Loop:
     # update component parameters for each repeat
     test2Audio1.setSound(firstAudio, secs=1.0, hamming=True)
     test2Audio1.setVolume(1, log=False)
+    test2Audio1Sound.setImage('sound.png')
+    test1Audio2Mute.setImage('mute.png')
     test2Audio2.setSound(secondAudio, secs=1.0, hamming=True)
     test2Audio2.setVolume(1, log=False)
-    test2Image.setImage(imageLoc)
+    test2Audio2Mute1.setImage('mute.png')
+    test2Audio2Sound.setImage('sound.png')
     test2Response.keys = []
     test2Response.rt = []
     _test2Response_allKeys = []
+    test2Image.setImage(imageLoc)
     # keep track of which components have finished
-    test2Components = [test2Audio1, test2Audio2, test2Image, test2Response]
+    test2Components = [test2Audio1, test2Audio1Sound, test1Audio2Mute, test2Audio2, test2Audio2Mute1, test2Audio2Sound, test2Audio2Mute2, test2Response, test2Image, test2F, test2J]
     for thisComponent in test2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1688,6 +2087,40 @@ for thisTest2Loop in test2Loop:
                 test2Audio1.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(test2Audio1, 'tStopRefresh')  # time at next scr refresh
                 test2Audio1.stop()
+        
+        # *test2Audio1Sound* updates
+        if test2Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test2Audio1Sound.frameNStart = frameN  # exact frame index
+            test2Audio1Sound.tStart = t  # local t and not account for scr refresh
+            test2Audio1Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Audio1Sound, 'tStartRefresh')  # time at next scr refresh
+            test2Audio1Sound.setAutoDraw(True)
+        if test2Audio1Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2Audio1Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test2Audio1Sound.tStop = t  # not accounting for scr refresh
+                test2Audio1Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Audio1Sound, 'tStopRefresh')  # time at next scr refresh
+                test2Audio1Sound.setAutoDraw(False)
+        
+        # *test1Audio2Mute* updates
+        if test1Audio2Mute.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test1Audio2Mute.frameNStart = frameN  # exact frame index
+            test1Audio2Mute.tStart = t  # local t and not account for scr refresh
+            test1Audio2Mute.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Audio2Mute, 'tStartRefresh')  # time at next scr refresh
+            test1Audio2Mute.setAutoDraw(True)
+        if test1Audio2Mute.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Audio2Mute.tStartRefresh + 9-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Audio2Mute.tStop = t  # not accounting for scr refresh
+                test1Audio2Mute.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Audio2Mute, 'tStopRefresh')  # time at next scr refresh
+                test1Audio2Mute.setAutoDraw(False)
         # start/stop test2Audio2
         if test2Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
@@ -1704,22 +2137,56 @@ for thisTest2Loop in test2Loop:
                 win.timeOnFlip(test2Audio2, 'tStopRefresh')  # time at next scr refresh
                 test2Audio2.stop()
         
-        # *test2Image* updates
-        if test2Image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *test2Audio2Mute1* updates
+        if test2Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            test2Image.frameNStart = frameN  # exact frame index
-            test2Image.tStart = t  # local t and not account for scr refresh
-            test2Image.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(test2Image, 'tStartRefresh')  # time at next scr refresh
-            test2Image.setAutoDraw(True)
-        if test2Image.status == STARTED:
+            test2Audio2Mute1.frameNStart = frameN  # exact frame index
+            test2Audio2Mute1.tStart = t  # local t and not account for scr refresh
+            test2Audio2Mute1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Audio2Mute1, 'tStartRefresh')  # time at next scr refresh
+            test2Audio2Mute1.setAutoDraw(True)
+        if test2Audio2Mute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Image.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test2Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
                 # keep track of stop time/frame for later
-                test2Image.tStop = t  # not accounting for scr refresh
-                test2Image.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test2Image, 'tStopRefresh')  # time at next scr refresh
-                test2Image.setAutoDraw(False)
+                test2Audio2Mute1.tStop = t  # not accounting for scr refresh
+                test2Audio2Mute1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Audio2Mute1, 'tStopRefresh')  # time at next scr refresh
+                test2Audio2Mute1.setAutoDraw(False)
+        
+        # *test2Audio2Sound* updates
+        if test2Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test2Audio2Sound.frameNStart = frameN  # exact frame index
+            test2Audio2Sound.tStart = t  # local t and not account for scr refresh
+            test2Audio2Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Audio2Sound, 'tStartRefresh')  # time at next scr refresh
+            test2Audio2Sound.setAutoDraw(True)
+        if test2Audio2Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2Audio2Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test2Audio2Sound.tStop = t  # not accounting for scr refresh
+                test2Audio2Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Audio2Sound, 'tStopRefresh')  # time at next scr refresh
+                test2Audio2Sound.setAutoDraw(False)
+        
+        # *test2Audio2Mute2* updates
+        if test2Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            test2Audio2Mute2.frameNStart = frameN  # exact frame index
+            test2Audio2Mute2.tStart = t  # local t and not account for scr refresh
+            test2Audio2Mute2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Audio2Mute2, 'tStartRefresh')  # time at next scr refresh
+            test2Audio2Mute2.setAutoDraw(True)
+        if test2Audio2Mute2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2Audio2Mute2.tStartRefresh + 8-frameTolerance:
+                # keep track of stop time/frame for later
+                test2Audio2Mute2.tStop = t  # not accounting for scr refresh
+                test2Audio2Mute2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Audio2Mute2, 'tStopRefresh')  # time at next scr refresh
+                test2Audio2Mute2.setAutoDraw(False)
         
         # *test2Response* updates
         waitOnFlip = False
@@ -1751,6 +2218,57 @@ for thisTest2Loop in test2Loop:
                 # a response ends the routine
                 continueRoutine = False
         
+        # *test2Image* updates
+        if test2Image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test2Image.frameNStart = frameN  # exact frame index
+            test2Image.tStart = t  # local t and not account for scr refresh
+            test2Image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Image, 'tStartRefresh')  # time at next scr refresh
+            test2Image.setAutoDraw(True)
+        if test2Image.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2Image.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test2Image.tStop = t  # not accounting for scr refresh
+                test2Image.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Image, 'tStopRefresh')  # time at next scr refresh
+                test2Image.setAutoDraw(False)
+        
+        # *test2F* updates
+        if test2F.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test2F.frameNStart = frameN  # exact frame index
+            test2F.tStart = t  # local t and not account for scr refresh
+            test2F.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2F, 'tStartRefresh')  # time at next scr refresh
+            test2F.setAutoDraw(True)
+        if test2F.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2F.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test2F.tStop = t  # not accounting for scr refresh
+                test2F.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2F, 'tStopRefresh')  # time at next scr refresh
+                test2F.setAutoDraw(False)
+        
+        # *test2J* updates
+        if test2J.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test2J.frameNStart = frameN  # exact frame index
+            test2J.tStart = t  # local t and not account for scr refresh
+            test2J.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2J, 'tStartRefresh')  # time at next scr refresh
+            test2J.setAutoDraw(True)
+        if test2J.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2J.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test2J.tStop = t  # not accounting for scr refresh
+                test2J.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2J, 'tStopRefresh')  # time at next scr refresh
+                test2J.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -1775,11 +2293,19 @@ for thisTest2Loop in test2Loop:
     test2Audio1.stop()  # ensure sound has stopped at end of routine
     test2Loop.addData('test2Audio1.started', test2Audio1.tStartRefresh)
     test2Loop.addData('test2Audio1.stopped', test2Audio1.tStopRefresh)
+    test2Loop.addData('test2Audio1Sound.started', test2Audio1Sound.tStartRefresh)
+    test2Loop.addData('test2Audio1Sound.stopped', test2Audio1Sound.tStopRefresh)
+    test2Loop.addData('test1Audio2Mute.started', test1Audio2Mute.tStartRefresh)
+    test2Loop.addData('test1Audio2Mute.stopped', test1Audio2Mute.tStopRefresh)
     test2Audio2.stop()  # ensure sound has stopped at end of routine
     test2Loop.addData('test2Audio2.started', test2Audio2.tStartRefresh)
     test2Loop.addData('test2Audio2.stopped', test2Audio2.tStopRefresh)
-    test2Loop.addData('test2Image.started', test2Image.tStartRefresh)
-    test2Loop.addData('test2Image.stopped', test2Image.tStopRefresh)
+    test2Loop.addData('test2Audio2Mute1.started', test2Audio2Mute1.tStartRefresh)
+    test2Loop.addData('test2Audio2Mute1.stopped', test2Audio2Mute1.tStopRefresh)
+    test2Loop.addData('test2Audio2Sound.started', test2Audio2Sound.tStartRefresh)
+    test2Loop.addData('test2Audio2Sound.stopped', test2Audio2Sound.tStopRefresh)
+    test2Loop.addData('test2Audio2Mute2.started', test2Audio2Mute2.tStartRefresh)
+    test2Loop.addData('test2Audio2Mute2.stopped', test2Audio2Mute2.tStopRefresh)
     # check responses
     if test2Response.keys in ['', [], None]:  # No response was made
         test2Response.keys = None
@@ -1788,6 +2314,12 @@ for thisTest2Loop in test2Loop:
         test2Loop.addData('test2Response.rt', test2Response.rt)
     test2Loop.addData('test2Response.started', test2Response.tStartRefresh)
     test2Loop.addData('test2Response.stopped', test2Response.tStopRefresh)
+    test2Loop.addData('test2Image.started', test2Image.tStartRefresh)
+    test2Loop.addData('test2Image.stopped', test2Image.tStopRefresh)
+    test2Loop.addData('test2F.started', test2F.tStartRefresh)
+    test2Loop.addData('test2F.stopped', test2F.tStopRefresh)
+    test2Loop.addData('test2J.started', test2J.tStartRefresh)
+    test2Loop.addData('test2J.stopped', test2J.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 0 repeats of 'test2Loop'
@@ -1905,7 +2437,7 @@ thisExp.addData('skipTest3Instr.stopped', skipTest3Instr.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=0, method='sequential', 
+test3Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('autoConditions\\test3Conditions.xlsx'),
     seed=None, name='test3Loop')
@@ -1929,14 +2461,19 @@ for thisTest3Loop in test3Loop:
     # update component parameters for each repeat
     test3Audio1.setSound(firstAudio, secs=1.0, hamming=True)
     test3Audio1.setVolume(1, log=False)
+    test3Audio1Sound.setImage('sound.png')
+    test3Audio1Mute.setImage('mute.png')
     test3Audio2.setSound(secondAudio, secs=1, hamming=True)
     test3Audio2.setVolume(1, log=False)
-    test3Image.setImage(imageLoc)
+    test3Audio2Mute1.setImage('mute.png')
+    test3Audio2Sound.setImage('sound.png')
+    test3Audio2Mute2.setImage('mute.png')
     test3Response.keys = []
     test3Response.rt = []
     _test3Response_allKeys = []
+    test3Image.setImage(imageLoc)
     # keep track of which components have finished
-    test3Components = [test3Audio1, test3Audio2, test3Image, test3Response]
+    test3Components = [test3Audio1, test3Audio1Sound, test3Audio1Mute, test3Audio2, test3Audio2Mute1, test3Audio2Sound, test3Audio2Mute2, test3Response, test3Image, test3F, test3J]
     for thisComponent in test3Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1973,6 +2510,40 @@ for thisTest3Loop in test3Loop:
                 test3Audio1.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(test3Audio1, 'tStopRefresh')  # time at next scr refresh
                 test3Audio1.stop()
+        
+        # *test3Audio1Sound* updates
+        if test3Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test3Audio1Sound.frameNStart = frameN  # exact frame index
+            test3Audio1Sound.tStart = t  # local t and not account for scr refresh
+            test3Audio1Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Audio1Sound, 'tStartRefresh')  # time at next scr refresh
+            test3Audio1Sound.setAutoDraw(True)
+        if test3Audio1Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Audio1Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Audio1Sound.tStop = t  # not accounting for scr refresh
+                test3Audio1Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Audio1Sound, 'tStopRefresh')  # time at next scr refresh
+                test3Audio1Sound.setAutoDraw(False)
+        
+        # *test3Audio1Mute* updates
+        if test3Audio1Mute.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test3Audio1Mute.frameNStart = frameN  # exact frame index
+            test3Audio1Mute.tStart = t  # local t and not account for scr refresh
+            test3Audio1Mute.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Audio1Mute, 'tStartRefresh')  # time at next scr refresh
+            test3Audio1Mute.setAutoDraw(True)
+        if test3Audio1Mute.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Audio1Mute.tStartRefresh + 9-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Audio1Mute.tStop = t  # not accounting for scr refresh
+                test3Audio1Mute.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Audio1Mute, 'tStopRefresh')  # time at next scr refresh
+                test3Audio1Mute.setAutoDraw(False)
         # start/stop test3Audio2
         if test3Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
@@ -1989,22 +2560,56 @@ for thisTest3Loop in test3Loop:
                 win.timeOnFlip(test3Audio2, 'tStopRefresh')  # time at next scr refresh
                 test3Audio2.stop()
         
-        # *test3Image* updates
-        if test3Image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *test3Audio2Mute1* updates
+        if test3Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            test3Image.frameNStart = frameN  # exact frame index
-            test3Image.tStart = t  # local t and not account for scr refresh
-            test3Image.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(test3Image, 'tStartRefresh')  # time at next scr refresh
-            test3Image.setAutoDraw(True)
-        if test3Image.status == STARTED:
+            test3Audio2Mute1.frameNStart = frameN  # exact frame index
+            test3Audio2Mute1.tStart = t  # local t and not account for scr refresh
+            test3Audio2Mute1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Audio2Mute1, 'tStartRefresh')  # time at next scr refresh
+            test3Audio2Mute1.setAutoDraw(True)
+        if test3Audio2Mute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Image.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test3Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
                 # keep track of stop time/frame for later
-                test3Image.tStop = t  # not accounting for scr refresh
-                test3Image.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test3Image, 'tStopRefresh')  # time at next scr refresh
-                test3Image.setAutoDraw(False)
+                test3Audio2Mute1.tStop = t  # not accounting for scr refresh
+                test3Audio2Mute1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Audio2Mute1, 'tStopRefresh')  # time at next scr refresh
+                test3Audio2Mute1.setAutoDraw(False)
+        
+        # *test3Audio2Sound* updates
+        if test3Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            test3Audio2Sound.frameNStart = frameN  # exact frame index
+            test3Audio2Sound.tStart = t  # local t and not account for scr refresh
+            test3Audio2Sound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Audio2Sound, 'tStartRefresh')  # time at next scr refresh
+            test3Audio2Sound.setAutoDraw(True)
+        if test3Audio2Sound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Audio2Sound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Audio2Sound.tStop = t  # not accounting for scr refresh
+                test3Audio2Sound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Audio2Sound, 'tStopRefresh')  # time at next scr refresh
+                test3Audio2Sound.setAutoDraw(False)
+        
+        # *test3Audio2Mute2* updates
+        if test3Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            test3Audio2Mute2.frameNStart = frameN  # exact frame index
+            test3Audio2Mute2.tStart = t  # local t and not account for scr refresh
+            test3Audio2Mute2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Audio2Mute2, 'tStartRefresh')  # time at next scr refresh
+            test3Audio2Mute2.setAutoDraw(True)
+        if test3Audio2Mute2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Audio2Mute2.tStartRefresh + 8-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Audio2Mute2.tStop = t  # not accounting for scr refresh
+                test3Audio2Mute2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Audio2Mute2, 'tStopRefresh')  # time at next scr refresh
+                test3Audio2Mute2.setAutoDraw(False)
         
         # *test3Response* updates
         waitOnFlip = False
@@ -2036,6 +2641,57 @@ for thisTest3Loop in test3Loop:
                 # a response ends the routine
                 continueRoutine = False
         
+        # *test3Image* updates
+        if test3Image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test3Image.frameNStart = frameN  # exact frame index
+            test3Image.tStart = t  # local t and not account for scr refresh
+            test3Image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Image, 'tStartRefresh')  # time at next scr refresh
+            test3Image.setAutoDraw(True)
+        if test3Image.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Image.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Image.tStop = t  # not accounting for scr refresh
+                test3Image.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Image, 'tStopRefresh')  # time at next scr refresh
+                test3Image.setAutoDraw(False)
+        
+        # *test3F* updates
+        if test3F.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test3F.frameNStart = frameN  # exact frame index
+            test3F.tStart = t  # local t and not account for scr refresh
+            test3F.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3F, 'tStartRefresh')  # time at next scr refresh
+            test3F.setAutoDraw(True)
+        if test3F.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3F.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test3F.tStop = t  # not accounting for scr refresh
+                test3F.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3F, 'tStopRefresh')  # time at next scr refresh
+                test3F.setAutoDraw(False)
+        
+        # *test3J* updates
+        if test3J.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test3J.frameNStart = frameN  # exact frame index
+            test3J.tStart = t  # local t and not account for scr refresh
+            test3J.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3J, 'tStartRefresh')  # time at next scr refresh
+            test3J.setAutoDraw(True)
+        if test3J.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3J.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test3J.tStop = t  # not accounting for scr refresh
+                test3J.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3J, 'tStopRefresh')  # time at next scr refresh
+                test3J.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -2060,11 +2716,19 @@ for thisTest3Loop in test3Loop:
     test3Audio1.stop()  # ensure sound has stopped at end of routine
     test3Loop.addData('test3Audio1.started', test3Audio1.tStartRefresh)
     test3Loop.addData('test3Audio1.stopped', test3Audio1.tStopRefresh)
+    test3Loop.addData('test3Audio1Sound.started', test3Audio1Sound.tStartRefresh)
+    test3Loop.addData('test3Audio1Sound.stopped', test3Audio1Sound.tStopRefresh)
+    test3Loop.addData('test3Audio1Mute.started', test3Audio1Mute.tStartRefresh)
+    test3Loop.addData('test3Audio1Mute.stopped', test3Audio1Mute.tStopRefresh)
     test3Audio2.stop()  # ensure sound has stopped at end of routine
     test3Loop.addData('test3Audio2.started', test3Audio2.tStartRefresh)
     test3Loop.addData('test3Audio2.stopped', test3Audio2.tStopRefresh)
-    test3Loop.addData('test3Image.started', test3Image.tStartRefresh)
-    test3Loop.addData('test3Image.stopped', test3Image.tStopRefresh)
+    test3Loop.addData('test3Audio2Mute1.started', test3Audio2Mute1.tStartRefresh)
+    test3Loop.addData('test3Audio2Mute1.stopped', test3Audio2Mute1.tStopRefresh)
+    test3Loop.addData('test3Audio2Sound.started', test3Audio2Sound.tStartRefresh)
+    test3Loop.addData('test3Audio2Sound.stopped', test3Audio2Sound.tStopRefresh)
+    test3Loop.addData('test3Audio2Mute2.started', test3Audio2Mute2.tStartRefresh)
+    test3Loop.addData('test3Audio2Mute2.stopped', test3Audio2Mute2.tStopRefresh)
     # check responses
     if test3Response.keys in ['', [], None]:  # No response was made
         test3Response.keys = None
@@ -2073,9 +2737,15 @@ for thisTest3Loop in test3Loop:
         test3Loop.addData('test3Response.rt', test3Response.rt)
     test3Loop.addData('test3Response.started', test3Response.tStartRefresh)
     test3Loop.addData('test3Response.stopped', test3Response.tStopRefresh)
+    test3Loop.addData('test3Image.started', test3Image.tStartRefresh)
+    test3Loop.addData('test3Image.stopped', test3Image.tStopRefresh)
+    test3Loop.addData('test3F.started', test3F.tStartRefresh)
+    test3Loop.addData('test3F.stopped', test3F.tStopRefresh)
+    test3Loop.addData('test3J.started', test3J.tStartRefresh)
+    test3Loop.addData('test3J.stopped', test3J.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test3Loop'
+# completed 1 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------
@@ -2168,7 +2838,7 @@ for thisPostTestLoop in postTestLoop:
     
     # ------Prepare to start Routine "posttest"-------
     continueRoutine = True
-    routineTimer.add(12.000000)
+    routineTimer.add(10.000000)
     # update component parameters for each repeat
     postTestResponse.keys = []
     postTestResponse.rt = []
@@ -2177,8 +2847,10 @@ for thisPostTestLoop in postTestLoop:
     postTestAudio1.setVolume(1, log=False)
     postTestAudio2.setSound(audioB, secs=1.0, hamming=True)
     postTestAudio2.setVolume(1, log=False)
+    postTestAudio3.setSound(audioC, secs=1.0, hamming=False)
+    postTestAudio3.setVolume(1, log=False)
     # keep track of which components have finished
-    posttestComponents = [postTestResponse, postTestAudio1, postTestAudio2]
+    posttestComponents = [postTestResponse, postTestAudio1, fSound, fMute, postTestAudio2, xMute1, xSound, xMute2, postTestAudio3, jMute1, jSound, jMute2, textInstructionsPostTest, fText, xText, jText]
     for thisComponent in posttestComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2203,7 +2875,7 @@ for thisPostTestLoop in postTestLoop:
         
         # *postTestResponse* updates
         waitOnFlip = False
-        if postTestResponse.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if postTestResponse.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             postTestResponse.frameNStart = frameN  # exact frame index
             postTestResponse.tStart = t  # local t and not account for scr refresh
@@ -2216,7 +2888,7 @@ for thisPostTestLoop in postTestLoop:
             win.callOnFlip(postTestResponse.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if postTestResponse.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > postTestResponse.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > postTestResponse.tStartRefresh + 7-frameTolerance:
                 # keep track of stop time/frame for later
                 postTestResponse.tStop = t  # not accounting for scr refresh
                 postTestResponse.frameNStop = frameN  # exact frame index
@@ -2245,6 +2917,40 @@ for thisPostTestLoop in postTestLoop:
                 postTestAudio1.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(postTestAudio1, 'tStopRefresh')  # time at next scr refresh
                 postTestAudio1.stop()
+        
+        # *fSound* updates
+        if fSound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fSound.frameNStart = frameN  # exact frame index
+            fSound.tStart = t  # local t and not account for scr refresh
+            fSound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fSound, 'tStartRefresh')  # time at next scr refresh
+            fSound.setAutoDraw(True)
+        if fSound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fSound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                fSound.tStop = t  # not accounting for scr refresh
+                fSound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(fSound, 'tStopRefresh')  # time at next scr refresh
+                fSound.setAutoDraw(False)
+        
+        # *fMute* updates
+        if fMute.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            fMute.frameNStart = frameN  # exact frame index
+            fMute.tStart = t  # local t and not account for scr refresh
+            fMute.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fMute, 'tStartRefresh')  # time at next scr refresh
+            fMute.setAutoDraw(True)
+        if fMute.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fMute.tStartRefresh + 9-frameTolerance:
+                # keep track of stop time/frame for later
+                fMute.tStop = t  # not accounting for scr refresh
+                fMute.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(fMute, 'tStopRefresh')  # time at next scr refresh
+                fMute.setAutoDraw(False)
         # start/stop postTestAudio2
         if postTestAudio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
@@ -2260,6 +2966,191 @@ for thisPostTestLoop in postTestLoop:
                 postTestAudio2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(postTestAudio2, 'tStopRefresh')  # time at next scr refresh
                 postTestAudio2.stop()
+        
+        # *xMute1* updates
+        if xMute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            xMute1.frameNStart = frameN  # exact frame index
+            xMute1.tStart = t  # local t and not account for scr refresh
+            xMute1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(xMute1, 'tStartRefresh')  # time at next scr refresh
+            xMute1.setAutoDraw(True)
+        if xMute1.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > xMute1.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                xMute1.tStop = t  # not accounting for scr refresh
+                xMute1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(xMute1, 'tStopRefresh')  # time at next scr refresh
+                xMute1.setAutoDraw(False)
+        
+        # *xSound* updates
+        if xSound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            xSound.frameNStart = frameN  # exact frame index
+            xSound.tStart = t  # local t and not account for scr refresh
+            xSound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(xSound, 'tStartRefresh')  # time at next scr refresh
+            xSound.setAutoDraw(True)
+        if xSound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > xSound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                xSound.tStop = t  # not accounting for scr refresh
+                xSound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(xSound, 'tStopRefresh')  # time at next scr refresh
+                xSound.setAutoDraw(False)
+        
+        # *xMute2* updates
+        if xMute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            xMute2.frameNStart = frameN  # exact frame index
+            xMute2.tStart = t  # local t and not account for scr refresh
+            xMute2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(xMute2, 'tStartRefresh')  # time at next scr refresh
+            xMute2.setAutoDraw(True)
+        if xMute2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > xMute2.tStartRefresh + 8-frameTolerance:
+                # keep track of stop time/frame for later
+                xMute2.tStop = t  # not accounting for scr refresh
+                xMute2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(xMute2, 'tStopRefresh')  # time at next scr refresh
+                xMute2.setAutoDraw(False)
+        # start/stop postTestAudio3
+        if postTestAudio3.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            postTestAudio3.frameNStart = frameN  # exact frame index
+            postTestAudio3.tStart = t  # local t and not account for scr refresh
+            postTestAudio3.tStartRefresh = tThisFlipGlobal  # on global time
+            postTestAudio3.play(when=win)  # sync with win flip
+        if postTestAudio3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > postTestAudio3.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                postTestAudio3.tStop = t  # not accounting for scr refresh
+                postTestAudio3.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(postTestAudio3, 'tStopRefresh')  # time at next scr refresh
+                postTestAudio3.stop()
+        
+        # *jMute1* updates
+        if jMute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            jMute1.frameNStart = frameN  # exact frame index
+            jMute1.tStart = t  # local t and not account for scr refresh
+            jMute1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(jMute1, 'tStartRefresh')  # time at next scr refresh
+            jMute1.setAutoDraw(True)
+        if jMute1.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > jMute1.tStartRefresh + 2-frameTolerance:
+                # keep track of stop time/frame for later
+                jMute1.tStop = t  # not accounting for scr refresh
+                jMute1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(jMute1, 'tStopRefresh')  # time at next scr refresh
+                jMute1.setAutoDraw(False)
+        
+        # *jSound* updates
+        if jSound.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+            # keep track of start time/frame for later
+            jSound.frameNStart = frameN  # exact frame index
+            jSound.tStart = t  # local t and not account for scr refresh
+            jSound.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(jSound, 'tStartRefresh')  # time at next scr refresh
+            jSound.setAutoDraw(True)
+        if jSound.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > jSound.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                jSound.tStop = t  # not accounting for scr refresh
+                jSound.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(jSound, 'tStopRefresh')  # time at next scr refresh
+                jSound.setAutoDraw(False)
+        
+        # *jMute2* updates
+        if jMute2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+            # keep track of start time/frame for later
+            jMute2.frameNStart = frameN  # exact frame index
+            jMute2.tStart = t  # local t and not account for scr refresh
+            jMute2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(jMute2, 'tStartRefresh')  # time at next scr refresh
+            jMute2.setAutoDraw(True)
+        if jMute2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > jMute2.tStartRefresh + 7-frameTolerance:
+                # keep track of stop time/frame for later
+                jMute2.tStop = t  # not accounting for scr refresh
+                jMute2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(jMute2, 'tStopRefresh')  # time at next scr refresh
+                jMute2.setAutoDraw(False)
+        
+        # *textInstructionsPostTest* updates
+        if textInstructionsPostTest.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            textInstructionsPostTest.frameNStart = frameN  # exact frame index
+            textInstructionsPostTest.tStart = t  # local t and not account for scr refresh
+            textInstructionsPostTest.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(textInstructionsPostTest, 'tStartRefresh')  # time at next scr refresh
+            textInstructionsPostTest.setAutoDraw(True)
+        if textInstructionsPostTest.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > textInstructionsPostTest.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                textInstructionsPostTest.tStop = t  # not accounting for scr refresh
+                textInstructionsPostTest.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(textInstructionsPostTest, 'tStopRefresh')  # time at next scr refresh
+                textInstructionsPostTest.setAutoDraw(False)
+        
+        # *fText* updates
+        if fText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fText.frameNStart = frameN  # exact frame index
+            fText.tStart = t  # local t and not account for scr refresh
+            fText.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fText, 'tStartRefresh')  # time at next scr refresh
+            fText.setAutoDraw(True)
+        if fText.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fText.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                fText.tStop = t  # not accounting for scr refresh
+                fText.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(fText, 'tStopRefresh')  # time at next scr refresh
+                fText.setAutoDraw(False)
+        
+        # *xText* updates
+        if xText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            xText.frameNStart = frameN  # exact frame index
+            xText.tStart = t  # local t and not account for scr refresh
+            xText.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(xText, 'tStartRefresh')  # time at next scr refresh
+            xText.setAutoDraw(True)
+        if xText.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > xText.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                xText.tStop = t  # not accounting for scr refresh
+                xText.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(xText, 'tStopRefresh')  # time at next scr refresh
+                xText.setAutoDraw(False)
+        
+        # *jText* updates
+        if jText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            jText.frameNStart = frameN  # exact frame index
+            jText.tStart = t  # local t and not account for scr refresh
+            jText.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(jText, 'tStartRefresh')  # time at next scr refresh
+            jText.setAutoDraw(True)
+        if jText.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > jText.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                jText.tStop = t  # not accounting for scr refresh
+                jText.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(jText, 'tStopRefresh')  # time at next scr refresh
+                jText.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2293,9 +3184,36 @@ for thisPostTestLoop in postTestLoop:
     postTestAudio1.stop()  # ensure sound has stopped at end of routine
     postTestLoop.addData('postTestAudio1.started', postTestAudio1.tStartRefresh)
     postTestLoop.addData('postTestAudio1.stopped', postTestAudio1.tStopRefresh)
+    postTestLoop.addData('fSound.started', fSound.tStartRefresh)
+    postTestLoop.addData('fSound.stopped', fSound.tStopRefresh)
+    postTestLoop.addData('fMute.started', fMute.tStartRefresh)
+    postTestLoop.addData('fMute.stopped', fMute.tStopRefresh)
     postTestAudio2.stop()  # ensure sound has stopped at end of routine
     postTestLoop.addData('postTestAudio2.started', postTestAudio2.tStartRefresh)
     postTestLoop.addData('postTestAudio2.stopped', postTestAudio2.tStopRefresh)
+    postTestLoop.addData('xMute1.started', xMute1.tStartRefresh)
+    postTestLoop.addData('xMute1.stopped', xMute1.tStopRefresh)
+    postTestLoop.addData('xSound.started', xSound.tStartRefresh)
+    postTestLoop.addData('xSound.stopped', xSound.tStopRefresh)
+    postTestLoop.addData('xMute2.started', xMute2.tStartRefresh)
+    postTestLoop.addData('xMute2.stopped', xMute2.tStopRefresh)
+    postTestAudio3.stop()  # ensure sound has stopped at end of routine
+    postTestLoop.addData('postTestAudio3.started', postTestAudio3.tStartRefresh)
+    postTestLoop.addData('postTestAudio3.stopped', postTestAudio3.tStopRefresh)
+    postTestLoop.addData('jMute1.started', jMute1.tStartRefresh)
+    postTestLoop.addData('jMute1.stopped', jMute1.tStopRefresh)
+    postTestLoop.addData('jSound.started', jSound.tStartRefresh)
+    postTestLoop.addData('jSound.stopped', jSound.tStopRefresh)
+    postTestLoop.addData('jMute2.started', jMute2.tStartRefresh)
+    postTestLoop.addData('jMute2.stopped', jMute2.tStopRefresh)
+    postTestLoop.addData('textInstructionsPostTest.started', textInstructionsPostTest.tStartRefresh)
+    postTestLoop.addData('textInstructionsPostTest.stopped', textInstructionsPostTest.tStopRefresh)
+    postTestLoop.addData('fText.started', fText.tStartRefresh)
+    postTestLoop.addData('fText.stopped', fText.tStopRefresh)
+    postTestLoop.addData('xText.started', xText.tStartRefresh)
+    postTestLoop.addData('xText.stopped', xText.tStopRefresh)
+    postTestLoop.addData('jText.started', jText.tStartRefresh)
+    postTestLoop.addData('jText.stopped', jText.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 1 repeats of 'postTestLoop'
