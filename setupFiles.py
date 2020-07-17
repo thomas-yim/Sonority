@@ -224,7 +224,7 @@ train1blocks = 9
 train1wordsPerBlock = 6
 train2blocks = 3
 train2wordsPerBlock = 9
-toFolder = "autoConditions/"
+
 trainingAudioFilenames = os.listdir('trainingaudio/.')
 novelAudioFilenames = os.listdir('novelaudio/.')
 #Get a list of all the unique audio in the form number_word. No wav or stress location
@@ -249,7 +249,9 @@ if setupWorks:
     thirdVowel = input("What is the vowel to be stressed third? ")
     
     ranking = [firstVowel, secondVowel, thirdVowel]
-
+    
+    toFolder = "".join(ranking) + "Conditions/"
+    
     train1conditions, train1TestConditions = setupTrain1(uniqueTrainAudio, train1wordsPerBlock, train1blocks, ranking, toFolder)
     dfTrain1 = pd.DataFrame({"condFiles":train1conditions, "testFiles":train1TestConditions},
                                 columns=['condFiles', "testFiles"])
