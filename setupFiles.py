@@ -1,3 +1,9 @@
+"""
+Thomas Yim
+July 1 2020
+Sonority Experiment Setup
+"""
+
 import matplotlib.pyplot as plt
 import os
 import numpy
