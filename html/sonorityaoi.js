@@ -250,7 +250,7 @@ function experimentInit() {
   stimulitest1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   stimulitest1.setVolume(1);
   correct = new visual.ImageStim({
@@ -293,7 +293,7 @@ function experimentInit() {
   stimulitrain2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   stimulitrain2.setVolume(1);
   imagetrain2 = new visual.ImageStim({
@@ -310,7 +310,7 @@ function experimentInit() {
   stimulitest2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   stimulitest2.setVolume(1);
   correct2 = new visual.ImageStim({
@@ -397,7 +397,7 @@ function experimentInit() {
   test1Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   test1Audio1.setVolume(1);
   test1Audio1Sound = new visual.ImageStim({
@@ -421,7 +421,7 @@ function experimentInit() {
   test1Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   test1Audio2.setVolume(1);
   test1Audio2Mute1 = new visual.ImageStim({
@@ -1454,14 +1454,12 @@ function trainquestions1RoutineBegin(trials) {
     t = 0;
     trainquestions1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(7.000000);
     // update component parameters for each repeat
     stimulitest1 = new sound.Sound({
     win: psychoJS.window,
     value: audioTrue,
-    secs: 1,
+    secs: -1,
     });
-    stimulitest1.secs=1;
     stimulitest1.setVolume(1);
     correct.setPos([truePos, 0]);
     correct.setImage(imageTrue);
@@ -1503,11 +1501,9 @@ function trainquestions1RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ stimulitest1.play(); });  // screen flip
       stimulitest1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (stimulitest1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  stimulitest1.stop();  // stop the sound (if longer than duration)
-        stimulitest1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (stimulitest1.getDuration() + stimulitest1.tStart)     && stimulitest1.status === PsychoJS.Status.STARTED) {
+      stimulitest1.stop();  // stop the sound (if longer than duration)
+      stimulitest1.status = PsychoJS.Status.FINISHED;
     }
     
     // *correct* updates
@@ -1583,7 +1579,7 @@ function trainquestions1RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1608,6 +1604,9 @@ function trainquestions1RoutineEnd(trials) {
         }
     
     train1Response.stop();
+    // the Routine "trainquestions1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -1745,14 +1744,12 @@ function train2RoutineBegin(trials) {
     t = 0;
     train2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
     // update component parameters for each repeat
     stimulitrain2 = new sound.Sound({
     win: psychoJS.window,
     value: audio,
-    secs: 1,
+    secs: -1,
     });
-    stimulitrain2.secs=1;
     stimulitrain2.setVolume(1);
     imagetrain2.setImage(imageLoc);
     // keep track of which components have finished
@@ -1786,11 +1783,9 @@ function train2RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ stimulitrain2.play(); });  // screen flip
       stimulitrain2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (stimulitrain2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  stimulitrain2.stop();  // stop the sound (if longer than duration)
-        stimulitrain2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (stimulitrain2.getDuration() + stimulitrain2.tStart)     && stimulitrain2.status === PsychoJS.Status.STARTED) {
+      stimulitrain2.stop();  // stop the sound (if longer than duration)
+      stimulitrain2.status = PsychoJS.Status.FINISHED;
     }
     
     // *imagetrain2* updates
@@ -1824,7 +1819,7 @@ function train2RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1842,6 +1837,9 @@ function train2RoutineEnd(trials) {
       }
     }
     stimulitrain2.stop();  // ensure sound has stopped at end of routine
+    // the Routine "train2" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -1855,14 +1853,12 @@ function trainquestions2RoutineBegin(trials) {
     t = 0;
     trainquestions2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(7.000000);
     // update component parameters for each repeat
     stimulitest2 = new sound.Sound({
     win: psychoJS.window,
     value: audioTrue,
-    secs: 1,
+    secs: -1,
     });
-    stimulitest2.secs=1;
     stimulitest2.setVolume(1);
     correct2.setPos([truePos, 0]);
     correct2.setImage(imageTrue);
@@ -1904,11 +1900,9 @@ function trainquestions2RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ stimulitest2.play(); });  // screen flip
       stimulitest2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (stimulitest2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  stimulitest2.stop();  // stop the sound (if longer than duration)
-        stimulitest2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (stimulitest2.getDuration() + stimulitest2.tStart)     && stimulitest2.status === PsychoJS.Status.STARTED) {
+      stimulitest2.stop();  // stop the sound (if longer than duration)
+      stimulitest2.status = PsychoJS.Status.FINISHED;
     }
     
     // *correct2* updates
@@ -1985,7 +1979,7 @@ function trainquestions2RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2010,6 +2004,9 @@ function trainquestions2RoutineEnd(trials) {
         }
     
     train2Response.stop();
+    // the Routine "trainquestions2" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -2208,23 +2205,20 @@ function test1RoutineBegin(trials) {
     t = 0;
     test1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(10.000000);
     // update component parameters for each repeat
     test1Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: firstAudio,
-    secs: 1,
+    secs: -1,
     });
-    test1Audio1.secs=1;
     test1Audio1.setVolume(1);
     test1Audio1Sound.setImage('sound.png');
     test1Audio1Mute.setImage('mute.png');
     test1Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: secondAudio,
-    secs: 1,
+    secs: -1,
     });
-    test1Audio2.secs=1;
     test1Audio2.setVolume(1);
     test1Audio2Mute1.setImage('mute.png');
     test1Audio2Sound.setImage('sound.png');
@@ -2273,11 +2267,9 @@ function test1RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test1Audio1.play(); });  // screen flip
       test1Audio1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test1Audio1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  test1Audio1.stop();  // stop the sound (if longer than duration)
-        test1Audio1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test1Audio1.getDuration() + test1Audio1.tStart)     && test1Audio1.status === PsychoJS.Status.STARTED) {
+      test1Audio1.stop();  // stop the sound (if longer than duration)
+      test1Audio1.status = PsychoJS.Status.FINISHED;
     }
     
     // *test1Audio1Sound* updates
@@ -2316,11 +2308,9 @@ function test1RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test1Audio2.play(); });  // screen flip
       test1Audio2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test1Audio2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  test1Audio2.stop();  // stop the sound (if longer than duration)
-        test1Audio2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test1Audio2.getDuration() + test1Audio2.tStart)     && test1Audio2.status === PsychoJS.Status.STARTED) {
+      test1Audio2.stop();  // stop the sound (if longer than duration)
+      test1Audio2.status = PsychoJS.Status.FINISHED;
     }
     
     // *test1Audio2Mute1* updates
@@ -2453,7 +2443,7 @@ function test1RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2479,6 +2469,9 @@ function test1RoutineEnd(trials) {
         }
     
     test1Response.stop();
+    // the Routine "test1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }

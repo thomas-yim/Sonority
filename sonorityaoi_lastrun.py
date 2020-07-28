@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 27, 2020, at 20:12
+    on July 27, 2020, at 22:34
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -93,7 +93,7 @@ instrResp = keyboard.Keyboard()
 
 # Initialize components for Routine "train1"
 train1Clock = core.Clock()
-stimulitrain1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+stimulitrain1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='stimulitrain1')
 stimulitrain1.setVolume(1)
 imagetrain1 = visual.ImageStim(
@@ -104,6 +104,9 @@ imagetrain1 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
+stimili2train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimili2train1')
+stimili2train1.setVolume(1)
 
 # Initialize components for Routine "trainquestions1"
 trainquestions1Clock = core.Clock()
@@ -710,13 +713,14 @@ for thisTrain1block in train1blocks:
         
         # ------Prepare to start Routine "train1"-------
         continueRoutine = True
-        routineTimer.add(1.000000)
         # update component parameters for each repeat
-        stimulitrain1.setSound(audio, secs=1, hamming=True)
+        stimulitrain1.setSound(audio, hamming=True)
         stimulitrain1.setVolume(1, log=False)
         imagetrain1.setImage(imageLoc)
+        stimili2train1.setSound(audio, hamming=True)
+        stimili2train1.setVolume(1, log=False)
         # keep track of which components have finished
-        train1Components = [stimulitrain1, imagetrain1]
+        train1Components = [stimulitrain1, imagetrain1, stimili2train1]
         for thisComponent in train1Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -731,7 +735,7 @@ for thisTrain1block in train1blocks:
         frameN = -1
         
         # -------Run Routine "train1"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = train1Clock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=train1Clock)
@@ -745,14 +749,6 @@ for thisTrain1block in train1blocks:
                 stimulitrain1.tStart = t  # local t and not account for scr refresh
                 stimulitrain1.tStartRefresh = tThisFlipGlobal  # on global time
                 stimulitrain1.play(when=win)  # sync with win flip
-            if stimulitrain1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > stimulitrain1.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    stimulitrain1.tStop = t  # not accounting for scr refresh
-                    stimulitrain1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(stimulitrain1, 'tStopRefresh')  # time at next scr refresh
-                    stimulitrain1.stop()
             
             # *imagetrain1* updates
             if imagetrain1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
@@ -770,6 +766,13 @@ for thisTrain1block in train1blocks:
                     imagetrain1.frameNStop = frameN  # exact frame index
                     win.timeOnFlip(imagetrain1, 'tStopRefresh')  # time at next scr refresh
                     imagetrain1.setAutoDraw(False)
+            # start/stop stimili2train1
+            if stimili2train1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                # keep track of start time/frame for later
+                stimili2train1.frameNStart = frameN  # exact frame index
+                stimili2train1.tStart = t  # local t and not account for scr refresh
+                stimili2train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimili2train1.play(when=win)  # sync with win flip
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -797,6 +800,11 @@ for thisTrain1block in train1blocks:
         blockwords1.addData('stimulitrain1.stopped', stimulitrain1.tStopRefresh)
         blockwords1.addData('imagetrain1.started', imagetrain1.tStartRefresh)
         blockwords1.addData('imagetrain1.stopped', imagetrain1.tStopRefresh)
+        stimili2train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimili2train1.started', stimili2train1.tStartRefresh)
+        blockwords1.addData('stimili2train1.stopped', stimili2train1.tStopRefresh)
+        # the Routine "train1" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blockwords1'
