@@ -225,7 +225,7 @@ function experimentInit() {
   stimulitrain1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   stimulitrain1.setVolume(1);
   imagetrain1 = new visual.ImageStim({
@@ -1347,14 +1347,12 @@ function train1RoutineBegin(trials) {
     t = 0;
     train1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
     // update component parameters for each repeat
     stimulitrain1 = new sound.Sound({
     win: psychoJS.window,
     value: audio,
-    secs: 1,
+    secs: -1,
     });
-    stimulitrain1.secs=1;
     stimulitrain1.setVolume(1);
     imagetrain1.setImage(imageLoc);
     // keep track of which components have finished
@@ -1390,11 +1388,9 @@ function train1RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ stimulitrain1.play(); });  // screen flip
       stimulitrain1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (stimulitrain1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  stimulitrain1.stop();  // stop the sound (if longer than duration)
-        stimulitrain1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (stimulitrain1.getDuration() + stimulitrain1.tStart)     && stimulitrain1.status === PsychoJS.Status.STARTED) {
+      stimulitrain1.stop();  // stop the sound (if longer than duration)
+      stimulitrain1.status = PsychoJS.Status.FINISHED;
     }
     
     // *imagetrain1* updates
@@ -1428,7 +1424,7 @@ function train1RoutineEachFrame(trials) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1446,6 +1442,9 @@ function train1RoutineEnd(trials) {
       }
     });
     stimulitrain1.stop();  // ensure sound has stopped at end of routine
+    // the Routine "train1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
