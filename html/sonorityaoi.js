@@ -757,7 +757,7 @@ function experimentInit() {
   xSound = new visual.ImageStim({
     win : psychoJS.window,
     name : 'xSound', units : undefined, 
-    image : 'Sound.png', mask : undefined,
+    image : 'sound.png', mask : undefined,
     ori : 0, pos : [0, (- 0.3)], size : [0.2, 0.2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,

@@ -40,7 +40,7 @@ def calculateAccuracy(df, phase):
             reactionTime.append(df[phase + 'Response.rt'][index])
             if df[phase + 'Response.keys'][index] == 'None':
                 empty += 1
-                correct.append(False)
+                correct.append("None")
             elif df['truePos'][index] == -0.5 and df[phase + 'Response.keys'][index] == 'f':
                 correctAnswers += 1
                 correct.append(True)
@@ -57,7 +57,7 @@ def calculateAccuracy(df, phase):
             reactionTime.append(df[phase + 'Response.rt'][index])
             if df[phase + 'Response.keys'][index] == 'None':
                 empty += 1
-                correct.append(False)
+                correct.append("None")
             elif df['whichAudio'][index] == 1 and df[phase + 'Response.keys'][index] == 'f':
                 correctAnswers += 1
                 correct.append(True)
@@ -80,11 +80,11 @@ def calculateAccuracy(df, phase):
     
     df = pd.DataFrame(data, columns=columns)
     
-    print(phase.title())
-    print(correctAnswers)
-    print(empty)
-    print(total)
-    print(str(100*(correctAnswers/total)) + "%")
+    print("Phase: " + phase.title())
+    print("Correct: ", correctAnswers)
+    print("Unanswered: ", empty)
+    print("Total: ", total)
+    print("Percentage Correct: ", str(100*(correctAnswers/total)) + "%")
     print()
     
     return df
@@ -95,7 +95,7 @@ dfTrain1 = calculateAccuracy(df, "train1")
 dfTrain2 = calculateAccuracy(df, "train2")
 dfTest1 = calculateAccuracy(df, "test1")
 
-writer = pd.ExcelWriter('results/' + filename[:-4] + '.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('results/' + filename[:-4] + '_results.xlsx', engine='xlsxwriter')
 dfTrain1.to_excel(writer, sheet_name='Train 1', index = False)
 dfTrain2.to_excel(writer, sheet_name='Train 2', index = False)
 dfTest1.to_excel(writer, sheet_name='Test 1', index = False)
