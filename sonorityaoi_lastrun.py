@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 20, 2020, at 22:30
+    on July 27, 2020, at 20:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ incorrect = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
-train1TestAnswer = keyboard.Keyboard()
+train1Response = keyboard.Keyboard()
 
 # Initialize components for Routine "instr2"
 instr2Clock = core.Clock()
@@ -158,7 +158,6 @@ trainquestions2Clock = core.Clock()
 stimulitest2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='stimulitest2')
 stimulitest2.setVolume(1)
-train2TestAnswer = keyboard.Keyboard()
 correct2 = visual.ImageStim(
     win=win,
     name='correct2', 
@@ -166,7 +165,7 @@ correct2 = visual.ImageStim(
     ori=0, pos=[0,0], size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=True, depth=-1.0)
 incorrect2 = visual.ImageStim(
     win=win,
     name='incorrect2', 
@@ -174,7 +173,8 @@ incorrect2 = visual.ImageStim(
     ori=0, pos=[0,0], size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=True, depth=-2.0)
+train2Response = keyboard.Keyboard()
 
 # Initialize components for Routine "testTrainInstr"
 testTrainInstrClock = core.Clock()
@@ -499,7 +499,7 @@ xMute1 = visual.ImageStim(
 xSound = visual.ImageStim(
     win=win,
     name='xSound', 
-    image='Sound.png', mask=None,
+    image='sound.png', mask=None,
     ori=0, pos=(0, -0.3), size=(0.2, 0.2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -831,11 +831,11 @@ for thisTrain1block in train1blocks:
         correct.setImage(imageTrue)
         incorrect.setPos((falsePos,0))
         incorrect.setImage(imageFalse)
-        train1TestAnswer.keys = []
-        train1TestAnswer.rt = []
-        _train1TestAnswer_allKeys = []
+        train1Response.keys = []
+        train1Response.rt = []
+        _train1Response_allKeys = []
         # keep track of which components have finished
-        trainquestions1Components = [stimulitest1, correct, incorrect, train1TestAnswer]
+        trainquestions1Components = [stimulitest1, correct, incorrect, train1Response]
         for thisComponent in trainquestions1Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -907,32 +907,32 @@ for thisTrain1block in train1blocks:
                     win.timeOnFlip(incorrect, 'tStopRefresh')  # time at next scr refresh
                     incorrect.setAutoDraw(False)
             
-            # *train1TestAnswer* updates
+            # *train1Response* updates
             waitOnFlip = False
-            if train1TestAnswer.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            if train1Response.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
                 # keep track of start time/frame for later
-                train1TestAnswer.frameNStart = frameN  # exact frame index
-                train1TestAnswer.tStart = t  # local t and not account for scr refresh
-                train1TestAnswer.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(train1TestAnswer, 'tStartRefresh')  # time at next scr refresh
-                train1TestAnswer.status = STARTED
+                train1Response.frameNStart = frameN  # exact frame index
+                train1Response.tStart = t  # local t and not account for scr refresh
+                train1Response.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(train1Response, 'tStartRefresh')  # time at next scr refresh
+                train1Response.status = STARTED
                 # keyboard checking is just starting
                 waitOnFlip = True
-                win.callOnFlip(train1TestAnswer.clock.reset)  # t=0 on next screen flip
-            if train1TestAnswer.status == STARTED:
+                win.callOnFlip(train1Response.clock.reset)  # t=0 on next screen flip
+            if train1Response.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > train1TestAnswer.tStartRefresh + 6.0-frameTolerance:
+                if tThisFlipGlobal > train1Response.tStartRefresh + 6.0-frameTolerance:
                     # keep track of stop time/frame for later
-                    train1TestAnswer.tStop = t  # not accounting for scr refresh
-                    train1TestAnswer.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(train1TestAnswer, 'tStopRefresh')  # time at next scr refresh
-                    train1TestAnswer.status = FINISHED
-            if train1TestAnswer.status == STARTED and not waitOnFlip:
-                theseKeys = train1TestAnswer.getKeys(keyList=['f', 'j'], waitRelease=False)
-                _train1TestAnswer_allKeys.extend(theseKeys)
-                if len(_train1TestAnswer_allKeys):
-                    train1TestAnswer.keys = _train1TestAnswer_allKeys[-1].name  # just the last key pressed
-                    train1TestAnswer.rt = _train1TestAnswer_allKeys[-1].rt
+                    train1Response.tStop = t  # not accounting for scr refresh
+                    train1Response.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(train1Response, 'tStopRefresh')  # time at next scr refresh
+                    train1Response.status = FINISHED
+            if train1Response.status == STARTED and not waitOnFlip:
+                theseKeys = train1Response.getKeys(keyList=['f', 'j'], waitRelease=False)
+                _train1Response_allKeys.extend(theseKeys)
+                if len(_train1Response_allKeys):
+                    train1Response.keys = _train1Response_allKeys[-1].name  # just the last key pressed
+                    train1Response.rt = _train1Response_allKeys[-1].rt
                     # a response ends the routine
                     continueRoutine = False
             
@@ -965,13 +965,13 @@ for thisTrain1block in train1blocks:
         blocktest1.addData('incorrect.started', incorrect.tStartRefresh)
         blocktest1.addData('incorrect.stopped', incorrect.tStopRefresh)
         # check responses
-        if train1TestAnswer.keys in ['', [], None]:  # No response was made
-            train1TestAnswer.keys = None
-        blocktest1.addData('train1TestAnswer.keys',train1TestAnswer.keys)
-        if train1TestAnswer.keys != None:  # we had a response
-            blocktest1.addData('train1TestAnswer.rt', train1TestAnswer.rt)
-        blocktest1.addData('train1TestAnswer.started', train1TestAnswer.tStartRefresh)
-        blocktest1.addData('train1TestAnswer.stopped', train1TestAnswer.tStopRefresh)
+        if train1Response.keys in ['', [], None]:  # No response was made
+            train1Response.keys = None
+        blocktest1.addData('train1Response.keys',train1Response.keys)
+        if train1Response.keys != None:  # we had a response
+            blocktest1.addData('train1Response.rt', train1Response.rt)
+        blocktest1.addData('train1Response.started', train1Response.tStartRefresh)
+        blocktest1.addData('train1Response.stopped', train1Response.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blocktest1'
@@ -1249,15 +1249,15 @@ for thisTrain2block in train2blocks:
         # update component parameters for each repeat
         stimulitest2.setSound(audioTrue, secs=1, hamming=True)
         stimulitest2.setVolume(1, log=False)
-        train2TestAnswer.keys = []
-        train2TestAnswer.rt = []
-        _train2TestAnswer_allKeys = []
         correct2.setPos((truePos, 0))
         correct2.setImage(imageTrue)
         incorrect2.setPos((falsePos, 0))
         incorrect2.setImage(imageFalse)
+        train2Response.keys = []
+        train2Response.rt = []
+        _train2Response_allKeys = []
         # keep track of which components have finished
-        trainquestions2Components = [stimulitest2, train2TestAnswer, correct2, incorrect2]
+        trainquestions2Components = [stimulitest2, correct2, incorrect2, train2Response]
         for thisComponent in trainquestions2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1295,36 +1295,6 @@ for thisTrain2block in train2blocks:
                     win.timeOnFlip(stimulitest2, 'tStopRefresh')  # time at next scr refresh
                     stimulitest2.stop()
             
-            # *train2TestAnswer* updates
-            waitOnFlip = False
-            if train2TestAnswer.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
-                # keep track of start time/frame for later
-                train2TestAnswer.frameNStart = frameN  # exact frame index
-                train2TestAnswer.tStart = t  # local t and not account for scr refresh
-                train2TestAnswer.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(train2TestAnswer, 'tStartRefresh')  # time at next scr refresh
-                train2TestAnswer.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(train2TestAnswer.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(train2TestAnswer.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if train2TestAnswer.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > train2TestAnswer.tStartRefresh + 6-frameTolerance:
-                    # keep track of stop time/frame for later
-                    train2TestAnswer.tStop = t  # not accounting for scr refresh
-                    train2TestAnswer.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(train2TestAnswer, 'tStopRefresh')  # time at next scr refresh
-                    train2TestAnswer.status = FINISHED
-            if train2TestAnswer.status == STARTED and not waitOnFlip:
-                theseKeys = train2TestAnswer.getKeys(keyList=['f', 'j'], waitRelease=False)
-                _train2TestAnswer_allKeys.extend(theseKeys)
-                if len(_train2TestAnswer_allKeys):
-                    train2TestAnswer.keys = _train2TestAnswer_allKeys[-1].name  # just the last key pressed
-                    train2TestAnswer.rt = _train2TestAnswer_allKeys[-1].rt
-                    # a response ends the routine
-                    continueRoutine = False
-            
             # *correct2* updates
             if correct2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
@@ -1359,6 +1329,36 @@ for thisTrain2block in train2blocks:
                     win.timeOnFlip(incorrect2, 'tStopRefresh')  # time at next scr refresh
                     incorrect2.setAutoDraw(False)
             
+            # *train2Response* updates
+            waitOnFlip = False
+            if train2Response.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                # keep track of start time/frame for later
+                train2Response.frameNStart = frameN  # exact frame index
+                train2Response.tStart = t  # local t and not account for scr refresh
+                train2Response.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(train2Response, 'tStartRefresh')  # time at next scr refresh
+                train2Response.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(train2Response.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(train2Response.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if train2Response.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > train2Response.tStartRefresh + 6-frameTolerance:
+                    # keep track of stop time/frame for later
+                    train2Response.tStop = t  # not accounting for scr refresh
+                    train2Response.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(train2Response, 'tStopRefresh')  # time at next scr refresh
+                    train2Response.status = FINISHED
+            if train2Response.status == STARTED and not waitOnFlip:
+                theseKeys = train2Response.getKeys(keyList=['f', 'j'], waitRelease=False)
+                _train2Response_allKeys.extend(theseKeys)
+                if len(_train2Response_allKeys):
+                    train2Response.keys = _train2Response_allKeys[-1].name  # just the last key pressed
+                    train2Response.rt = _train2Response_allKeys[-1].rt
+                    # a response ends the routine
+                    continueRoutine = False
+            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -1383,18 +1383,18 @@ for thisTrain2block in train2blocks:
         stimulitest2.stop()  # ensure sound has stopped at end of routine
         blocktest2.addData('stimulitest2.started', stimulitest2.tStartRefresh)
         blocktest2.addData('stimulitest2.stopped', stimulitest2.tStopRefresh)
-        # check responses
-        if train2TestAnswer.keys in ['', [], None]:  # No response was made
-            train2TestAnswer.keys = None
-        blocktest2.addData('train2TestAnswer.keys',train2TestAnswer.keys)
-        if train2TestAnswer.keys != None:  # we had a response
-            blocktest2.addData('train2TestAnswer.rt', train2TestAnswer.rt)
-        blocktest2.addData('train2TestAnswer.started', train2TestAnswer.tStartRefresh)
-        blocktest2.addData('train2TestAnswer.stopped', train2TestAnswer.tStopRefresh)
         blocktest2.addData('correct2.started', correct2.tStartRefresh)
         blocktest2.addData('correct2.stopped', correct2.tStopRefresh)
         blocktest2.addData('incorrect2.started', incorrect2.tStartRefresh)
         blocktest2.addData('incorrect2.stopped', incorrect2.tStopRefresh)
+        # check responses
+        if train2Response.keys in ['', [], None]:  # No response was made
+            train2Response.keys = None
+        blocktest2.addData('train2Response.keys',train2Response.keys)
+        if train2Response.keys != None:  # we had a response
+            blocktest2.addData('train2Response.rt', train2Response.rt)
+        blocktest2.addData('train2Response.started', train2Response.tStartRefresh)
+        blocktest2.addData('train2Response.stopped', train2Response.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blocktest2'
