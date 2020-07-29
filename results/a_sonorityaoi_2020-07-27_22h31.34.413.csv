@@ -1,0 +1,6 @@
+blockwords1.thisRepN,blockwords1.thisTrialN,blockwords1.thisN,blockwords1.thisIndex,blockwords1.ran,audio,imageLoc,participant,session,date,expName,psychopyVersion,OS,frameRate
+0,0,0,0,1,trainingaudio/03_kikita3.wav,pngimages/03_box.png,a,001,2020-07-27_22h31.34.413,sonorityaoi,2020.1.3,Win32,60
+0,1,1,1,1,trainingaudio/07_pitapi2.wav,pngimages/07_suitcase.png,a,001,2020-07-27_22h31.34.413,sonorityaoi,2020.1.3,Win32,60
+0,2,2,2,1,trainingaudio/06_titoka3.wav,pngimages/06_tent.png,a,001,2020-07-27_22h31.34.413,sonorityaoi,2020.1.3,Win32,60
+0,3,3,3,1,trainingaudio/11_tokiko1.wav,pngimages/11_compass.png,a,001,2020-07-27_22h31.34.413,sonorityaoi,2020.1.3,Win32,60
+0,4,4,4,1,trainingaudio/25_tapapi1.wav,pngimages/25_apple.png,a,001,2020-07-27_22h31.34.413,sonorityaoi,2020.1.3,Win32,60

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 27, 2020, at 22:34
+    on July 28, 2020, at 18:48
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -93,9 +93,6 @@ instrResp = keyboard.Keyboard()
 
 # Initialize components for Routine "train1"
 train1Clock = core.Clock()
-stimulitrain1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
-    name='stimulitrain1')
-stimulitrain1.setVolume(1)
 imagetrain1 = visual.ImageStim(
     win=win,
     name='imagetrain1', 
@@ -103,14 +100,29 @@ imagetrain1 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
-stimili2train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
-    name='stimili2train1')
-stimili2train1.setVolume(1)
+    texRes=128, interpolate=True, depth=0.0)
+stimuli1train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli1train1')
+stimuli1train1.setVolume(1)
+stimuli2train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli2train1')
+stimuli2train1.setVolume(1)
+sound_1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='sound_1')
+sound_1.setVolume(1)
+stimuli3train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli3train1')
+stimuli3train1.setVolume(1)
+stimuli4train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli4train1')
+stimuli4train1.setVolume(1)
+stimuli5train1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli5train1')
+stimuli5train1.setVolume(1)
 
 # Initialize components for Routine "trainquestions1"
 trainquestions1Clock = core.Clock()
-stimulitest1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+stimulitest1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='stimulitest1')
 stimulitest1.setVolume(1)
 correct = visual.ImageStim(
@@ -144,9 +156,9 @@ key_resp_3 = keyboard.Keyboard()
 
 # Initialize components for Routine "train2"
 train2Clock = core.Clock()
-stimulitrain2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
-    name='stimulitrain2')
-stimulitrain2.setVolume(1)
+stimuli1train2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='stimuli1train2')
+stimuli1train2.setVolume(1)
 imagetrain2 = visual.ImageStim(
     win=win,
     name='imagetrain2', 
@@ -158,7 +170,7 @@ imagetrain2 = visual.ImageStim(
 
 # Initialize components for Routine "trainquestions2"
 trainquestions2Clock = core.Clock()
-stimulitest2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+stimulitest2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='stimulitest2')
 stimulitest2.setVolume(1)
 correct2 = visual.ImageStim(
@@ -220,7 +232,7 @@ fourWarningTest1 = visual.TextStim(win=win, name='fourWarningTest1',
 
 # Initialize components for Routine "test1"
 test1Clock = core.Clock()
-test1Audio1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+test1Audio1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test1Audio1')
 test1Audio1.setVolume(1)
 test1Audio1Sound = visual.ImageStim(
@@ -239,7 +251,7 @@ test1Audio1Mute = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
-test1Audio2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+test1Audio2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test1Audio2')
 test1Audio2.setVolume(1)
 test1Audio2Mute1 = visual.ImageStim(
@@ -303,7 +315,7 @@ skipTest2Instr = keyboard.Keyboard()
 
 # Initialize components for Routine "test2"
 test2Clock = core.Clock()
-test2Audio1 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
+test2Audio1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test2Audio1')
 test2Audio1.setVolume(1)
 test2Audio1Sound = visual.ImageStim(
@@ -322,7 +334,7 @@ test1Audio2Mute = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
-test2Audio2 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
+test2Audio2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test2Audio2')
 test2Audio2.setVolume(1)
 test2Audio2Mute1 = visual.ImageStim(
@@ -386,7 +398,7 @@ skipTest3Instr = keyboard.Keyboard()
 
 # Initialize components for Routine "test3"
 test3Clock = core.Clock()
-test3Audio1 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
+test3Audio1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test3Audio1')
 test3Audio1.setVolume(1)
 test3Audio1Sound = visual.ImageStim(
@@ -405,7 +417,7 @@ test3Audio1Mute = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
-test3Audio2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+test3Audio2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='test3Audio2')
 test3Audio2.setVolume(1)
 test3Audio2Mute1 = visual.ImageStim(
@@ -469,7 +481,7 @@ postTestText = visual.TextStim(win=win, name='postTestText',
 # Initialize components for Routine "posttest"
 posttestClock = core.Clock()
 postTestResponse = keyboard.Keyboard()
-postTestAudio1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+postTestAudio1 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='postTestAudio1')
 postTestAudio1.setVolume(1)
 fSound = visual.ImageStim(
@@ -488,7 +500,7 @@ fMute = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
-postTestAudio2 = sound.Sound('A', secs=1.0, stereo=True, hamming=True,
+postTestAudio2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='postTestAudio2')
 postTestAudio2.setVolume(1)
 xMute1 = visual.ImageStim(
@@ -515,7 +527,7 @@ xMute2 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-7.0)
-postTestAudio3 = sound.Sound('A', secs=1.0, stereo=True, hamming=False,
+postTestAudio3 = sound.Sound('A', secs=-1, stereo=True, hamming=False,
     name='postTestAudio3')
 postTestAudio3.setVolume(1)
 jMute1 = visual.ImageStim(
@@ -714,13 +726,21 @@ for thisTrain1block in train1blocks:
         # ------Prepare to start Routine "train1"-------
         continueRoutine = True
         # update component parameters for each repeat
-        stimulitrain1.setSound(audio, hamming=True)
-        stimulitrain1.setVolume(1, log=False)
         imagetrain1.setImage(imageLoc)
-        stimili2train1.setSound(audio, hamming=True)
-        stimili2train1.setVolume(1, log=False)
+        stimuli1train1.setSound(audio, hamming=True)
+        stimuli1train1.setVolume(1, log=False)
+        stimuli2train1.setSound(audio, hamming=True)
+        stimuli2train1.setVolume(1, log=False)
+        sound_1.setSound(audio, hamming=True)
+        sound_1.setVolume(1, log=False)
+        stimuli3train1.setSound(audio, hamming=True)
+        stimuli3train1.setVolume(1, log=False)
+        stimuli4train1.setSound(audio, hamming=True)
+        stimuli4train1.setVolume(1, log=False)
+        stimuli5train1.setSound(audio, hamming=True)
+        stimuli5train1.setVolume(1, log=False)
         # keep track of which components have finished
-        train1Components = [stimulitrain1, imagetrain1, stimili2train1]
+        train1Components = [imagetrain1, stimuli1train1, stimuli2train1, sound_1, stimuli3train1, stimuli4train1, stimuli5train1]
         for thisComponent in train1Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -742,16 +762,9 @@ for thisTrain1block in train1blocks:
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
-            # start/stop stimulitrain1
-            if stimulitrain1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-                # keep track of start time/frame for later
-                stimulitrain1.frameNStart = frameN  # exact frame index
-                stimulitrain1.tStart = t  # local t and not account for scr refresh
-                stimulitrain1.tStartRefresh = tThisFlipGlobal  # on global time
-                stimulitrain1.play(when=win)  # sync with win flip
             
             # *imagetrain1* updates
-            if imagetrain1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            if imagetrain1.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
                 # keep track of start time/frame for later
                 imagetrain1.frameNStart = frameN  # exact frame index
                 imagetrain1.tStart = t  # local t and not account for scr refresh
@@ -760,19 +773,54 @@ for thisTrain1block in train1blocks:
                 imagetrain1.setAutoDraw(True)
             if imagetrain1.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > imagetrain1.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > imagetrain1.tStartRefresh + 11-frameTolerance:
                     # keep track of stop time/frame for later
                     imagetrain1.tStop = t  # not accounting for scr refresh
                     imagetrain1.frameNStop = frameN  # exact frame index
                     win.timeOnFlip(imagetrain1, 'tStopRefresh')  # time at next scr refresh
                     imagetrain1.setAutoDraw(False)
-            # start/stop stimili2train1
-            if stimili2train1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # start/stop stimuli1train1
+            if stimuli1train1.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
                 # keep track of start time/frame for later
-                stimili2train1.frameNStart = frameN  # exact frame index
-                stimili2train1.tStart = t  # local t and not account for scr refresh
-                stimili2train1.tStartRefresh = tThisFlipGlobal  # on global time
-                stimili2train1.play(when=win)  # sync with win flip
+                stimuli1train1.frameNStart = frameN  # exact frame index
+                stimuli1train1.tStart = t  # local t and not account for scr refresh
+                stimuli1train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli1train1.play(when=win)  # sync with win flip
+            # start/stop stimuli2train1
+            if stimuli2train1.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
+                # keep track of start time/frame for later
+                stimuli2train1.frameNStart = frameN  # exact frame index
+                stimuli2train1.tStart = t  # local t and not account for scr refresh
+                stimuli2train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli2train1.play(when=win)  # sync with win flip
+            # start/stop sound_1
+            if sound_1.status == NOT_STARTED and tThisFlip >= 6-frameTolerance:
+                # keep track of start time/frame for later
+                sound_1.frameNStart = frameN  # exact frame index
+                sound_1.tStart = t  # local t and not account for scr refresh
+                sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                sound_1.play(when=win)  # sync with win flip
+            # start/stop stimuli3train1
+            if stimuli3train1.status == NOT_STARTED and tThisFlip >= 8-frameTolerance:
+                # keep track of start time/frame for later
+                stimuli3train1.frameNStart = frameN  # exact frame index
+                stimuli3train1.tStart = t  # local t and not account for scr refresh
+                stimuli3train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli3train1.play(when=win)  # sync with win flip
+            # start/stop stimuli4train1
+            if stimuli4train1.status == NOT_STARTED and tThisFlip >= 10-frameTolerance:
+                # keep track of start time/frame for later
+                stimuli4train1.frameNStart = frameN  # exact frame index
+                stimuli4train1.tStart = t  # local t and not account for scr refresh
+                stimuli4train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli4train1.play(when=win)  # sync with win flip
+            # start/stop stimuli5train1
+            if stimuli5train1.status == NOT_STARTED and tThisFlip >= 12-frameTolerance:
+                # keep track of start time/frame for later
+                stimuli5train1.frameNStart = frameN  # exact frame index
+                stimuli5train1.tStart = t  # local t and not account for scr refresh
+                stimuli5train1.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli5train1.play(when=win)  # sync with win flip
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -795,14 +843,26 @@ for thisTrain1block in train1blocks:
         for thisComponent in train1Components:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        stimulitrain1.stop()  # ensure sound has stopped at end of routine
-        blockwords1.addData('stimulitrain1.started', stimulitrain1.tStartRefresh)
-        blockwords1.addData('stimulitrain1.stopped', stimulitrain1.tStopRefresh)
         blockwords1.addData('imagetrain1.started', imagetrain1.tStartRefresh)
         blockwords1.addData('imagetrain1.stopped', imagetrain1.tStopRefresh)
-        stimili2train1.stop()  # ensure sound has stopped at end of routine
-        blockwords1.addData('stimili2train1.started', stimili2train1.tStartRefresh)
-        blockwords1.addData('stimili2train1.stopped', stimili2train1.tStopRefresh)
+        stimuli1train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimuli1train1.started', stimuli1train1.tStartRefresh)
+        blockwords1.addData('stimuli1train1.stopped', stimuli1train1.tStopRefresh)
+        stimuli2train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimuli2train1.started', stimuli2train1.tStartRefresh)
+        blockwords1.addData('stimuli2train1.stopped', stimuli2train1.tStopRefresh)
+        sound_1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('sound_1.started', sound_1.tStartRefresh)
+        blockwords1.addData('sound_1.stopped', sound_1.tStopRefresh)
+        stimuli3train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimuli3train1.started', stimuli3train1.tStartRefresh)
+        blockwords1.addData('stimuli3train1.stopped', stimuli3train1.tStopRefresh)
+        stimuli4train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimuli4train1.started', stimuli4train1.tStartRefresh)
+        blockwords1.addData('stimuli4train1.stopped', stimuli4train1.tStopRefresh)
+        stimuli5train1.stop()  # ensure sound has stopped at end of routine
+        blockwords1.addData('stimuli5train1.started', stimuli5train1.tStartRefresh)
+        blockwords1.addData('stimuli5train1.stopped', stimuli5train1.tStopRefresh)
         # the Routine "train1" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -831,9 +891,8 @@ for thisTrain1block in train1blocks:
         
         # ------Prepare to start Routine "trainquestions1"-------
         continueRoutine = True
-        routineTimer.add(7.000000)
         # update component parameters for each repeat
-        stimulitest1.setSound(audioTrue, secs=1, hamming=True)
+        stimulitest1.setSound(audioTrue, hamming=True)
         stimulitest1.setVolume(1, log=False)
         correct.setPos((truePos,0))
         correct.setImage(imageTrue)
@@ -858,7 +917,7 @@ for thisTrain1block in train1blocks:
         frameN = -1
         
         # -------Run Routine "trainquestions1"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = trainquestions1Clock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=trainquestions1Clock)
@@ -872,14 +931,6 @@ for thisTrain1block in train1blocks:
                 stimulitest1.tStart = t  # local t and not account for scr refresh
                 stimulitest1.tStartRefresh = tThisFlipGlobal  # on global time
                 stimulitest1.play(when=win)  # sync with win flip
-            if stimulitest1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > stimulitest1.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    stimulitest1.tStop = t  # not accounting for scr refresh
-                    stimulitest1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(stimulitest1, 'tStopRefresh')  # time at next scr refresh
-                    stimulitest1.stop()
             
             # *correct* updates
             if correct.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -980,6 +1031,8 @@ for thisTrain1block in train1blocks:
             blocktest1.addData('train1Response.rt', train1Response.rt)
         blocktest1.addData('train1Response.started', train1Response.tStartRefresh)
         blocktest1.addData('train1Response.stopped', train1Response.tStopRefresh)
+        # the Routine "trainquestions1" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blocktest1'
@@ -1140,13 +1193,12 @@ for thisTrain2block in train2blocks:
         
         # ------Prepare to start Routine "train2"-------
         continueRoutine = True
-        routineTimer.add(1.000000)
         # update component parameters for each repeat
-        stimulitrain2.setSound(audio, secs=1, hamming=True)
-        stimulitrain2.setVolume(1, log=False)
+        stimuli1train2.setSound(audio, hamming=True)
+        stimuli1train2.setVolume(1, log=False)
         imagetrain2.setImage(imageLoc)
         # keep track of which components have finished
-        train2Components = [stimulitrain2, imagetrain2]
+        train2Components = [stimuli1train2, imagetrain2]
         for thisComponent in train2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1161,28 +1213,20 @@ for thisTrain2block in train2blocks:
         frameN = -1
         
         # -------Run Routine "train2"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = train2Clock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=train2Clock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
-            # start/stop stimulitrain2
-            if stimulitrain2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # start/stop stimuli1train2
+            if stimuli1train2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                stimulitrain2.frameNStart = frameN  # exact frame index
-                stimulitrain2.tStart = t  # local t and not account for scr refresh
-                stimulitrain2.tStartRefresh = tThisFlipGlobal  # on global time
-                stimulitrain2.play(when=win)  # sync with win flip
-            if stimulitrain2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > stimulitrain2.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    stimulitrain2.tStop = t  # not accounting for scr refresh
-                    stimulitrain2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(stimulitrain2, 'tStopRefresh')  # time at next scr refresh
-                    stimulitrain2.stop()
+                stimuli1train2.frameNStart = frameN  # exact frame index
+                stimuli1train2.tStart = t  # local t and not account for scr refresh
+                stimuli1train2.tStartRefresh = tThisFlipGlobal  # on global time
+                stimuli1train2.play(when=win)  # sync with win flip
             
             # *imagetrain2* updates
             if imagetrain2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1222,11 +1266,13 @@ for thisTrain2block in train2blocks:
         for thisComponent in train2Components:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        stimulitrain2.stop()  # ensure sound has stopped at end of routine
-        blockloop2.addData('stimulitrain2.started', stimulitrain2.tStartRefresh)
-        blockloop2.addData('stimulitrain2.stopped', stimulitrain2.tStopRefresh)
+        stimuli1train2.stop()  # ensure sound has stopped at end of routine
+        blockloop2.addData('stimuli1train2.started', stimuli1train2.tStartRefresh)
+        blockloop2.addData('stimuli1train2.stopped', stimuli1train2.tStopRefresh)
         blockloop2.addData('imagetrain2.started', imagetrain2.tStartRefresh)
         blockloop2.addData('imagetrain2.stopped', imagetrain2.tStopRefresh)
+        # the Routine "train2" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blockloop2'
@@ -1253,9 +1299,8 @@ for thisTrain2block in train2blocks:
         
         # ------Prepare to start Routine "trainquestions2"-------
         continueRoutine = True
-        routineTimer.add(7.000000)
         # update component parameters for each repeat
-        stimulitest2.setSound(audioTrue, secs=1, hamming=True)
+        stimulitest2.setSound(audioTrue, hamming=True)
         stimulitest2.setVolume(1, log=False)
         correct2.setPos((truePos, 0))
         correct2.setImage(imageTrue)
@@ -1280,7 +1325,7 @@ for thisTrain2block in train2blocks:
         frameN = -1
         
         # -------Run Routine "trainquestions2"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = trainquestions2Clock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=trainquestions2Clock)
@@ -1294,14 +1339,6 @@ for thisTrain2block in train2blocks:
                 stimulitest2.tStart = t  # local t and not account for scr refresh
                 stimulitest2.tStartRefresh = tThisFlipGlobal  # on global time
                 stimulitest2.play(when=win)  # sync with win flip
-            if stimulitest2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > stimulitest2.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    stimulitest2.tStop = t  # not accounting for scr refresh
-                    stimulitest2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(stimulitest2, 'tStopRefresh')  # time at next scr refresh
-                    stimulitest2.stop()
             
             # *correct2* updates
             if correct2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1403,6 +1440,8 @@ for thisTrain2block in train2blocks:
             blocktest2.addData('train2Response.rt', train2Response.rt)
         blocktest2.addData('train2Response.started', train2Response.tStartRefresh)
         blocktest2.addData('train2Response.stopped', train2Response.tStopRefresh)
+        # the Routine "trainquestions2" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'blocktest2'
@@ -1620,13 +1659,12 @@ for thisTest1Loop in test1Loop:
     
     # ------Prepare to start Routine "test1"-------
     continueRoutine = True
-    routineTimer.add(10.000000)
     # update component parameters for each repeat
-    test1Audio1.setSound(firstAudio, secs=1, hamming=True)
+    test1Audio1.setSound(firstAudio, hamming=True)
     test1Audio1.setVolume(1, log=False)
     test1Audio1Sound.setImage('sound.png')
     test1Audio1Mute.setImage('mute.png')
-    test1Audio2.setSound(secondAudio, secs=1, hamming=True)
+    test1Audio2.setSound(secondAudio, hamming=True)
     test1Audio2.setVolume(1, log=False)
     test1Audio2Mute1.setImage('mute.png')
     test1Audio2Sound.setImage('sound.png')
@@ -1651,7 +1689,7 @@ for thisTest1Loop in test1Loop:
     frameN = -1
     
     # -------Run Routine "test1"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = test1Clock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=test1Clock)
@@ -1665,14 +1703,6 @@ for thisTest1Loop in test1Loop:
             test1Audio1.tStart = t  # local t and not account for scr refresh
             test1Audio1.tStartRefresh = tThisFlipGlobal  # on global time
             test1Audio1.play(when=win)  # sync with win flip
-        if test1Audio1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio1.tStartRefresh + 1-frameTolerance:
-                # keep track of stop time/frame for later
-                test1Audio1.tStop = t  # not accounting for scr refresh
-                test1Audio1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test1Audio1, 'tStopRefresh')  # time at next scr refresh
-                test1Audio1.stop()
         
         # *test1Audio1Sound* updates
         if test1Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1714,14 +1744,6 @@ for thisTest1Loop in test1Loop:
             test1Audio2.tStart = t  # local t and not account for scr refresh
             test1Audio2.tStartRefresh = tThisFlipGlobal  # on global time
             test1Audio2.play(when=win)  # sync with win flip
-        if test1Audio2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2.tStartRefresh + 1-frameTolerance:
-                # keep track of stop time/frame for later
-                test1Audio2.tStop = t  # not accounting for scr refresh
-                test1Audio2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test1Audio2, 'tStopRefresh')  # time at next scr refresh
-                test1Audio2.stop()
         
         # *test1Audio2Mute1* updates
         if test1Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1906,6 +1928,8 @@ for thisTest1Loop in test1Loop:
     test1Loop.addData('test1F.stopped', test1F.tStopRefresh)
     test1Loop.addData('test1J.started', test1J.tStartRefresh)
     test1Loop.addData('test1J.stopped', test1J.tStopRefresh)
+    # the Routine "test1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 1 repeats of 'test1Loop'
@@ -2043,13 +2067,12 @@ for thisTest2Loop in test2Loop:
     
     # ------Prepare to start Routine "test2"-------
     continueRoutine = True
-    routineTimer.add(10.000000)
     # update component parameters for each repeat
-    test2Audio1.setSound(firstAudio, secs=1.0, hamming=True)
+    test2Audio1.setSound(firstAudio, hamming=True)
     test2Audio1.setVolume(1, log=False)
     test2Audio1Sound.setImage('sound.png')
     test1Audio2Mute.setImage('mute.png')
-    test2Audio2.setSound(secondAudio, secs=1.0, hamming=True)
+    test2Audio2.setSound(secondAudio, hamming=True)
     test2Audio2.setVolume(1, log=False)
     test2Audio2Mute1.setImage('mute.png')
     test2Audio2Sound.setImage('sound.png')
@@ -2073,7 +2096,7 @@ for thisTest2Loop in test2Loop:
     frameN = -1
     
     # -------Run Routine "test2"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = test2Clock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=test2Clock)
@@ -2087,14 +2110,6 @@ for thisTest2Loop in test2Loop:
             test2Audio1.tStart = t  # local t and not account for scr refresh
             test2Audio1.tStartRefresh = tThisFlipGlobal  # on global time
             test2Audio1.play(when=win)  # sync with win flip
-        if test2Audio1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Audio1.tStartRefresh + 1.0-frameTolerance:
-                # keep track of stop time/frame for later
-                test2Audio1.tStop = t  # not accounting for scr refresh
-                test2Audio1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test2Audio1, 'tStopRefresh')  # time at next scr refresh
-                test2Audio1.stop()
         
         # *test2Audio1Sound* updates
         if test2Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2136,14 +2151,6 @@ for thisTest2Loop in test2Loop:
             test2Audio2.tStart = t  # local t and not account for scr refresh
             test2Audio2.tStartRefresh = tThisFlipGlobal  # on global time
             test2Audio2.play(when=win)  # sync with win flip
-        if test2Audio2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Audio2.tStartRefresh + 1.0-frameTolerance:
-                # keep track of stop time/frame for later
-                test2Audio2.tStop = t  # not accounting for scr refresh
-                test2Audio2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test2Audio2, 'tStopRefresh')  # time at next scr refresh
-                test2Audio2.stop()
         
         # *test2Audio2Mute1* updates
         if test2Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2328,6 +2335,8 @@ for thisTest2Loop in test2Loop:
     test2Loop.addData('test2F.stopped', test2F.tStopRefresh)
     test2Loop.addData('test2J.started', test2J.tStartRefresh)
     test2Loop.addData('test2J.stopped', test2J.tStopRefresh)
+    # the Routine "test2" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 0 repeats of 'test2Loop'
@@ -2465,13 +2474,12 @@ for thisTest3Loop in test3Loop:
     
     # ------Prepare to start Routine "test3"-------
     continueRoutine = True
-    routineTimer.add(10.000000)
     # update component parameters for each repeat
-    test3Audio1.setSound(firstAudio, secs=1.0, hamming=True)
+    test3Audio1.setSound(firstAudio, hamming=True)
     test3Audio1.setVolume(1, log=False)
     test3Audio1Sound.setImage('sound.png')
     test3Audio1Mute.setImage('mute.png')
-    test3Audio2.setSound(secondAudio, secs=1, hamming=True)
+    test3Audio2.setSound(secondAudio, hamming=True)
     test3Audio2.setVolume(1, log=False)
     test3Audio2Mute1.setImage('mute.png')
     test3Audio2Sound.setImage('sound.png')
@@ -2496,7 +2504,7 @@ for thisTest3Loop in test3Loop:
     frameN = -1
     
     # -------Run Routine "test3"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = test3Clock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=test3Clock)
@@ -2510,14 +2518,6 @@ for thisTest3Loop in test3Loop:
             test3Audio1.tStart = t  # local t and not account for scr refresh
             test3Audio1.tStartRefresh = tThisFlipGlobal  # on global time
             test3Audio1.play(when=win)  # sync with win flip
-        if test3Audio1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio1.tStartRefresh + 1.0-frameTolerance:
-                # keep track of stop time/frame for later
-                test3Audio1.tStop = t  # not accounting for scr refresh
-                test3Audio1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test3Audio1, 'tStopRefresh')  # time at next scr refresh
-                test3Audio1.stop()
         
         # *test3Audio1Sound* updates
         if test3Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2559,14 +2559,6 @@ for thisTest3Loop in test3Loop:
             test3Audio2.tStart = t  # local t and not account for scr refresh
             test3Audio2.tStartRefresh = tThisFlipGlobal  # on global time
             test3Audio2.play(when=win)  # sync with win flip
-        if test3Audio2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio2.tStartRefresh + 1-frameTolerance:
-                # keep track of stop time/frame for later
-                test3Audio2.tStop = t  # not accounting for scr refresh
-                test3Audio2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(test3Audio2, 'tStopRefresh')  # time at next scr refresh
-                test3Audio2.stop()
         
         # *test3Audio2Mute1* updates
         if test3Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2751,6 +2743,8 @@ for thisTest3Loop in test3Loop:
     test3Loop.addData('test3F.stopped', test3F.tStopRefresh)
     test3Loop.addData('test3J.started', test3J.tStartRefresh)
     test3Loop.addData('test3J.stopped', test3J.tStopRefresh)
+    # the Routine "test3" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 0 repeats of 'test3Loop'
@@ -2846,16 +2840,15 @@ for thisPostTestLoop in postTestLoop:
     
     # ------Prepare to start Routine "posttest"-------
     continueRoutine = True
-    routineTimer.add(10.000000)
     # update component parameters for each repeat
     postTestResponse.keys = []
     postTestResponse.rt = []
     _postTestResponse_allKeys = []
-    postTestAudio1.setSound(audioA, secs=1, hamming=True)
+    postTestAudio1.setSound(audioA, hamming=True)
     postTestAudio1.setVolume(1, log=False)
-    postTestAudio2.setSound(audioB, secs=1.0, hamming=True)
+    postTestAudio2.setSound(audioB, hamming=True)
     postTestAudio2.setVolume(1, log=False)
-    postTestAudio3.setSound(audioC, secs=1.0, hamming=False)
+    postTestAudio3.setSound(audioC, hamming=False)
     postTestAudio3.setVolume(1, log=False)
     # keep track of which components have finished
     posttestComponents = [postTestResponse, postTestAudio1, fSound, fMute, postTestAudio2, xMute1, xSound, xMute2, postTestAudio3, jMute1, jSound, jMute2, textInstructionsPostTest, fText, xText, jText]
@@ -2873,7 +2866,7 @@ for thisPostTestLoop in postTestLoop:
     frameN = -1
     
     # -------Run Routine "posttest"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = posttestClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=posttestClock)
@@ -2917,14 +2910,6 @@ for thisPostTestLoop in postTestLoop:
             postTestAudio1.tStart = t  # local t and not account for scr refresh
             postTestAudio1.tStartRefresh = tThisFlipGlobal  # on global time
             postTestAudio1.play(when=win)  # sync with win flip
-        if postTestAudio1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > postTestAudio1.tStartRefresh + 1-frameTolerance:
-                # keep track of stop time/frame for later
-                postTestAudio1.tStop = t  # not accounting for scr refresh
-                postTestAudio1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(postTestAudio1, 'tStopRefresh')  # time at next scr refresh
-                postTestAudio1.stop()
         
         # *fSound* updates
         if fSound.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2966,14 +2951,6 @@ for thisPostTestLoop in postTestLoop:
             postTestAudio2.tStart = t  # local t and not account for scr refresh
             postTestAudio2.tStartRefresh = tThisFlipGlobal  # on global time
             postTestAudio2.play(when=win)  # sync with win flip
-        if postTestAudio2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > postTestAudio2.tStartRefresh + 1.0-frameTolerance:
-                # keep track of stop time/frame for later
-                postTestAudio2.tStop = t  # not accounting for scr refresh
-                postTestAudio2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(postTestAudio2, 'tStopRefresh')  # time at next scr refresh
-                postTestAudio2.stop()
         
         # *xMute1* updates
         if xMute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3032,14 +3009,6 @@ for thisPostTestLoop in postTestLoop:
             postTestAudio3.tStart = t  # local t and not account for scr refresh
             postTestAudio3.tStartRefresh = tThisFlipGlobal  # on global time
             postTestAudio3.play(when=win)  # sync with win flip
-        if postTestAudio3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > postTestAudio3.tStartRefresh + 1.0-frameTolerance:
-                # keep track of stop time/frame for later
-                postTestAudio3.tStop = t  # not accounting for scr refresh
-                postTestAudio3.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(postTestAudio3, 'tStopRefresh')  # time at next scr refresh
-                postTestAudio3.stop()
         
         # *jMute1* updates
         if jMute1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3222,6 +3191,8 @@ for thisPostTestLoop in postTestLoop:
     postTestLoop.addData('xText.stopped', xText.tStopRefresh)
     postTestLoop.addData('jText.started', jText.tStartRefresh)
     postTestLoop.addData('jText.stopped', jText.tStopRefresh)
+    # the Routine "posttest" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 0 repeats of 'postTestLoop'
