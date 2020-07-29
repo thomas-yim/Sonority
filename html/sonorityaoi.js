@@ -119,33 +119,47 @@ function updateInfo() {
 
 var instrClock;
 var instructions;
-var instrResp;
+var advanceTrain1;
 var train1Clock;
-var stimulitrain1;
 var imagetrain1;
+var stimuli1train1;
+var stimuli2train1;
+var stimuli3train1;
+var stimuli4train1;
+var stimuli5train1;
 var trainquestions1Clock;
 var stimulitest1;
 var correct;
 var incorrect;
 var train1Response;
 var instr2Clock;
-var notice;
-var key_resp_3;
+var train2warning10;
+var train2warning5;
+var train2warning4;
+var train2warning3;
+var train2warning2;
+var train2warning1;
+var skipTrain2Instr;
 var train2Clock;
-var stimulitrain2;
 var imagetrain2;
+var stimuli1train2;
+var stimuli2train2;
+var stimuli3train2;
+var stimuli4train2;
+var stimuli5train2;
 var trainquestions2Clock;
 var stimulitest2;
 var correct2;
 var incorrect2;
 var train2Response;
 var testTrainInstrClock;
-var test1Instr;
 var skipTest1Instr;
-var oneWarningTest1;
-var twoWarningTest1;
-var threeWarningTest1;
-var fourWarningTest1;
+var test1warning10;
+var test1warning5;
+var test1warning4;
+var test1warning3;
+var test1warning2;
+var test1warning1;
 var test1Clock;
 var test1Audio1;
 var test1Audio1Sound;
@@ -159,8 +173,13 @@ var test1Image;
 var test1F;
 var test1J;
 var testNovel1InstrClock;
-var test2Instr;
 var skipTest2Instr;
+var test2warning10;
+var test2warning5;
+var test2warning4;
+var test2warning3;
+var test2warning2;
+var test2warning1;
 var test2Clock;
 var test2Audio1;
 var test2Audio1Sound;
@@ -174,8 +193,13 @@ var test2Image;
 var test2F;
 var test2J;
 var testNovel2InstrClock;
-var test3Instr;
 var skipTest3Instr;
+var test3warning10;
+var test3warning5;
+var test3warning4;
+var test3warning3;
+var test3warning2;
+var test3warning1;
 var test3Clock;
 var test3Audio1;
 var test3Audio1Sound;
@@ -189,7 +213,13 @@ var test3Image;
 var test3F;
 var test3J;
 var postTestInstrClock;
-var postTestText;
+var skipPostTestInstr;
+var postTestWarning10;
+var postTestWarning5;
+var postTestWarning4;
+var postTestWarning3;
+var postTestWarning2;
+var postTestWarning1;
 var posttestClock;
 var postTestResponse;
 var postTestAudio1;
@@ -226,16 +256,10 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  instrResp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "train1"
   train1Clock = new util.Clock();
-  stimulitrain1 = new sound.Sound({
-    win: psychoJS.window,
-    value: 'A',
-    secs: (- 1),
-    });
-  stimulitrain1.setVolume(1);
   imagetrain1 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'imagetrain1', units : undefined, 
@@ -243,8 +267,38 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : 0.0 
   });
+  stimuli1train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli1train1.setVolume(1);
+  stimuli2train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli2train1.setVolume(1);
+  stimuli3train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli3train1.setVolume(1);
+  stimuli4train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli4train1.setVolume(1);
+  stimuli5train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli5train1.setVolume(1);
   // Initialize components for Routine "trainquestions1"
   trainquestions1Clock = new util.Clock();
   stimulitest1 = new sound.Sound({
@@ -275,10 +329,10 @@ function experimentInit() {
   
   // Initialize components for Routine "instr2"
   instr2Clock = new util.Clock();
-  notice = new visual.TextStim({
+  train2warning10 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'notice',
-    text: 'Next part will automaticall start in 3 minutes.\n\nPress any button to start',
+    name: 'train2warning10',
+    text: 'Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -286,16 +340,65 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  key_resp_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  train2warning5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2warning5',
+    text: 'Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  train2warning4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2warning4',
+    text: 'Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  train2warning3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2warning3',
+    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  train2warning2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2warning2',
+    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  train2warning1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2warning1',
+    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  skipTrain2Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "train2"
   train2Clock = new util.Clock();
-  stimulitrain2 = new sound.Sound({
-    win: psychoJS.window,
-    value: 'A',
-    secs: (- 1),
-    });
-  stimulitrain2.setVolume(1);
   imagetrain2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'imagetrain2', units : undefined, 
@@ -303,8 +406,38 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : 0.0 
   });
+  stimuli1train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli1train2.setVolume(1);
+  stimuli2train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli2train2.setVolume(1);
+  stimuli3train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli3train2.setVolume(1);
+  stimuli4train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli4train2.setVolume(1);
+  stimuli5train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  stimuli5train2.setVolume(1);
   // Initialize components for Routine "trainquestions2"
   trainquestions2Clock = new util.Clock();
   stimulitest2 = new sound.Sound({
@@ -335,61 +468,72 @@ function experimentInit() {
   
   // Initialize components for Routine "testTrainInstr"
   testTrainInstrClock = new util.Clock();
-  test1Instr = new visual.TextStim({
+  skipTest1Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  test1warning10 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'test1Instr',
-    text: 'Instructions For Test1 Go Here',
+    name: 'test1warning10',
+    text: 'Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
-  skipTest1Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  oneWarningTest1 = new visual.TextStim({
+  test1warning5 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'oneWarningTest1',
-    text: 'Less than 1 minute left',
+    name: 'test1warning5',
+    text: 'Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.5)], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
   
-  twoWarningTest1 = new visual.TextStim({
+  test1warning4 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'twoWarningTest1',
-    text: 'Less than 2 minutes left',
+    name: 'test1warning4',
+    text: 'Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.5)], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
-  threeWarningTest1 = new visual.TextStim({
+  test1warning3 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'threeWarningTest1',
-    text: 'Less than 3 minutes left',
+    name: 'test1warning3',
+    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -4.0 
   });
   
-  fourWarningTest1 = new visual.TextStim({
+  test1warning2 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'fourWarningTest1',
-    text: 'Less than four minutes left',
+    name: 'test1warning2',
+    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -5.0 
+  });
+  
+  test1warning1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test1warning1',
+    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
   });
   
   // Initialize components for Routine "test1"
@@ -486,25 +630,80 @@ function experimentInit() {
   
   // Initialize components for Routine "testNovel1Instr"
   testNovel1InstrClock = new util.Clock();
-  test2Instr = new visual.TextStim({
+  skipTest2Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  test2warning10 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'test2Instr',
-    text: 'Instructions For Test2 Go Here',
+    name: 'test2warning10',
+    text: 'Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
-  skipTest2Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  test2warning5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2warning5',
+    text: 'Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  test2warning4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2warning4',
+    text: 'Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  test2warning3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2warning3',
+    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  test2warning2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2warning2',
+    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  test2warning1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2warning1',
+    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "test2"
   test2Clock = new util.Clock();
   test2Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1.0,
+    secs: (- 1),
     });
   test2Audio1.setVolume(1);
   test2Audio1Sound = new visual.ImageStim({
@@ -528,7 +727,7 @@ function experimentInit() {
   test2Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1.0,
+    secs: (- 1),
     });
   test2Audio2.setVolume(1);
   test2Audio2Mute1 = new visual.ImageStim({
@@ -593,25 +792,80 @@ function experimentInit() {
   
   // Initialize components for Routine "testNovel2Instr"
   testNovel2InstrClock = new util.Clock();
-  test3Instr = new visual.TextStim({
+  skipTest3Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  test3warning10 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'test3Instr',
-    text: 'Instructions For Test3 Go Here\n',
+    name: 'test3warning10',
+    text: 'Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
-  skipTest3Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  test3warning5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3warning5',
+    text: 'Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  test3warning4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3warning4',
+    text: 'Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  test3warning3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3warning3',
+    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  test3warning2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3warning2',
+    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  test3warning1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3warning1',
+    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "test3"
   test3Clock = new util.Clock();
   test3Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1.0,
+    secs: (- 1),
     });
   test3Audio1.setVolume(1);
   test3Audio1Sound = new visual.ImageStim({
@@ -635,7 +889,7 @@ function experimentInit() {
   test3Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   test3Audio2.setVolume(1);
   test3Audio2Mute1 = new visual.ImageStim({
@@ -700,15 +954,72 @@ function experimentInit() {
   
   // Initialize components for Routine "postTestInstr"
   postTestInstrClock = new util.Clock();
-  postTestText = new visual.TextStim({
+  skipPostTestInstr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  postTestWarning10 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'postTestText',
-    text: 'You have reached the final section of the experiment.',
+    name: 'postTestWarning10',
+    text: 'Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
+  });
+  
+  postTestWarning5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'postTestWarning5',
+    text: 'Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  postTestWarning4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'postTestWarning4',
+    text: 'Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  postTestWarning3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'postTestWarning3',
+    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  postTestWarning2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'postTestWarning2',
+    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  postTestWarning1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'postTestWarning1',
+    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
   });
   
   // Initialize components for Routine "posttest"
@@ -718,7 +1029,7 @@ function experimentInit() {
   postTestAudio1 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   postTestAudio1.setVolume(1);
   fSound = new visual.ImageStim({
@@ -742,7 +1053,7 @@ function experimentInit() {
   postTestAudio2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1.0,
+    secs: (- 1),
     });
   postTestAudio2.setVolume(1);
   xMute1 = new visual.ImageStim({
@@ -775,7 +1086,7 @@ function experimentInit() {
   postTestAudio3 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1.0,
+    secs: (- 1),
     });
   postTestAudio3.setVolume(1);
   jMute1 = new visual.ImageStim({
@@ -874,7 +1185,7 @@ function experimentInit() {
 
 var t;
 var frameN;
-var _instrResp_allKeys;
+var _advanceTrain1_allKeys;
 var instrComponents;
 function instrRoutineBegin(trials) {
   return function () {
@@ -883,13 +1194,13 @@ function instrRoutineBegin(trials) {
     instrClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    instrResp.keys = undefined;
-    instrResp.rt = undefined;
-    _instrResp_allKeys = [];
+    advanceTrain1.keys = undefined;
+    advanceTrain1.rt = undefined;
+    _advanceTrain1_allKeys = [];
     // keep track of which components have finished
     instrComponents = [];
     instrComponents.push(instructions);
-    instrComponents.push(instrResp);
+    instrComponents.push(advanceTrain1);
     
     for (const thisComponent of instrComponents)
       if ('status' in thisComponent)
@@ -920,24 +1231,24 @@ function instrRoutineEachFrame(trials) {
     }
 
     
-    // *instrResp* updates
-    if (t >= 0.0 && instrResp.status === PsychoJS.Status.NOT_STARTED) {
+    // *advanceTrain1* updates
+    if (t >= 0.0 && advanceTrain1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      instrResp.tStart = t;  // (not accounting for frame time here)
-      instrResp.frameNStart = frameN;  // exact frame index
+      advanceTrain1.tStart = t;  // (not accounting for frame time here)
+      advanceTrain1.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { instrResp.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { instrResp.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { instrResp.clearEvents(); });
+      psychoJS.window.callOnFlip(function() { advanceTrain1.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { advanceTrain1.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { advanceTrain1.clearEvents(); });
     }
 
-    if (instrResp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = instrResp.getKeys({keyList: [], waitRelease: false});
-      _instrResp_allKeys = _instrResp_allKeys.concat(theseKeys);
-      if (_instrResp_allKeys.length > 0) {
-        instrResp.keys = _instrResp_allKeys[_instrResp_allKeys.length - 1].name;  // just the last key pressed
-        instrResp.rt = _instrResp_allKeys[_instrResp_allKeys.length - 1].rt;
+    if (advanceTrain1.status === PsychoJS.Status.STARTED) {
+      let theseKeys = advanceTrain1.getKeys({keyList: [], waitRelease: false});
+      _advanceTrain1_allKeys = _advanceTrain1_allKeys.concat(theseKeys);
+      if (_advanceTrain1_allKeys.length > 0) {
+        advanceTrain1.keys = _advanceTrain1_allKeys[_advanceTrain1_allKeys.length - 1].name;  // just the last key pressed
+        advanceTrain1.rt = _advanceTrain1_allKeys[_advanceTrain1_allKeys.length - 1].rt;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -1345,17 +1656,45 @@ function train1RoutineBegin(trials) {
     train1Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    stimulitrain1 = new sound.Sound({
+    imagetrain1.setImage(imageLoc);
+    stimuli1train1 = new sound.Sound({
     win: psychoJS.window,
     value: audio,
     secs: -1,
     });
-    stimulitrain1.setVolume(1);
-    imagetrain1.setImage(imageLoc);
+    stimuli1train1.setVolume(1);
+    stimuli2train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli2train1.setVolume(1);
+    stimuli3train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli3train1.setVolume(1);
+    stimuli4train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli4train1.setVolume(1);
+    stimuli5train1 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli5train1.setVolume(1);
     // keep track of which components have finished
     train1Components = [];
-    train1Components.push(stimulitrain1);
     train1Components.push(imagetrain1);
+    train1Components.push(stimuli1train1);
+    train1Components.push(stimuli2train1);
+    train1Components.push(stimuli3train1);
+    train1Components.push(stimuli4train1);
+    train1Components.push(stimuli5train1);
     
     for (const thisComponent of train1Components)
       if ('status' in thisComponent)
@@ -1375,22 +1714,9 @@ function train1RoutineEachFrame(trials) {
     t = train1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    // start/stop stimulitrain1
-    if (t >= 0 && stimulitrain1.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      stimulitrain1.tStart = t;  // (not accounting for frame time here)
-      stimulitrain1.frameNStart = frameN;  // exact frame index
-      
-      psychoJS.window.callOnFlip(function(){ stimulitrain1.play(); });  // screen flip
-      stimulitrain1.status = PsychoJS.Status.STARTED;
-    }
-    if (t >= (stimulitrain1.getDuration() + stimulitrain1.tStart)     && stimulitrain1.status === PsychoJS.Status.STARTED) {
-      stimulitrain1.stop();  // stop the sound (if longer than duration)
-      stimulitrain1.status = PsychoJS.Status.FINISHED;
-    }
     
     // *imagetrain1* updates
-    if (t >= 0 && imagetrain1.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 2 && imagetrain1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       imagetrain1.tStart = t;  // (not accounting for frame time here)
       imagetrain1.frameNStart = frameN;  // exact frame index
@@ -1398,9 +1724,74 @@ function train1RoutineEachFrame(trials) {
       imagetrain1.setAutoDraw(true);
     }
 
-    frameRemains = 0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 9 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (imagetrain1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       imagetrain1.setAutoDraw(false);
+    }
+    // start/stop stimuli1train1
+    if (t >= 2 && stimuli1train1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli1train1.tStart = t;  // (not accounting for frame time here)
+      stimuli1train1.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli1train1.play(); });  // screen flip
+      stimuli1train1.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli1train1.getDuration() + stimuli1train1.tStart)     && stimuli1train1.status === PsychoJS.Status.STARTED) {
+      stimuli1train1.stop();  // stop the sound (if longer than duration)
+      stimuli1train1.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli2train1
+    if (t >= 4 && stimuli2train1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli2train1.tStart = t;  // (not accounting for frame time here)
+      stimuli2train1.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli2train1.play(); });  // screen flip
+      stimuli2train1.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli2train1.getDuration() + stimuli2train1.tStart)     && stimuli2train1.status === PsychoJS.Status.STARTED) {
+      stimuli2train1.stop();  // stop the sound (if longer than duration)
+      stimuli2train1.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli3train1
+    if (t >= 6 && stimuli3train1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli3train1.tStart = t;  // (not accounting for frame time here)
+      stimuli3train1.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli3train1.play(); });  // screen flip
+      stimuli3train1.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli3train1.getDuration() + stimuli3train1.tStart)     && stimuli3train1.status === PsychoJS.Status.STARTED) {
+      stimuli3train1.stop();  // stop the sound (if longer than duration)
+      stimuli3train1.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli4train1
+    if (t >= 8 && stimuli4train1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli4train1.tStart = t;  // (not accounting for frame time here)
+      stimuli4train1.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli4train1.play(); });  // screen flip
+      stimuli4train1.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli4train1.getDuration() + stimuli4train1.tStart)     && stimuli4train1.status === PsychoJS.Status.STARTED) {
+      stimuli4train1.stop();  // stop the sound (if longer than duration)
+      stimuli4train1.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli5train1
+    if (t >= 10 && stimuli5train1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli5train1.tStart = t;  // (not accounting for frame time here)
+      stimuli5train1.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli5train1.play(); });  // screen flip
+      stimuli5train1.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli5train1.getDuration() + stimuli5train1.tStart)     && stimuli5train1.status === PsychoJS.Status.STARTED) {
+      stimuli5train1.stop();  // stop the sound (if longer than duration)
+      stimuli5train1.status = PsychoJS.Status.FINISHED;
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -1437,7 +1828,11 @@ function train1RoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    stimulitrain1.stop();  // ensure sound has stopped at end of routine
+    stimuli1train1.stop();  // ensure sound has stopped at end of routine
+    stimuli2train1.stop();  // ensure sound has stopped at end of routine
+    stimuli3train1.stop();  // ensure sound has stopped at end of routine
+    stimuli4train1.stop();  // ensure sound has stopped at end of routine
+    stimuli5train1.stop();  // ensure sound has stopped at end of routine
     // the Routine "train1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -1612,7 +2007,7 @@ function trainquestions1RoutineEnd(trials) {
 }
 
 
-var _key_resp_3_allKeys;
+var _skipTrain2Instr_allKeys;
 var instr2Components;
 function instr2RoutineBegin(trials) {
   return function () {
@@ -1622,13 +2017,18 @@ function instr2RoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(600.000000);
     // update component parameters for each repeat
-    key_resp_3.keys = undefined;
-    key_resp_3.rt = undefined;
-    _key_resp_3_allKeys = [];
+    skipTrain2Instr.keys = undefined;
+    skipTrain2Instr.rt = undefined;
+    _skipTrain2Instr_allKeys = [];
     // keep track of which components have finished
     instr2Components = [];
-    instr2Components.push(notice);
-    instr2Components.push(key_resp_3);
+    instr2Components.push(train2warning10);
+    instr2Components.push(train2warning5);
+    instr2Components.push(train2warning4);
+    instr2Components.push(train2warning3);
+    instr2Components.push(train2warning2);
+    instr2Components.push(train2warning1);
+    instr2Components.push(skipTrain2Instr);
     
     for (const thisComponent of instr2Components)
       if ('status' in thisComponent)
@@ -1648,43 +2048,113 @@ function instr2RoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *notice* updates
-    if (t >= 0.0 && notice.status === PsychoJS.Status.NOT_STARTED) {
+    // *train2warning10* updates
+    if (t >= 0.0 && train2warning10.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      notice.tStart = t;  // (not accounting for frame time here)
-      notice.frameNStart = frameN;  // exact frame index
+      train2warning10.tStart = t;  // (not accounting for frame time here)
+      train2warning10.frameNStart = frameN;  // exact frame index
       
-      notice.setAutoDraw(true);
+      train2warning10.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (notice.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      notice.setAutoDraw(false);
+    frameRemains = 0.0 + 300 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning10.setAutoDraw(false);
     }
     
-    // *key_resp_3* updates
-    if (t >= 0.0 && key_resp_3.status === PsychoJS.Status.NOT_STARTED) {
+    // *train2warning5* updates
+    if (t >= 300 && train2warning5.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      key_resp_3.tStart = t;  // (not accounting for frame time here)
-      key_resp_3.frameNStart = frameN;  // exact frame index
+      train2warning5.tStart = t;  // (not accounting for frame time here)
+      train2warning5.frameNStart = frameN;  // exact frame index
+      
+      train2warning5.setAutoDraw(true);
+    }
+
+    frameRemains = 300 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning5.setAutoDraw(false);
+    }
+    
+    // *train2warning4* updates
+    if (t >= 360 && train2warning4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2warning4.tStart = t;  // (not accounting for frame time here)
+      train2warning4.frameNStart = frameN;  // exact frame index
+      
+      train2warning4.setAutoDraw(true);
+    }
+
+    frameRemains = 360 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning4.setAutoDraw(false);
+    }
+    
+    // *train2warning3* updates
+    if (t >= 420 && train2warning3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2warning3.tStart = t;  // (not accounting for frame time here)
+      train2warning3.frameNStart = frameN;  // exact frame index
+      
+      train2warning3.setAutoDraw(true);
+    }
+
+    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning3.setAutoDraw(false);
+    }
+    
+    // *train2warning2* updates
+    if (t >= 480 && train2warning2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2warning2.tStart = t;  // (not accounting for frame time here)
+      train2warning2.frameNStart = frameN;  // exact frame index
+      
+      train2warning2.setAutoDraw(true);
+    }
+
+    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning2.setAutoDraw(false);
+    }
+    
+    // *train2warning1* updates
+    if (t >= 540 && train2warning1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2warning1.tStart = t;  // (not accounting for frame time here)
+      train2warning1.frameNStart = frameN;  // exact frame index
+      
+      train2warning1.setAutoDraw(true);
+    }
+
+    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2warning1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2warning1.setAutoDraw(false);
+    }
+    
+    // *skipTrain2Instr* updates
+    if (t >= 0.0 && skipTrain2Instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      skipTrain2Instr.tStart = t;  // (not accounting for frame time here)
+      skipTrain2Instr.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { key_resp_3.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_3.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_3.clearEvents(); });
+      psychoJS.window.callOnFlip(function() { skipTrain2Instr.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { skipTrain2Instr.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { skipTrain2Instr.clearEvents(); });
     }
 
     frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (key_resp_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      key_resp_3.status = PsychoJS.Status.FINISHED;
+    if (skipTrain2Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      skipTrain2Instr.status = PsychoJS.Status.FINISHED;
   }
 
-    if (key_resp_3.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_3.getKeys({keyList: [], waitRelease: false});
-      _key_resp_3_allKeys = _key_resp_3_allKeys.concat(theseKeys);
-      if (_key_resp_3_allKeys.length > 0) {
-        key_resp_3.keys = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].name;  // just the last key pressed
-        key_resp_3.rt = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].rt;
+    if (skipTrain2Instr.status === PsychoJS.Status.STARTED) {
+      let theseKeys = skipTrain2Instr.getKeys({keyList: [], waitRelease: false});
+      _skipTrain2Instr_allKeys = _skipTrain2Instr_allKeys.concat(theseKeys);
+      if (_skipTrain2Instr_allKeys.length > 0) {
+        skipTrain2Instr.keys = _skipTrain2Instr_allKeys[_skipTrain2Instr_allKeys.length - 1].name;  // just the last key pressed
+        skipTrain2Instr.rt = _skipTrain2Instr_allKeys[_skipTrain2Instr_allKeys.length - 1].rt;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -1725,13 +2195,13 @@ function instr2RoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('key_resp_3.keys', key_resp_3.keys);
-    if (typeof key_resp_3.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('key_resp_3.rt', key_resp_3.rt);
+    psychoJS.experiment.addData('skipTrain2Instr.keys', skipTrain2Instr.keys);
+    if (typeof skipTrain2Instr.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('skipTrain2Instr.rt', skipTrain2Instr.rt);
         routineTimer.reset();
         }
     
-    key_resp_3.stop();
+    skipTrain2Instr.stop();
     return Scheduler.Event.NEXT;
   };
 }
@@ -1745,17 +2215,45 @@ function train2RoutineBegin(trials) {
     train2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    stimulitrain2 = new sound.Sound({
+    imagetrain2.setImage(imageLoc);
+    stimuli1train2 = new sound.Sound({
     win: psychoJS.window,
     value: audio,
     secs: -1,
     });
-    stimulitrain2.setVolume(1);
-    imagetrain2.setImage(imageLoc);
+    stimuli1train2.setVolume(1);
+    stimuli2train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli2train2.setVolume(1);
+    stimuli3train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli3train2.setVolume(1);
+    stimuli4train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli4train2.setVolume(1);
+    stimuli5train2 = new sound.Sound({
+    win: psychoJS.window,
+    value: audio,
+    secs: -1,
+    });
+    stimuli5train2.setVolume(1);
     // keep track of which components have finished
     train2Components = [];
-    train2Components.push(stimulitrain2);
     train2Components.push(imagetrain2);
+    train2Components.push(stimuli1train2);
+    train2Components.push(stimuli2train2);
+    train2Components.push(stimuli3train2);
+    train2Components.push(stimuli4train2);
+    train2Components.push(stimuli5train2);
     
     for (const thisComponent of train2Components)
       if ('status' in thisComponent)
@@ -1774,22 +2272,9 @@ function train2RoutineEachFrame(trials) {
     t = train2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    // start/stop stimulitrain2
-    if (t >= 0.0 && stimulitrain2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      stimulitrain2.tStart = t;  // (not accounting for frame time here)
-      stimulitrain2.frameNStart = frameN;  // exact frame index
-      
-      psychoJS.window.callOnFlip(function(){ stimulitrain2.play(); });  // screen flip
-      stimulitrain2.status = PsychoJS.Status.STARTED;
-    }
-    if (t >= (stimulitrain2.getDuration() + stimulitrain2.tStart)     && stimulitrain2.status === PsychoJS.Status.STARTED) {
-      stimulitrain2.stop();  // stop the sound (if longer than duration)
-      stimulitrain2.status = PsychoJS.Status.FINISHED;
-    }
     
     // *imagetrain2* updates
-    if (t >= 0.0 && imagetrain2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 2 && imagetrain2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       imagetrain2.tStart = t;  // (not accounting for frame time here)
       imagetrain2.frameNStart = frameN;  // exact frame index
@@ -1797,9 +2282,74 @@ function train2RoutineEachFrame(trials) {
       imagetrain2.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 9 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (imagetrain2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       imagetrain2.setAutoDraw(false);
+    }
+    // start/stop stimuli1train2
+    if (t >= 2 && stimuli1train2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli1train2.tStart = t;  // (not accounting for frame time here)
+      stimuli1train2.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli1train2.play(); });  // screen flip
+      stimuli1train2.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli1train2.getDuration() + stimuli1train2.tStart)     && stimuli1train2.status === PsychoJS.Status.STARTED) {
+      stimuli1train2.stop();  // stop the sound (if longer than duration)
+      stimuli1train2.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli2train2
+    if (t >= 4 && stimuli2train2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli2train2.tStart = t;  // (not accounting for frame time here)
+      stimuli2train2.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli2train2.play(); });  // screen flip
+      stimuli2train2.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli2train2.getDuration() + stimuli2train2.tStart)     && stimuli2train2.status === PsychoJS.Status.STARTED) {
+      stimuli2train2.stop();  // stop the sound (if longer than duration)
+      stimuli2train2.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli3train2
+    if (t >= 6 && stimuli3train2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli3train2.tStart = t;  // (not accounting for frame time here)
+      stimuli3train2.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli3train2.play(); });  // screen flip
+      stimuli3train2.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli3train2.getDuration() + stimuli3train2.tStart)     && stimuli3train2.status === PsychoJS.Status.STARTED) {
+      stimuli3train2.stop();  // stop the sound (if longer than duration)
+      stimuli3train2.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli4train2
+    if (t >= 8 && stimuli4train2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli4train2.tStart = t;  // (not accounting for frame time here)
+      stimuli4train2.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli4train2.play(); });  // screen flip
+      stimuli4train2.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli4train2.getDuration() + stimuli4train2.tStart)     && stimuli4train2.status === PsychoJS.Status.STARTED) {
+      stimuli4train2.stop();  // stop the sound (if longer than duration)
+      stimuli4train2.status = PsychoJS.Status.FINISHED;
+    }
+    // start/stop stimuli5train2
+    if (t >= 10 && stimuli5train2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      stimuli5train2.tStart = t;  // (not accounting for frame time here)
+      stimuli5train2.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ stimuli5train2.play(); });  // screen flip
+      stimuli5train2.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (stimuli5train2.getDuration() + stimuli5train2.tStart)     && stimuli5train2.status === PsychoJS.Status.STARTED) {
+      stimuli5train2.stop();  // stop the sound (if longer than duration)
+      stimuli5train2.status = PsychoJS.Status.FINISHED;
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -1836,7 +2386,11 @@ function train2RoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    stimulitrain2.stop();  // ensure sound has stopped at end of routine
+    stimuli1train2.stop();  // ensure sound has stopped at end of routine
+    stimuli2train2.stop();  // ensure sound has stopped at end of routine
+    stimuli3train2.stop();  // ensure sound has stopped at end of routine
+    stimuli4train2.stop();  // ensure sound has stopped at end of routine
+    stimuli5train2.stop();  // ensure sound has stopped at end of routine
     // the Routine "train2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -2027,12 +2581,13 @@ function testTrainInstrRoutineBegin(trials) {
     _skipTest1Instr_allKeys = [];
     // keep track of which components have finished
     testTrainInstrComponents = [];
-    testTrainInstrComponents.push(test1Instr);
     testTrainInstrComponents.push(skipTest1Instr);
-    testTrainInstrComponents.push(oneWarningTest1);
-    testTrainInstrComponents.push(twoWarningTest1);
-    testTrainInstrComponents.push(threeWarningTest1);
-    testTrainInstrComponents.push(fourWarningTest1);
+    testTrainInstrComponents.push(test1warning10);
+    testTrainInstrComponents.push(test1warning5);
+    testTrainInstrComponents.push(test1warning4);
+    testTrainInstrComponents.push(test1warning3);
+    testTrainInstrComponents.push(test1warning2);
+    testTrainInstrComponents.push(test1warning1);
     
     for (const thisComponent of testTrainInstrComponents)
       if ('status' in thisComponent)
@@ -2051,20 +2606,6 @@ function testTrainInstrRoutineEachFrame(trials) {
     t = testTrainInstrClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *test1Instr* updates
-    if (t >= 0.0 && test1Instr.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      test1Instr.tStart = t;  // (not accounting for frame time here)
-      test1Instr.frameNStart = frameN;  // exact frame index
-      
-      test1Instr.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test1Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      test1Instr.setAutoDraw(false);
-    }
     
     // *skipTest1Instr* updates
     if (t >= 0.0 && skipTest1Instr.status === PsychoJS.Status.NOT_STARTED) {
@@ -2095,60 +2636,88 @@ function testTrainInstrRoutineEachFrame(trials) {
     }
     
     
-    // *oneWarningTest1* updates
-    if (t >= 540 && oneWarningTest1.status === PsychoJS.Status.NOT_STARTED) {
+    // *test1warning10* updates
+    if (t >= 0.0 && test1warning10.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      oneWarningTest1.tStart = t;  // (not accounting for frame time here)
-      oneWarningTest1.frameNStart = frameN;  // exact frame index
+      test1warning10.tStart = t;  // (not accounting for frame time here)
+      test1warning10.frameNStart = frameN;  // exact frame index
       
-      oneWarningTest1.setAutoDraw(true);
+      test1warning10.setAutoDraw(true);
     }
 
-    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (oneWarningTest1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      oneWarningTest1.setAutoDraw(false);
+    frameRemains = 0.0 + 300 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1warning10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning10.setAutoDraw(false);
     }
     
-    // *twoWarningTest1* updates
-    if (t >= 480 && twoWarningTest1.status === PsychoJS.Status.NOT_STARTED) {
+    // *test1warning5* updates
+    if (t >= 300 && test1warning5.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      twoWarningTest1.tStart = t;  // (not accounting for frame time here)
-      twoWarningTest1.frameNStart = frameN;  // exact frame index
+      test1warning5.tStart = t;  // (not accounting for frame time here)
+      test1warning5.frameNStart = frameN;  // exact frame index
       
-      twoWarningTest1.setAutoDraw(true);
+      test1warning5.setAutoDraw(true);
     }
 
-    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (twoWarningTest1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      twoWarningTest1.setAutoDraw(false);
+    frameRemains = 300 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1warning5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning5.setAutoDraw(false);
     }
     
-    // *threeWarningTest1* updates
-    if (t >= 420 && threeWarningTest1.status === PsychoJS.Status.NOT_STARTED) {
+    // *test1warning4* updates
+    if (t >= 360 && test1warning4.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      threeWarningTest1.tStart = t;  // (not accounting for frame time here)
-      threeWarningTest1.frameNStart = frameN;  // exact frame index
+      test1warning4.tStart = t;  // (not accounting for frame time here)
+      test1warning4.frameNStart = frameN;  // exact frame index
       
-      threeWarningTest1.setAutoDraw(true);
-    }
-
-    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (threeWarningTest1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      threeWarningTest1.setAutoDraw(false);
-    }
-    
-    // *fourWarningTest1* updates
-    if (t >= 360 && fourWarningTest1.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      fourWarningTest1.tStart = t;  // (not accounting for frame time here)
-      fourWarningTest1.frameNStart = frameN;  // exact frame index
-      
-      fourWarningTest1.setAutoDraw(true);
+      test1warning4.setAutoDraw(true);
     }
 
     frameRemains = 360 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (fourWarningTest1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      fourWarningTest1.setAutoDraw(false);
+    if (test1warning4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning4.setAutoDraw(false);
+    }
+    
+    // *test1warning3* updates
+    if (t >= 420 && test1warning3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test1warning3.tStart = t;  // (not accounting for frame time here)
+      test1warning3.frameNStart = frameN;  // exact frame index
+      
+      test1warning3.setAutoDraw(true);
+    }
+
+    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1warning3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning3.setAutoDraw(false);
+    }
+    
+    // *test1warning2* updates
+    if (t >= 480 && test1warning2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test1warning2.tStart = t;  // (not accounting for frame time here)
+      test1warning2.frameNStart = frameN;  // exact frame index
+      
+      test1warning2.setAutoDraw(true);
+    }
+
+    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1warning2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning2.setAutoDraw(false);
+    }
+    
+    // *test1warning1* updates
+    if (t >= 540 && test1warning1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test1warning1.tStart = t;  // (not accounting for frame time here)
+      test1warning1.frameNStart = frameN;  // exact frame index
+      
+      test1warning1.setAutoDraw(true);
+    }
+
+    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1warning1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1warning1.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -2492,8 +3061,13 @@ function testNovel1InstrRoutineBegin(trials) {
     _skipTest2Instr_allKeys = [];
     // keep track of which components have finished
     testNovel1InstrComponents = [];
-    testNovel1InstrComponents.push(test2Instr);
     testNovel1InstrComponents.push(skipTest2Instr);
+    testNovel1InstrComponents.push(test2warning10);
+    testNovel1InstrComponents.push(test2warning5);
+    testNovel1InstrComponents.push(test2warning4);
+    testNovel1InstrComponents.push(test2warning3);
+    testNovel1InstrComponents.push(test2warning2);
+    testNovel1InstrComponents.push(test2warning1);
     
     for (const thisComponent of testNovel1InstrComponents)
       if ('status' in thisComponent)
@@ -2512,20 +3086,6 @@ function testNovel1InstrRoutineEachFrame(trials) {
     t = testNovel1InstrClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *test2Instr* updates
-    if (t >= 0.0 && test2Instr.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      test2Instr.tStart = t;  // (not accounting for frame time here)
-      test2Instr.frameNStart = frameN;  // exact frame index
-      
-      test2Instr.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test2Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      test2Instr.setAutoDraw(false);
-    }
     
     // *skipTest2Instr* updates
     if (t >= 0.0 && skipTest2Instr.status === PsychoJS.Status.NOT_STARTED) {
@@ -2555,6 +3115,90 @@ function testNovel1InstrRoutineEachFrame(trials) {
       }
     }
     
+    
+    // *test2warning10* updates
+    if (t >= 0.0 && test2warning10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning10.tStart = t;  // (not accounting for frame time here)
+      test2warning10.frameNStart = frameN;  // exact frame index
+      
+      test2warning10.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning10.setAutoDraw(false);
+    }
+    
+    // *test2warning5* updates
+    if (t >= 300 && test2warning5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning5.tStart = t;  // (not accounting for frame time here)
+      test2warning5.frameNStart = frameN;  // exact frame index
+      
+      test2warning5.setAutoDraw(true);
+    }
+
+    frameRemains = 300 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning5.setAutoDraw(false);
+    }
+    
+    // *test2warning4* updates
+    if (t >= 360 && test2warning4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning4.tStart = t;  // (not accounting for frame time here)
+      test2warning4.frameNStart = frameN;  // exact frame index
+      
+      test2warning4.setAutoDraw(true);
+    }
+
+    frameRemains = 360 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning4.setAutoDraw(false);
+    }
+    
+    // *test2warning3* updates
+    if (t >= 420 && test2warning3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning3.tStart = t;  // (not accounting for frame time here)
+      test2warning3.frameNStart = frameN;  // exact frame index
+      
+      test2warning3.setAutoDraw(true);
+    }
+
+    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning3.setAutoDraw(false);
+    }
+    
+    // *test2warning2* updates
+    if (t >= 480 && test2warning2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning2.tStart = t;  // (not accounting for frame time here)
+      test2warning2.frameNStart = frameN;  // exact frame index
+      
+      test2warning2.setAutoDraw(true);
+    }
+
+    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning2.setAutoDraw(false);
+    }
+    
+    // *test2warning1* updates
+    if (t >= 540 && test2warning1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2warning1.tStart = t;  // (not accounting for frame time here)
+      test2warning1.frameNStart = frameN;  // exact frame index
+      
+      test2warning1.setAutoDraw(true);
+    }
+
+    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2warning1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2warning1.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2610,23 +3254,20 @@ function test2RoutineBegin(trials) {
     t = 0;
     test2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(10.000000);
     // update component parameters for each repeat
     test2Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: firstAudio,
-    secs: 1.0,
+    secs: -1,
     });
-    test2Audio1.secs=1.0;
     test2Audio1.setVolume(1);
     test2Audio1Sound.setImage('sound.png');
     test1Audio2Mute.setImage('mute.png');
     test2Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: secondAudio,
-    secs: 1.0,
+    secs: -1,
     });
-    test2Audio2.secs=1.0;
     test2Audio2.setVolume(1);
     test2Audio2Mute1.setImage('mute.png');
     test2Audio2Sound.setImage('sound.png');
@@ -2674,11 +3315,9 @@ function test2RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test2Audio1.play(); });  // screen flip
       test2Audio1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test2Audio1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1.0 > 0.5) {  test2Audio1.stop();  // stop the sound (if longer than duration)
-        test2Audio1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test2Audio1.getDuration() + test2Audio1.tStart)     && test2Audio1.status === PsychoJS.Status.STARTED) {
+      test2Audio1.stop();  // stop the sound (if longer than duration)
+      test2Audio1.status = PsychoJS.Status.FINISHED;
     }
     
     // *test2Audio1Sound* updates
@@ -2717,11 +3356,9 @@ function test2RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test2Audio2.play(); });  // screen flip
       test2Audio2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 1 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test2Audio2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1.0 > 0.5) {  test2Audio2.stop();  // stop the sound (if longer than duration)
-        test2Audio2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test2Audio2.getDuration() + test2Audio2.tStart)     && test2Audio2.status === PsychoJS.Status.STARTED) {
+      test2Audio2.stop();  // stop the sound (if longer than duration)
+      test2Audio2.status = PsychoJS.Status.FINISHED;
     }
     
     // *test2Audio2Mute1* updates
@@ -2854,7 +3491,7 @@ function test2RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2880,6 +3517,9 @@ function test2RoutineEnd(trials) {
         }
     
     test2Response.stop();
+    // the Routine "test2" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -2900,8 +3540,13 @@ function testNovel2InstrRoutineBegin(trials) {
     _skipTest3Instr_allKeys = [];
     // keep track of which components have finished
     testNovel2InstrComponents = [];
-    testNovel2InstrComponents.push(test3Instr);
     testNovel2InstrComponents.push(skipTest3Instr);
+    testNovel2InstrComponents.push(test3warning10);
+    testNovel2InstrComponents.push(test3warning5);
+    testNovel2InstrComponents.push(test3warning4);
+    testNovel2InstrComponents.push(test3warning3);
+    testNovel2InstrComponents.push(test3warning2);
+    testNovel2InstrComponents.push(test3warning1);
     
     for (const thisComponent of testNovel2InstrComponents)
       if ('status' in thisComponent)
@@ -2920,20 +3565,6 @@ function testNovel2InstrRoutineEachFrame(trials) {
     t = testNovel2InstrClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *test3Instr* updates
-    if (t >= 0.0 && test3Instr.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      test3Instr.tStart = t;  // (not accounting for frame time here)
-      test3Instr.frameNStart = frameN;  // exact frame index
-      
-      test3Instr.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test3Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      test3Instr.setAutoDraw(false);
-    }
     
     // *skipTest3Instr* updates
     if (t >= 0.0 && skipTest3Instr.status === PsychoJS.Status.NOT_STARTED) {
@@ -2963,6 +3594,90 @@ function testNovel2InstrRoutineEachFrame(trials) {
       }
     }
     
+    
+    // *test3warning10* updates
+    if (t >= 0.0 && test3warning10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning10.tStart = t;  // (not accounting for frame time here)
+      test3warning10.frameNStart = frameN;  // exact frame index
+      
+      test3warning10.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning10.setAutoDraw(false);
+    }
+    
+    // *test3warning5* updates
+    if (t >= 300 && test3warning5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning5.tStart = t;  // (not accounting for frame time here)
+      test3warning5.frameNStart = frameN;  // exact frame index
+      
+      test3warning5.setAutoDraw(true);
+    }
+
+    frameRemains = 300 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning5.setAutoDraw(false);
+    }
+    
+    // *test3warning4* updates
+    if (t >= 360 && test3warning4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning4.tStart = t;  // (not accounting for frame time here)
+      test3warning4.frameNStart = frameN;  // exact frame index
+      
+      test3warning4.setAutoDraw(true);
+    }
+
+    frameRemains = 360 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning4.setAutoDraw(false);
+    }
+    
+    // *test3warning3* updates
+    if (t >= 420 && test3warning3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning3.tStart = t;  // (not accounting for frame time here)
+      test3warning3.frameNStart = frameN;  // exact frame index
+      
+      test3warning3.setAutoDraw(true);
+    }
+
+    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning3.setAutoDraw(false);
+    }
+    
+    // *test3warning2* updates
+    if (t >= 480 && test3warning2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning2.tStart = t;  // (not accounting for frame time here)
+      test3warning2.frameNStart = frameN;  // exact frame index
+      
+      test3warning2.setAutoDraw(true);
+    }
+
+    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning2.setAutoDraw(false);
+    }
+    
+    // *test3warning1* updates
+    if (t >= 540 && test3warning1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3warning1.tStart = t;  // (not accounting for frame time here)
+      test3warning1.frameNStart = frameN;  // exact frame index
+      
+      test3warning1.setAutoDraw(true);
+    }
+
+    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3warning1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3warning1.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -3018,23 +3733,20 @@ function test3RoutineBegin(trials) {
     t = 0;
     test3Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(10.000000);
     // update component parameters for each repeat
     test3Audio1 = new sound.Sound({
     win: psychoJS.window,
     value: firstAudio,
-    secs: 1.0,
+    secs: -1,
     });
-    test3Audio1.secs=1.0;
     test3Audio1.setVolume(1);
     test3Audio1Sound.setImage('sound.png');
     test3Audio1Mute.setImage('mute.png');
     test3Audio2 = new sound.Sound({
     win: psychoJS.window,
     value: secondAudio,
-    secs: 1,
+    secs: -1,
     });
-    test3Audio2.secs=1;
     test3Audio2.setVolume(1);
     test3Audio2Mute1.setImage('mute.png');
     test3Audio2Sound.setImage('sound.png');
@@ -3083,11 +3795,9 @@ function test3RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test3Audio1.play(); });  // screen flip
       test3Audio1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test3Audio1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1.0 > 0.5) {  test3Audio1.stop();  // stop the sound (if longer than duration)
-        test3Audio1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test3Audio1.getDuration() + test3Audio1.tStart)     && test3Audio1.status === PsychoJS.Status.STARTED) {
+      test3Audio1.stop();  // stop the sound (if longer than duration)
+      test3Audio1.status = PsychoJS.Status.FINISHED;
     }
     
     // *test3Audio1Sound* updates
@@ -3126,11 +3836,9 @@ function test3RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ test3Audio2.play(); });  // screen flip
       test3Audio2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test3Audio2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  test3Audio2.stop();  // stop the sound (if longer than duration)
-        test3Audio2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (test3Audio2.getDuration() + test3Audio2.tStart)     && test3Audio2.status === PsychoJS.Status.STARTED) {
+      test3Audio2.stop();  // stop the sound (if longer than duration)
+      test3Audio2.status = PsychoJS.Status.FINISHED;
     }
     
     // *test3Audio2Mute1* updates
@@ -3263,7 +3971,7 @@ function test3RoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -3289,11 +3997,15 @@ function test3RoutineEnd(trials) {
         }
     
     test3Response.stop();
+    // the Routine "test3" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
 
 
+var _skipPostTestInstr_allKeys;
 var postTestInstrComponents;
 function postTestInstrRoutineBegin(trials) {
   return function () {
@@ -3301,11 +4013,20 @@ function postTestInstrRoutineBegin(trials) {
     t = 0;
     postTestInstrClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
+    routineTimer.add(600.000000);
     // update component parameters for each repeat
+    skipPostTestInstr.keys = undefined;
+    skipPostTestInstr.rt = undefined;
+    _skipPostTestInstr_allKeys = [];
     // keep track of which components have finished
     postTestInstrComponents = [];
-    postTestInstrComponents.push(postTestText);
+    postTestInstrComponents.push(skipPostTestInstr);
+    postTestInstrComponents.push(postTestWarning10);
+    postTestInstrComponents.push(postTestWarning5);
+    postTestInstrComponents.push(postTestWarning4);
+    postTestInstrComponents.push(postTestWarning3);
+    postTestInstrComponents.push(postTestWarning2);
+    postTestInstrComponents.push(postTestWarning1);
     
     for (const thisComponent of postTestInstrComponents)
       if ('status' in thisComponent)
@@ -3325,18 +4046,117 @@ function postTestInstrRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *postTestText* updates
-    if (t >= 0.0 && postTestText.status === PsychoJS.Status.NOT_STARTED) {
+    // *skipPostTestInstr* updates
+    if (t >= 0.0 && skipPostTestInstr.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      postTestText.tStart = t;  // (not accounting for frame time here)
-      postTestText.frameNStart = frameN;  // exact frame index
+      skipPostTestInstr.tStart = t;  // (not accounting for frame time here)
+      skipPostTestInstr.frameNStart = frameN;  // exact frame index
       
-      postTestText.setAutoDraw(true);
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { skipPostTestInstr.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { skipPostTestInstr.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { skipPostTestInstr.clearEvents(); });
     }
 
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (postTestText.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      postTestText.setAutoDraw(false);
+    frameRemains = 0.0 + 600 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (skipPostTestInstr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      skipPostTestInstr.status = PsychoJS.Status.FINISHED;
+  }
+
+    if (skipPostTestInstr.status === PsychoJS.Status.STARTED) {
+      let theseKeys = skipPostTestInstr.getKeys({keyList: [], waitRelease: false});
+      _skipPostTestInstr_allKeys = _skipPostTestInstr_allKeys.concat(theseKeys);
+      if (_skipPostTestInstr_allKeys.length > 0) {
+        skipPostTestInstr.keys = _skipPostTestInstr_allKeys[_skipPostTestInstr_allKeys.length - 1].name;  // just the last key pressed
+        skipPostTestInstr.rt = _skipPostTestInstr_allKeys[_skipPostTestInstr_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    
+    // *postTestWarning10* updates
+    if (t >= 0.0 && postTestWarning10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning10.tStart = t;  // (not accounting for frame time here)
+      postTestWarning10.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning10.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning10.setAutoDraw(false);
+    }
+    
+    // *postTestWarning5* updates
+    if (t >= 300 && postTestWarning5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning5.tStart = t;  // (not accounting for frame time here)
+      postTestWarning5.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning5.setAutoDraw(true);
+    }
+
+    frameRemains = 300 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning5.setAutoDraw(false);
+    }
+    
+    // *postTestWarning4* updates
+    if (t >= 360 && postTestWarning4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning4.tStart = t;  // (not accounting for frame time here)
+      postTestWarning4.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning4.setAutoDraw(true);
+    }
+
+    frameRemains = 360 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning4.setAutoDraw(false);
+    }
+    
+    // *postTestWarning3* updates
+    if (t >= 420 && postTestWarning3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning3.tStart = t;  // (not accounting for frame time here)
+      postTestWarning3.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning3.setAutoDraw(true);
+    }
+
+    frameRemains = 420 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning3.setAutoDraw(false);
+    }
+    
+    // *postTestWarning2* updates
+    if (t >= 480 && postTestWarning2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning2.tStart = t;  // (not accounting for frame time here)
+      postTestWarning2.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning2.setAutoDraw(true);
+    }
+
+    frameRemains = 480 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning2.setAutoDraw(false);
+    }
+    
+    // *postTestWarning1* updates
+    if (t >= 540 && postTestWarning1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      postTestWarning1.tStart = t;  // (not accounting for frame time here)
+      postTestWarning1.frameNStart = frameN;  // exact frame index
+      
+      postTestWarning1.setAutoDraw(true);
+    }
+
+    frameRemains = 540 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (postTestWarning1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      postTestWarning1.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -3373,6 +4193,13 @@ function postTestInstrRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('skipPostTestInstr.keys', skipPostTestInstr.keys);
+    if (typeof skipPostTestInstr.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('skipPostTestInstr.rt', skipPostTestInstr.rt);
+        routineTimer.reset();
+        }
+    
+    skipPostTestInstr.stop();
     return Scheduler.Event.NEXT;
   };
 }
@@ -3386,7 +4213,6 @@ function posttestRoutineBegin(trials) {
     t = 0;
     posttestClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(10.000000);
     // update component parameters for each repeat
     postTestResponse.keys = undefined;
     postTestResponse.rt = undefined;
@@ -3394,23 +4220,20 @@ function posttestRoutineBegin(trials) {
     postTestAudio1 = new sound.Sound({
     win: psychoJS.window,
     value: audioA,
-    secs: 1,
+    secs: -1,
     });
-    postTestAudio1.secs=1;
     postTestAudio1.setVolume(1);
     postTestAudio2 = new sound.Sound({
     win: psychoJS.window,
     value: audioB,
-    secs: 1.0,
+    secs: -1,
     });
-    postTestAudio2.secs=1.0;
     postTestAudio2.setVolume(1);
     postTestAudio3 = new sound.Sound({
     win: psychoJS.window,
     value: audioC,
-    secs: 1.0,
+    secs: -1,
     });
-    postTestAudio3.secs=1.0;
     postTestAudio3.setVolume(1);
     // keep track of which components have finished
     posttestComponents = [];
@@ -3486,11 +4309,9 @@ function posttestRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ postTestAudio1.play(); });  // screen flip
       postTestAudio1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (postTestAudio1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1 > 0.5) {  postTestAudio1.stop();  // stop the sound (if longer than duration)
-        postTestAudio1.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (postTestAudio1.getDuration() + postTestAudio1.tStart)     && postTestAudio1.status === PsychoJS.Status.STARTED) {
+      postTestAudio1.stop();  // stop the sound (if longer than duration)
+      postTestAudio1.status = PsychoJS.Status.FINISHED;
     }
     
     // *fSound* updates
@@ -3529,11 +4350,9 @@ function posttestRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ postTestAudio2.play(); });  // screen flip
       postTestAudio2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 1 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (postTestAudio2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1.0 > 0.5) {  postTestAudio2.stop();  // stop the sound (if longer than duration)
-        postTestAudio2.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (postTestAudio2.getDuration() + postTestAudio2.tStart)     && postTestAudio2.status === PsychoJS.Status.STARTED) {
+      postTestAudio2.stop();  // stop the sound (if longer than duration)
+      postTestAudio2.status = PsychoJS.Status.FINISHED;
     }
     
     // *xMute1* updates
@@ -3586,11 +4405,9 @@ function posttestRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function(){ postTestAudio3.play(); });  // screen flip
       postTestAudio3.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (postTestAudio3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (1.0 > 0.5) {  postTestAudio3.stop();  // stop the sound (if longer than duration)
-        postTestAudio3.status = PsychoJS.Status.FINISHED;
-      }
+    if (t >= (postTestAudio3.getDuration() + postTestAudio3.tStart)     && postTestAudio3.status === PsychoJS.Status.STARTED) {
+      postTestAudio3.stop();  // stop the sound (if longer than duration)
+      postTestAudio3.status = PsychoJS.Status.FINISHED;
     }
     
     // *jMute1* updates
@@ -3708,7 +4525,7 @@ function posttestRoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -3735,6 +4552,9 @@ function posttestRoutineEnd(trials) {
     postTestAudio1.stop();  // ensure sound has stopped at end of routine
     postTestAudio2.stop();  // ensure sound has stopped at end of routine
     postTestAudio3.stop();  // ensure sound has stopped at end of routine
+    // the Routine "posttest" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
