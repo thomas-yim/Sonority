@@ -3,7 +3,7 @@ import math
 import xlsxwriter
 
 
-filename = "othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
+filename = "deleteonline_sonorityaoi_2020-07-30_22h45.59.097.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
 df = pd.read_csv("data/" + filename)
 
 def calculateAccuracy(df, phase):
