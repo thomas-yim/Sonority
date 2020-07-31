@@ -127,11 +127,18 @@ var stimuli2train1;
 var stimuli3train1;
 var stimuli4train1;
 var stimuli5train1;
+var listenTrain1;
+var train1QuestInstrClock;
+var train1QuestText;
+var train1QuestAdvance;
 var trainquestions1Clock;
 var stimulitest1;
 var correct;
 var incorrect;
 var train1Response;
+var chooseImageTrain1;
+var train1F;
+var train1J;
 var instr2Clock;
 var train2warning10;
 var train2warning5;
@@ -147,11 +154,18 @@ var stimuli2train2;
 var stimuli3train2;
 var stimuli4train2;
 var stimuli5train2;
+var listenTrain2;
+var train2QuestInstrClock;
+var train2QuestText;
+var train2QuestAdvance;
 var trainquestions2Clock;
 var stimulitest2;
 var correct2;
 var incorrect2;
 var train2Response;
+var chooseImageTrain2;
+var train2F;
+var train2J;
 var testTrainInstrClock;
 var skipTest1Instr;
 var test1warning10;
@@ -233,7 +247,7 @@ var postTestAudio3;
 var jMute1;
 var jSound;
 var jMute2;
-var textInstructionsPostTest;
+var textInstrPostTest;
 var fText;
 var xText;
 var jText;
@@ -264,7 +278,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'imagetrain1', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, (- 0.1)], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -299,6 +313,32 @@ function experimentInit() {
     secs: (- 1),
     });
   stimuli5train1.setVolume(1);
+  listenTrain1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'listenTrain1',
+    text: 'Listen to the words:',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
+  
+  // Initialize components for Routine "train1QuestInstr"
+  train1QuestInstrClock = new util.Clock();
+  train1QuestText = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train1QuestText',
+    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  train1QuestAdvance = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "trainquestions1"
   trainquestions1Clock = new util.Clock();
   stimulitest1 = new sound.Sound({
@@ -311,7 +351,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'correct', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -320,12 +360,45 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'incorrect', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
   train1Response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  chooseImageTrain1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'chooseImageTrain1',
+    text: 'Choose the image (f or j) that matches the audio:',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  train1F = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train1F',
+    text: 'F',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.5), 0], height: 0.2,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  train1J = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train1J',
+    text: 'J',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.5, 0], height: 0.2,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "instr2"
   instr2Clock = new util.Clock();
@@ -403,7 +476,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'imagetrain2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, (- 0.1)], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -438,6 +511,32 @@ function experimentInit() {
     secs: (- 1),
     });
   stimuli5train2.setVolume(1);
+  listenTrain2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'listenTrain2',
+    text: 'Listen to the words:',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
+  
+  // Initialize components for Routine "train2QuestInstr"
+  train2QuestInstrClock = new util.Clock();
+  train2QuestText = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2QuestText',
+    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  train2QuestAdvance = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "trainquestions2"
   trainquestions2Clock = new util.Clock();
   stimulitest2 = new sound.Sound({
@@ -450,7 +549,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'correct2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -459,12 +558,45 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'incorrect2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
   });
   train2Response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  chooseImageTrain2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'chooseImageTrain2',
+    text: 'Choose the image (f or j) that matches the audio:',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -4.0 
+  });
+  
+  train2F = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2F',
+    text: 'F',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.5), 0], height: 0.2,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
+  
+  train2J = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'train2J',
+    text: 'J',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.5, 0], height: 0.2,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "testTrainInstr"
   testTrainInstrClock = new util.Clock();
@@ -1116,9 +1248,9 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -11.0 
   });
-  textInstructionsPostTest = new visual.TextStim({
+  textInstrPostTest = new visual.TextStim({
     win: psychoJS.window,
-    name: 'textInstructionsPostTest',
+    name: 'textInstrPostTest',
     text: 'Does the middle audio (X) match in stress with F or J? (Press F or J)',
     font: 'Arial',
     units: undefined, 
@@ -1303,7 +1435,7 @@ function train1blocksLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1blocks = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train1LoopCondition.xlsx',
     seed: undefined, name: 'train1blocks'
@@ -1319,6 +1451,9 @@ function train1blocksLoopBegin(thisScheduler) {
     thisScheduler.add(blockwords1LoopBegin, blockwords1LoopScheduler);
     thisScheduler.add(blockwords1LoopScheduler);
     thisScheduler.add(blockwords1LoopEnd);
+    thisScheduler.add(train1QuestInstrRoutineBegin(snapshot));
+    thisScheduler.add(train1QuestInstrRoutineEachFrame(snapshot));
+    thisScheduler.add(train1QuestInstrRoutineEnd(snapshot));
     const blocktest1LoopScheduler = new Scheduler(psychoJS);
     thisScheduler.add(blocktest1LoopBegin, blocktest1LoopScheduler);
     thisScheduler.add(blocktest1LoopScheduler);
@@ -1426,6 +1561,9 @@ function train2blocksLoopBegin(thisScheduler) {
     thisScheduler.add(blockloop2LoopBegin, blockloop2LoopScheduler);
     thisScheduler.add(blockloop2LoopScheduler);
     thisScheduler.add(blockloop2LoopEnd);
+    thisScheduler.add(train2QuestInstrRoutineBegin(snapshot));
+    thisScheduler.add(train2QuestInstrRoutineEachFrame(snapshot));
+    thisScheduler.add(train2QuestInstrRoutineEnd(snapshot));
     const blocktest2LoopScheduler = new Scheduler(psychoJS);
     thisScheduler.add(blocktest2LoopBegin, blocktest2LoopScheduler);
     thisScheduler.add(blocktest2LoopScheduler);
@@ -1695,6 +1833,7 @@ function train1RoutineBegin(trials) {
     train1Components.push(stimuli3train1);
     train1Components.push(stimuli4train1);
     train1Components.push(stimuli5train1);
+    train1Components.push(listenTrain1);
     
     for (const thisComponent of train1Components)
       if ('status' in thisComponent)
@@ -1793,6 +1932,20 @@ function train1RoutineEachFrame(trials) {
       stimuli5train1.stop();  // stop the sound (if longer than duration)
       stimuli5train1.status = PsychoJS.Status.FINISHED;
     }
+    
+    // *listenTrain1* updates
+    if (t >= 0.0 && listenTrain1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      listenTrain1.tStart = t;  // (not accounting for frame time here)
+      listenTrain1.frameNStart = frameN;  // exact frame index
+      
+      listenTrain1.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 11 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (listenTrain1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      listenTrain1.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1841,6 +1994,131 @@ function train1RoutineEnd(trials) {
 }
 
 
+var _train1QuestAdvance_allKeys;
+var train1QuestInstrComponents;
+function train1QuestInstrRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'train1QuestInstr'-------
+    t = 0;
+    train1QuestInstrClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(10.000000);
+    // update component parameters for each repeat
+    train1QuestAdvance.keys = undefined;
+    train1QuestAdvance.rt = undefined;
+    _train1QuestAdvance_allKeys = [];
+    // keep track of which components have finished
+    train1QuestInstrComponents = [];
+    train1QuestInstrComponents.push(train1QuestText);
+    train1QuestInstrComponents.push(train1QuestAdvance);
+    
+    for (const thisComponent of train1QuestInstrComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function train1QuestInstrRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'train1QuestInstr'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = train1QuestInstrClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *train1QuestText* updates
+    if (t >= 0.0 && train1QuestText.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train1QuestText.tStart = t;  // (not accounting for frame time here)
+      train1QuestText.frameNStart = frameN;  // exact frame index
+      
+      train1QuestText.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train1QuestText.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train1QuestText.setAutoDraw(false);
+    }
+    
+    // *train1QuestAdvance* updates
+    if (t >= 0.0 && train1QuestAdvance.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train1QuestAdvance.tStart = t;  // (not accounting for frame time here)
+      train1QuestAdvance.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { train1QuestAdvance.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { train1QuestAdvance.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { train1QuestAdvance.clearEvents(); });
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train1QuestAdvance.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train1QuestAdvance.status = PsychoJS.Status.FINISHED;
+  }
+
+    if (train1QuestAdvance.status === PsychoJS.Status.STARTED) {
+      let theseKeys = train1QuestAdvance.getKeys({keyList: [], waitRelease: false});
+      _train1QuestAdvance_allKeys = _train1QuestAdvance_allKeys.concat(theseKeys);
+      if (_train1QuestAdvance_allKeys.length > 0) {
+        train1QuestAdvance.keys = _train1QuestAdvance_allKeys[_train1QuestAdvance_allKeys.length - 1].name;  // just the last key pressed
+        train1QuestAdvance.rt = _train1QuestAdvance_allKeys[_train1QuestAdvance_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of train1QuestInstrComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function train1QuestInstrRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'train1QuestInstr'-------
+    for (const thisComponent of train1QuestInstrComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('train1QuestAdvance.keys', train1QuestAdvance.keys);
+    if (typeof train1QuestAdvance.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('train1QuestAdvance.rt', train1QuestAdvance.rt);
+        routineTimer.reset();
+        }
+    
+    train1QuestAdvance.stop();
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _train1Response_allKeys;
 var trainquestions1Components;
 function trainquestions1RoutineBegin(trials) {
@@ -1856,9 +2134,9 @@ function trainquestions1RoutineBegin(trials) {
     secs: -1,
     });
     stimulitest1.setVolume(1);
-    correct.setPos([truePos, 0]);
+    correct.setPos([truePos, (- 0.3)]);
     correct.setImage(imageTrue);
-    incorrect.setPos([falsePos, 0]);
+    incorrect.setPos([falsePos, (- 0.3)]);
     incorrect.setImage(imageFalse);
     train1Response.keys = undefined;
     train1Response.rt = undefined;
@@ -1869,6 +2147,9 @@ function trainquestions1RoutineBegin(trials) {
     trainquestions1Components.push(correct);
     trainquestions1Components.push(incorrect);
     trainquestions1Components.push(train1Response);
+    trainquestions1Components.push(chooseImageTrain1);
+    trainquestions1Components.push(train1F);
+    trainquestions1Components.push(train1J);
     
     for (const thisComponent of trainquestions1Components)
       if ('status' in thisComponent)
@@ -1956,6 +2237,48 @@ function trainquestions1RoutineEachFrame(trials) {
       }
     }
     
+    
+    // *chooseImageTrain1* updates
+    if (t >= 0.0 && chooseImageTrain1.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      chooseImageTrain1.tStart = t;  // (not accounting for frame time here)
+      chooseImageTrain1.frameNStart = frameN;  // exact frame index
+      
+      chooseImageTrain1.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 7 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (chooseImageTrain1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      chooseImageTrain1.setAutoDraw(false);
+    }
+    
+    // *train1F* updates
+    if (t >= 1 && train1F.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train1F.tStart = t;  // (not accounting for frame time here)
+      train1F.frameNStart = frameN;  // exact frame index
+      
+      train1F.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train1F.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train1F.setAutoDraw(false);
+    }
+    
+    // *train1J* updates
+    if (t >= 1 && train1J.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train1J.tStart = t;  // (not accounting for frame time here)
+      train1J.frameNStart = frameN;  // exact frame index
+      
+      train1J.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train1J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train1J.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2254,6 +2577,7 @@ function train2RoutineBegin(trials) {
     train2Components.push(stimuli3train2);
     train2Components.push(stimuli4train2);
     train2Components.push(stimuli5train2);
+    train2Components.push(listenTrain2);
     
     for (const thisComponent of train2Components)
       if ('status' in thisComponent)
@@ -2351,6 +2675,20 @@ function train2RoutineEachFrame(trials) {
       stimuli5train2.stop();  // stop the sound (if longer than duration)
       stimuli5train2.status = PsychoJS.Status.FINISHED;
     }
+    
+    // *listenTrain2* updates
+    if (t >= 0.0 && listenTrain2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      listenTrain2.tStart = t;  // (not accounting for frame time here)
+      listenTrain2.frameNStart = frameN;  // exact frame index
+      
+      listenTrain2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 11 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (listenTrain2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      listenTrain2.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2399,6 +2737,131 @@ function train2RoutineEnd(trials) {
 }
 
 
+var _train2QuestAdvance_allKeys;
+var train2QuestInstrComponents;
+function train2QuestInstrRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'train2QuestInstr'-------
+    t = 0;
+    train2QuestInstrClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(10.000000);
+    // update component parameters for each repeat
+    train2QuestAdvance.keys = undefined;
+    train2QuestAdvance.rt = undefined;
+    _train2QuestAdvance_allKeys = [];
+    // keep track of which components have finished
+    train2QuestInstrComponents = [];
+    train2QuestInstrComponents.push(train2QuestText);
+    train2QuestInstrComponents.push(train2QuestAdvance);
+    
+    for (const thisComponent of train2QuestInstrComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function train2QuestInstrRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'train2QuestInstr'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = train2QuestInstrClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *train2QuestText* updates
+    if (t >= 0.0 && train2QuestText.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2QuestText.tStart = t;  // (not accounting for frame time here)
+      train2QuestText.frameNStart = frameN;  // exact frame index
+      
+      train2QuestText.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2QuestText.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2QuestText.setAutoDraw(false);
+    }
+    
+    // *train2QuestAdvance* updates
+    if (t >= 0.0 && train2QuestAdvance.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2QuestAdvance.tStart = t;  // (not accounting for frame time here)
+      train2QuestAdvance.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { train2QuestAdvance.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { train2QuestAdvance.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { train2QuestAdvance.clearEvents(); });
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2QuestAdvance.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2QuestAdvance.status = PsychoJS.Status.FINISHED;
+  }
+
+    if (train2QuestAdvance.status === PsychoJS.Status.STARTED) {
+      let theseKeys = train2QuestAdvance.getKeys({keyList: [], waitRelease: false});
+      _train2QuestAdvance_allKeys = _train2QuestAdvance_allKeys.concat(theseKeys);
+      if (_train2QuestAdvance_allKeys.length > 0) {
+        train2QuestAdvance.keys = _train2QuestAdvance_allKeys[_train2QuestAdvance_allKeys.length - 1].name;  // just the last key pressed
+        train2QuestAdvance.rt = _train2QuestAdvance_allKeys[_train2QuestAdvance_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of train2QuestInstrComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function train2QuestInstrRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'train2QuestInstr'-------
+    for (const thisComponent of train2QuestInstrComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('train2QuestAdvance.keys', train2QuestAdvance.keys);
+    if (typeof train2QuestAdvance.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('train2QuestAdvance.rt', train2QuestAdvance.rt);
+        routineTimer.reset();
+        }
+    
+    train2QuestAdvance.stop();
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _train2Response_allKeys;
 var trainquestions2Components;
 function trainquestions2RoutineBegin(trials) {
@@ -2414,9 +2877,9 @@ function trainquestions2RoutineBegin(trials) {
     secs: -1,
     });
     stimulitest2.setVolume(1);
-    correct2.setPos([truePos, 0]);
+    correct2.setPos([truePos, (- 0.3)]);
     correct2.setImage(imageTrue);
-    incorrect2.setPos([falsePos, 0]);
+    incorrect2.setPos([falsePos, (- 0.3)]);
     incorrect2.setImage(imageFalse);
     train2Response.keys = undefined;
     train2Response.rt = undefined;
@@ -2427,6 +2890,9 @@ function trainquestions2RoutineBegin(trials) {
     trainquestions2Components.push(correct2);
     trainquestions2Components.push(incorrect2);
     trainquestions2Components.push(train2Response);
+    trainquestions2Components.push(chooseImageTrain2);
+    trainquestions2Components.push(train2F);
+    trainquestions2Components.push(train2J);
     
     for (const thisComponent of trainquestions2Components)
       if ('status' in thisComponent)
@@ -2515,6 +2981,48 @@ function trainquestions2RoutineEachFrame(trials) {
       }
     }
     
+    
+    // *chooseImageTrain2* updates
+    if (t >= 0.0 && chooseImageTrain2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      chooseImageTrain2.tStart = t;  // (not accounting for frame time here)
+      chooseImageTrain2.frameNStart = frameN;  // exact frame index
+      
+      chooseImageTrain2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 7 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (chooseImageTrain2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      chooseImageTrain2.setAutoDraw(false);
+    }
+    
+    // *train2F* updates
+    if (t >= 1 && train2F.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2F.tStart = t;  // (not accounting for frame time here)
+      train2F.frameNStart = frameN;  // exact frame index
+      
+      train2F.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2F.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2F.setAutoDraw(false);
+    }
+    
+    // *train2J* updates
+    if (t >= 1 && train2J.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      train2J.tStart = t;  // (not accounting for frame time here)
+      train2J.frameNStart = frameN;  // exact frame index
+      
+      train2J.setAutoDraw(true);
+    }
+
+    frameRemains = 1 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (train2J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      train2J.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -4249,7 +4757,7 @@ function posttestRoutineBegin(trials) {
     posttestComponents.push(jMute1);
     posttestComponents.push(jSound);
     posttestComponents.push(jMute2);
-    posttestComponents.push(textInstructionsPostTest);
+    posttestComponents.push(textInstrPostTest);
     posttestComponents.push(fText);
     posttestComponents.push(xText);
     posttestComponents.push(jText);
@@ -4452,18 +4960,18 @@ function posttestRoutineEachFrame(trials) {
       jMute2.setAutoDraw(false);
     }
     
-    // *textInstructionsPostTest* updates
-    if (t >= 0.0 && textInstructionsPostTest.status === PsychoJS.Status.NOT_STARTED) {
+    // *textInstrPostTest* updates
+    if (t >= 0.0 && textInstrPostTest.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      textInstructionsPostTest.tStart = t;  // (not accounting for frame time here)
-      textInstructionsPostTest.frameNStart = frameN;  // exact frame index
+      textInstrPostTest.tStart = t;  // (not accounting for frame time here)
+      textInstrPostTest.frameNStart = frameN;  // exact frame index
       
-      textInstructionsPostTest.setAutoDraw(true);
+      textInstrPostTest.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (textInstructionsPostTest.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      textInstructionsPostTest.setAutoDraw(false);
+    if (textInstrPostTest.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      textInstrPostTest.setAutoDraw(false);
     }
     
     // *fText* updates
