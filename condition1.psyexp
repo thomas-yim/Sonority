@@ -2631,7 +2631,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="10" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J&amp;#10;&amp;#10;Press any key to advance" valType="str"/>
+        <Param name="text" updates="constant" val="You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.&amp;#10;&amp;#10;Press any key to advance" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2675,7 +2675,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="10" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J&amp;#10;&amp;#10;Press any key to advance" valType="str"/>
+        <Param name="text" updates="constant" val="You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.&amp;#10;&amp;#10;Press any key to advance" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
