@@ -1551,7 +1551,7 @@ function test2LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test2Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test2Conditions.xlsx',
     seed: undefined, name: 'test2Loop'
@@ -1585,7 +1585,7 @@ function test3LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test3Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test3Conditions.xlsx',
     seed: undefined, name: 'test3Loop'
@@ -1619,7 +1619,7 @@ function postTestLoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   postTestLoop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'postTestConditions.xlsx',
     seed: undefined, name: 'postTestLoop'
