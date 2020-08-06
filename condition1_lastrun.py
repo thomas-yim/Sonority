@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 31, 2020, at 11:22
+    on August 05, 2020, at 12:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -127,7 +127,7 @@ listenTrain1 = visual.TextStim(win=win, name='listenTrain1',
 # Initialize components for Routine "train1QuestInstr"
 train1QuestInstrClock = core.Clock()
 train1QuestText = visual.TextStim(win=win, name='train1QuestText',
-    text='You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    text='You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.\n\nPress any key to advance',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -261,7 +261,7 @@ listenTrain2 = visual.TextStim(win=win, name='listenTrain2',
 # Initialize components for Routine "train2QuestInstr"
 train2QuestInstrClock = core.Clock()
 train2QuestText = visual.TextStim(win=win, name='train2QuestText',
-    text='You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    text='You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.\n\nPress any key to advance',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -278,7 +278,7 @@ correct2 = visual.ImageStim(
     win=win,
     name='correct2', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.5, 0.5),
+    ori=0, pos=[0,0], size=(0.3, 0.3),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -286,7 +286,7 @@ incorrect2 = visual.ImageStim(
     win=win,
     name='incorrect2', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.5, 0.5),
+    ori=0, pos=[0,0], size=(0.3, 0.3),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -1658,7 +1658,7 @@ thisExp.addData('skipTrain2Instr.stopped', skipTrain2Instr.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-train2blocks = data.TrialHandler(nReps=1, method='sequential', 
+train2blocks = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train2LoopCondition.xlsx'),
     seed=None, name='train2blocks')
@@ -2186,7 +2186,7 @@ for thisTrain2block in train2blocks:
     
     thisExp.nextEntry()
     
-# completed 1 repeats of 'train2blocks'
+# completed 0 repeats of 'train2blocks'
 
 
 # ------Prepare to start Routine "testTrainInstr"-------
@@ -2396,7 +2396,7 @@ thisExp.addData('test1warning1.started', test1warning1.tStartRefresh)
 thisExp.addData('test1warning1.stopped', test1warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test1Loop = data.TrialHandler(nReps=1, method='sequential', 
+test1Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test1Conditions.xlsx'),
     seed=None, name='test1Loop')
@@ -2689,7 +2689,7 @@ for thisTest1Loop in test1Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test1Loop'
+# completed 0 repeats of 'test1Loop'
 
 
 # ------Prepare to start Routine "testNovel1Instr"-------
@@ -2899,7 +2899,7 @@ thisExp.addData('test2warning1.started', test2warning1.tStartRefresh)
 thisExp.addData('test2warning1.stopped', test2warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=1, method='sequential', 
+test2Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -3191,7 +3191,7 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test2Loop'
+# completed 0 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "testNovel2Instr"-------
@@ -3401,7 +3401,7 @@ thisExp.addData('test3warning1.started', test3warning1.tStartRefresh)
 thisExp.addData('test3warning1.stopped', test3warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=1, method='sequential', 
+test3Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test3Conditions.xlsx'),
     seed=None, name='test3Loop')
@@ -3694,7 +3694,7 @@ for thisTest3Loop in test3Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test3Loop'
+# completed 0 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------

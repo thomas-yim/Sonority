@@ -31,6 +31,12 @@ def calculateAccuracy(df, phase):
         audio2 = []
         trueAudio = []
         
+        #These are the arrays for the post test phase
+        audioA
+        audioX
+        audioB
+        trueAudio
+        
         for index in questionIndexes:
             
             total += 1
@@ -50,6 +56,9 @@ def calculateAccuracy(df, phase):
                     correct.append(True)
                 else:
                     correct.append(False)
+                data = {"Audio": audio, "True Image": trueImage, "False Image": falseImage,
+                    "Correct": correct, "Reaction Time": reactionTime}
+                columns = ["Audio", "True Image", "False Image", "Correct", "Reaction Time"]
             elif "test" in phase:
                 images.append(df['imageLoc'][index].split('/')[1])
                 audio1.append(df['firstAudio'][index].split('/')[1])
@@ -67,17 +76,31 @@ def calculateAccuracy(df, phase):
                     correct.append(True)
                 else:
                     correct.append(False)
+                data = {"Images": images, "Audio 1": audio1, "Audio 2": audio2, "True Audio": trueAudio,
+                    "Correct": correct, "Reaction Time": reactionTime}
+                columns = ["Images", "Audio 1", "Audio 2", "True Audio", "Correct", "Reaction Time"]
+            elif "postTest" in phase:
+                audioA.append(df['audioA'][index].split('/')[1])
+                audioX.append(df['audioX'][index].split('/')[1])
+                audioB.append(df['audioB'][index].split('/')[1])
+                trueAudio.append(df['correctLabel'][index])
+                reactionTime.append(df[phase + 'Response.rt'][index])
+                if df[phase + 'Response.keys'][index] == 'None':
+                    empty += 1
+                    correct.append("None")
+                elif df['correctLabel'][index] == "audioA" and df[phase + 'Response.keys'][index] == 'f':
+                    correctAnswers += 1
+                    correct.append(True)
+                elif df['correctLabel'][index] == "audioB" and df[phase + 'Response.keys'][index] == 'j':
+                    correctAnswers += 1
+                    correct.append(True)
+                else:
+                    correct.append(False)
+                data = {"Audio A": audioA, "Audio X": audioX, "Audio B": audioB, "True Audio": trueAudio,
+                    "Correct": correct, "Reaction Time": reactionTime}
+                columns = ["Audio A", "Audio X", "Audio B", "True Audio", "Correct", "Reaction Time"]
             else:
                 print("Invalid phase")
-        
-        if "train" in phase:
-            data = {"Audio": audio, "True Image": trueImage, "False Image": falseImage,
-                    "Correct": correct, "Reaction Time": reactionTime}
-            columns = ["Audio", "True Image", "False Image", "Correct", "Reaction Time"]
-        elif "test" in phase:
-            data = {"Images": images, "Audio 1": audio1, "Audio 2": audio2, "True Audio": trueAudio,
-                    "Correct": correct, "Reaction Time": reactionTime}
-            columns = ["Images", "Audio 1", "Audio 2", "True Audio", "Correct", "Reaction Time"]
         
         df = pd.DataFrame(data, columns=columns)
         
@@ -95,6 +118,9 @@ def calculateAccuracy(df, phase):
 dfTrain1 = calculateAccuracy(df, "train1")
 dfTrain2 = calculateAccuracy(df, "train2")
 dfTest1 = calculateAccuracy(df, "test1")
+dfTest1 = calculateAccuracy(df, "test2")
+dfTest1 = calculateAccuracy(df, "test3")
+dfTest1 = calculateAccuracy(df, "postTest")
 
 writer = pd.ExcelWriter('results/' + filename[:-4] + '_results.xlsx', engine='xlsxwriter')
 dfTrain1.to_excel(writer, sheet_name='Train 1', index = False)
