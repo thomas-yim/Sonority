@@ -254,7 +254,7 @@ function experimentInit() {
   instructions = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions',
-    text: 'Welcome and thank you for participating!\n\nInstructions will go here',
+    text: 'Welcome and thank you for participating!\n\nInstructions will go here.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -321,7 +321,7 @@ function experimentInit() {
   train1QuestText = new visual.TextStim({
     win: psychoJS.window,
     name: 'train1QuestText',
-    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.\n\nPress any key to advance',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -519,7 +519,7 @@ function experimentInit() {
   train2QuestText = new visual.TextStim({
     win: psychoJS.window,
     name: 'train2QuestText',
-    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J\n\nPress any key to advance',
+    text: 'You will now be presented with three questions. For each, you will hear one word and you will choose the image that corresponds to it by clicking the keys F or J.\n\nPress any key to advance',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1428,7 +1428,7 @@ function train1blocksLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1blocks = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train1LoopCondition.xlsx',
     seed: undefined, name: 'train1blocks'
@@ -1541,7 +1541,7 @@ function train2blocksLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2blocks = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train2LoopCondition.xlsx',
     seed: undefined, name: 'train2blocks'
@@ -1654,7 +1654,7 @@ function test1LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test1Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test1Conditions.xlsx',
     seed: undefined, name: 'test1Loop'
@@ -1689,7 +1689,7 @@ function test2LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test2Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test2Conditions.xlsx',
     seed: undefined, name: 'test2Loop'
@@ -1724,7 +1724,7 @@ function test3LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test3Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test3Conditions.xlsx',
     seed: undefined, name: 'test3Loop'
@@ -4750,13 +4750,13 @@ function posttestRoutineBegin(trials) {
     postTestAudio1.setVolume(1);
     postTestAudio2 = new sound.Sound({
     win: psychoJS.window,
-    value: audioB,
+    value: audioX,
     secs: -1,
     });
     postTestAudio2.setVolume(1);
     postTestAudio3 = new sound.Sound({
     win: psychoJS.window,
-    value: audioC,
+    value: audioB,
     secs: -1,
     });
     postTestAudio3.setVolume(1);

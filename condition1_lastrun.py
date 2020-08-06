@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 05, 2020, at 12:15
+    on August 06, 2020, at 00:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -83,7 +83,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
-    text='Welcome and thank you for participating!\n\nInstructions will go here',
+    text='Welcome and thank you for participating!\n\nInstructions will go here...',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -3930,9 +3930,9 @@ for thisPostTestLoop in postTestLoop:
     _postTestResponse_allKeys = []
     postTestAudio1.setSound(audioA, hamming=True)
     postTestAudio1.setVolume(1, log=False)
-    postTestAudio2.setSound(audioB, hamming=True)
+    postTestAudio2.setSound(audioX, hamming=True)
     postTestAudio2.setVolume(1, log=False)
-    postTestAudio3.setSound(audioC, hamming=False)
+    postTestAudio3.setSound(audioB, hamming=False)
     postTestAudio3.setVolume(1, log=False)
     # keep track of which components have finished
     posttestComponents = [postTestResponse, postTestAudio1, fSound, fMute, postTestAudio2, xMute1, xSound, xMute2, postTestAudio3, jMute1, jSound, jMute2, textInstrPostTest, fText, xText, jText]
