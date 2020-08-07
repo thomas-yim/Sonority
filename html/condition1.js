@@ -186,6 +186,7 @@ var test1Response;
 var test1Image;
 var test1F;
 var test1J;
+var test1Instr;
 var testNovel1InstrClock;
 var skipTest2Instr;
 var test2warning10;
@@ -206,6 +207,7 @@ var test2Response;
 var test2Image;
 var test2F;
 var test2J;
+var test2Instr;
 var testNovel2InstrClock;
 var skipTest3Instr;
 var test3warning10;
@@ -226,6 +228,7 @@ var test3Response;
 var test3Image;
 var test3F;
 var test3J;
+var test3Instr;
 var postTestInstrClock;
 var skipPostTestInstr;
 var postTestWarning10;
@@ -733,7 +736,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'test1Image', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0.2], size : [0.4, 0.4],
+    ori : 0, pos : [0, 0.1], size : [0.4, 0.4],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -8.0 
@@ -758,6 +761,17 @@ function experimentInit() {
     pos: [0.3, (- 0.1)], height: 0.2,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -10.0 
+  });
+  
+  test1Instr = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test1Instr',
+    text: 'Choose the audio that has the correct pronunciation (F or J)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -11.0 
   });
   
   // Initialize components for Routine "testNovel1Instr"
@@ -895,7 +909,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'test2Image', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0.2], size : [0.4, 0.4],
+    ori : 0, pos : [0, 0.1], size : [0.4, 0.4],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -8.0 
@@ -920,6 +934,17 @@ function experimentInit() {
     pos: [0.3, (- 0.1)], height: 0.2,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -10.0 
+  });
+  
+  test2Instr = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test2Instr',
+    text: 'Choose the audio that has the correct pronunciation (F or J)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -11.0 
   });
   
   // Initialize components for Routine "testNovel2Instr"
@@ -1057,7 +1082,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'test3Image', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0.2], size : [0.4, 0.4],
+    ori : 0, pos : [0, 0.1], size : [0.4, 0.4],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -8.0 
@@ -1082,6 +1107,17 @@ function experimentInit() {
     pos: [0.3, (- 0.1)], height: 0.2,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -10.0 
+  });
+  
+  test3Instr = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'test3Instr',
+    text: 'Choose the audio that has the correct pronunciation (F or J)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -11.0 
   });
   
   // Initialize components for Routine "postTestInstr"
@@ -3317,6 +3353,7 @@ function test1RoutineBegin(trials) {
     test1Components.push(test1Image);
     test1Components.push(test1F);
     test1Components.push(test1J);
+    test1Components.push(test1Instr);
     
     for (const thisComponent of test1Components)
       if ('status' in thisComponent)
@@ -3501,6 +3538,20 @@ function test1RoutineEachFrame(trials) {
     frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1J.setAutoDraw(false);
+    }
+    
+    // *test1Instr* updates
+    if (t >= 0.0 && test1Instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test1Instr.tStart = t;  // (not accounting for frame time here)
+      test1Instr.frameNStart = frameN;  // exact frame index
+      
+      test1Instr.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test1Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test1Instr.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -3796,6 +3847,7 @@ function test2RoutineBegin(trials) {
     test2Components.push(test2Image);
     test2Components.push(test2F);
     test2Components.push(test2J);
+    test2Components.push(test2Instr);
     
     for (const thisComponent of test2Components)
       if ('status' in thisComponent)
@@ -3980,6 +4032,20 @@ function test2RoutineEachFrame(trials) {
     frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test2J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test2J.setAutoDraw(false);
+    }
+    
+    // *test2Instr* updates
+    if (t >= 0.0 && test2Instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test2Instr.tStart = t;  // (not accounting for frame time here)
+      test2Instr.frameNStart = frameN;  // exact frame index
+      
+      test2Instr.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test2Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test2Instr.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -4276,6 +4342,7 @@ function test3RoutineBegin(trials) {
     test3Components.push(test3Image);
     test3Components.push(test3F);
     test3Components.push(test3J);
+    test3Components.push(test3Instr);
     
     for (const thisComponent of test3Components)
       if ('status' in thisComponent)
@@ -4460,6 +4527,20 @@ function test3RoutineEachFrame(trials) {
     frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test3J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test3J.setAutoDraw(false);
+    }
+    
+    // *test3Instr* updates
+    if (t >= 0.0 && test3Instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test3Instr.tStart = t;  // (not accounting for frame time here)
+      test3Instr.frameNStart = frameN;  // exact frame index
+      
+      test3Instr.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (test3Instr.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      test3Instr.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {

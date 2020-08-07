@@ -3,7 +3,7 @@ import math
 import xlsxwriter
 
 
-filename = "thomas_condition1_2020-08-06_10h29.14.535.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
+filename = "delete_sonority_2020_Aug_06_2144.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
 df = pd.read_csv("data/" + filename)
 
 def calculateAccuracy(df, phase):
@@ -111,23 +111,33 @@ def calculateAccuracy(df, phase):
         print("Percentage Correct: ", str(100*(correctAnswers/total)) + "%")
         print()
         
-        return df
+        return df, correctAnswers, empty, total, str(round(100*(correctAnswers/total), 2)) + "%"
     else:
-        return pd.DataFrame()
+        return pd.DataFrame(), "N/A", "N/A", "N/A", "N/A"
     
-dfTrain1 = calculateAccuracy(df, "train1")
-dfTrain2 = calculateAccuracy(df, "train2")
-dfTest1 = calculateAccuracy(df, "test1")
-dfTest2 = calculateAccuracy(df, "test2")
-dfTest3 = calculateAccuracy(df, "test3")
-dfPostTest = calculateAccuracy(df, "postTest")
+#Cumulative Results
+phases = []
+numCorrect = []
+numEmpty = []
+numTotal = []
+percentages = []
+
+phaseDict = {"train1": "Train 1", "train2": "Train 2", "test1": "Test 1",
+          "test2": "Test 2", "test3": "Test 3", "postTest": "PostTest"}
 
 writer = pd.ExcelWriter('results/' + filename[:-4] + '_results.xlsx', engine='xlsxwriter')
-dfTrain1.to_excel(writer, sheet_name='Train 1', index = False)
-dfTrain2.to_excel(writer, sheet_name='Train 2', index = False)
-dfTest1.to_excel(writer, sheet_name='Test 1', index = False)
-dfTest2.to_excel(writer, sheet_name='Test 2', index = False)
-dfTest3.to_excel(writer, sheet_name='Test 3', index = False)
-dfPostTest.to_excel(writer, sheet_name='Post Test', index = False)
+for phase in phaseDict.keys():    
+    dfPhase, correct, empty, total, percent = calculateAccuracy(df, phase)
+    phases.append(phaseDict[phase])
+    numCorrect.append(correct)
+    numEmpty.append(empty)
+    numTotal.append(total)
+    percentages.append(percent)
+    dfPhase.to_excel(writer, sheet_name=phaseDict[phase], index = False)
+
+data = {"Phase": phases, "Correct": numCorrect, "Empty": numEmpty,
+        "Total": numTotal, "Percent Correct": percentages}
+columns = ["Phase", "Correct", "Empty", "Total", "Percent Correct"]
+pd.DataFrame(data,columns=columns).to_excel(writer, sheet_name="Overview", index = False)
 
 writer.save()

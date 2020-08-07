@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 06, 2020, at 19:42
+    on August 06, 2020, at 22:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -412,7 +412,7 @@ test1Image = visual.ImageStim(
     win=win,
     name='test1Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
+    ori=0, pos=(0, 0.1), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-8.0)
@@ -430,6 +430,13 @@ test1J = visual.TextStim(win=win, name='test1J',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-10.0);
+test1Instr = visual.TextStim(win=win, name='test1Instr',
+    text='Choose the audio that has the correct pronunciation (F or J)',
+    font='Arial',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
 
 # Initialize components for Routine "testNovel1Instr"
 testNovel1InstrClock = core.Clock()
@@ -530,7 +537,7 @@ test2Image = visual.ImageStim(
     win=win,
     name='test2Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
+    ori=0, pos=(0, 0.1), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-8.0)
@@ -548,6 +555,13 @@ test2J = visual.TextStim(win=win, name='test2J',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-10.0);
+test2Instr = visual.TextStim(win=win, name='test2Instr',
+    text='Choose the audio that has the correct pronunciation (F or J)',
+    font='Arial',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
 
 # Initialize components for Routine "testNovel2Instr"
 testNovel2InstrClock = core.Clock()
@@ -648,7 +662,7 @@ test3Image = visual.ImageStim(
     win=win,
     name='test3Image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0.2), size=(0.4, 0.4),
+    ori=0, pos=(0, 0.1), size=(0.4, 0.4),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-8.0)
@@ -666,6 +680,13 @@ test3J = visual.TextStim(win=win, name='test3J',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-10.0);
+test3Instr = visual.TextStim(win=win, name='test3Instr',
+    text='Choose the audio that has the correct pronunciation (F or J)',
+    font='Arial',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-11.0);
 
 # Initialize components for Routine "postTestInstr"
 postTestInstrClock = core.Clock()
@@ -2431,7 +2452,7 @@ for thisTest1Loop in test1Loop:
     _test1Response_allKeys = []
     test1Image.setImage(imageLoc)
     # keep track of which components have finished
-    test1Components = [test1Audio1, test1Audio1Sound, test1Audio1Mute, test1Audio2, test1Audio2Mute1, test1Audio2Sound, test1Audio2Mute2, test1Response, test1Image, test1F, test1J]
+    test1Components = [test1Audio1, test1Audio1Sound, test1Audio1Mute, test1Audio2, test1Audio2Mute1, test1Audio2Sound, test1Audio2Mute2, test1Response, test1Image, test1F, test1J, test1Instr]
     for thisComponent in test1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2634,6 +2655,23 @@ for thisTest1Loop in test1Loop:
                 win.timeOnFlip(test1J, 'tStopRefresh')  # time at next scr refresh
                 test1J.setAutoDraw(False)
         
+        # *test1Instr* updates
+        if test1Instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test1Instr.frameNStart = frameN  # exact frame index
+            test1Instr.tStart = t  # local t and not account for scr refresh
+            test1Instr.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test1Instr, 'tStartRefresh')  # time at next scr refresh
+            test1Instr.setAutoDraw(True)
+        if test1Instr.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test1Instr.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test1Instr.tStop = t  # not accounting for scr refresh
+                test1Instr.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test1Instr, 'tStopRefresh')  # time at next scr refresh
+                test1Instr.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -2685,6 +2723,8 @@ for thisTest1Loop in test1Loop:
     test1Loop.addData('test1F.stopped', test1F.tStopRefresh)
     test1Loop.addData('test1J.started', test1J.tStartRefresh)
     test1Loop.addData('test1J.stopped', test1J.tStopRefresh)
+    test1Loop.addData('test1Instr.started', test1Instr.tStartRefresh)
+    test1Loop.addData('test1Instr.stopped', test1Instr.tStopRefresh)
     # the Routine "test1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -2899,7 +2939,7 @@ thisExp.addData('test2warning1.started', test2warning1.tStartRefresh)
 thisExp.addData('test2warning1.stopped', test2warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=1, method='sequential', 
+test2Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -2933,7 +2973,7 @@ for thisTest2Loop in test2Loop:
     _test2Response_allKeys = []
     test2Image.setImage(imageLoc)
     # keep track of which components have finished
-    test2Components = [test2Audio1, test2Audio1Sound, test1Audio2Mute, test2Audio2, test2Audio2Mute1, test2Audio2Sound, test2Audio2Mute2, test2Response, test2Image, test2F, test2J]
+    test2Components = [test2Audio1, test2Audio1Sound, test1Audio2Mute, test2Audio2, test2Audio2Mute1, test2Audio2Sound, test2Audio2Mute2, test2Response, test2Image, test2F, test2J, test2Instr]
     for thisComponent in test2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3136,6 +3176,23 @@ for thisTest2Loop in test2Loop:
                 win.timeOnFlip(test2J, 'tStopRefresh')  # time at next scr refresh
                 test2J.setAutoDraw(False)
         
+        # *test2Instr* updates
+        if test2Instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test2Instr.frameNStart = frameN  # exact frame index
+            test2Instr.tStart = t  # local t and not account for scr refresh
+            test2Instr.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test2Instr, 'tStartRefresh')  # time at next scr refresh
+            test2Instr.setAutoDraw(True)
+        if test2Instr.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test2Instr.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test2Instr.tStop = t  # not accounting for scr refresh
+                test2Instr.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test2Instr, 'tStopRefresh')  # time at next scr refresh
+                test2Instr.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -3187,11 +3244,13 @@ for thisTest2Loop in test2Loop:
     test2Loop.addData('test2F.stopped', test2F.tStopRefresh)
     test2Loop.addData('test2J.started', test2J.tStartRefresh)
     test2Loop.addData('test2J.stopped', test2J.tStopRefresh)
+    test2Loop.addData('test2Instr.started', test2Instr.tStartRefresh)
+    test2Loop.addData('test2Instr.stopped', test2Instr.tStopRefresh)
     # the Routine "test2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test2Loop'
+# completed 0 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "testNovel2Instr"-------
@@ -3436,7 +3495,7 @@ for thisTest3Loop in test3Loop:
     _test3Response_allKeys = []
     test3Image.setImage(imageLoc)
     # keep track of which components have finished
-    test3Components = [test3Audio1, test3Audio1Sound, test3Audio1Mute, test3Audio2, test3Audio2Mute1, test3Audio2Sound, test3Audio2Mute2, test3Response, test3Image, test3F, test3J]
+    test3Components = [test3Audio1, test3Audio1Sound, test3Audio1Mute, test3Audio2, test3Audio2Mute1, test3Audio2Sound, test3Audio2Mute2, test3Response, test3Image, test3F, test3J, test3Instr]
     for thisComponent in test3Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3639,6 +3698,23 @@ for thisTest3Loop in test3Loop:
                 win.timeOnFlip(test3J, 'tStopRefresh')  # time at next scr refresh
                 test3J.setAutoDraw(False)
         
+        # *test3Instr* updates
+        if test3Instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            test3Instr.frameNStart = frameN  # exact frame index
+            test3Instr.tStart = t  # local t and not account for scr refresh
+            test3Instr.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(test3Instr, 'tStartRefresh')  # time at next scr refresh
+            test3Instr.setAutoDraw(True)
+        if test3Instr.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > test3Instr.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                test3Instr.tStop = t  # not accounting for scr refresh
+                test3Instr.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(test3Instr, 'tStopRefresh')  # time at next scr refresh
+                test3Instr.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -3690,6 +3766,8 @@ for thisTest3Loop in test3Loop:
     test3Loop.addData('test3F.stopped', test3F.tStopRefresh)
     test3Loop.addData('test3J.started', test3J.tStartRefresh)
     test3Loop.addData('test3J.stopped', test3J.tStopRefresh)
+    test3Loop.addData('test3Instr.started', test3Instr.tStartRefresh)
+    test3Loop.addData('test3Instr.stopped', test3Instr.tStopRefresh)
     # the Routine "test3" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
