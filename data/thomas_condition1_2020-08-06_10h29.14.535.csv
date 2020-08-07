@@ -1,0 +1,14 @@
+skipTrain2Instr.keys,skipTrain2Instr.rt,skipTest1Instr.keys,skipTest1Instr.rt,skipTest2Instr.keys,skipTest2Instr.rt,skipTest3Instr.keys,skipTest3Instr.rt,skipPostTestInstr.keys,skipPostTestInstr.rt,postTestResponse.keys,postTestResponse.rt,postTestLoop.thisRepN,postTestLoop.thisTrialN,postTestLoop.thisN,postTestLoop.thisIndex,postTestLoop.ran,audioA,audioX,audioB,correctLabel,participant,session,date,expName,psychopyVersion,OS,frameRate,quit.keys,quit.rt
+g,0.63224,g,0.4005,g,0.4264,g,0.42343,g,0.4294,f,1.348775,0,0,0,0,1,postTest/82_tipiko1.wav,postTest/82_tipiko1.wav,postTest/82_tipiko3.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,f,1.16187,0,1,1,1,1,postTest/83_pitita3.wav,postTest/83_pitita3.wav,postTest/83_pitita2.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,0.39167,0,2,2,2,1,postTest/84_pitoka3.wav,postTest/84_pitoka1.wav,postTest/84_pitoka1.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,f,1.037435,0,3,3,3,1,postTest/85_kipata2.wav,postTest/85_kipata2.wav,postTest/85_kipata3.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,2.870765,0,4,4,4,1,postTest/86_totipa2.wav,postTest/86_totipa1.wav,postTest/86_totipa1.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,0.911865,0,5,5,5,1,postTest/87_kopoko1.wav,postTest/87_kopoko3.wav,postTest/87_kopoko3.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,f,0.77374,0,6,6,6,1,postTest/88_pokota2.wav,postTest/88_pokota2.wav,postTest/88_pokota1.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,0.117535,0,7,7,7,1,postTest/89_totako3.wav,postTest/89_totako2.wav,postTest/89_totako2.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,0.635815,0,8,8,8,1,postTest/90_papiki2.wav,postTest/90_papiki3.wav,postTest/90_papiki3.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,f,0.751495,0,9,9,9,1,postTest/91_papipo1.wav,postTest/91_papipo1.wav,postTest/91_papipo2.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,j,0.565225,0,10,10,10,1,postTest/92_katoki1.wav,postTest/92_katoki2.wav,postTest/92_katoki2.wav,audioB,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,f,0.509965,0,11,11,11,1,postTest/93_pakopa3.wav,postTest/93_pakopa3.wav,postTest/93_pakopa1.wav,audioA,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,,
+,,,,,,,,,,,,,,,,,,,,,thomas,001,2020-08-06_10h29.14.535,condition1,2020.1.3,Win32,60,f,1.081345

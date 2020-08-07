@@ -3,7 +3,7 @@ import math
 import xlsxwriter
 
 
-filename = "deleteonline_sonorityaoi_2020-07-30_22h45.59.097.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
+filename = "thomas_condition1_2020-08-06_10h29.14.535.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
 df = pd.read_csv("data/" + filename)
 
 def calculateAccuracy(df, phase):
@@ -32,10 +32,10 @@ def calculateAccuracy(df, phase):
         trueAudio = []
         
         #These are the arrays for the post test phase
-        audioA
-        audioX
-        audioB
-        trueAudio
+        audioA = []
+        audioX = []
+        audioB = []
+        trueAudio = []
         
         for index in questionIndexes:
             
@@ -118,13 +118,16 @@ def calculateAccuracy(df, phase):
 dfTrain1 = calculateAccuracy(df, "train1")
 dfTrain2 = calculateAccuracy(df, "train2")
 dfTest1 = calculateAccuracy(df, "test1")
-dfTest1 = calculateAccuracy(df, "test2")
-dfTest1 = calculateAccuracy(df, "test3")
-dfTest1 = calculateAccuracy(df, "postTest")
+dfTest2 = calculateAccuracy(df, "test2")
+dfTest3 = calculateAccuracy(df, "test3")
+dfPostTest = calculateAccuracy(df, "postTest")
 
 writer = pd.ExcelWriter('results/' + filename[:-4] + '_results.xlsx', engine='xlsxwriter')
 dfTrain1.to_excel(writer, sheet_name='Train 1', index = False)
 dfTrain2.to_excel(writer, sheet_name='Train 2', index = False)
 dfTest1.to_excel(writer, sheet_name='Test 1', index = False)
+dfTest2.to_excel(writer, sheet_name='Test 2', index = False)
+dfTest3.to_excel(writer, sheet_name='Test 3', index = False)
+dfPostTest.to_excel(writer, sheet_name='Post Test', index = False)
 
 writer.save()

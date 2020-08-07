@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 06, 2020, at 00:33
+    on August 06, 2020, at 19:42
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -83,7 +83,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
-    text='Welcome and thank you for participating!\n\nInstructions will go here...',
+    text='Welcome and thank you for participating!\n\nInstructions will go here.',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -2899,7 +2899,7 @@ thisExp.addData('test2warning1.started', test2warning1.tStartRefresh)
 thisExp.addData('test2warning1.stopped', test2warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=0, method='sequential', 
+test2Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -3191,7 +3191,7 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test2Loop'
+# completed 1 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "testNovel2Instr"-------
@@ -3401,7 +3401,7 @@ thisExp.addData('test3warning1.started', test3warning1.tStartRefresh)
 thisExp.addData('test3warning1.stopped', test3warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=0, method='sequential', 
+test3Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test3Conditions.xlsx'),
     seed=None, name='test3Loop')
@@ -3694,7 +3694,7 @@ for thisTest3Loop in test3Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test3Loop'
+# completed 1 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------
