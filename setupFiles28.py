@@ -1,7 +1,7 @@
 """
 Thomas Yim
 July 1 2020
-Sonority Experiment Setup
+Sonority Experiment Setup 14x2 and 7x4
 """
 
 import matplotlib.pyplot as plt
@@ -67,30 +67,21 @@ def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking):
                    "imageFalse","truePos", "falsePos"]
     testdf = pd.DataFrame(testData, columns=testColumns)
     return testdf
-"""
-This will set up the condition files for the first blocks of the training files
-and then link them all to one loop condition file.
-It will return the lists of block and test files
-"""
-def setupTrain1(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder):
-    trainConditions = []
-    testConditions = []
 
+def setupTrainSubPhase(trainingAudio, trainConditions, testConditions, start, end, wordsPerBlock, phase):
     #This will be used to make sure a word is the right answer once.
     tempTrueAudio = trainingAudio.copy()
     tempFalseAudio = trainingAudio.copy()
-
     
     #This array is to check if the word was used in the previous block
     #We want to space out the words
-    beforePreviousBlock = []
     previousBlock = []
 
-    for i in range(1, numBlocks + 1):
+    for i in range(start, end):
         currentBlock = []
         
-        trainConditionName = "train1Block" + str(i) + ".xlsx"
-        testConditionName = "train1Block" + str(i) + "Test.xlsx"
+        trainConditionName = phase + "Block" + str(i) + ".xlsx"
+        testConditionName = phase + "Block" + str(i) + "Test.xlsx"
         
         blockAudioTrue = []
         blockAudioFalse = []
@@ -99,7 +90,7 @@ def setupTrain1(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder):
         
         for j in range(0, int(wordsPerBlock/2)):
             trueInd = random.randint(0, int(len(tempTrueAudio)-1))
-            while tempTrueAudio[trueInd] in previousBlock or tempTrueAudio[trueInd] in currentBlock or tempTrueAudio[trueInd] in beforePreviousBlock:
+            while tempTrueAudio[trueInd] in previousBlock or tempTrueAudio[trueInd] in currentBlock:
                 trueInd = random.randint(0, int(len(tempTrueAudio)-1))
             trueAudio = tempTrueAudio[trueInd]
             currentBlock.append(trueAudio)
@@ -110,7 +101,7 @@ def setupTrain1(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder):
             del tempTrueAudio[trueInd]
             
             falseInd = random.randint(0, int(len(tempFalseAudio)-1))
-            while tempFalseAudio[falseInd] in previousBlock or tempFalseAudio[falseInd] in currentBlock or tempFalseAudio[falseInd] == trueAudio or tempFalseAudio[falseInd] in beforePreviousBlock:
+            while tempFalseAudio[falseInd] in previousBlock or tempFalseAudio[falseInd] in currentBlock or tempFalseAudio[falseInd] == trueAudio:
                 falseInd = random.randint(0, int(len(tempFalseAudio)-1))
             currentBlock.append(tempFalseAudio[falseInd])
             blockAudioFalse.append(tempFalseAudio[falseInd])
@@ -135,43 +126,24 @@ def setupTrain1(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder):
         testdf.to_excel(toFolder + testConditionName, index=False)
         
         trainConditions.append(toFolder + trainConditionName)
-        testConditions.append(toFolder + testConditionName)
-    
+        testConditions.append(toFolder + testConditionName)    
     return trainConditions, testConditions
 
-def setupTrain2(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder):
+
+"""
+This will set up the condition files for the first blocks of the training files
+and then link them all to one loop condition file.
+It will return the lists of block and test files
+"""
+def setupTrain(trainingAudio, ranking, toFolder, phase):
     trainConditions = []
     testConditions = []
 
-    tempAudio = trainingAudio.copy()
-    
-    for i in range(1, numBlocks + 1):
-        trainConditionName = "train2Block" + str(i) + ".xlsx"
-        testConditionName = "train2Block" + str(i) + "Test.xlsx"
-        audio = []
-        imageLoc = []
-        for j in range(0, wordsPerBlock):
-            audioInd = random.randint(0, len(tempAudio)-1)
-            audio.append(correctAudio(ranking, tempAudio[audioInd]))
-            imageLoc.append(findImage(tempAudio[audioInd]))
-            del tempAudio[audioInd]
-            
-        train2Data = {"audio":[("trainingaudio/"+file) for file in audio], "imageLoc":imageLoc}
-        train2Columns = ["audio", "imageLoc"]
-        train2df = pd.DataFrame(train2Data, columns=train2Columns)
-        train2df.to_excel(toFolder + trainConditionName, index=False)
-        
-        trueAudio = audio.copy()
-        falseAudio = audio.copy()
 
-        
-        testdf = setupBlockTest(trueAudio, falseAudio, ranking)
-        testdf.to_excel(toFolder + testConditionName, index=False)
-        
-        trainConditions.append(toFolder + trainConditionName)
-        testConditions.append(toFolder + testConditionName)
+    trainConditions, testConditions = setupTrainSubPhase(trainingAudio, trainConditions, testConditions, 1, 15, 2, phase)
+    trainConditions, testConditions = setupTrainSubPhase(trainingAudio, trainConditions, testConditions, 15, 22, 4, phase)
+    
     return trainConditions, testConditions
-        
             
 
 def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
@@ -180,7 +152,6 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
     whichAudioCorrect = []
     relatedImages = []
     audioCopy = uniqueAudio.copy()
-
     
     for i in range(0, totalQuestions):
         if len(audioCopy) > 1:
@@ -223,13 +194,17 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
     return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect
     
 
-wordCount = 81
+wordCount = 82
 novelCount = 54
-trainingCount = 27
-train1blocks = 9
-train1wordsPerBlock = 6
-train2blocks = 3
-train2wordsPerBlock = 9
+trainingCount = 28
+train1blocksP1 = 14
+train1wordsPerBlockP1 = 2
+train1blocksP2 = 7
+train1wordsPerBlockP2 = 4
+train2blocksP1 = 14
+train2wordsPerBlockP1 = 2
+train2blocksP2= 7
+train2wordsPerBlockP2 = 4
 
 trainingAudioFilenames = os.listdir('trainingaudio/.')
 novelAudioFilenames = os.listdir('novelaudio/.')
@@ -238,15 +213,16 @@ uniqueTrainAudio = list(dict.fromkeys([x[0:-5] for x in trainingAudioFilenames])
 uniqueNovelAudio = list(dict.fromkeys([y[0:-5] for y in novelAudioFilenames]))
 
 #IMPORTANT!!! if this is set then it will randomize the same way every time.
-random.seed(32)
+random.seed(31)
 
 setupWorks = True
 if ((novelCount + trainingCount) != wordCount):
     setupWorks = False
-elif (train1blocks*train1wordsPerBlock%trainingCount != 0):
+elif (train1blocksP1*train1wordsPerBlockP1 + train1blocksP2*train1wordsPerBlockP2) % trainingCount != 0:
     setupWorks = False
-elif (train2blocks*train2wordsPerBlock%trainingCount != 0):
+elif (train2blocksP1*train2wordsPerBlockP1 + train2blocksP2*train2wordsPerBlockP2) % trainingCount != 0:
     setupWorks = False
+    
     
 if setupWorks:
     
@@ -258,12 +234,12 @@ if setupWorks:
     
     toFolder = "".join(ranking) + "Conditions/"
     
-    train1conditions, train1TestConditions = setupTrain1(uniqueTrainAudio, train1wordsPerBlock, train1blocks, ranking, toFolder)
+    train1conditions, train1TestConditions = setupTrain(uniqueTrainAudio, ranking, toFolder, "train1")
     dfTrain1 = pd.DataFrame({"condFiles":train1conditions, "testFiles":train1TestConditions},
                                 columns=['condFiles', "testFiles"])
     dfTrain1.to_excel(toFolder + "train1LoopCondition.xlsx", index=False)
 
-    train2conditions, train2TestConditions = setupTrain2(uniqueTrainAudio, train2wordsPerBlock, train2blocks, ranking, toFolder)
+    train2conditions, train2TestConditions = setupTrain(uniqueTrainAudio, ranking, toFolder, "train2")
     dfTrain2 = pd.DataFrame({"condFiles":train2conditions, "testFiles":train2TestConditions},
                                 columns=['condFiles', 'testFiles'])
     dfTrain2.to_excel(toFolder + "train2LoopCondition.xlsx", index=False)
@@ -294,8 +270,5 @@ if setupWorks:
     columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
     test3Df = pd.DataFrame(test3Data, columns=columns)
     test3Df.to_excel(toFolder + "test3Conditions.xlsx", index = False)
-
-
-    
 else:
     print("This setup doesn't work")

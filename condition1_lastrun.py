@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 06, 2020, at 22:57
+    on August 07, 2020, at 16:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -181,48 +181,27 @@ train1J = visual.TextStim(win=win, name='train1J',
 
 # Initialize components for Routine "instr2"
 instr2Clock = core.Clock()
-train2warning10 = visual.TextStim(win=win, name='train2warning10',
-    text='Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-train2warning5 = visual.TextStim(win=win, name='train2warning5',
-    text='Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-train2warning4 = visual.TextStim(win=win, name='train2warning4',
-    text='Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
 train2warning3 = visual.TextStim(win=win, name='train2warning3',
     text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=0.0);
 train2warning2 = visual.TextStim(win=win, name='train2warning2',
     text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 train2warning1 = visual.TextStim(win=win, name='train2warning1',
     text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-5.0);
+    depth=-2.0);
 skipTrain2Instr = keyboard.Keyboard()
 
 # Initialize components for Routine "train2"
@@ -316,48 +295,27 @@ train2J = visual.TextStim(win=win, name='train2J',
 # Initialize components for Routine "testTrainInstr"
 testTrainInstrClock = core.Clock()
 skipTest1Instr = keyboard.Keyboard()
-test1warning10 = visual.TextStim(win=win, name='test1warning10',
-    text='Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-test1warning5 = visual.TextStim(win=win, name='test1warning5',
-    text='Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-test1warning4 = visual.TextStim(win=win, name='test1warning4',
-    text='Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 test1warning3 = visual.TextStim(win=win, name='test1warning3',
     text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 test1warning2 = visual.TextStim(win=win, name='test1warning2',
     text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-5.0);
+    depth=-2.0);
 test1warning1 = visual.TextStim(win=win, name='test1warning1',
     text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-6.0);
+    depth=-3.0);
 
 # Initialize components for Routine "test1"
 test1Clock = core.Clock()
@@ -441,48 +399,27 @@ test1Instr = visual.TextStim(win=win, name='test1Instr',
 # Initialize components for Routine "testNovel1Instr"
 testNovel1InstrClock = core.Clock()
 skipTest2Instr = keyboard.Keyboard()
-test2warning10 = visual.TextStim(win=win, name='test2warning10',
-    text='Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-test2warning5 = visual.TextStim(win=win, name='test2warning5',
-    text='Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-test2warning4 = visual.TextStim(win=win, name='test2warning4',
-    text='Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 test2warning3 = visual.TextStim(win=win, name='test2warning3',
     text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 test2warning2 = visual.TextStim(win=win, name='test2warning2',
     text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-5.0);
+    depth=-2.0);
 test2warning1 = visual.TextStim(win=win, name='test2warning1',
     text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-6.0);
+    depth=-3.0);
 
 # Initialize components for Routine "test2"
 test2Clock = core.Clock()
@@ -566,48 +503,27 @@ test2Instr = visual.TextStim(win=win, name='test2Instr',
 # Initialize components for Routine "testNovel2Instr"
 testNovel2InstrClock = core.Clock()
 skipTest3Instr = keyboard.Keyboard()
-test3warning10 = visual.TextStim(win=win, name='test3warning10',
-    text='Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-test3warning5 = visual.TextStim(win=win, name='test3warning5',
-    text='Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-test3warning4 = visual.TextStim(win=win, name='test3warning4',
-    text='Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 test3warning3 = visual.TextStim(win=win, name='test3warning3',
     text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 test3warning2 = visual.TextStim(win=win, name='test3warning2',
     text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-5.0);
+    depth=-2.0);
 test3warning1 = visual.TextStim(win=win, name='test3warning1',
     text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-6.0);
+    depth=-3.0);
 
 # Initialize components for Routine "test3"
 test3Clock = core.Clock()
@@ -691,48 +607,27 @@ test3Instr = visual.TextStim(win=win, name='test3Instr',
 # Initialize components for Routine "postTestInstr"
 postTestInstrClock = core.Clock()
 skipPostTestInstr = keyboard.Keyboard()
-postTestWarning10 = visual.TextStim(win=win, name='postTestWarning10',
-    text='Next part will  start automatically\nin less than 10 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-postTestWarning5 = visual.TextStim(win=win, name='postTestWarning5',
-    text='Next part will  start automatically\nin less than 5 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-postTestWarning4 = visual.TextStim(win=win, name='postTestWarning4',
-    text='Next part will  start automatically\nin less than 4 minutes.\n\nPress any button to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 postTestWarning3 = visual.TextStim(win=win, name='postTestWarning3',
     text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-1.0);
 postTestWarning2 = visual.TextStim(win=win, name='postTestWarning2',
     text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-5.0);
+    depth=-2.0);
 postTestWarning1 = visual.TextStim(win=win, name='postTestWarning1',
     text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-6.0);
+    depth=-3.0);
 
 # Initialize components for Routine "posttest"
 posttestClock = core.Clock()
@@ -1474,13 +1369,13 @@ for thisTrain1block in train1blocks:
 
 # ------Prepare to start Routine "instr2"-------
 continueRoutine = True
-routineTimer.add(600.000000)
+routineTimer.add(180.000000)
 # update component parameters for each repeat
 skipTrain2Instr.keys = []
 skipTrain2Instr.rt = []
 _skipTrain2Instr_allKeys = []
 # keep track of which components have finished
-instr2Components = [train2warning10, train2warning5, train2warning4, train2warning3, train2warning2, train2warning1, skipTrain2Instr]
+instr2Components = [train2warning3, train2warning2, train2warning1, skipTrain2Instr]
 for thisComponent in instr2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1503,59 +1398,8 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *train2warning10* updates
-    if train2warning10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        train2warning10.frameNStart = frameN  # exact frame index
-        train2warning10.tStart = t  # local t and not account for scr refresh
-        train2warning10.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(train2warning10, 'tStartRefresh')  # time at next scr refresh
-        train2warning10.setAutoDraw(True)
-    if train2warning10.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > train2warning10.tStartRefresh + 300-frameTolerance:
-            # keep track of stop time/frame for later
-            train2warning10.tStop = t  # not accounting for scr refresh
-            train2warning10.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(train2warning10, 'tStopRefresh')  # time at next scr refresh
-            train2warning10.setAutoDraw(False)
-    
-    # *train2warning5* updates
-    if train2warning5.status == NOT_STARTED and tThisFlip >= 300-frameTolerance:
-        # keep track of start time/frame for later
-        train2warning5.frameNStart = frameN  # exact frame index
-        train2warning5.tStart = t  # local t and not account for scr refresh
-        train2warning5.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(train2warning5, 'tStartRefresh')  # time at next scr refresh
-        train2warning5.setAutoDraw(True)
-    if train2warning5.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > train2warning5.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            train2warning5.tStop = t  # not accounting for scr refresh
-            train2warning5.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(train2warning5, 'tStopRefresh')  # time at next scr refresh
-            train2warning5.setAutoDraw(False)
-    
-    # *train2warning4* updates
-    if train2warning4.status == NOT_STARTED and tThisFlip >= 360-frameTolerance:
-        # keep track of start time/frame for later
-        train2warning4.frameNStart = frameN  # exact frame index
-        train2warning4.tStart = t  # local t and not account for scr refresh
-        train2warning4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(train2warning4, 'tStartRefresh')  # time at next scr refresh
-        train2warning4.setAutoDraw(True)
-    if train2warning4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > train2warning4.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            train2warning4.tStop = t  # not accounting for scr refresh
-            train2warning4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(train2warning4, 'tStopRefresh')  # time at next scr refresh
-            train2warning4.setAutoDraw(False)
-    
     # *train2warning3* updates
-    if train2warning3.status == NOT_STARTED and tThisFlip >= 420-frameTolerance:
+    if train2warning3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         train2warning3.frameNStart = frameN  # exact frame index
         train2warning3.tStart = t  # local t and not account for scr refresh
@@ -1572,7 +1416,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             train2warning3.setAutoDraw(False)
     
     # *train2warning2* updates
-    if train2warning2.status == NOT_STARTED and tThisFlip >= 480-frameTolerance:
+    if train2warning2.status == NOT_STARTED and tThisFlip >= 60-frameTolerance:
         # keep track of start time/frame for later
         train2warning2.frameNStart = frameN  # exact frame index
         train2warning2.tStart = t  # local t and not account for scr refresh
@@ -1589,7 +1433,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             train2warning2.setAutoDraw(False)
     
     # *train2warning1* updates
-    if train2warning1.status == NOT_STARTED and tThisFlip >= 540-frameTolerance:
+    if train2warning1.status == NOT_STARTED and tThisFlip >= 120-frameTolerance:
         # keep track of start time/frame for later
         train2warning1.frameNStart = frameN  # exact frame index
         train2warning1.tStart = t  # local t and not account for scr refresh
@@ -1620,7 +1464,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(skipTrain2Instr.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if skipTrain2Instr.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipTrain2Instr.tStartRefresh + 600-frameTolerance:
+        if tThisFlipGlobal > skipTrain2Instr.tStartRefresh + 180-frameTolerance:
             # keep track of stop time/frame for later
             skipTrain2Instr.tStop = t  # not accounting for scr refresh
             skipTrain2Instr.frameNStop = frameN  # exact frame index
@@ -1656,12 +1500,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in instr2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('train2warning10.started', train2warning10.tStartRefresh)
-thisExp.addData('train2warning10.stopped', train2warning10.tStopRefresh)
-thisExp.addData('train2warning5.started', train2warning5.tStartRefresh)
-thisExp.addData('train2warning5.stopped', train2warning5.tStopRefresh)
-thisExp.addData('train2warning4.started', train2warning4.tStartRefresh)
-thisExp.addData('train2warning4.stopped', train2warning4.tStopRefresh)
 thisExp.addData('train2warning3.started', train2warning3.tStartRefresh)
 thisExp.addData('train2warning3.stopped', train2warning3.tStopRefresh)
 thisExp.addData('train2warning2.started', train2warning2.tStartRefresh)
@@ -2212,13 +2050,13 @@ for thisTrain2block in train2blocks:
 
 # ------Prepare to start Routine "testTrainInstr"-------
 continueRoutine = True
-routineTimer.add(600.000000)
+routineTimer.add(180.000000)
 # update component parameters for each repeat
 skipTest1Instr.keys = []
 skipTest1Instr.rt = []
 _skipTest1Instr_allKeys = []
 # keep track of which components have finished
-testTrainInstrComponents = [skipTest1Instr, test1warning10, test1warning5, test1warning4, test1warning3, test1warning2, test1warning1]
+testTrainInstrComponents = [skipTest1Instr, test1warning3, test1warning2, test1warning1]
 for thisComponent in testTrainInstrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -2256,7 +2094,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(skipTest1Instr.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if skipTest1Instr.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipTest1Instr.tStartRefresh + 600-frameTolerance:
+        if tThisFlipGlobal > skipTest1Instr.tStartRefresh + 180-frameTolerance:
             # keep track of stop time/frame for later
             skipTest1Instr.tStop = t  # not accounting for scr refresh
             skipTest1Instr.frameNStop = frameN  # exact frame index
@@ -2271,59 +2109,8 @@ while continueRoutine and routineTimer.getTime() > 0:
             # a response ends the routine
             continueRoutine = False
     
-    # *test1warning10* updates
-    if test1warning10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        test1warning10.frameNStart = frameN  # exact frame index
-        test1warning10.tStart = t  # local t and not account for scr refresh
-        test1warning10.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test1warning10, 'tStartRefresh')  # time at next scr refresh
-        test1warning10.setAutoDraw(True)
-    if test1warning10.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test1warning10.tStartRefresh + 300-frameTolerance:
-            # keep track of stop time/frame for later
-            test1warning10.tStop = t  # not accounting for scr refresh
-            test1warning10.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test1warning10, 'tStopRefresh')  # time at next scr refresh
-            test1warning10.setAutoDraw(False)
-    
-    # *test1warning5* updates
-    if test1warning5.status == NOT_STARTED and tThisFlip >= 300-frameTolerance:
-        # keep track of start time/frame for later
-        test1warning5.frameNStart = frameN  # exact frame index
-        test1warning5.tStart = t  # local t and not account for scr refresh
-        test1warning5.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test1warning5, 'tStartRefresh')  # time at next scr refresh
-        test1warning5.setAutoDraw(True)
-    if test1warning5.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test1warning5.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test1warning5.tStop = t  # not accounting for scr refresh
-            test1warning5.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test1warning5, 'tStopRefresh')  # time at next scr refresh
-            test1warning5.setAutoDraw(False)
-    
-    # *test1warning4* updates
-    if test1warning4.status == NOT_STARTED and tThisFlip >= 360-frameTolerance:
-        # keep track of start time/frame for later
-        test1warning4.frameNStart = frameN  # exact frame index
-        test1warning4.tStart = t  # local t and not account for scr refresh
-        test1warning4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test1warning4, 'tStartRefresh')  # time at next scr refresh
-        test1warning4.setAutoDraw(True)
-    if test1warning4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test1warning4.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test1warning4.tStop = t  # not accounting for scr refresh
-            test1warning4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test1warning4, 'tStopRefresh')  # time at next scr refresh
-            test1warning4.setAutoDraw(False)
-    
     # *test1warning3* updates
-    if test1warning3.status == NOT_STARTED and tThisFlip >= 420-frameTolerance:
+    if test1warning3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         test1warning3.frameNStart = frameN  # exact frame index
         test1warning3.tStart = t  # local t and not account for scr refresh
@@ -2340,7 +2127,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test1warning3.setAutoDraw(False)
     
     # *test1warning2* updates
-    if test1warning2.status == NOT_STARTED and tThisFlip >= 480-frameTolerance:
+    if test1warning2.status == NOT_STARTED and tThisFlip >= 60-frameTolerance:
         # keep track of start time/frame for later
         test1warning2.frameNStart = frameN  # exact frame index
         test1warning2.tStart = t  # local t and not account for scr refresh
@@ -2357,7 +2144,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test1warning2.setAutoDraw(False)
     
     # *test1warning1* updates
-    if test1warning1.status == NOT_STARTED and tThisFlip >= 540-frameTolerance:
+    if test1warning1.status == NOT_STARTED and tThisFlip >= 120-frameTolerance:
         # keep track of start time/frame for later
         test1warning1.frameNStart = frameN  # exact frame index
         test1warning1.tStart = t  # local t and not account for scr refresh
@@ -2403,12 +2190,6 @@ if skipTest1Instr.keys != None:  # we had a response
 thisExp.addData('skipTest1Instr.started', skipTest1Instr.tStartRefresh)
 thisExp.addData('skipTest1Instr.stopped', skipTest1Instr.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('test1warning10.started', test1warning10.tStartRefresh)
-thisExp.addData('test1warning10.stopped', test1warning10.tStopRefresh)
-thisExp.addData('test1warning5.started', test1warning5.tStartRefresh)
-thisExp.addData('test1warning5.stopped', test1warning5.tStopRefresh)
-thisExp.addData('test1warning4.started', test1warning4.tStartRefresh)
-thisExp.addData('test1warning4.stopped', test1warning4.tStopRefresh)
 thisExp.addData('test1warning3.started', test1warning3.tStartRefresh)
 thisExp.addData('test1warning3.stopped', test1warning3.tStopRefresh)
 thisExp.addData('test1warning2.started', test1warning2.tStartRefresh)
@@ -2417,7 +2198,7 @@ thisExp.addData('test1warning1.started', test1warning1.tStartRefresh)
 thisExp.addData('test1warning1.stopped', test1warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test1Loop = data.TrialHandler(nReps=0, method='sequential', 
+test1Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test1Conditions.xlsx'),
     seed=None, name='test1Loop')
@@ -2516,7 +2297,7 @@ for thisTest1Loop in test1Loop:
                 win.timeOnFlip(test1Audio1Mute, 'tStopRefresh')  # time at next scr refresh
                 test1Audio1Mute.setAutoDraw(False)
         # start/stop test1Audio2
-        if test1Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test1Audio2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2.frameNStart = frameN  # exact frame index
             test1Audio2.tStart = t  # local t and not account for scr refresh
@@ -2533,7 +2314,7 @@ for thisTest1Loop in test1Loop:
             test1Audio2Mute1.setAutoDraw(True)
         if test1Audio2Mute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > test1Audio2Mute1.tStartRefresh + 2-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio2Mute1.tStop = t  # not accounting for scr refresh
                 test1Audio2Mute1.frameNStop = frameN  # exact frame index
@@ -2541,7 +2322,7 @@ for thisTest1Loop in test1Loop:
                 test1Audio2Mute1.setAutoDraw(False)
         
         # *test1Audio2Sound* updates
-        if test1Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test1Audio2Sound.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2Sound.frameNStart = frameN  # exact frame index
             test1Audio2Sound.tStart = t  # local t and not account for scr refresh
@@ -2558,7 +2339,7 @@ for thisTest1Loop in test1Loop:
                 test1Audio2Sound.setAutoDraw(False)
         
         # *test1Audio2Mute2* updates
-        if test1Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if test1Audio2Mute2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2Mute2.frameNStart = frameN  # exact frame index
             test1Audio2Mute2.tStart = t  # local t and not account for scr refresh
@@ -2567,7 +2348,7 @@ for thisTest1Loop in test1Loop:
             test1Audio2Mute2.setAutoDraw(True)
         if test1Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 7-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test1Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -2729,18 +2510,18 @@ for thisTest1Loop in test1Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test1Loop'
+# completed 1 repeats of 'test1Loop'
 
 
 # ------Prepare to start Routine "testNovel1Instr"-------
 continueRoutine = True
-routineTimer.add(600.000000)
+routineTimer.add(180.000000)
 # update component parameters for each repeat
 skipTest2Instr.keys = []
 skipTest2Instr.rt = []
 _skipTest2Instr_allKeys = []
 # keep track of which components have finished
-testNovel1InstrComponents = [skipTest2Instr, test2warning10, test2warning5, test2warning4, test2warning3, test2warning2, test2warning1]
+testNovel1InstrComponents = [skipTest2Instr, test2warning3, test2warning2, test2warning1]
 for thisComponent in testNovel1InstrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -2778,7 +2559,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(skipTest2Instr.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if skipTest2Instr.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipTest2Instr.tStartRefresh + 600-frameTolerance:
+        if tThisFlipGlobal > skipTest2Instr.tStartRefresh + 180-frameTolerance:
             # keep track of stop time/frame for later
             skipTest2Instr.tStop = t  # not accounting for scr refresh
             skipTest2Instr.frameNStop = frameN  # exact frame index
@@ -2793,59 +2574,8 @@ while continueRoutine and routineTimer.getTime() > 0:
             # a response ends the routine
             continueRoutine = False
     
-    # *test2warning10* updates
-    if test2warning10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        test2warning10.frameNStart = frameN  # exact frame index
-        test2warning10.tStart = t  # local t and not account for scr refresh
-        test2warning10.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test2warning10, 'tStartRefresh')  # time at next scr refresh
-        test2warning10.setAutoDraw(True)
-    if test2warning10.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test2warning10.tStartRefresh + 300-frameTolerance:
-            # keep track of stop time/frame for later
-            test2warning10.tStop = t  # not accounting for scr refresh
-            test2warning10.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test2warning10, 'tStopRefresh')  # time at next scr refresh
-            test2warning10.setAutoDraw(False)
-    
-    # *test2warning5* updates
-    if test2warning5.status == NOT_STARTED and tThisFlip >= 300-frameTolerance:
-        # keep track of start time/frame for later
-        test2warning5.frameNStart = frameN  # exact frame index
-        test2warning5.tStart = t  # local t and not account for scr refresh
-        test2warning5.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test2warning5, 'tStartRefresh')  # time at next scr refresh
-        test2warning5.setAutoDraw(True)
-    if test2warning5.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test2warning5.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test2warning5.tStop = t  # not accounting for scr refresh
-            test2warning5.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test2warning5, 'tStopRefresh')  # time at next scr refresh
-            test2warning5.setAutoDraw(False)
-    
-    # *test2warning4* updates
-    if test2warning4.status == NOT_STARTED and tThisFlip >= 360-frameTolerance:
-        # keep track of start time/frame for later
-        test2warning4.frameNStart = frameN  # exact frame index
-        test2warning4.tStart = t  # local t and not account for scr refresh
-        test2warning4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test2warning4, 'tStartRefresh')  # time at next scr refresh
-        test2warning4.setAutoDraw(True)
-    if test2warning4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test2warning4.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test2warning4.tStop = t  # not accounting for scr refresh
-            test2warning4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test2warning4, 'tStopRefresh')  # time at next scr refresh
-            test2warning4.setAutoDraw(False)
-    
     # *test2warning3* updates
-    if test2warning3.status == NOT_STARTED and tThisFlip >= 420-frameTolerance:
+    if test2warning3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         test2warning3.frameNStart = frameN  # exact frame index
         test2warning3.tStart = t  # local t and not account for scr refresh
@@ -2862,7 +2592,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test2warning3.setAutoDraw(False)
     
     # *test2warning2* updates
-    if test2warning2.status == NOT_STARTED and tThisFlip >= 480-frameTolerance:
+    if test2warning2.status == NOT_STARTED and tThisFlip >= 60-frameTolerance:
         # keep track of start time/frame for later
         test2warning2.frameNStart = frameN  # exact frame index
         test2warning2.tStart = t  # local t and not account for scr refresh
@@ -2879,7 +2609,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test2warning2.setAutoDraw(False)
     
     # *test2warning1* updates
-    if test2warning1.status == NOT_STARTED and tThisFlip >= 540-frameTolerance:
+    if test2warning1.status == NOT_STARTED and tThisFlip >= 120-frameTolerance:
         # keep track of start time/frame for later
         test2warning1.frameNStart = frameN  # exact frame index
         test2warning1.tStart = t  # local t and not account for scr refresh
@@ -2925,12 +2655,6 @@ if skipTest2Instr.keys != None:  # we had a response
 thisExp.addData('skipTest2Instr.started', skipTest2Instr.tStartRefresh)
 thisExp.addData('skipTest2Instr.stopped', skipTest2Instr.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('test2warning10.started', test2warning10.tStartRefresh)
-thisExp.addData('test2warning10.stopped', test2warning10.tStopRefresh)
-thisExp.addData('test2warning5.started', test2warning5.tStartRefresh)
-thisExp.addData('test2warning5.stopped', test2warning5.tStopRefresh)
-thisExp.addData('test2warning4.started', test2warning4.tStartRefresh)
-thisExp.addData('test2warning4.stopped', test2warning4.tStopRefresh)
 thisExp.addData('test2warning3.started', test2warning3.tStartRefresh)
 thisExp.addData('test2warning3.stopped', test2warning3.tStopRefresh)
 thisExp.addData('test2warning2.started', test2warning2.tStartRefresh)
@@ -2939,7 +2663,7 @@ thisExp.addData('test2warning1.started', test2warning1.tStartRefresh)
 thisExp.addData('test2warning1.stopped', test2warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=0, method='sequential', 
+test2Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -3037,7 +2761,7 @@ for thisTest2Loop in test2Loop:
                 win.timeOnFlip(test1Audio2Mute, 'tStopRefresh')  # time at next scr refresh
                 test1Audio2Mute.setAutoDraw(False)
         # start/stop test2Audio2
-        if test2Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test2Audio2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test2Audio2.frameNStart = frameN  # exact frame index
             test2Audio2.tStart = t  # local t and not account for scr refresh
@@ -3054,7 +2778,7 @@ for thisTest2Loop in test2Loop:
             test2Audio2Mute1.setAutoDraw(True)
         if test2Audio2Mute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > test2Audio2Mute1.tStartRefresh + 2-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Audio2Mute1.tStop = t  # not accounting for scr refresh
                 test2Audio2Mute1.frameNStop = frameN  # exact frame index
@@ -3062,7 +2786,7 @@ for thisTest2Loop in test2Loop:
                 test2Audio2Mute1.setAutoDraw(False)
         
         # *test2Audio2Sound* updates
-        if test2Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test2Audio2Sound.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test2Audio2Sound.frameNStart = frameN  # exact frame index
             test2Audio2Sound.tStart = t  # local t and not account for scr refresh
@@ -3079,7 +2803,7 @@ for thisTest2Loop in test2Loop:
                 test2Audio2Sound.setAutoDraw(False)
         
         # *test2Audio2Mute2* updates
-        if test2Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if test2Audio2Mute2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             test2Audio2Mute2.frameNStart = frameN  # exact frame index
             test2Audio2Mute2.tStart = t  # local t and not account for scr refresh
@@ -3088,7 +2812,7 @@ for thisTest2Loop in test2Loop:
             test2Audio2Mute2.setAutoDraw(True)
         if test2Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Audio2Mute2.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > test2Audio2Mute2.tStartRefresh + 7-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test2Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -3250,18 +2974,18 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test2Loop'
+# completed 1 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "testNovel2Instr"-------
 continueRoutine = True
-routineTimer.add(600.000000)
+routineTimer.add(180.000000)
 # update component parameters for each repeat
 skipTest3Instr.keys = []
 skipTest3Instr.rt = []
 _skipTest3Instr_allKeys = []
 # keep track of which components have finished
-testNovel2InstrComponents = [skipTest3Instr, test3warning10, test3warning5, test3warning4, test3warning3, test3warning2, test3warning1]
+testNovel2InstrComponents = [skipTest3Instr, test3warning3, test3warning2, test3warning1]
 for thisComponent in testNovel2InstrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -3299,7 +3023,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(skipTest3Instr.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if skipTest3Instr.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipTest3Instr.tStartRefresh + 600-frameTolerance:
+        if tThisFlipGlobal > skipTest3Instr.tStartRefresh + 180-frameTolerance:
             # keep track of stop time/frame for later
             skipTest3Instr.tStop = t  # not accounting for scr refresh
             skipTest3Instr.frameNStop = frameN  # exact frame index
@@ -3314,59 +3038,8 @@ while continueRoutine and routineTimer.getTime() > 0:
             # a response ends the routine
             continueRoutine = False
     
-    # *test3warning10* updates
-    if test3warning10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        test3warning10.frameNStart = frameN  # exact frame index
-        test3warning10.tStart = t  # local t and not account for scr refresh
-        test3warning10.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test3warning10, 'tStartRefresh')  # time at next scr refresh
-        test3warning10.setAutoDraw(True)
-    if test3warning10.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test3warning10.tStartRefresh + 300-frameTolerance:
-            # keep track of stop time/frame for later
-            test3warning10.tStop = t  # not accounting for scr refresh
-            test3warning10.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test3warning10, 'tStopRefresh')  # time at next scr refresh
-            test3warning10.setAutoDraw(False)
-    
-    # *test3warning5* updates
-    if test3warning5.status == NOT_STARTED and tThisFlip >= 300-frameTolerance:
-        # keep track of start time/frame for later
-        test3warning5.frameNStart = frameN  # exact frame index
-        test3warning5.tStart = t  # local t and not account for scr refresh
-        test3warning5.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test3warning5, 'tStartRefresh')  # time at next scr refresh
-        test3warning5.setAutoDraw(True)
-    if test3warning5.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test3warning5.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test3warning5.tStop = t  # not accounting for scr refresh
-            test3warning5.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test3warning5, 'tStopRefresh')  # time at next scr refresh
-            test3warning5.setAutoDraw(False)
-    
-    # *test3warning4* updates
-    if test3warning4.status == NOT_STARTED and tThisFlip >= 360-frameTolerance:
-        # keep track of start time/frame for later
-        test3warning4.frameNStart = frameN  # exact frame index
-        test3warning4.tStart = t  # local t and not account for scr refresh
-        test3warning4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test3warning4, 'tStartRefresh')  # time at next scr refresh
-        test3warning4.setAutoDraw(True)
-    if test3warning4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test3warning4.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            test3warning4.tStop = t  # not accounting for scr refresh
-            test3warning4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test3warning4, 'tStopRefresh')  # time at next scr refresh
-            test3warning4.setAutoDraw(False)
-    
     # *test3warning3* updates
-    if test3warning3.status == NOT_STARTED and tThisFlip >= 420-frameTolerance:
+    if test3warning3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         test3warning3.frameNStart = frameN  # exact frame index
         test3warning3.tStart = t  # local t and not account for scr refresh
@@ -3383,7 +3056,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test3warning3.setAutoDraw(False)
     
     # *test3warning2* updates
-    if test3warning2.status == NOT_STARTED and tThisFlip >= 480-frameTolerance:
+    if test3warning2.status == NOT_STARTED and tThisFlip >= 60-frameTolerance:
         # keep track of start time/frame for later
         test3warning2.frameNStart = frameN  # exact frame index
         test3warning2.tStart = t  # local t and not account for scr refresh
@@ -3400,7 +3073,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             test3warning2.setAutoDraw(False)
     
     # *test3warning1* updates
-    if test3warning1.status == NOT_STARTED and tThisFlip >= 540-frameTolerance:
+    if test3warning1.status == NOT_STARTED and tThisFlip >= 120-frameTolerance:
         # keep track of start time/frame for later
         test3warning1.frameNStart = frameN  # exact frame index
         test3warning1.tStart = t  # local t and not account for scr refresh
@@ -3446,12 +3119,6 @@ if skipTest3Instr.keys != None:  # we had a response
 thisExp.addData('skipTest3Instr.started', skipTest3Instr.tStartRefresh)
 thisExp.addData('skipTest3Instr.stopped', skipTest3Instr.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('test3warning10.started', test3warning10.tStartRefresh)
-thisExp.addData('test3warning10.stopped', test3warning10.tStopRefresh)
-thisExp.addData('test3warning5.started', test3warning5.tStartRefresh)
-thisExp.addData('test3warning5.stopped', test3warning5.tStopRefresh)
-thisExp.addData('test3warning4.started', test3warning4.tStartRefresh)
-thisExp.addData('test3warning4.stopped', test3warning4.tStopRefresh)
 thisExp.addData('test3warning3.started', test3warning3.tStartRefresh)
 thisExp.addData('test3warning3.stopped', test3warning3.tStopRefresh)
 thisExp.addData('test3warning2.started', test3warning2.tStartRefresh)
@@ -3559,7 +3226,7 @@ for thisTest3Loop in test3Loop:
                 win.timeOnFlip(test3Audio1Mute, 'tStopRefresh')  # time at next scr refresh
                 test3Audio1Mute.setAutoDraw(False)
         # start/stop test3Audio2
-        if test3Audio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test3Audio2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test3Audio2.frameNStart = frameN  # exact frame index
             test3Audio2.tStart = t  # local t and not account for scr refresh
@@ -3576,7 +3243,7 @@ for thisTest3Loop in test3Loop:
             test3Audio2Mute1.setAutoDraw(True)
         if test3Audio2Mute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio2Mute1.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > test3Audio2Mute1.tStartRefresh + 2-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Audio2Mute1.tStop = t  # not accounting for scr refresh
                 test3Audio2Mute1.frameNStop = frameN  # exact frame index
@@ -3584,7 +3251,7 @@ for thisTest3Loop in test3Loop:
                 test3Audio2Mute1.setAutoDraw(False)
         
         # *test3Audio2Sound* updates
-        if test3Audio2Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if test3Audio2Sound.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test3Audio2Sound.frameNStart = frameN  # exact frame index
             test3Audio2Sound.tStart = t  # local t and not account for scr refresh
@@ -3601,7 +3268,7 @@ for thisTest3Loop in test3Loop:
                 test3Audio2Sound.setAutoDraw(False)
         
         # *test3Audio2Mute2* updates
-        if test3Audio2Mute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if test3Audio2Mute2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             test3Audio2Mute2.frameNStart = frameN  # exact frame index
             test3Audio2Mute2.tStart = t  # local t and not account for scr refresh
@@ -3610,7 +3277,7 @@ for thisTest3Loop in test3Loop:
             test3Audio2Mute2.setAutoDraw(True)
         if test3Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio2Mute2.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > test3Audio2Mute2.tStartRefresh + 7-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test3Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -3777,13 +3444,13 @@ for thisTest3Loop in test3Loop:
 
 # ------Prepare to start Routine "postTestInstr"-------
 continueRoutine = True
-routineTimer.add(600.000000)
+routineTimer.add(180.000000)
 # update component parameters for each repeat
 skipPostTestInstr.keys = []
 skipPostTestInstr.rt = []
 _skipPostTestInstr_allKeys = []
 # keep track of which components have finished
-postTestInstrComponents = [skipPostTestInstr, postTestWarning10, postTestWarning5, postTestWarning4, postTestWarning3, postTestWarning2, postTestWarning1]
+postTestInstrComponents = [skipPostTestInstr, postTestWarning3, postTestWarning2, postTestWarning1]
 for thisComponent in postTestInstrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -3821,7 +3488,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(skipPostTestInstr.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if skipPostTestInstr.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipPostTestInstr.tStartRefresh + 600-frameTolerance:
+        if tThisFlipGlobal > skipPostTestInstr.tStartRefresh + 180-frameTolerance:
             # keep track of stop time/frame for later
             skipPostTestInstr.tStop = t  # not accounting for scr refresh
             skipPostTestInstr.frameNStop = frameN  # exact frame index
@@ -3836,59 +3503,8 @@ while continueRoutine and routineTimer.getTime() > 0:
             # a response ends the routine
             continueRoutine = False
     
-    # *postTestWarning10* updates
-    if postTestWarning10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        postTestWarning10.frameNStart = frameN  # exact frame index
-        postTestWarning10.tStart = t  # local t and not account for scr refresh
-        postTestWarning10.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(postTestWarning10, 'tStartRefresh')  # time at next scr refresh
-        postTestWarning10.setAutoDraw(True)
-    if postTestWarning10.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > postTestWarning10.tStartRefresh + 300-frameTolerance:
-            # keep track of stop time/frame for later
-            postTestWarning10.tStop = t  # not accounting for scr refresh
-            postTestWarning10.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(postTestWarning10, 'tStopRefresh')  # time at next scr refresh
-            postTestWarning10.setAutoDraw(False)
-    
-    # *postTestWarning5* updates
-    if postTestWarning5.status == NOT_STARTED and tThisFlip >= 300-frameTolerance:
-        # keep track of start time/frame for later
-        postTestWarning5.frameNStart = frameN  # exact frame index
-        postTestWarning5.tStart = t  # local t and not account for scr refresh
-        postTestWarning5.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(postTestWarning5, 'tStartRefresh')  # time at next scr refresh
-        postTestWarning5.setAutoDraw(True)
-    if postTestWarning5.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > postTestWarning5.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            postTestWarning5.tStop = t  # not accounting for scr refresh
-            postTestWarning5.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(postTestWarning5, 'tStopRefresh')  # time at next scr refresh
-            postTestWarning5.setAutoDraw(False)
-    
-    # *postTestWarning4* updates
-    if postTestWarning4.status == NOT_STARTED and tThisFlip >= 360-frameTolerance:
-        # keep track of start time/frame for later
-        postTestWarning4.frameNStart = frameN  # exact frame index
-        postTestWarning4.tStart = t  # local t and not account for scr refresh
-        postTestWarning4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(postTestWarning4, 'tStartRefresh')  # time at next scr refresh
-        postTestWarning4.setAutoDraw(True)
-    if postTestWarning4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > postTestWarning4.tStartRefresh + 60-frameTolerance:
-            # keep track of stop time/frame for later
-            postTestWarning4.tStop = t  # not accounting for scr refresh
-            postTestWarning4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(postTestWarning4, 'tStopRefresh')  # time at next scr refresh
-            postTestWarning4.setAutoDraw(False)
-    
     # *postTestWarning3* updates
-    if postTestWarning3.status == NOT_STARTED and tThisFlip >= 420-frameTolerance:
+    if postTestWarning3.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         postTestWarning3.frameNStart = frameN  # exact frame index
         postTestWarning3.tStart = t  # local t and not account for scr refresh
@@ -3905,7 +3521,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             postTestWarning3.setAutoDraw(False)
     
     # *postTestWarning2* updates
-    if postTestWarning2.status == NOT_STARTED and tThisFlip >= 480-frameTolerance:
+    if postTestWarning2.status == NOT_STARTED and tThisFlip >= 60-frameTolerance:
         # keep track of start time/frame for later
         postTestWarning2.frameNStart = frameN  # exact frame index
         postTestWarning2.tStart = t  # local t and not account for scr refresh
@@ -3922,7 +3538,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             postTestWarning2.setAutoDraw(False)
     
     # *postTestWarning1* updates
-    if postTestWarning1.status == NOT_STARTED and tThisFlip >= 540-frameTolerance:
+    if postTestWarning1.status == NOT_STARTED and tThisFlip >= 120-frameTolerance:
         # keep track of start time/frame for later
         postTestWarning1.frameNStart = frameN  # exact frame index
         postTestWarning1.tStart = t  # local t and not account for scr refresh
@@ -3968,12 +3584,6 @@ if skipPostTestInstr.keys != None:  # we had a response
 thisExp.addData('skipPostTestInstr.started', skipPostTestInstr.tStartRefresh)
 thisExp.addData('skipPostTestInstr.stopped', skipPostTestInstr.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('postTestWarning10.started', postTestWarning10.tStartRefresh)
-thisExp.addData('postTestWarning10.stopped', postTestWarning10.tStopRefresh)
-thisExp.addData('postTestWarning5.started', postTestWarning5.tStartRefresh)
-thisExp.addData('postTestWarning5.stopped', postTestWarning5.tStopRefresh)
-thisExp.addData('postTestWarning4.started', postTestWarning4.tStartRefresh)
-thisExp.addData('postTestWarning4.stopped', postTestWarning4.tStopRefresh)
 thisExp.addData('postTestWarning3.started', postTestWarning3.tStartRefresh)
 thisExp.addData('postTestWarning3.stopped', postTestWarning3.tStopRefresh)
 thisExp.addData('postTestWarning2.started', postTestWarning2.tStartRefresh)
