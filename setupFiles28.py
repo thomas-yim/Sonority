@@ -70,8 +70,7 @@ def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking):
 
 def setupTrainSubPhase(trainingAudio, trainConditions, testConditions, start, end, wordsPerBlock, phase):
     #This will be used to make sure a word is the right answer once.
-    tempTrueAudio = trainingAudio.copy()
-    tempFalseAudio = trainingAudio.copy()
+    tempAudio = trainingAudio.copy()
     
     #This array is to check if the word was used in the previous block
     #We want to space out the words
@@ -89,32 +88,30 @@ def setupTrainSubPhase(trainingAudio, trainConditions, testConditions, start, en
         imageLoc = []
         
         for j in range(0, int(wordsPerBlock/2)):
-            trueInd = random.randint(0, int(len(tempTrueAudio)-1))
-            while tempTrueAudio[trueInd] in previousBlock or tempTrueAudio[trueInd] in currentBlock:
-                trueInd = random.randint(0, int(len(tempTrueAudio)-1))
-            trueAudio = tempTrueAudio[trueInd]
+            trueInd = random.randint(0, int(len(tempAudio)-1))
+            while tempAudio[trueInd] in previousBlock or tempAudio[trueInd] in currentBlock:
+                trueInd = random.randint(0, int(len(tempAudio)-1))
+            trueAudio = tempAudio[trueInd]
             currentBlock.append(trueAudio)
             blockAudioTrue.append(trueAudio)
             blockAudio.append("trainingaudio/" + correctAudio(ranking, trueAudio))
-            imageLoc.append(findImage(tempTrueAudio[trueInd]))
+            imageLoc.append(findImage(tempAudio[trueInd]))
                     
-            del tempTrueAudio[trueInd]
+            del tempAudio[trueInd]
             
-            falseInd = random.randint(0, int(len(tempFalseAudio)-1))
-            while tempFalseAudio[falseInd] in previousBlock or tempFalseAudio[falseInd] in currentBlock or tempFalseAudio[falseInd] == trueAudio:
-                falseInd = random.randint(0, int(len(tempFalseAudio)-1))
-            currentBlock.append(tempFalseAudio[falseInd])
-            blockAudioFalse.append(tempFalseAudio[falseInd])
-            blockAudio.append("trainingaudio/" + correctAudio(ranking, tempFalseAudio[falseInd]))
-            imageLoc.append(findImage(tempFalseAudio[falseInd]))
+            falseInd = random.randint(0, int(len(tempAudio)-1))
+            while tempAudio[falseInd] in previousBlock or tempAudio[falseInd] in currentBlock or tempAudio[falseInd] == trueAudio:
+                falseInd = random.randint(0, int(len(tempAudio)-1))
+            currentBlock.append(tempAudio[falseInd])
+            blockAudioFalse.append(tempAudio[falseInd])
+            blockAudio.append("trainingaudio/" + correctAudio(ranking, tempAudio[falseInd]))
+            imageLoc.append(findImage(tempAudio[falseInd]))
                     
-            del tempFalseAudio[falseInd]
+            del tempAudio[falseInd]
             
-            if len(tempTrueAudio) == 0:
-                tempTrueAudio = trainingAudio.copy()
-                tempFalseAudio = trainingAudio.copy()
-                
-        beforePreviousBlock = previousBlock    
+            if len(tempAudio) == 0:
+                tempAudio = trainingAudio.copy()
+                 
         previousBlock = currentBlock
                                 
         trainData = {"audio":blockAudio, "imageLoc":imageLoc}
