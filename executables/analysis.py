@@ -1,10 +1,8 @@
+from tkinter import Tk
+from tkinter.filedialog import askopenfilenames, askdirectory
 import pandas as pd
-import math
-import xlsxwriter
-
-
-filename = "delete_sonority_2020_Aug_06_2144.csv"#"othercomputertest_sonorityaoi_2020-07-28_22h14.45.527.csv"#"1_sonority_2020_Jul_20_2230.csv" #input("Input name of experiment output file: ")
-df = pd.read_csv("data/" + filename)
+import ntpath
+import pkg_resources.py2_warn
 
 def calculateAccuracy(df, phase):
     if phase + "Response.keys" in df.columns:
@@ -114,30 +112,38 @@ def calculateAccuracy(df, phase):
         return df, correctAnswers, empty, total, str(round(100*(correctAnswers/total), 2)) + "%"
     else:
         return pd.DataFrame(), "N/A", "N/A", "N/A", "N/A"
+
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+filenames = askopenfilenames(title='Choose file(s)', filetypes = (("CSV Files", "*.csv"),)) # show an "Open" dialog box and return the path to the selected file
+toFolder = askdirectory(title="Choose output folder")
+print(toFolder)
+
+for filename in filenames:
+    df = pd.read_csv(filename)
+        
+    #Cumulative Results
+    phases = []
+    numCorrect = []
+    numEmpty = []
+    numTotal = []
+    percentages = []
     
-#Cumulative Results
-phases = []
-numCorrect = []
-numEmpty = []
-numTotal = []
-percentages = []
-
-phaseDict = {"train1": "Train 1", "train2": "Train 2", "test1": "Test 1",
-          "test2": "Test 2", "test3": "Test 3", "postTest": "PostTest"}
-
-writer = pd.ExcelWriter('results/' + filename[:-4] + '_results.xlsx', engine='xlsxwriter')
-for phase in phaseDict.keys():    
-    dfPhase, correct, empty, total, percent = calculateAccuracy(df, phase)
-    phases.append(phaseDict[phase])
-    numCorrect.append(correct)
-    numEmpty.append(correct)
-    numTotal.append(total)
-    percentages.append(percent)
-    dfPhase.to_excel(writer, sheet_name=phaseDict[phase], index = False)
-
-data = {"Phase": phases, "Correct": numCorrect, "Empty": numEmpty,
-        "Total": numTotal, "Percent Correct": percentages}
-columns = ["Phase", "Correct", "Empty", "Total", "Percent Correct"]
-pd.DataFrame(data,columns=columns).to_excel(writer, sheet_name="Overview", index = False)
-
-writer.save()
+    phaseDict = {"train1": "Train 1", "train2": "Train 2", "test1": "Test 1",
+              "test2": "Test 2", "test3": "Test 3", "postTest": "PostTest"}
+    
+    writer = pd.ExcelWriter(toFolder + "/" + ntpath.basename(filename)[:-4] + '_results.xlsx', engine='xlsxwriter')
+    for phase in phaseDict.keys():    
+        dfPhase, correct, empty, total, percent = calculateAccuracy(df, phase)
+        phases.append(phaseDict[phase])
+        numCorrect.append(correct)
+        numEmpty.append(empty)
+        numTotal.append(total)
+        percentages.append(percent)
+        dfPhase.to_excel(writer, sheet_name=phaseDict[phase], index = False)
+    
+    data = {"Phase": phases, "Correct": numCorrect, "Empty": numEmpty,
+            "Total": numTotal, "Percent Correct": percentages}
+    columns = ["Phase", "Correct", "Empty", "Total", "Percent Correct"]
+    pd.DataFrame(data,columns=columns).to_excel(writer, sheet_name="Overview", index = False)
+    
+    writer.save()

@@ -1320,7 +1320,7 @@ function blockwords1LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   blockwords1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'blockwords1'
@@ -1433,7 +1433,7 @@ function blockloop2LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   blockloop2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'blockloop2'
