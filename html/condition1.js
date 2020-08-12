@@ -1358,7 +1358,7 @@ function trial1phasesLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   trial1phases = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFile,
     seed: undefined, name: 'trial1phases'
@@ -1393,7 +1393,7 @@ function train1WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train1Words'
@@ -1541,7 +1541,7 @@ function train2WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train2Words'

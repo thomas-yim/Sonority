@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 10, 2020, at 21:32
+    on August 11, 2020, at 19:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -859,7 +859,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrian1 = data.TrialHandler(nReps=0, method='sequential', 
+alltrian1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train1Conditions.xlsx'),
     seed=None, name='alltrian1')
@@ -989,7 +989,7 @@ for thisAlltrian1 in alltrian1:
     alltrian1.addData('skipTrain1Type.stopped', skipTrain1Type.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
-    trial1phases = data.TrialHandler(nReps=1, method='random', 
+    trial1phases = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions(condFile),
         seed=None, name='trial1phases')
@@ -1008,7 +1008,7 @@ for thisAlltrian1 in alltrian1:
                 exec('{} = thisTrial1phase[paramName]'.format(paramName))
         
         # set up handler to look after randomisation of conditions etc
-        train1Words = data.TrialHandler(nReps=1, method='sequential', 
+        train1Words = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(condFiles),
             seed=None, name='train1Words')
@@ -1177,7 +1177,7 @@ for thisAlltrian1 in alltrian1:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train1Words'
+        # completed 0 repeats of 'train1Words'
         
         
         # ------Prepare to start Routine "train1QuestInstr_2"-------
@@ -1345,7 +1345,7 @@ for thisAlltrian1 in alltrian1:
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
                 # start/stop stimulitest1
-                if stimulitest1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if stimulitest1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     stimulitest1.frameNStart = frameN  # exact frame index
                     stimulitest1.tStart = t  # local t and not account for scr refresh
@@ -1353,7 +1353,7 @@ for thisAlltrian1 in alltrian1:
                     stimulitest1.play(when=win)  # sync with win flip
                 
                 # *correct* updates
-                if correct.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if correct.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     correct.frameNStart = frameN  # exact frame index
                     correct.tStart = t  # local t and not account for scr refresh
@@ -1370,7 +1370,7 @@ for thisAlltrian1 in alltrian1:
                         correct.setAutoDraw(False)
                 
                 # *incorrect* updates
-                if incorrect.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if incorrect.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     incorrect.frameNStart = frameN  # exact frame index
                     incorrect.tStart = t  # local t and not account for scr refresh
@@ -1388,7 +1388,7 @@ for thisAlltrian1 in alltrian1:
                 
                 # *train1Response* updates
                 waitOnFlip = False
-                if train1Response.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train1Response.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train1Response.frameNStart = frameN  # exact frame index
                     train1Response.tStart = t  # local t and not account for scr refresh
@@ -1416,7 +1416,7 @@ for thisAlltrian1 in alltrian1:
                         continueRoutine = False
                 
                 # *chooseImageTrain1* updates
-                if chooseImageTrain1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if chooseImageTrain1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     chooseImageTrain1.frameNStart = frameN  # exact frame index
                     chooseImageTrain1.tStart = t  # local t and not account for scr refresh
@@ -1433,7 +1433,7 @@ for thisAlltrian1 in alltrian1:
                         chooseImageTrain1.setAutoDraw(False)
                 
                 # *train1F* updates
-                if train1F.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train1F.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train1F.frameNStart = frameN  # exact frame index
                     train1F.tStart = t  # local t and not account for scr refresh
@@ -1450,7 +1450,7 @@ for thisAlltrian1 in alltrian1:
                         train1F.setAutoDraw(False)
                 
                 # *train1J* updates
-                if train1J.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train1J.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train1J.frameNStart = frameN  # exact frame index
                     train1J.tStart = t  # local t and not account for scr refresh
@@ -1520,7 +1520,7 @@ for thisAlltrian1 in alltrian1:
     
     thisExp.nextEntry()
     
-# completed 0 repeats of 'alltrian1'
+# completed 1 repeats of 'alltrian1'
 
 
 # ------Prepare to start Routine "instr2"-------
@@ -1822,7 +1822,7 @@ for thisAlltrain2 in alltrain2:
                 exec('{} = thisTrial2phase[paramName]'.format(paramName))
         
         # set up handler to look after randomisation of conditions etc
-        train2Words = data.TrialHandler(nReps=1, method='sequential', 
+        train2Words = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(condFiles),
             seed=None, name='train2Words')
@@ -1991,7 +1991,7 @@ for thisAlltrain2 in alltrain2:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train2Words'
+        # completed 0 repeats of 'train2Words'
         
         
         # ------Prepare to start Routine "train2QuestInstr"-------
@@ -2159,7 +2159,7 @@ for thisAlltrain2 in alltrain2:
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
                 # start/stop stimulitest2
-                if stimulitest2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if stimulitest2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     stimulitest2.frameNStart = frameN  # exact frame index
                     stimulitest2.tStart = t  # local t and not account for scr refresh
@@ -2167,7 +2167,7 @@ for thisAlltrain2 in alltrain2:
                     stimulitest2.play(when=win)  # sync with win flip
                 
                 # *correct2* updates
-                if correct2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if correct2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     correct2.frameNStart = frameN  # exact frame index
                     correct2.tStart = t  # local t and not account for scr refresh
@@ -2184,7 +2184,7 @@ for thisAlltrain2 in alltrain2:
                         correct2.setAutoDraw(False)
                 
                 # *incorrect2* updates
-                if incorrect2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if incorrect2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     incorrect2.frameNStart = frameN  # exact frame index
                     incorrect2.tStart = t  # local t and not account for scr refresh
@@ -2202,7 +2202,7 @@ for thisAlltrain2 in alltrain2:
                 
                 # *train2Response* updates
                 waitOnFlip = False
-                if train2Response.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train2Response.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train2Response.frameNStart = frameN  # exact frame index
                     train2Response.tStart = t  # local t and not account for scr refresh
@@ -2231,7 +2231,7 @@ for thisAlltrain2 in alltrain2:
                         continueRoutine = False
                 
                 # *chooseImageTrain2* updates
-                if chooseImageTrain2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if chooseImageTrain2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
                     # keep track of start time/frame for later
                     chooseImageTrain2.frameNStart = frameN  # exact frame index
                     chooseImageTrain2.tStart = t  # local t and not account for scr refresh
@@ -2248,7 +2248,7 @@ for thisAlltrain2 in alltrain2:
                         chooseImageTrain2.setAutoDraw(False)
                 
                 # *train2F* updates
-                if train2F.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train2F.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train2F.frameNStart = frameN  # exact frame index
                     train2F.tStart = t  # local t and not account for scr refresh
@@ -2265,7 +2265,7 @@ for thisAlltrain2 in alltrain2:
                         train2F.setAutoDraw(False)
                 
                 # *train2J* updates
-                if train2J.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+                if train2J.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
                     # keep track of start time/frame for later
                     train2J.frameNStart = frameN  # exact frame index
                     train2J.tStart = t  # local t and not account for scr refresh
@@ -2580,7 +2580,7 @@ for thisTest1Loop in test1Loop:
             test1Audio1Mute.setAutoDraw(True)
         if test1Audio1Mute.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio1Mute.tStartRefresh + 9-frameTolerance:
+            if tThisFlipGlobal > test1Audio1Mute.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio1Mute.tStop = t  # not accounting for scr refresh
                 test1Audio1Mute.frameNStop = frameN  # exact frame index
@@ -2638,7 +2638,7 @@ for thisTest1Loop in test1Loop:
             test1Audio2Mute2.setAutoDraw(True)
         if test1Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 7-frameTolerance:
+            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test1Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -2660,7 +2660,7 @@ for thisTest1Loop in test1Loop:
             win.callOnFlip(test1Response.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if test1Response.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Response.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > test1Response.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Response.tStop = t  # not accounting for scr refresh
                 test1Response.frameNStop = frameN  # exact frame index
@@ -2685,7 +2685,7 @@ for thisTest1Loop in test1Loop:
             test1Image.setAutoDraw(True)
         if test1Image.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Image.tStartRefresh + 11-frameTolerance:
+            if tThisFlipGlobal > test1Image.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Image.tStop = t  # not accounting for scr refresh
                 test1Image.frameNStop = frameN  # exact frame index
@@ -2702,7 +2702,7 @@ for thisTest1Loop in test1Loop:
             test1F.setAutoDraw(True)
         if test1F.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1F.tStartRefresh + 11-frameTolerance:
+            if tThisFlipGlobal > test1F.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test1F.tStop = t  # not accounting for scr refresh
                 test1F.frameNStop = frameN  # exact frame index
@@ -2719,7 +2719,7 @@ for thisTest1Loop in test1Loop:
             test1J.setAutoDraw(True)
         if test1J.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1J.tStartRefresh + 11-frameTolerance:
+            if tThisFlipGlobal > test1J.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test1J.tStop = t  # not accounting for scr refresh
                 test1J.frameNStop = frameN  # exact frame index
@@ -2736,7 +2736,7 @@ for thisTest1Loop in test1Loop:
             test1Instr.setAutoDraw(True)
         if test1Instr.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Instr.tStartRefresh + 11-frameTolerance:
+            if tThisFlipGlobal > test1Instr.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Instr.tStop = t  # not accounting for scr refresh
                 test1Instr.frameNStop = frameN  # exact frame index
@@ -3044,7 +3044,7 @@ for thisTest2Loop in test2Loop:
             test1Audio2Mute.setAutoDraw(True)
         if test1Audio2Mute.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2Mute.tStartRefresh + 9-frameTolerance:
+            if tThisFlipGlobal > test1Audio2Mute.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio2Mute.tStop = t  # not accounting for scr refresh
                 test1Audio2Mute.frameNStop = frameN  # exact frame index
@@ -3102,7 +3102,7 @@ for thisTest2Loop in test2Loop:
             test2Audio2Mute2.setAutoDraw(True)
         if test2Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Audio2Mute2.tStartRefresh + 7-frameTolerance:
+            if tThisFlipGlobal > test2Audio2Mute2.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test2Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -3124,7 +3124,7 @@ for thisTest2Loop in test2Loop:
             win.callOnFlip(test2Response.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if test2Response.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Response.tStartRefresh + 7-frameTolerance:
+            if tThisFlipGlobal > test2Response.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Response.tStop = t  # not accounting for scr refresh
                 test2Response.frameNStop = frameN  # exact frame index
@@ -3149,7 +3149,7 @@ for thisTest2Loop in test2Loop:
             test2Image.setAutoDraw(True)
         if test2Image.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Image.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test2Image.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Image.tStop = t  # not accounting for scr refresh
                 test2Image.frameNStop = frameN  # exact frame index
@@ -3166,7 +3166,7 @@ for thisTest2Loop in test2Loop:
             test2F.setAutoDraw(True)
         if test2F.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2F.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test2F.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test2F.tStop = t  # not accounting for scr refresh
                 test2F.frameNStop = frameN  # exact frame index
@@ -3183,7 +3183,7 @@ for thisTest2Loop in test2Loop:
             test2J.setAutoDraw(True)
         if test2J.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2J.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test2J.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test2J.tStop = t  # not accounting for scr refresh
                 test2J.frameNStop = frameN  # exact frame index
@@ -3200,7 +3200,7 @@ for thisTest2Loop in test2Loop:
             test2Instr.setAutoDraw(True)
         if test2Instr.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test2Instr.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test2Instr.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test2Instr.tStop = t  # not accounting for scr refresh
                 test2Instr.frameNStop = frameN  # exact frame index
@@ -3509,7 +3509,7 @@ for thisTest3Loop in test3Loop:
             test3Audio1Mute.setAutoDraw(True)
         if test3Audio1Mute.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio1Mute.tStartRefresh + 9-frameTolerance:
+            if tThisFlipGlobal > test3Audio1Mute.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Audio1Mute.tStop = t  # not accounting for scr refresh
                 test3Audio1Mute.frameNStop = frameN  # exact frame index
@@ -3567,7 +3567,7 @@ for thisTest3Loop in test3Loop:
             test3Audio2Mute2.setAutoDraw(True)
         if test3Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Audio2Mute2.tStartRefresh + 7-frameTolerance:
+            if tThisFlipGlobal > test3Audio2Mute2.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test3Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -3589,7 +3589,7 @@ for thisTest3Loop in test3Loop:
             win.callOnFlip(test3Response.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if test3Response.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Response.tStartRefresh + 7-frameTolerance:
+            if tThisFlipGlobal > test3Response.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Response.tStop = t  # not accounting for scr refresh
                 test3Response.frameNStop = frameN  # exact frame index
@@ -3614,7 +3614,7 @@ for thisTest3Loop in test3Loop:
             test3Image.setAutoDraw(True)
         if test3Image.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Image.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test3Image.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Image.tStop = t  # not accounting for scr refresh
                 test3Image.frameNStop = frameN  # exact frame index
@@ -3631,7 +3631,7 @@ for thisTest3Loop in test3Loop:
             test3F.setAutoDraw(True)
         if test3F.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3F.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test3F.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test3F.tStop = t  # not accounting for scr refresh
                 test3F.frameNStop = frameN  # exact frame index
@@ -3648,7 +3648,7 @@ for thisTest3Loop in test3Loop:
             test3J.setAutoDraw(True)
         if test3J.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3J.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test3J.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test3J.tStop = t  # not accounting for scr refresh
                 test3J.frameNStop = frameN  # exact frame index
@@ -3665,7 +3665,7 @@ for thisTest3Loop in test3Loop:
             test3Instr.setAutoDraw(True)
         if test3Instr.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test3Instr.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > test3Instr.tStartRefresh + 12-frameTolerance:
                 # keep track of stop time/frame for later
                 test3Instr.tStop = t  # not accounting for scr refresh
                 test3Instr.frameNStop = frameN  # exact frame index
@@ -3938,7 +3938,7 @@ for thisPostTestLoop in postTestLoop:
         
         # *postTestResponse* updates
         waitOnFlip = False
-        if postTestResponse.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+        if postTestResponse.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             postTestResponse.frameNStart = frameN  # exact frame index
             postTestResponse.tStart = t  # local t and not account for scr refresh
@@ -4000,14 +4000,14 @@ for thisPostTestLoop in postTestLoop:
             fMute.setAutoDraw(True)
         if fMute.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > fMute.tStartRefresh + 9-frameTolerance:
+            if tThisFlipGlobal > fMute.tStartRefresh + 10-frameTolerance:
                 # keep track of stop time/frame for later
                 fMute.tStop = t  # not accounting for scr refresh
                 fMute.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(fMute, 'tStopRefresh')  # time at next scr refresh
                 fMute.setAutoDraw(False)
         # start/stop postTestAudio2
-        if postTestAudio2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if postTestAudio2.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
             # keep track of start time/frame for later
             postTestAudio2.frameNStart = frameN  # exact frame index
             postTestAudio2.tStart = t  # local t and not account for scr refresh
@@ -4024,7 +4024,7 @@ for thisPostTestLoop in postTestLoop:
             xMute1.setAutoDraw(True)
         if xMute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > xMute1.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > xMute1.tStartRefresh + 1.5-frameTolerance:
                 # keep track of stop time/frame for later
                 xMute1.tStop = t  # not accounting for scr refresh
                 xMute1.frameNStop = frameN  # exact frame index
@@ -4032,7 +4032,7 @@ for thisPostTestLoop in postTestLoop:
                 xMute1.setAutoDraw(False)
         
         # *xSound* updates
-        if xSound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if xSound.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
             # keep track of start time/frame for later
             xSound.frameNStart = frameN  # exact frame index
             xSound.tStart = t  # local t and not account for scr refresh
@@ -4049,7 +4049,7 @@ for thisPostTestLoop in postTestLoop:
                 xSound.setAutoDraw(False)
         
         # *xMute2* updates
-        if xMute2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if xMute2.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
             # keep track of start time/frame for later
             xMute2.frameNStart = frameN  # exact frame index
             xMute2.tStart = t  # local t and not account for scr refresh
@@ -4058,14 +4058,14 @@ for thisPostTestLoop in postTestLoop:
             xMute2.setAutoDraw(True)
         if xMute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > xMute2.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > xMute2.tStartRefresh + 8.5-frameTolerance:
                 # keep track of stop time/frame for later
                 xMute2.tStop = t  # not accounting for scr refresh
                 xMute2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(xMute2, 'tStopRefresh')  # time at next scr refresh
                 xMute2.setAutoDraw(False)
         # start/stop postTestAudio3
-        if postTestAudio3.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if postTestAudio3.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             postTestAudio3.frameNStart = frameN  # exact frame index
             postTestAudio3.tStart = t  # local t and not account for scr refresh
@@ -4082,7 +4082,7 @@ for thisPostTestLoop in postTestLoop:
             jMute1.setAutoDraw(True)
         if jMute1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > jMute1.tStartRefresh + 2-frameTolerance:
+            if tThisFlipGlobal > jMute1.tStartRefresh + 3-frameTolerance:
                 # keep track of stop time/frame for later
                 jMute1.tStop = t  # not accounting for scr refresh
                 jMute1.frameNStop = frameN  # exact frame index
@@ -4090,7 +4090,7 @@ for thisPostTestLoop in postTestLoop:
                 jMute1.setAutoDraw(False)
         
         # *jSound* updates
-        if jSound.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if jSound.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             jSound.frameNStart = frameN  # exact frame index
             jSound.tStart = t  # local t and not account for scr refresh
@@ -4107,7 +4107,7 @@ for thisPostTestLoop in postTestLoop:
                 jSound.setAutoDraw(False)
         
         # *jMute2* updates
-        if jMute2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+        if jMute2.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             jMute2.frameNStart = frameN  # exact frame index
             jMute2.tStart = t  # local t and not account for scr refresh
@@ -4133,7 +4133,7 @@ for thisPostTestLoop in postTestLoop:
             textInstrPostTest.setAutoDraw(True)
         if textInstrPostTest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > textInstrPostTest.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > textInstrPostTest.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 textInstrPostTest.tStop = t  # not accounting for scr refresh
                 textInstrPostTest.frameNStop = frameN  # exact frame index
@@ -4150,7 +4150,7 @@ for thisPostTestLoop in postTestLoop:
             fText.setAutoDraw(True)
         if fText.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > fText.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > fText.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 fText.tStop = t  # not accounting for scr refresh
                 fText.frameNStop = frameN  # exact frame index
@@ -4167,7 +4167,7 @@ for thisPostTestLoop in postTestLoop:
             xText.setAutoDraw(True)
         if xText.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > xText.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > xText.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 xText.tStop = t  # not accounting for scr refresh
                 xText.frameNStop = frameN  # exact frame index
@@ -4184,7 +4184,7 @@ for thisPostTestLoop in postTestLoop:
             jText.setAutoDraw(True)
         if jText.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > jText.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > jText.tStartRefresh + 11-frameTolerance:
                 # keep track of stop time/frame for later
                 jText.tStop = t  # not accounting for scr refresh
                 jText.frameNStop = frameN  # exact frame index

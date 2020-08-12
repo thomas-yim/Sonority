@@ -129,7 +129,7 @@ def setupTrain(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder, usedT
         trainConditions.append(toFolder + trainConditionName)
         testConditions.append(toFolder + testConditionName)
     
-    return trainConditions, testConditions
+    return usedTrue, usedFalse, trainConditions, testConditions
             
 
 def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
@@ -225,15 +225,16 @@ if setupWorks:
     TRAIN 1
     """
     #Part 1
-    audioCond, testCond = setupTrain(
+    usedTrue, usedFalse, audioCond, testCond = setupTrain(
         uniqueTrainAudio, 2, 14, ranking, toFolder, [], [], "train1P1")
+    #Create a Data Frame to be exported. This will be the second loop condition.
     df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
                                 columns=['condFiles', "testFiles"])
     df.to_excel(toFolder + "train1P1LoopCondition.xlsx", index=False)
     
     #Part 2
-    audioCond, testCond = setupTrain(
-        uniqueTrainAudio, 4, 7, ranking, toFolder, [], [], "train1P2")
+    usedTrue, usedFalse, audioCond, testCond = setupTrain(
+        uniqueTrainAudio, 4, 7, ranking, toFolder, usedTrue, usedFalse, "train1P2")
     df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
                                 columns=['condFiles', "testFiles"])
     df.to_excel(toFolder + "train1P2LoopCondition.xlsx", index=False)
@@ -243,15 +244,15 @@ if setupWorks:
     TRAIN 2
     """
     #Part 1
-    audioCond, testCond = setupTrain(
+    usedTrue, usedFalse, audioCond, testCond = setupTrain(
         uniqueTrainAudio, 2, 14, ranking, toFolder, [], [], "train2P1")
     df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
                                 columns=['condFiles', "testFiles"])
     df.to_excel(toFolder + "train2P1LoopCondition.xlsx", index=False)
     
     #Part 2
-    audioCond, testCond = setupTrain(
-        uniqueTrainAudio, 4, 7, ranking, toFolder, [], [], "train2P2")
+    usedTrue, usedFalse, audioCond, testCond = setupTrain(
+        uniqueTrainAudio, 4, 7, ranking, toFolder, usedTrue, usedFalse, "train2P2")
     df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
                                 columns=['condFiles', "testFiles"])
     df.to_excel(toFolder + "train2P2LoopCondition.xlsx", index=False)
