@@ -287,7 +287,7 @@ if setupWorks:
     """
     TEST 3
     """
-    firstAudio, secondAudio, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, firstAudio, secondAudio)
+    _, _, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, firstAudio, secondAudio)
     test3Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
                 "imageLoc": images,
