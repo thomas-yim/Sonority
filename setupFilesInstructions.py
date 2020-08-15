@@ -19,15 +19,16 @@ def findImage(audioFile):
             location = "pngimages/" + image
             return location
         
-def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking):
+def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking, phase):
     #This next part will be setting up the test within the block
     testAudioTrue = []
     testImagesTrue = []
     truePos = []
     
-    testAudioFalse = []
     testImagesFalse = []
     falsePos = []
+    
+    currentPhase = []
     for k in range(0, len(blockAudioTrue)):
         trueIndex = random.randint(0, len(blockAudioTrue)-1)
         trueAudio = blockAudioTrue[trueIndex]
@@ -41,7 +42,6 @@ def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking):
         
         falseIndex = random.randint(0, len(blockAudioFalse)-1)
         falseAudio = blockAudioFalse[falseIndex]
-        testAudioFalse.append("trainingaudio/" + correctAudio(ranking, falseAudio))
         
         imageLocation = findImage(falseAudio)
         testImagesFalse.append(imageLocation)
@@ -55,11 +55,14 @@ def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking):
         else:
             truePos.append(-0.5)
             falsePos.append(0.5)
-        
+            
+        currentPhase.append(phase)
+    
+    print(len(currentPhase))
     testData = {"audioTrue": testAudioTrue, "imageTrue": testImagesTrue,
-                "audioFalse": testAudioFalse, "imageFalse": testImagesFalse,
+                "currentPhase": currentPhase, "imageFalse": testImagesFalse,
                 "truePos": truePos, "falsePos": falsePos}
-    testColumns = ["audioTrue", "imageTrue", "audioFalse",
+    testColumns = ["audioTrue", "imageTrue", "currentPhase",
                    "imageFalse","truePos", "falsePos"]
     testdf = pd.DataFrame(testData, columns=testColumns)
     return testdf
@@ -123,7 +126,7 @@ def setupTrain(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder, usedT
         traindf = pd.DataFrame(trainData, columns=trainColumns)
         traindf.to_excel(toFolder + trainConditionName, index=False)
         
-        testdf = setupBlockTest(blockTrue, blockFalse, ranking)
+        testdf = setupBlockTest(blockTrue, blockFalse, ranking, phase)
         testdf.to_excel(toFolder + testConditionName, index=False)
         
         trainConditions.append(toFolder + trainConditionName)
@@ -132,11 +135,12 @@ def setupTrain(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder, usedT
     return usedTrue, usedFalse, trainConditions, testConditions
             
 
-def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
+def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, phase):
     firstAudioFiles = []
     secondAudioFiles = []
     whichAudioCorrect = []
     relatedImages = []
+    currentPhase = []
     audioCopy = uniqueAudio.copy()
     
     for i in range(0, totalQuestions):
@@ -176,8 +180,9 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2):
             whichAudioCorrect.append(2)
 
         relatedImages.append(correspImage)
+        currentPhase.append(phase)
         
-    return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect
+    return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect, currentPhase
     
 
 wordCount = 82
@@ -261,12 +266,15 @@ if setupWorks:
     """
     TEST 1
     """
-    firstAudio, secondAudio, images, correctLabels = setupTest('trainingaudio/',uniqueTrainAudio, 2*trainingCount, [], [])
+    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('trainingaudio/',
+                                            uniqueTrainAudio, 2*trainingCount, [], [], "test1")
     test1Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
                 "imageLoc": images,
-                "whichAudio": correctLabels}
-    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+                "whichAudio": correctLabels,
+                "currentPhase": currentPhase}
+
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio", "currentPhase"]
     test1Df = pd.DataFrame(test1Data, columns=columns)
     test1Df.to_excel(toFolder + "test1Conditions.xlsx", index = False)
     
@@ -274,12 +282,14 @@ if setupWorks:
     """
     TEST 2
     """
-    firstAudio, secondAudio, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, [], [])
+    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('novelaudio/',
+                                        uniqueNovelAudio, novelCount, [], [], "test2")
     test2Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
                 "imageLoc": images,
-                "whichAudio": correctLabels}
-    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+                "whichAudio": correctLabels,
+                "currentPhase": currentPhase}
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio", "currentPhase"]
     test2Df = pd.DataFrame(test2Data, columns=columns)
     test2Df.to_excel(toFolder + "test2Conditions.xlsx", index = False)
     
@@ -287,12 +297,14 @@ if setupWorks:
     """
     TEST 3
     """
-    _, _, images, correctLabels = setupTest('novelaudio/', uniqueNovelAudio, novelCount, firstAudio, secondAudio)
+    _, _, images, correctLabels, currentPhase = setupTest('novelaudio/', uniqueNovelAudio,
+                                    novelCount, firstAudio, secondAudio, "test3")
     test3Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
                 "imageLoc": images,
-                "whichAudio": correctLabels}
-    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio"]
+                "whichAudio": correctLabels,
+                "currentPhase": currentPhase}
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio", "currentPhase"]
     test3Df = pd.DataFrame(test3Data, columns=columns)
     test3Df.to_excel(toFolder + "test3Conditions.xlsx", index = False)
     
