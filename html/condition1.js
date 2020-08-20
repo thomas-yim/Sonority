@@ -274,10 +274,10 @@ function experimentInit() {
   instructions = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions',
-    text: 'This is an experiment about learning words of a foreign language.  You will hear the pronunciation of each word and see the figure that corresponds to the meaning of the word. Please try to remember each word’s pronunciation. There will be two training sections, three test sections, and one post test section.\nPress any key to continue.',
+    text: 'This is an experiment about learning words of a foreign language. You will hear the pronunciation of each word five times, accompanied by a picture of the word. After hearing a few words, you will answer some picture matching questions: you will hear the pronunciation of one word you have learned, and choose the corresponding picture out of two. There will be two training sessions where you familiarize yourself with the language, three test sessions where you hear words you have learned and novel words, and one post test session. Participation is completely voluntary, and you can quit the experiment at any point.\n\nPress any key to advance.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -432,7 +432,7 @@ function experimentInit() {
   train2warning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'train2warning3',
-    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -443,7 +443,7 @@ function experimentInit() {
   train2warning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'train2warning2',
-    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -454,7 +454,7 @@ function experimentInit() {
   train2warning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'train2warning1',
-    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -614,7 +614,7 @@ function experimentInit() {
   test1warning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test1warning3',
-    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -625,7 +625,7 @@ function experimentInit() {
   test1warning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test1warning2',
-    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -636,7 +636,7 @@ function experimentInit() {
   test1warning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test1warning1',
-    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -769,7 +769,7 @@ function experimentInit() {
   test2warning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2warning3',
-    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -780,7 +780,7 @@ function experimentInit() {
   test2warning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2warning2',
-    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -791,7 +791,7 @@ function experimentInit() {
   test2warning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2warning1',
-    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -804,7 +804,7 @@ function experimentInit() {
   test2Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2Text',
-    text: 'You will now hear two pronunciations of a word you have not heard. Select the one that you think might be the correct pronunciation.',
+    text: 'You will now hear two pronunciations of a word you have not heard. Select the one that you think might be the correct pronunciation.\n\nPress any key to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -924,7 +924,7 @@ function experimentInit() {
   test3warning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning3',
-    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -935,7 +935,7 @@ function experimentInit() {
   test3warning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning2',
-    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -946,7 +946,7 @@ function experimentInit() {
   test3warning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning1',
-    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -959,7 +959,7 @@ function experimentInit() {
   test3Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3Text',
-    text: 'You will now hear two pronunciations of the words you just heard. Select the one that you think might be the correct pronunciation.',
+    text: 'You will now hear two pronunciations of the words you just heard. Select the one that you think might be the correct pronunciation.\n\nPress any key to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1079,7 +1079,7 @@ function experimentInit() {
   postTestWarning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'postTestWarning3',
-    text: 'Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1090,7 +1090,7 @@ function experimentInit() {
   postTestWarning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'postTestWarning2',
-    text: 'Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1101,7 +1101,7 @@ function experimentInit() {
   postTestWarning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'postTestWarning1',
-    text: 'Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1252,7 +1252,7 @@ function experimentInit() {
   text = new visual.TextStim({
     win: psychoJS.window,
     name: 'text',
-    text: 'Thank you for participating!\n\nPress any button to end this experiment',
+    text: 'Thank you for participating!\n\nPress any key to end this experiment',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -1456,7 +1456,7 @@ function train1WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train1Words'
@@ -1604,7 +1604,7 @@ function train2WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train2Words'
@@ -1827,7 +1827,7 @@ function train1InstrRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(10.000000);
     // update component parameters for each repeat
-    train1Type.setText((('You will be hearing ' + numWords) + ' words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures.'));
+    train1Type.setText((('You will be hearing ' + numWords) + ' words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures. \nPress any key to advance.'));
     skipTrain1Type.keys = undefined;
     skipTrain1Type.rt = undefined;
     _skipTrain1Type_allKeys = [];
@@ -2652,7 +2652,7 @@ function train2InstrRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(10.000000);
     // update component parameters for each repeat
-    train2Type.setText((('You will be hearing ' + numWords) + ' words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures.'));
+    train2Type.setText((('You will be hearing ' + numWords) + ' words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures. \nPress any key to advance.'));
     skipTrain2Type.keys = undefined;
     skipTrain2Type.rt = undefined;
     _skipTrain2Type_allKeys = [];
@@ -4684,7 +4684,7 @@ function test3instrRoutineEachFrame(trials) {
   }
 
     if (key_resp_3.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_3.getKeys({keyList: 10, waitRelease: false});
+      let theseKeys = key_resp_3.getKeys({keyList: [], waitRelease: false});
       _key_resp_3_allKeys = _key_resp_3_allKeys.concat(theseKeys);
       if (_key_resp_3_allKeys.length > 0) {
         key_resp_3.keys = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].name;  // just the last key pressed

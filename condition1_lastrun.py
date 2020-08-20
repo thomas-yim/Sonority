@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 17, 2020, at 17:18
+    on August 20, 2020, at 13:44
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -36,7 +36,7 @@ os.chdir(_thisDir)
 
 # Store info about the experiment session
 psychopyVersion = '2020.1.3'
-expName = 'sonority'  # from the Builder filename that created this script
+expName = 'condition1'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
@@ -54,8 +54,6 @@ thisExp = data.ExperimentHandler(name=expName, version='',
     originPath='C:\\Users\\ThomasY21\\Dropbox\\Documents\\Prep\\Koehnlein\\experiment\\condition1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
-# save a log file for detail verbose info
-logFile = logging.LogFile(filename+'.log', level=logging.EXP)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
@@ -65,7 +63,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=(1024, 768), fullscr=True, screen=0, 
+    size=[1280, 720], fullscr=True, screen=0, 
     winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
@@ -83,9 +81,9 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
-    text='This is an experiment about learning words of a foreign language.  You will hear the pronunciation of each word and see the figure that corresponds to the meaning of the word. Please try to remember each word’s pronunciation. There will be two training sections, three test sections, and one post test section.\nPress any key to continue.',
+    text='This is an experiment about learning words of a foreign language. You will hear the pronunciation of each word for a few times, accompanied by a picture of the word. After hearing a few words, you will answer some picture matching questions: you will hear the pronunciation of one word you have learned, and choose the corresponding picture out of two. There will be two training sessions where you familiarize yourself with the language, three test sessions where you hear words you have learned and novel words, and one post test session. Participation is completely voluntary, and you can quit the experiment at any point.\n\nPress any key to advance.',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -193,21 +191,21 @@ train1J = visual.TextStim(win=win, name='train1J',
 # Initialize components for Routine "instr2"
 instr2Clock = core.Clock()
 train2warning3 = visual.TextStim(win=win, name='train2warning3',
-    text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 train2warning2 = visual.TextStim(win=win, name='train2warning2',
-    text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 train2warning1 = visual.TextStim(win=win, name='train2warning1',
-    text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -318,21 +316,21 @@ train2J = visual.TextStim(win=win, name='train2J',
 test1waitClock = core.Clock()
 skipTest1Instr = keyboard.Keyboard()
 test1warning3 = visual.TextStim(win=win, name='test1warning3',
-    text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 test1warning2 = visual.TextStim(win=win, name='test1warning2',
-    text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 test1warning1 = visual.TextStim(win=win, name='test1warning1',
-    text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -433,21 +431,21 @@ test1Instr = visual.TextStim(win=win, name='test1Instr',
 test2waitClock = core.Clock()
 skipTest2Instr = keyboard.Keyboard()
 test2warning3 = visual.TextStim(win=win, name='test2warning3',
-    text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 test2warning2 = visual.TextStim(win=win, name='test2warning2',
-    text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 test2warning1 = visual.TextStim(win=win, name='test2warning1',
-    text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -457,7 +455,7 @@ test2warning1 = visual.TextStim(win=win, name='test2warning1',
 # Initialize components for Routine "test2instr"
 test2instrClock = core.Clock()
 test2Text = visual.TextStim(win=win, name='test2Text',
-    text='You will now hear two pronunciations of a word you have not heard. Select the one that you think might be the correct pronunciation.',
+    text='You will now hear two pronunciations of a word you have not heard. Select the one that you think might be the correct pronunciation.\n\nPress any key to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -548,21 +546,21 @@ test2Instr = visual.TextStim(win=win, name='test2Instr',
 test3waitClock = core.Clock()
 skipTest3Instr = keyboard.Keyboard()
 test3warning3 = visual.TextStim(win=win, name='test3warning3',
-    text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 test3warning2 = visual.TextStim(win=win, name='test3warning2',
-    text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 test3warning1 = visual.TextStim(win=win, name='test3warning1',
-    text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -572,7 +570,7 @@ test3warning1 = visual.TextStim(win=win, name='test3warning1',
 # Initialize components for Routine "test3instr"
 test3instrClock = core.Clock()
 test3Text = visual.TextStim(win=win, name='test3Text',
-    text='You will now hear two pronunciations of the words you just heard. Select the one that you think might be the correct pronunciation.',
+    text='You will now hear two pronunciations of the words you just heard. Select the one that you think might be the correct pronunciation.\n\nPress any key to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -663,21 +661,21 @@ test3Instr = visual.TextStim(win=win, name='test3Instr',
 postTestInstrClock = core.Clock()
 skipPostTestInstr = keyboard.Keyboard()
 postTestWarning3 = visual.TextStim(win=win, name='postTestWarning3',
-    text='Next part will  start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 postTestWarning2 = visual.TextStim(win=win, name='postTestWarning2',
-    text='Next part will  start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 postTestWarning1 = visual.TextStim(win=win, name='postTestWarning1',
-    text='Next part will  start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -792,7 +790,7 @@ jText = visual.TextStim(win=win, name='jText',
 # Initialize components for Routine "thankuser"
 thankuserClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='Thank you for participating!\n\nPress any button to end this experiment',
+    text='Thank you for participating!\n\nPress any key to end this experiment',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -914,7 +912,7 @@ for thisAlltrain1 in alltrain1:
     continueRoutine = True
     routineTimer.add(10.000000)
     # update component parameters for each repeat
-    train1Type.setText("You will be hearing " + numWords + " words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures.")
+    train1Type.setText("You will be hearing " + numWords + " words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures. \nPress any key to advance.")
     skipTrain1Type.keys = []
     skipTrain1Type.rt = []
     _skipTrain1Type_allKeys = []
@@ -1041,7 +1039,7 @@ for thisAlltrain1 in alltrain1:
                 exec('{} = thisTrial1phase[paramName]'.format(paramName))
         
         # set up handler to look after randomisation of conditions etc
-        train1Words = data.TrialHandler(nReps=1, method='sequential', 
+        train1Words = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(condFiles),
             seed=None, name='train1Words')
@@ -1210,7 +1208,7 @@ for thisAlltrain1 in alltrain1:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train1Words'
+        # completed 0 repeats of 'train1Words'
         
         
         # ------Prepare to start Routine "train1QuestInstr"-------
@@ -1324,7 +1322,7 @@ for thisAlltrain1 in alltrain1:
         trial1phases.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
         
         # set up handler to look after randomisation of conditions etc
-        train1Questions = data.TrialHandler(nReps=1, method='sequential', 
+        train1Questions = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(testFiles),
             seed=None, name='train1Questions')
@@ -1545,7 +1543,7 @@ for thisAlltrain1 in alltrain1:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train1Questions'
+        # completed 0 repeats of 'train1Questions'
         
         thisExp.nextEntry()
         
@@ -1728,7 +1726,7 @@ for thisAlltrain2 in alltrain2:
     continueRoutine = True
     routineTimer.add(10.000000)
     # update component parameters for each repeat
-    train2Type.setText("You will be hearing " + numWords + " words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures.")
+    train2Type.setText("You will be hearing " + numWords + " words in a row, each for five times. Please try to remember these words’ pronunciations and their corresponding meaning shown in the pictures. \nPress any key to advance.")
     skipTrain2Type.keys = []
     skipTrain2Type.rt = []
     _skipTrain2Type_allKeys = []
@@ -1855,7 +1853,7 @@ for thisAlltrain2 in alltrain2:
                 exec('{} = thisTrial2phase[paramName]'.format(paramName))
         
         # set up handler to look after randomisation of conditions etc
-        train2Words = data.TrialHandler(nReps=1, method='sequential', 
+        train2Words = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(condFiles),
             seed=None, name='train2Words')
@@ -2024,7 +2022,7 @@ for thisAlltrain2 in alltrain2:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train2Words'
+        # completed 0 repeats of 'train2Words'
         
         
         # ------Prepare to start Routine "train2QuestInstr"-------
@@ -2138,7 +2136,7 @@ for thisAlltrain2 in alltrain2:
         trial2phases.addData('train2QuestAdvance.stopped', train2QuestAdvance.tStopRefresh)
         
         # set up handler to look after randomisation of conditions etc
-        train2Questions = data.TrialHandler(nReps=1, method='sequential', 
+        train2Questions = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(testFiles),
             seed=None, name='train2Questions')
@@ -2360,7 +2358,7 @@ for thisAlltrain2 in alltrain2:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train2Questions'
+        # completed 0 repeats of 'train2Questions'
         
         thisExp.nextEntry()
         
@@ -2632,7 +2630,7 @@ thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test1Loop = data.TrialHandler(nReps=1, method='sequential', 
+test1Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test1Conditions.xlsx'),
     seed=None, name='test1Loop')
@@ -2944,7 +2942,7 @@ for thisTest1Loop in test1Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test1Loop'
+# completed 0 repeats of 'test1Loop'
 
 
 # ------Prepare to start Routine "test2wait"-------
@@ -3208,7 +3206,7 @@ thisExp.addData('key_resp_2.stopped', key_resp_2.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=1, method='sequential', 
+test2Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
     seed=None, name='test2Loop')
@@ -3519,7 +3517,7 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test2Loop'
+# completed 0 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "test3wait"-------
@@ -3741,7 +3739,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             win.timeOnFlip(key_resp_3, 'tStopRefresh')  # time at next scr refresh
             key_resp_3.status = FINISHED
     if key_resp_3.status == STARTED and not waitOnFlip:
-        theseKeys = key_resp_3.getKeys(keyList=10, waitRelease=False)
+        theseKeys = key_resp_3.getKeys(keyList=None, waitRelease=False)
         _key_resp_3_allKeys.extend(theseKeys)
         if len(_key_resp_3_allKeys):
             key_resp_3.keys = _key_resp_3_allKeys[-1].name  # just the last key pressed
@@ -3783,7 +3781,7 @@ thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=1, method='sequential', 
+test3Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\test3Conditions.xlsx'),
     seed=None, name='test3Loop')
@@ -4095,7 +4093,7 @@ for thisTest3Loop in test3Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test3Loop'
+# completed 0 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------
@@ -4248,7 +4246,7 @@ thisExp.addData('postTestWarning1.started', postTestWarning1.tStartRefresh)
 thisExp.addData('postTestWarning1.stopped', postTestWarning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-postTestLoop = data.TrialHandler(nReps=1, method='sequential', 
+postTestLoop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('postTestConditions.xlsx'),
     seed=None, name='postTestLoop')
@@ -4623,7 +4621,7 @@ for thisPostTestLoop in postTestLoop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'postTestLoop'
+# completed 0 repeats of 'postTestLoop'
 
 
 # ------Prepare to start Routine "thankuser"-------
@@ -4744,7 +4742,6 @@ win.flip()
 # these shouldn't be strictly necessary (should auto-save)
 thisExp.saveAsWideText(filename+'.csv')
 thisExp.saveAsPickle(filename)
-logging.flush()
 # make sure everything is closed down
 thisExp.abort()  # or data files will save again on exit
 win.close()
