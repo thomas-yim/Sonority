@@ -1486,7 +1486,7 @@ function train1QuestionsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Questions = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: testFiles,
     seed: undefined, name: 'train1Questions'
@@ -1638,7 +1638,7 @@ function train2QuestionsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2Questions = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: testFiles,
     seed: undefined, name: 'train2Questions'
@@ -1687,7 +1687,7 @@ function test1LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test1Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test1Conditions.xlsx',
     seed: undefined, name: 'test1Loop'
@@ -1722,7 +1722,7 @@ function test2LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test2Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test2Conditions.xlsx',
     seed: undefined, name: 'test2Loop'
@@ -1757,7 +1757,7 @@ function test3LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test3Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test3Conditions.xlsx',
     seed: undefined, name: 'test3Loop'
