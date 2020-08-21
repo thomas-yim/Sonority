@@ -1718,7 +1718,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <TextComponent name="text_2">
+      <TextComponent name="postTestTestText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -1726,8 +1726,8 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.2" valType="code"/>
-        <Param name="name" updates="None" val="text_2" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="postTestTestText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -1738,7 +1738,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$working" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$currentPhase" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2851,7 +2851,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="alltrain1" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -2904,7 +2904,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
       <Param name="name" updates="None" val="alltrain2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -2997,7 +2997,7 @@
     <Routine name="postTestInstr"/>
     <LoopInitiator loopType="TrialHandler" name="postTestLoop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('audioA', 'postTest/82_tipiko1.wav'), ('audioX', 'postTest/82_tipiko1.wav'), ('audioB', 'postTest/82_tipiko3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/83_pitita3.wav'), ('audioX', 'postTest/83_pitita3.wav'), ('audioB', 'postTest/83_pitita2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/84_pitoka3.wav'), ('audioX', 'postTest/84_pitoka1.wav'), ('audioB', 'postTest/84_pitoka1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/85_kipata2.wav'), ('audioX', 'postTest/85_kipata2.wav'), ('audioB', 'postTest/85_kipata3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/86_totipa2.wav'), ('audioX', 'postTest/86_totipa1.wav'), ('audioB', 'postTest/86_totipa1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/87_kopoko1.wav'), ('audioX', 'postTest/87_kopoko3.wav'), ('audioB', 'postTest/87_kopoko3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/88_pokota2.wav'), ('audioX', 'postTest/88_pokota2.wav'), ('audioB', 'postTest/88_pokota1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/89_totako3.wav'), ('audioX', 'postTest/89_totako2.wav'), ('audioB', 'postTest/89_totako2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/90_papiki2.wav'), ('audioX', 'postTest/90_papiki3.wav'), ('audioB', 'postTest/90_papiki3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/91_papipo1.wav'), ('audioX', 'postTest/91_papipo1.wav'), ('audioB', 'postTest/91_papipo2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/92_katoki1.wav'), ('audioX', 'postTest/92_katoki2.wav'), ('audioB', 'postTest/92_katoki2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB'), ('working', 'w')]), OrderedDict([('audioA', 'postTest/93_pakopa3.wav'), ('audioX', 'postTest/93_pakopa3.wav'), ('audioB', 'postTest/93_pakopa1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA'), ('working', 'w')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('audioA', 'postTest/82_tipiko1.wav'), ('audioX', 'postTest/82_tipiko1.wav'), ('audioB', 'postTest/82_tipiko3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')]), OrderedDict([('audioA', 'postTest/83_pitita3.wav'), ('audioX', 'postTest/83_pitita3.wav'), ('audioB', 'postTest/83_pitita2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')]), OrderedDict([('audioA', 'postTest/84_pitoka3.wav'), ('audioX', 'postTest/84_pitoka1.wav'), ('audioB', 'postTest/84_pitoka1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/85_kipata2.wav'), ('audioX', 'postTest/85_kipata2.wav'), ('audioB', 'postTest/85_kipata3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')]), OrderedDict([('audioA', 'postTest/86_totipa2.wav'), ('audioX', 'postTest/86_totipa1.wav'), ('audioB', 'postTest/86_totipa1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/87_kopoko1.wav'), ('audioX', 'postTest/87_kopoko3.wav'), ('audioB', 'postTest/87_kopoko3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/88_pokota2.wav'), ('audioX', 'postTest/88_pokota2.wav'), ('audioB', 'postTest/88_pokota1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')]), OrderedDict([('audioA', 'postTest/89_totako3.wav'), ('audioX', 'postTest/89_totako2.wav'), ('audioB', 'postTest/89_totako2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/90_papiki2.wav'), ('audioX', 'postTest/90_papiki3.wav'), ('audioB', 'postTest/90_papiki3.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/91_papipo1.wav'), ('audioX', 'postTest/91_papipo1.wav'), ('audioB', 'postTest/91_papipo2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')]), OrderedDict([('audioA', 'postTest/92_katoki1.wav'), ('audioX', 'postTest/92_katoki2.wav'), ('audioB', 'postTest/92_katoki2.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioB')]), OrderedDict([('audioA', 'postTest/93_pakopa3.wav'), ('audioX', 'postTest/93_pakopa3.wav'), ('audioB', 'postTest/93_pakopa1.wav'), ('currentPhase', 'postTest'), ('correctLabel', 'audioA')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="postTestConditions.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>

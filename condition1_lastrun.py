@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 20, 2020, at 22:23
+    on August 20, 2020, at 22:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -786,10 +786,10 @@ jText = visual.TextStim(win=win, name='jText',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-15.0);
-text_2 = visual.TextStim(win=win, name='text_2',
+postTestTestText = visual.TextStim(win=win, name='postTestTestText',
     text='default text',
     font='Arial',
-    pos=(0, 0), height=0.2, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-16.0);
@@ -897,7 +897,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
+alltrain1 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train1Conditions.xlsx'),
     seed=None, name='alltrain1')
@@ -1329,7 +1329,7 @@ for thisAlltrain1 in alltrain1:
         trial1phases.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
         
         # set up handler to look after randomisation of conditions etc
-        train1Questions = data.TrialHandler(nReps=1, method='sequential', 
+        train1Questions = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(testFiles),
             seed=None, name='train1Questions')
@@ -1550,7 +1550,7 @@ for thisAlltrain1 in alltrain1:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train1Questions'
+        # completed 0 repeats of 'train1Questions'
         
         thisExp.nextEntry()
         
@@ -1558,7 +1558,7 @@ for thisAlltrain1 in alltrain1:
     
     thisExp.nextEntry()
     
-# completed 1 repeats of 'alltrain1'
+# completed 0 repeats of 'alltrain1'
 
 
 # ------Prepare to start Routine "instr2"-------
@@ -1711,7 +1711,7 @@ thisExp.addData('skipTrain2Instr.stopped', skipTrain2Instr.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-alltrain2 = data.TrialHandler(nReps=1, method='sequential', 
+alltrain2 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train2Conditions.xlsx'),
     seed=None, name='alltrain2')
@@ -2373,7 +2373,7 @@ for thisAlltrain2 in alltrain2:
     
     thisExp.nextEntry()
     
-# completed 1 repeats of 'alltrain2'
+# completed 0 repeats of 'alltrain2'
 
 
 # ------Prepare to start Routine "test1wait"-------
@@ -4283,9 +4283,9 @@ for thisPostTestLoop in postTestLoop:
     postTestAudio2.setVolume(1, log=False)
     postTestAudio3.setSound(audioB, hamming=False)
     postTestAudio3.setVolume(1, log=False)
-    text_2.setText(currentPhase)
+    postTestTestText.setText('currentPhase')
     # keep track of which components have finished
-    posttestComponents = [postTestResponse, postTestAudio1, fSound, fMute, postTestAudio2, xMute1, xSound, xMute2, postTestAudio3, jMute1, jSound, jMute2, textInstrPostTest, fText, xText, jText, text_2]
+    posttestComponents = [postTestResponse, postTestAudio1, fSound, fMute, postTestAudio2, xMute1, xSound, xMute2, postTestAudio3, jMute1, jSound, jMute2, textInstrPostTest, fText, xText, jText, postTestTestText]
     for thisComponent in posttestComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -4563,22 +4563,22 @@ for thisPostTestLoop in postTestLoop:
                 win.timeOnFlip(jText, 'tStopRefresh')  # time at next scr refresh
                 jText.setAutoDraw(False)
         
-        # *text_2* updates
-        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *postTestTestText* updates
+        if postTestTestText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_2.frameNStart = frameN  # exact frame index
-            text_2.tStart = t  # local t and not account for scr refresh
-            text_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
-            text_2.setAutoDraw(True)
-        if text_2.status == STARTED:
+            postTestTestText.frameNStart = frameN  # exact frame index
+            postTestTestText.tStart = t  # local t and not account for scr refresh
+            postTestTestText.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(postTestTestText, 'tStartRefresh')  # time at next scr refresh
+            postTestTestText.setAutoDraw(True)
+        if postTestTestText.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_2.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > postTestTestText.tStartRefresh + 1.0-frameTolerance:
                 # keep track of stop time/frame for later
-                text_2.tStop = t  # not accounting for scr refresh
-                text_2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_2, 'tStopRefresh')  # time at next scr refresh
-                text_2.setAutoDraw(False)
+                postTestTestText.tStop = t  # not accounting for scr refresh
+                postTestTestText.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(postTestTestText, 'tStopRefresh')  # time at next scr refresh
+                postTestTestText.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4642,8 +4642,8 @@ for thisPostTestLoop in postTestLoop:
     postTestLoop.addData('xText.stopped', xText.tStopRefresh)
     postTestLoop.addData('jText.started', jText.tStartRefresh)
     postTestLoop.addData('jText.stopped', jText.tStopRefresh)
-    postTestLoop.addData('text_2.started', text_2.tStartRefresh)
-    postTestLoop.addData('text_2.stopped', text_2.tStopRefresh)
+    postTestLoop.addData('postTestTestText.started', postTestTestText.tStartRefresh)
+    postTestLoop.addData('postTestTestText.stopped', postTestTestText.tStopRefresh)
     # the Routine "posttest" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
