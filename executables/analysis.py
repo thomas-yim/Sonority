@@ -2,21 +2,23 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilenames, askdirectory
 import pandas as pd
 from ntpath import basename
-#import pkg_resources.py2_warn
+import pkg_resources.py2_warn
 
 def calculateAccuracy(df, phase):
-    allPhases = df['currentPhase']
-    postTestRows = df['correctLabel']
     questionIndexes = []
     if phase == "postTest":
-        for i in range(0, len(postTestRows)):
-            if type(postTestRows[i]) == str:
-                questionIndexes.append(i)
-    else:
-        for i in range(0, len(allPhases)):
-            if type(allPhases[i]) == str:
-                if phase in allPhases[i]:
+        if 'correctLabel' in df:
+            postTestRows = df['correctLabel']
+            for i in range(0, len(postTestRows)):
+                if type(postTestRows[i]) == str:
                     questionIndexes.append(i)
+    else:
+        if 'currentPhase' in df:
+            allPhases = df['currentPhase']
+            for i in range(0, len(allPhases)):
+                if type(allPhases[i]) == str:
+                    if phase in allPhases[i]:
+                        questionIndexes.append(i)
     if len(questionIndexes) == 0:
         return pd.DataFrame(), "N/A", "N/A", "N/A", "N/A"
                 

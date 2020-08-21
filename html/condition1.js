@@ -1390,7 +1390,7 @@ function alltrain1LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   alltrain1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train1Conditions.xlsx',
     seed: undefined, name: 'alltrain1'
@@ -1456,7 +1456,7 @@ function train1WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train1Words'
@@ -1490,7 +1490,7 @@ function train1QuestionsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Questions = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: testFiles,
     seed: undefined, name: 'train1Questions'
@@ -1538,7 +1538,7 @@ function alltrain2LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   alltrain2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train2Conditions.xlsx',
     seed: undefined, name: 'alltrain2'
@@ -1604,7 +1604,7 @@ function train2WordsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2Words = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: condFiles,
     seed: undefined, name: 'train2Words'
@@ -1638,7 +1638,7 @@ function train2QuestionsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train2Questions = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: testFiles,
     seed: undefined, name: 'train2Questions'
@@ -1686,7 +1686,7 @@ function test1LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test1Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test1Conditions.xlsx',
     seed: undefined, name: 'test1Loop'
@@ -1720,7 +1720,7 @@ function test2LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test2Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test2Conditions.xlsx',
     seed: undefined, name: 'test2Loop'
@@ -1754,7 +1754,7 @@ function test3LoopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   test3Loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/test3Conditions.xlsx',
     seed: undefined, name: 'test3Loop'
