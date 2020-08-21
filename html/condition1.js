@@ -1254,7 +1254,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.01,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.2,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -16.0 
   });
