@@ -5257,7 +5257,7 @@ function posttestRoutineBegin(trials) {
     secs: -1,
     });
     postTestAudio3.setVolume(1);
-    text_2.setText(currentPhase);
+    text_2.setText(working);
     // keep track of which components have finished
     posttestComponents = [];
     posttestComponents.push(postTestResponse);
