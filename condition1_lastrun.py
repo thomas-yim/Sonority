@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 20, 2020, at 13:44
+    on August 20, 2020, at 15:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -81,7 +81,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instructions = visual.TextStim(win=win, name='instructions',
-    text='This is an experiment about learning words of a foreign language. You will hear the pronunciation of each word for a few times, accompanied by a picture of the word. After hearing a few words, you will answer some picture matching questions: you will hear the pronunciation of one word you have learned, and choose the corresponding picture out of two. There will be two training sessions where you familiarize yourself with the language, three test sessions where you hear words you have learned and novel words, and one post test session. Participation is completely voluntary, and you can quit the experiment at any point.\n\nPress any key to advance.',
+    text='This is an experiment about learning words of a foreign language. You will hear the pronunciation of each word five times, accompanied by a picture of the word. After hearing a few words, you will answer some picture matching questions: you will hear the pronunciation of one word you have learned, and choose the corresponding picture out of two. There will be two training sessions where you familiarize yourself with the language, three test sessions where you hear words you have learned and novel words, and one post test session. Participation is completely voluntary, and you can quit the experiment at any point.\n\nPress any key to advance.',
     font='Arial',
     pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -4246,7 +4246,7 @@ thisExp.addData('postTestWarning1.started', postTestWarning1.tStartRefresh)
 thisExp.addData('postTestWarning1.stopped', postTestWarning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-postTestLoop = data.TrialHandler(nReps=0, method='sequential', 
+postTestLoop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('postTestConditions.xlsx'),
     seed=None, name='postTestLoop')
@@ -4621,7 +4621,7 @@ for thisPostTestLoop in postTestLoop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'postTestLoop'
+# completed 1 repeats of 'postTestLoop'
 
 
 # ------Prepare to start Routine "thankuser"-------
