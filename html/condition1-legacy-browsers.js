@@ -1498,7 +1498,7 @@ function train1QuestionsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   train1Questions = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: testFiles,
     seed: undefined, name: 'train1Questions'
