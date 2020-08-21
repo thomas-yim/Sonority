@@ -6,11 +6,17 @@ from ntpath import basename
 
 def calculateAccuracy(df, phase):
     allPhases = df['currentPhase']
+    postTestRows = df['correctLabel']
     questionIndexes = []
-    for i in range(0, len(allPhases)):
-        if type(allPhases[i]) == str:
-            if phase in allPhases[i]:
+    if phase == "postTest":
+        for i in range(0, len(postTestRows)):
+            if type(postTestRows[i]) == str:
                 questionIndexes.append(i)
+    else:
+        for i in range(0, len(allPhases)):
+            if type(allPhases[i]) == str:
+                if phase in allPhases[i]:
+                    questionIndexes.append(i)
     if len(questionIndexes) == 0:
         return pd.DataFrame(), "N/A", "N/A", "N/A", "N/A"
                 

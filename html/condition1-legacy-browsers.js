@@ -255,7 +255,6 @@ var textInstrPostTest;
 var fText;
 var xText;
 var jText;
-var postTestTestText;
 var thankuserClock;
 var text;
 var quit;
@@ -1238,17 +1237,6 @@ function experimentInit() {
     pos: [0.5, 0], height: 0.3,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -15.0 
-  });
-  
-  postTestTestText = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'postTestTestText',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -16.0 
   });
   
   // Initialize components for Routine "thankuser"
@@ -5257,7 +5245,6 @@ function posttestRoutineBegin(trials) {
     secs: -1,
     });
     postTestAudio3.setVolume(1);
-    postTestTestText.setText(currentPhase);
     // keep track of which components have finished
     posttestComponents = [];
     posttestComponents.push(postTestResponse);
@@ -5276,7 +5263,6 @@ function posttestRoutineBegin(trials) {
     posttestComponents.push(fText);
     posttestComponents.push(xText);
     posttestComponents.push(jText);
-    posttestComponents.push(postTestTestText);
     
     posttestComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -5531,20 +5517,6 @@ function posttestRoutineEachFrame(trials) {
     frameRemains = 0.0 + 11 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (jText.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       jText.setAutoDraw(false);
-    }
-    
-    // *postTestTestText* updates
-    if (t >= 0.0 && postTestTestText.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      postTestTestText.tStart = t;  // (not accounting for frame time here)
-      postTestTestText.frameNStart = frameN;  // exact frame index
-      
-      postTestTestText.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (postTestTestText.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      postTestTestText.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
