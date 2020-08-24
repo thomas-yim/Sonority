@@ -58,7 +58,7 @@ def setupBlockTest(blockAudioTrue, blockAudioFalse, ranking, phase):
             
         currentPhase.append(phase)
     
-    print(len(currentPhase))
+
     testData = {"audioTrue": testAudioTrue, "imageTrue": testImagesTrue,
                 "currentPhase": currentPhase, "imageFalse": testImagesFalse,
                 "truePos": truePos, "falsePos": falsePos}
@@ -89,7 +89,6 @@ def setupTrain(trainingAudio, wordsPerBlock, numBlocks, ranking, toFolder, usedT
         imageLoc = []
         
         for j in range(0, int(wordsPerBlock/2)):
-            print(j)
             trueInd = random.randint(0, int(len(tempAudio)-1))
             
             while tempAudio[trueInd] in usedTrue:
@@ -160,11 +159,13 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
         incorrectIndex = random.randint(0,1)
         incorrect = possibilities[incorrectIndex]
         del possibilities[incorrectIndex]
+        print(correct)
         
         if incorrect in pastList1 or incorrect in pastList2:
             incorrect = possibilities[0]
-        elif incorrect in firstAudioFiles or incorrect in secondAudioFiles:
+        if incorrect in firstAudioFiles or incorrect in secondAudioFiles:
             incorrect = possibilities[0]
+            
         
         correspImage = findImage(correct)
             
@@ -177,6 +178,7 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
         else:
             firstAudioFiles.append(audioFolder + incorrect)
             secondAudioFiles.append(audioFolder + correct)
+            print(secondAudioFiles[-1])
             whichAudioCorrect.append(2)
 
         relatedImages.append(correspImage)
@@ -297,7 +299,7 @@ if setupWorks:
     """
     TEST 3
     """
-    _, _, images, correctLabels, currentPhase = setupTest('novelaudio/', uniqueNovelAudio,
+    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('novelaudio/', uniqueNovelAudio,
                                     novelCount, firstAudio, secondAudio, "test3")
     test3Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
