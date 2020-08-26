@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 21, 2020, at 12:21
+    on August 25, 2020, at 19:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -136,7 +136,7 @@ listenTrain1p1 = visual.TextStim(win=win, name='listenTrain1p1',
 # Initialize components for Routine "train1QuestInstr"
 train1QuestInstrClock = core.Clock()
 train1QuestText = visual.TextStim(win=win, name='train1QuestText',
-    text='Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. \n\nPress any key to advance',
+    text='Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback. \n\nPress any key to advance',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -272,7 +272,7 @@ test1warning1 = visual.TextStim(win=win, name='test1warning1',
 # Initialize components for Routine "test1instr"
 test1instrClock = core.Clock()
 test1Text = visual.TextStim(win=win, name='test1Text',
-    text='You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. \n\nPress any key to start now.',
+    text='You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback.\n\nPress any key to start now.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -358,6 +358,27 @@ test1Instr = visual.TextStim(win=win, name='test1Instr',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-11.0);
+
+# Initialize components for Routine "test1feedback"
+test1feedbackClock = core.Clock()
+test1Correct = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='test1Correct')
+test1Correct.setVolume(1)
+text_2 = visual.TextStim(win=win, name='text_2',
+    text='The correct pronunciation is...',
+    font='Arial',
+    pos=(0, 0.2), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+image = visual.ImageStim(
+    win=win,
+    name='image', 
+    image='sin', mask=None,
+    ori=0, pos=(0, -0.2), size=(0.3, 0.3),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "test2wait"
 test2waitClock = core.Clock()
@@ -1240,7 +1261,7 @@ for thisAlltrain1 in alltrain1:
         trial1phases.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
         
         # set up handler to look after randomisation of conditions etc
-        train1Questions = data.TrialHandler(nReps=1, method='sequential', 
+        train1Questions = data.TrialHandler(nReps=0, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(testFiles),
             seed=None, name='train1Questions')
@@ -1652,7 +1673,7 @@ for thisAlltrain1 in alltrain1:
             train1Questions.addData('train1Instructions.stopped', train1Instructions.tStopRefresh)
             thisExp.nextEntry()
             
-        # completed 1 repeats of 'train1Questions'
+        # completed 0 repeats of 'train1Questions'
         
         thisExp.nextEntry()
         
@@ -2233,6 +2254,108 @@ for thisTest1Loop in test1Loop:
     test1Loop.addData('test1Instr.started', test1Instr.tStartRefresh)
     test1Loop.addData('test1Instr.stopped', test1Instr.tStopRefresh)
     # the Routine "test1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "test1feedback"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    test1Correct.setSound(feedback, hamming=True)
+    test1Correct.setVolume(1, log=False)
+    image.setImage('sound.png')
+    # keep track of which components have finished
+    test1feedbackComponents = [test1Correct, text_2, image]
+    for thisComponent in test1feedbackComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    test1feedbackClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "test1feedback"-------
+    while continueRoutine:
+        # get current time
+        t = test1feedbackClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=test1feedbackClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        # start/stop test1Correct
+        if test1Correct.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            # keep track of start time/frame for later
+            test1Correct.frameNStart = frameN  # exact frame index
+            test1Correct.tStart = t  # local t and not account for scr refresh
+            test1Correct.tStartRefresh = tThisFlipGlobal  # on global time
+            test1Correct.play(when=win)  # sync with win flip
+        
+        # *text_2* updates
+        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_2.frameNStart = frameN  # exact frame index
+            text_2.tStart = t  # local t and not account for scr refresh
+            text_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+            text_2.setAutoDraw(True)
+        if text_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_2.tStartRefresh + 1.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_2.tStop = t  # not accounting for scr refresh
+                text_2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_2, 'tStopRefresh')  # time at next scr refresh
+                text_2.setAutoDraw(False)
+        
+        # *image* updates
+        if image.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            # keep track of start time/frame for later
+            image.frameNStart = frameN  # exact frame index
+            image.tStart = t  # local t and not account for scr refresh
+            image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
+            image.setAutoDraw(True)
+        if image.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                image.tStop = t  # not accounting for scr refresh
+                image.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image, 'tStopRefresh')  # time at next scr refresh
+                image.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in test1feedbackComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "test1feedback"-------
+    for thisComponent in test1feedbackComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    test1Correct.stop()  # ensure sound has stopped at end of routine
+    test1Loop.addData('test1Correct.started', test1Correct.tStartRefresh)
+    test1Loop.addData('test1Correct.stopped', test1Correct.tStopRefresh)
+    test1Loop.addData('text_2.started', text_2.tStartRefresh)
+    test1Loop.addData('text_2.stopped', text_2.tStopRefresh)
+    test1Loop.addData('image.started', image.tStartRefresh)
+    test1Loop.addData('image.stopped', image.tStopRefresh)
+    # the Routine "test1feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
     

@@ -173,6 +173,10 @@ var test1Image;
 var test1F;
 var test1J;
 var test1Instr;
+var test1feedbackClock;
+var test1Correct;
+var text_2;
+var image;
 var test2waitClock;
 var skipTest2Instr;
 var test2warning3;
@@ -328,7 +332,7 @@ function experimentInit() {
   train1QuestText = new visual.TextStim({
     win: psychoJS.window,
     name: 'train1QuestText',
-    text: 'Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. \n\nPress any key to advance',
+    text: 'Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback. \n\nPress any key to advance',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -512,7 +516,7 @@ function experimentInit() {
   test1Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test1Text',
-    text: 'You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. \n\nPress any key to start now.',
+    text: 'You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback.\n\nPress any key to start now.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -625,6 +629,34 @@ function experimentInit() {
     depth: -11.0 
   });
   
+  // Initialize components for Routine "test1feedback"
+  test1feedbackClock = new util.Clock();
+  test1Correct = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  test1Correct.setVolume(1);
+  text_2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_2',
+    text: 'The correct pronunciation is...',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.2], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, (- 0.2)], size : [0.3, 0.3],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   // Initialize components for Routine "test2wait"
   test2waitClock = new util.Clock();
   skipTest2Instr = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1397,6 +1429,9 @@ function test1LoopLoopBegin(thisScheduler) {
     thisScheduler.add(test1RoutineBegin(snapshot));
     thisScheduler.add(test1RoutineEachFrame(snapshot));
     thisScheduler.add(test1RoutineEnd(snapshot));
+    thisScheduler.add(test1feedbackRoutineBegin(snapshot));
+    thisScheduler.add(test1feedbackRoutineEachFrame(snapshot));
+    thisScheduler.add(test1feedbackRoutineEnd(snapshot));
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
   }
 
@@ -2933,6 +2968,129 @@ function test1RoutineEnd(trials) {
     
     test1Response.stop();
     // the Routine "test1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var test1feedbackComponents;
+function test1feedbackRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'test1feedback'-------
+    t = 0;
+    test1feedbackClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    test1Correct = new sound.Sound({
+    win: psychoJS.window,
+    value: feedback,
+    secs: -1,
+    });
+    test1Correct.setVolume(1);
+    image.setImage('sound.png');
+    // keep track of which components have finished
+    test1feedbackComponents = [];
+    test1feedbackComponents.push(test1Correct);
+    test1feedbackComponents.push(text_2);
+    test1feedbackComponents.push(image);
+    
+    for (const thisComponent of test1feedbackComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function test1feedbackRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'test1feedback'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = test1feedbackClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    // start/stop test1Correct
+    if (t >= 0.5 && test1Correct.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      test1Correct.tStart = t;  // (not accounting for frame time here)
+      test1Correct.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ test1Correct.play(); });  // screen flip
+      test1Correct.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (test1Correct.getDuration() + test1Correct.tStart)     && test1Correct.status === PsychoJS.Status.STARTED) {
+      test1Correct.stop();  // stop the sound (if longer than duration)
+      test1Correct.status = PsychoJS.Status.FINISHED;
+    }
+    
+    // *text_2* updates
+    if (t >= 0.0 && text_2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_2.tStart = t;  // (not accounting for frame time here)
+      text_2.frameNStart = frameN;  // exact frame index
+      
+      text_2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_2.setAutoDraw(false);
+    }
+    
+    // *image* updates
+    if (t >= 0.5 && image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image.tStart = t;  // (not accounting for frame time here)
+      image.frameNStart = frameN;  // exact frame index
+      
+      image.setAutoDraw(true);
+    }
+
+    frameRemains = 0.5 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of test1feedbackComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function test1feedbackRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'test1feedback'-------
+    for (const thisComponent of test1feedbackComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    test1Correct.stop();  // ensure sound has stopped at end of routine
+    // the Routine "test1feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     return Scheduler.Event.NEXT;

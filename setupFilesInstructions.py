@@ -138,6 +138,7 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
     firstAudioFiles = []
     secondAudioFiles = []
     whichAudioCorrect = []
+    feedbackAudio = []
     relatedImages = []
     currentPhase = []
     audioCopy = uniqueAudio.copy()
@@ -159,7 +160,6 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
         incorrectIndex = random.randint(0,1)
         incorrect = possibilities[incorrectIndex]
         del possibilities[incorrectIndex]
-        print(correct)
         
         if incorrect in pastList1 or incorrect in pastList2:
             incorrect = possibilities[0]
@@ -174,17 +174,18 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
         if random.randint(0,1) == 0:
             firstAudioFiles.append(audioFolder + correct)
             secondAudioFiles.append(audioFolder + incorrect)
+            feedbackAudio.append(audioFolder + correct)
             whichAudioCorrect.append(1)
         else:
             firstAudioFiles.append(audioFolder + incorrect)
             secondAudioFiles.append(audioFolder + correct)
-            print(secondAudioFiles[-1])
+            feedbackAudio.append(audioFolder + correct)
             whichAudioCorrect.append(2)
 
         relatedImages.append(correspImage)
         currentPhase.append(phase)
         
-    return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect, currentPhase
+    return firstAudioFiles, secondAudioFiles, relatedImages, whichAudioCorrect, currentPhase, feedbackAudio
     
 
 wordCount = 82
@@ -268,15 +269,16 @@ if setupWorks:
     """
     TEST 1
     """
-    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('trainingaudio/',
+    firstAudio, secondAudio, images, correctLabels, currentPhase, feedbackAudio = setupTest('trainingaudio/',
                                             uniqueTrainAudio, 2*trainingCount, [], [], "test1")
     test1Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
                 "imageLoc": images,
                 "whichAudio": correctLabels,
-                "currentPhase": currentPhase}
+                "currentPhase": currentPhase,
+                "feedback": feedbackAudio}
 
-    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio", "currentPhase"]
+    columns = ["firstAudio", "secondAudio", "imageLoc", "whichAudio", "currentPhase", "feedback"]
     test1Df = pd.DataFrame(test1Data, columns=columns)
     test1Df.to_excel(toFolder + "test1Conditions.xlsx", index = False)
     
@@ -284,7 +286,7 @@ if setupWorks:
     """
     TEST 2
     """
-    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('novelaudio/',
+    firstAudio, secondAudio, images, correctLabels, currentPhase, _ = setupTest('novelaudio/',
                                         uniqueNovelAudio, novelCount, [], [], "test2")
     test2Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
@@ -299,7 +301,7 @@ if setupWorks:
     """
     TEST 3
     """
-    firstAudio, secondAudio, images, correctLabels, currentPhase = setupTest('novelaudio/', uniqueNovelAudio,
+    firstAudio, secondAudio, images, correctLabels, currentPhase, _ = setupTest('novelaudio/', uniqueNovelAudio,
                                     novelCount, firstAudio, secondAudio, "test3")
     test3Data = {"firstAudio": firstAudio,
                 "secondAudio": secondAudio,
