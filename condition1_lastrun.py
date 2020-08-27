@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 26, 2020, at 17:39
+    on August 26, 2020, at 18:00
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -830,7 +830,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrain1 = data.TrialHandler(nReps=0, method='sequential', 
+alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train1Conditions.xlsx'),
     seed=None, name='alltrain1')
@@ -1710,7 +1710,7 @@ for thisAlltrain1 in alltrain1:
     
     thisExp.nextEntry()
     
-# completed 0 repeats of 'alltrain1'
+# completed 1 repeats of 'alltrain1'
 
 
 # ------Prepare to start Routine "test1wait"-------
