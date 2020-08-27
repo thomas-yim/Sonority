@@ -2366,8 +2366,8 @@
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if trial1phases.thisIndex &gt; 0:&amp;#10;    continueRoutine = False&amp;#10;    break_loop.finished" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((trial1phases.thisIndex &gt; 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    break_loop.finished;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if trial1phases.thisN &gt; 0:&amp;#10;    continueRoutine = False&amp;#10;    break_loop.finished" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((trial1phases.thisN &gt; 0)) {&amp;#10;    continueRoutine = false;&amp;#10;    break_loop.finished;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>

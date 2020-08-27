@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 26, 2020, at 18:15
+    on August 26, 2020, at 18:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1246,7 +1246,7 @@ for thisAlltrain1 in alltrain1:
                         train1QuestAdvance.rt = _train1QuestAdvance_allKeys[-1].rt
                         # a response ends the routine
                         continueRoutine = False
-                if trial1phases.thisIndex > 0:
+                if trial1phases.thisN > 0:
                     continueRoutine = False
                     break_loop.finished
                 
