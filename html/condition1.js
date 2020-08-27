@@ -122,7 +122,6 @@ function updateInfo() {
 var instrClock;
 var instructions;
 var advanceTrain1;
-var myCount;
 var train1InstrClock;
 var train1Type;
 var skipTrain1Type;
@@ -260,8 +259,6 @@ function experimentInit() {
   });
   
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  myCount = 0;
   
   // Initialize components for Routine "train1Instr"
   train1InstrClock = new util.Clock();
@@ -1933,13 +1930,6 @@ function train1QuestInstrRoutineBegin(trials) {
     train1QuestAdvance.keys = undefined;
     train1QuestAdvance.rt = undefined;
     _train1QuestAdvance_allKeys = [];
-    if ((myCount >= 1)) {
-        continueRoutine = false;
-        break_loop.finished;
-    } else {
-        myCount = (myCount + 1);
-    }
-    
     // keep track of which components have finished
     train1QuestInstrComponents = [];
     train1QuestInstrComponents.push(train1QuestText);
@@ -2003,6 +1993,11 @@ function train1QuestInstrRoutineEachFrame(trials) {
         // a response ends the routine
         continueRoutine = false;
       }
+    }
+    
+    if ((trial1phases.thisIndex > 0)) {
+        continueRoutine = false;
+        break_loop.finished;
     }
     
     // check for quit (typically the Esc key)
@@ -4933,8 +4928,6 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
-  
-  
   
   
   psychoJS.window.close();

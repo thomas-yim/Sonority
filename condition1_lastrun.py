@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 26, 2020, at 18:00
+    on August 26, 2020, at 18:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -88,7 +88,6 @@ instructions = visual.TextStim(win=win, name='instructions',
     languageStyle='LTR',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
-myCount = 0
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
@@ -1177,11 +1176,6 @@ for thisAlltrain1 in alltrain1:
             train1QuestAdvance.keys = []
             train1QuestAdvance.rt = []
             _train1QuestAdvance_allKeys = []
-            if myCount >= 1:
-                continueRoutine = False
-                break_loop.finished
-            else:
-                myCount = myCount + 1
             # keep track of which components have finished
             train1QuestInstrComponents = [train1QuestText, train1QuestAdvance]
             for thisComponent in train1QuestInstrComponents:
@@ -1252,6 +1246,9 @@ for thisAlltrain1 in alltrain1:
                         train1QuestAdvance.rt = _train1QuestAdvance_allKeys[-1].rt
                         # a response ends the routine
                         continueRoutine = False
+                if trial1phases.thisIndex > 0:
+                    continueRoutine = False
+                    break_loop.finished
                 
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
