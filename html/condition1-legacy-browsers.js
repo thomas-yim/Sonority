@@ -1586,6 +1586,7 @@ function postTestLoopLoopEnd() {
 
 
 var _skipTrain1Type_allKeys;
+var myCount;
 var train1InstrComponents;
 function train1InstrRoutineBegin(trials) {
   return function () {
@@ -1599,6 +1600,8 @@ function train1InstrRoutineBegin(trials) {
     skipTrain1Type.keys = undefined;
     skipTrain1Type.rt = undefined;
     _skipTrain1Type_allKeys = [];
+    myCount = 0;
+    
     // keep track of which components have finished
     train1InstrComponents = [];
     train1InstrComponents.push(train1Type);
@@ -2000,7 +2003,7 @@ function train1QuestInstrRoutineEachFrame(trials) {
       }
     }
     
-    if ((break_loop.thisN > 0)) {
+    if ((myCount > 0)) {
         continueRoutine = false;
         break_loop.finished;
     }
@@ -2047,6 +2050,8 @@ function train1QuestInstrRoutineEnd(trials) {
         }
     
     train1QuestAdvance.stop();
+    myCount = (myCount + 1);
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -4948,6 +4953,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   psychoJS.window.close();

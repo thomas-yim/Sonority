@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 26, 2020, at 18:30
+    on August 26, 2020, at 18:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -855,6 +855,7 @@ for thisAlltrain1 in alltrain1:
     skipTrain1Type.keys = []
     skipTrain1Type.rt = []
     _skipTrain1Type_allKeys = []
+    myCount = 0
     # keep track of which components have finished
     train1InstrComponents = [train1Type, skipTrain1Type]
     for thisComponent in train1InstrComponents:
@@ -1246,7 +1247,7 @@ for thisAlltrain1 in alltrain1:
                         train1QuestAdvance.rt = _train1QuestAdvance_allKeys[-1].rt
                         # a response ends the routine
                         continueRoutine = False
-                if trial1phases.thisN > 0:
+                if myCount> 0:
                     continueRoutine = False
                     break_loop.finished
                 
@@ -1281,6 +1282,7 @@ for thisAlltrain1 in alltrain1:
                 break_loop.addData('train1QuestAdvance.rt', train1QuestAdvance.rt)
             break_loop.addData('train1QuestAdvance.started', train1QuestAdvance.tStartRefresh)
             break_loop.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
+            myCount = myCount + 1
             thisExp.nextEntry()
             
         # completed 1 repeats of 'break_loop'
