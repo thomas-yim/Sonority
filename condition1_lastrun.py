@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 25, 2020, at 19:07
+    on August 26, 2020, at 17:39
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -88,6 +88,7 @@ instructions = visual.TextStim(win=win, name='instructions',
     languageStyle='LTR',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
+myCount = 0
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
@@ -829,7 +830,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
+alltrain1 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('aoiConditions\\train1Conditions.xlsx'),
     seed=None, name='alltrain1')
@@ -978,7 +979,7 @@ for thisAlltrain1 in alltrain1:
                 exec('{} = thisTrial1phase[paramName]'.format(paramName))
         
         # set up handler to look after randomisation of conditions etc
-        train1Words = data.TrialHandler(nReps=0, method='sequential', 
+        train1Words = data.TrialHandler(nReps=1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(condFiles),
             seed=None, name='train1Words')
@@ -1147,121 +1148,149 @@ for thisAlltrain1 in alltrain1:
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 0 repeats of 'train1Words'
+        # completed 1 repeats of 'train1Words'
         
-        
-        # ------Prepare to start Routine "train1QuestInstr"-------
-        continueRoutine = True
-        routineTimer.add(15.000000)
-        # update component parameters for each repeat
-        train1QuestAdvance.keys = []
-        train1QuestAdvance.rt = []
-        _train1QuestAdvance_allKeys = []
-        # keep track of which components have finished
-        train1QuestInstrComponents = [train1QuestText, train1QuestAdvance]
-        for thisComponent in train1QuestInstrComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        train1QuestInstrClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-        frameN = -1
-        
-        # -------Run Routine "train1QuestInstr"-------
-        while continueRoutine and routineTimer.getTime() > 0:
-            # get current time
-            t = train1QuestInstrClock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=train1QuestInstrClock)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *train1QuestText* updates
-            if train1QuestText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                train1QuestText.frameNStart = frameN  # exact frame index
-                train1QuestText.tStart = t  # local t and not account for scr refresh
-                train1QuestText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(train1QuestText, 'tStartRefresh')  # time at next scr refresh
-                train1QuestText.setAutoDraw(True)
-            if train1QuestText.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > train1QuestText.tStartRefresh + 15-frameTolerance:
-                    # keep track of stop time/frame for later
-                    train1QuestText.tStop = t  # not accounting for scr refresh
-                    train1QuestText.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(train1QuestText, 'tStopRefresh')  # time at next scr refresh
-                    train1QuestText.setAutoDraw(False)
-            
-            # *train1QuestAdvance* updates
-            waitOnFlip = False
-            if train1QuestAdvance.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                train1QuestAdvance.frameNStart = frameN  # exact frame index
-                train1QuestAdvance.tStart = t  # local t and not account for scr refresh
-                train1QuestAdvance.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(train1QuestAdvance, 'tStartRefresh')  # time at next scr refresh
-                train1QuestAdvance.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(train1QuestAdvance.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(train1QuestAdvance.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if train1QuestAdvance.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > train1QuestAdvance.tStartRefresh + 15-frameTolerance:
-                    # keep track of stop time/frame for later
-                    train1QuestAdvance.tStop = t  # not accounting for scr refresh
-                    train1QuestAdvance.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(train1QuestAdvance, 'tStopRefresh')  # time at next scr refresh
-                    train1QuestAdvance.status = FINISHED
-            if train1QuestAdvance.status == STARTED and not waitOnFlip:
-                theseKeys = train1QuestAdvance.getKeys(keyList=None, waitRelease=False)
-                _train1QuestAdvance_allKeys.extend(theseKeys)
-                if len(_train1QuestAdvance_allKeys):
-                    train1QuestAdvance.keys = _train1QuestAdvance_allKeys[-1].name  # just the last key pressed
-                    train1QuestAdvance.rt = _train1QuestAdvance_allKeys[-1].rt
-                    # a response ends the routine
-                    continueRoutine = False
-            
-            # check for quit (typically the Esc key)
-            if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-                core.quit()
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in train1QuestInstrComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # -------Ending Routine "train1QuestInstr"-------
-        for thisComponent in train1QuestInstrComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        trial1phases.addData('train1QuestText.started', train1QuestText.tStartRefresh)
-        trial1phases.addData('train1QuestText.stopped', train1QuestText.tStopRefresh)
-        # check responses
-        if train1QuestAdvance.keys in ['', [], None]:  # No response was made
-            train1QuestAdvance.keys = None
-        trial1phases.addData('train1QuestAdvance.keys',train1QuestAdvance.keys)
-        if train1QuestAdvance.keys != None:  # we had a response
-            trial1phases.addData('train1QuestAdvance.rt', train1QuestAdvance.rt)
-        trial1phases.addData('train1QuestAdvance.started', train1QuestAdvance.tStartRefresh)
-        trial1phases.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
         
         # set up handler to look after randomisation of conditions etc
-        train1Questions = data.TrialHandler(nReps=0, method='sequential', 
+        break_loop = data.TrialHandler(nReps=1, method='sequential', 
+            extraInfo=expInfo, originPath=-1,
+            trialList=[None],
+            seed=None, name='break_loop')
+        thisExp.addLoop(break_loop)  # add the loop to the experiment
+        thisBreak_loop = break_loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisBreak_loop.rgb)
+        if thisBreak_loop != None:
+            for paramName in thisBreak_loop:
+                exec('{} = thisBreak_loop[paramName]'.format(paramName))
+        
+        for thisBreak_loop in break_loop:
+            currentLoop = break_loop
+            # abbreviate parameter names if possible (e.g. rgb = thisBreak_loop.rgb)
+            if thisBreak_loop != None:
+                for paramName in thisBreak_loop:
+                    exec('{} = thisBreak_loop[paramName]'.format(paramName))
+            
+            # ------Prepare to start Routine "train1QuestInstr"-------
+            continueRoutine = True
+            routineTimer.add(15.000000)
+            # update component parameters for each repeat
+            train1QuestAdvance.keys = []
+            train1QuestAdvance.rt = []
+            _train1QuestAdvance_allKeys = []
+            if myCount >= 1:
+                continueRoutine = False
+                break_loop.finished
+            else:
+                myCount = myCount + 1
+            # keep track of which components have finished
+            train1QuestInstrComponents = [train1QuestText, train1QuestAdvance]
+            for thisComponent in train1QuestInstrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            train1QuestInstrClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+            frameN = -1
+            
+            # -------Run Routine "train1QuestInstr"-------
+            while continueRoutine and routineTimer.getTime() > 0:
+                # get current time
+                t = train1QuestInstrClock.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=train1QuestInstrClock)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *train1QuestText* updates
+                if train1QuestText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    train1QuestText.frameNStart = frameN  # exact frame index
+                    train1QuestText.tStart = t  # local t and not account for scr refresh
+                    train1QuestText.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(train1QuestText, 'tStartRefresh')  # time at next scr refresh
+                    train1QuestText.setAutoDraw(True)
+                if train1QuestText.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > train1QuestText.tStartRefresh + 15-frameTolerance:
+                        # keep track of stop time/frame for later
+                        train1QuestText.tStop = t  # not accounting for scr refresh
+                        train1QuestText.frameNStop = frameN  # exact frame index
+                        win.timeOnFlip(train1QuestText, 'tStopRefresh')  # time at next scr refresh
+                        train1QuestText.setAutoDraw(False)
+                
+                # *train1QuestAdvance* updates
+                waitOnFlip = False
+                if train1QuestAdvance.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    train1QuestAdvance.frameNStart = frameN  # exact frame index
+                    train1QuestAdvance.tStart = t  # local t and not account for scr refresh
+                    train1QuestAdvance.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(train1QuestAdvance, 'tStartRefresh')  # time at next scr refresh
+                    train1QuestAdvance.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(train1QuestAdvance.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(train1QuestAdvance.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if train1QuestAdvance.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > train1QuestAdvance.tStartRefresh + 15-frameTolerance:
+                        # keep track of stop time/frame for later
+                        train1QuestAdvance.tStop = t  # not accounting for scr refresh
+                        train1QuestAdvance.frameNStop = frameN  # exact frame index
+                        win.timeOnFlip(train1QuestAdvance, 'tStopRefresh')  # time at next scr refresh
+                        train1QuestAdvance.status = FINISHED
+                if train1QuestAdvance.status == STARTED and not waitOnFlip:
+                    theseKeys = train1QuestAdvance.getKeys(keyList=None, waitRelease=False)
+                    _train1QuestAdvance_allKeys.extend(theseKeys)
+                    if len(_train1QuestAdvance_allKeys):
+                        train1QuestAdvance.keys = _train1QuestAdvance_allKeys[-1].name  # just the last key pressed
+                        train1QuestAdvance.rt = _train1QuestAdvance_allKeys[-1].rt
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+                    core.quit()
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in train1QuestInstrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # -------Ending Routine "train1QuestInstr"-------
+            for thisComponent in train1QuestInstrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            break_loop.addData('train1QuestText.started', train1QuestText.tStartRefresh)
+            break_loop.addData('train1QuestText.stopped', train1QuestText.tStopRefresh)
+            # check responses
+            if train1QuestAdvance.keys in ['', [], None]:  # No response was made
+                train1QuestAdvance.keys = None
+            break_loop.addData('train1QuestAdvance.keys',train1QuestAdvance.keys)
+            if train1QuestAdvance.keys != None:  # we had a response
+                break_loop.addData('train1QuestAdvance.rt', train1QuestAdvance.rt)
+            break_loop.addData('train1QuestAdvance.started', train1QuestAdvance.tStartRefresh)
+            break_loop.addData('train1QuestAdvance.stopped', train1QuestAdvance.tStopRefresh)
+            thisExp.nextEntry()
+            
+        # completed 1 repeats of 'break_loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        train1Questions = data.TrialHandler(nReps=1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(testFiles),
             seed=None, name='train1Questions')
@@ -1673,7 +1702,7 @@ for thisAlltrain1 in alltrain1:
             train1Questions.addData('train1Instructions.stopped', train1Instructions.tStopRefresh)
             thisExp.nextEntry()
             
-        # completed 0 repeats of 'train1Questions'
+        # completed 1 repeats of 'train1Questions'
         
         thisExp.nextEntry()
         
@@ -1681,7 +1710,7 @@ for thisAlltrain1 in alltrain1:
     
     thisExp.nextEntry()
     
-# completed 1 repeats of 'alltrain1'
+# completed 0 repeats of 'alltrain1'
 
 
 # ------Prepare to start Routine "test1wait"-------

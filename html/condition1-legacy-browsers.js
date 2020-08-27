@@ -114,6 +114,7 @@ function updateInfo() {
 var instrClock;
 var instructions;
 var advanceTrain1;
+var myCount;
 var train1InstrClock;
 var train1Type;
 var skipTrain1Type;
@@ -251,6 +252,8 @@ function experimentInit() {
   });
   
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  myCount = 0;
   
   // Initialize components for Routine "train1Instr"
   train1InstrClock = new util.Clock();
@@ -1256,7 +1259,7 @@ function alltrain1LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   alltrain1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'aoiConditions/train1Conditions.xlsx',
     seed: undefined, name: 'alltrain1'
@@ -1305,9 +1308,10 @@ function trial1phasesLoopBegin(thisScheduler) {
     thisScheduler.add(train1WordsLoopBegin, train1WordsLoopScheduler);
     thisScheduler.add(train1WordsLoopScheduler);
     thisScheduler.add(train1WordsLoopEnd);
-    thisScheduler.add(train1QuestInstrRoutineBegin(snapshot));
-    thisScheduler.add(train1QuestInstrRoutineEachFrame(snapshot));
-    thisScheduler.add(train1QuestInstrRoutineEnd(snapshot));
+    const break_loopLoopScheduler = new Scheduler(psychoJS);
+    thisScheduler.add(break_loopLoopBegin, break_loopLoopScheduler);
+    thisScheduler.add(break_loopLoopScheduler);
+    thisScheduler.add(break_loopLoopEnd);
     const train1QuestionsLoopScheduler = new Scheduler(psychoJS);
     thisScheduler.add(train1QuestionsLoopBegin, train1QuestionsLoopScheduler);
     thisScheduler.add(train1QuestionsLoopScheduler);
@@ -1349,6 +1353,41 @@ function train1WordsLoopBegin(thisScheduler) {
 
 function train1WordsLoopEnd() {
   psychoJS.experiment.removeLoop(train1Words);
+
+  return Scheduler.Event.NEXT;
+}
+
+
+var break_loop;
+function break_loopLoopBegin(thisScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  break_loop = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: undefined,
+    seed: undefined, name: 'break_loop'
+  });
+  psychoJS.experiment.addLoop(break_loop); // add the loop to the experiment
+  currentLoop = break_loop;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  break_loop.forEach(function() {
+    const snapshot = break_loop.getSnapshot();
+
+    thisScheduler.add(importConditions(snapshot));
+    thisScheduler.add(train1QuestInstrRoutineBegin(snapshot));
+    thisScheduler.add(train1QuestInstrRoutineEachFrame(snapshot));
+    thisScheduler.add(train1QuestInstrRoutineEnd(snapshot));
+    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+  });
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function break_loopLoopEnd() {
+  psychoJS.experiment.removeLoop(break_loop);
 
   return Scheduler.Event.NEXT;
 }
@@ -1898,6 +1937,13 @@ function train1QuestInstrRoutineBegin(trials) {
     train1QuestAdvance.keys = undefined;
     train1QuestAdvance.rt = undefined;
     _train1QuestAdvance_allKeys = [];
+    if ((myCount >= 1)) {
+        continueRoutine = false;
+        break_loop.finished;
+    } else {
+        myCount = (myCount + 1);
+    }
+    
     // keep track of which components have finished
     train1QuestInstrComponents = [];
     train1QuestInstrComponents.push(train1QuestText);
@@ -4907,6 +4953,10 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
   
