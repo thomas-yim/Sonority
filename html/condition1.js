@@ -1995,7 +1995,7 @@ function train1QuestInstrRoutineEachFrame(trials) {
       }
     }
     
-    if ((trial1phases.thisN > 0)) {
+    if ((break_loop.thisN > 0)) {
         continueRoutine = false;
         break_loop.finished;
     }
