@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'condition1';  // from the Builder filename that created this script
-let expInfo = {'participant': '', 'session': '001'};
+let expInfo = {'participant': '', 'session': '001', 'Experiment Type': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -114,9 +114,11 @@ function updateInfo() {
 var instrClock;
 var instructions;
 var advanceTrain1;
+var folder;
 var train1InstrClock;
 var train1Type;
 var skipTrain1Type;
+var text_3;
 var train1Clock;
 var imagetrain1p1;
 var stimuli1train1p1;
@@ -125,6 +127,7 @@ var stimuli3train1p1;
 var stimuli4train1p1;
 var stimuli5train1p1;
 var listenTrain1p1;
+var text_4;
 var train1QuestInstrClock;
 var train1QuestText;
 var train1QuestAdvance;
@@ -252,6 +255,18 @@ function experimentInit() {
   
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  if ((expInfo["Experiment Type"] === "1")) {
+      folder = "aoiConditions/";
+  } else {
+      if ((expInfo["Experiment Type"] === "2")) {
+          folder = "ioaConditions/";
+      } else {
+          if ((expInfo["Experiment Type"] === "3")) {
+              folder = "oiaConditions/";
+          }
+      }
+  }
+  
   // Initialize components for Routine "train1Instr"
   train1InstrClock = new util.Clock();
   train1Type = new visual.TextStim({
@@ -266,6 +281,17 @@ function experimentInit() {
   });
   
   skipTrain1Type = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  text_3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_3',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
   
   // Initialize components for Routine "train1"
   train1Clock = new util.Clock();
@@ -317,6 +343,17 @@ function experimentInit() {
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -6.0 
+  });
+  
+  text_4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_4',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -7.0 
   });
   
   // Initialize components for Routine "train1QuestInstr"
@@ -1258,7 +1295,7 @@ function alltrain1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'aoiConditions/train1Conditions.xlsx',
+    trialList: (folder + 'train1Conditions.xlsx'),
     seed: undefined, name: 'alltrain1'
   });
   psychoJS.experiment.addLoop(alltrain1); // add the loop to the experiment
@@ -1449,7 +1486,7 @@ function test1LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'aoiConditions/test1Conditions.xlsx',
+    trialList: (folder + 'test1Conditions.xlsx'),
     seed: undefined, name: 'test1Loop'
   });
   psychoJS.experiment.addLoop(test1Loop); // add the loop to the experiment
@@ -1487,7 +1524,7 @@ function test2LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'aoiConditions/test2Conditions.xlsx',
+    trialList: (folder + 'test2Conditions.xlsx'),
     seed: undefined, name: 'test2Loop'
   });
   psychoJS.experiment.addLoop(test2Loop); // add the loop to the experiment
@@ -1522,7 +1559,7 @@ function test3LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'aoiConditions/test3Conditions.xlsx',
+    trialList: (folder + 'test3Conditions.xlsx'),
     seed: undefined, name: 'test3Loop'
   });
   psychoJS.experiment.addLoop(test3Loop); // add the loop to the experiment
@@ -1602,10 +1639,12 @@ function train1InstrRoutineBegin(trials) {
     _skipTrain1Type_allKeys = [];
     myCount = 0;
     
+    text_3.setText(folder);
     // keep track of which components have finished
     train1InstrComponents = [];
     train1InstrComponents.push(train1Type);
     train1InstrComponents.push(skipTrain1Type);
+    train1InstrComponents.push(text_3);
     
     train1InstrComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1669,6 +1708,20 @@ function train1InstrRoutineEachFrame(trials) {
       }
     }
     
+    
+    // *text_3* updates
+    if (t >= 0.0 && text_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_3.tStart = t;  // (not accounting for frame time here)
+      text_3.frameNStart = frameN;  // exact frame index
+      
+      text_3.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_3.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1755,6 +1808,7 @@ function train1RoutineBegin(trials) {
     secs: -1,
     });
     stimuli5train1p1.setVolume(1);
+    text_4.setText(audio);
     // keep track of which components have finished
     train1Components = [];
     train1Components.push(imagetrain1p1);
@@ -1764,6 +1818,7 @@ function train1RoutineBegin(trials) {
     train1Components.push(stimuli4train1p1);
     train1Components.push(stimuli5train1p1);
     train1Components.push(listenTrain1p1);
+    train1Components.push(text_4);
     
     train1Components.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1875,6 +1930,20 @@ function train1RoutineEachFrame(trials) {
     frameRemains = 0.0 + 11 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (listenTrain1p1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       listenTrain1p1.setAutoDraw(false);
+    }
+    
+    // *text_4* updates
+    if (t >= 0.0 && text_4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_4.tStart = t;  // (not accounting for frame time here)
+      text_4.frameNStart = frameN;  // exact frame index
+      
+      text_4.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_4.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -2798,7 +2867,7 @@ function test1RoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // start/stop test1Audio1
-    if (t >= 0.5 && test1Audio1.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && test1Audio1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio1.tStart = t;  // (not accounting for frame time here)
       test1Audio1.frameNStart = frameN;  // exact frame index
@@ -2812,7 +2881,7 @@ function test1RoutineEachFrame(trials) {
     }
     
     // *test1Audio1Sound* updates
-    if (t >= 0.5 && test1Audio1Sound.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && test1Audio1Sound.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio1Sound.tStart = t;  // (not accounting for frame time here)
       test1Audio1Sound.frameNStart = frameN;  // exact frame index
@@ -2820,13 +2889,13 @@ function test1RoutineEachFrame(trials) {
       test1Audio1Sound.setAutoDraw(true);
     }
 
-    frameRemains = 0.5 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Audio1Sound.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Audio1Sound.setAutoDraw(false);
     }
     
     // *test1Audio1Mute* updates
-    if (t >= 1.5 && test1Audio1Mute.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 2 && test1Audio1Mute.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio1Mute.tStart = t;  // (not accounting for frame time here)
       test1Audio1Mute.frameNStart = frameN;  // exact frame index
@@ -2834,12 +2903,12 @@ function test1RoutineEachFrame(trials) {
       test1Audio1Mute.setAutoDraw(true);
     }
 
-    frameRemains = 1.5 + 18.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 18 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Audio1Mute.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Audio1Mute.setAutoDraw(false);
     }
     // start/stop test1Audio2
-    if (t >= 2.5 && test1Audio2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 3 && test1Audio2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio2.tStart = t;  // (not accounting for frame time here)
       test1Audio2.frameNStart = frameN;  // exact frame index
@@ -2853,7 +2922,7 @@ function test1RoutineEachFrame(trials) {
     }
     
     // *test1Audio2Mute1* updates
-    if (t >= 0.5 && test1Audio2Mute1.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && test1Audio2Mute1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio2Mute1.tStart = t;  // (not accounting for frame time here)
       test1Audio2Mute1.frameNStart = frameN;  // exact frame index
@@ -2861,13 +2930,13 @@ function test1RoutineEachFrame(trials) {
       test1Audio2Mute1.setAutoDraw(true);
     }
 
-    frameRemains = 0.5 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Audio2Mute1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Audio2Mute1.setAutoDraw(false);
     }
     
     // *test1Audio2Sound* updates
-    if (t >= 2.5 && test1Audio2Sound.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 3 && test1Audio2Sound.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio2Sound.tStart = t;  // (not accounting for frame time here)
       test1Audio2Sound.frameNStart = frameN;  // exact frame index
@@ -2875,13 +2944,13 @@ function test1RoutineEachFrame(trials) {
       test1Audio2Sound.setAutoDraw(true);
     }
 
-    frameRemains = 2.5 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 3 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Audio2Sound.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Audio2Sound.setAutoDraw(false);
     }
     
     // *test1Audio2Mute2* updates
-    if (t >= 3.5 && test1Audio2Mute2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 4 && test1Audio2Mute2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Audio2Mute2.tStart = t;  // (not accounting for frame time here)
       test1Audio2Mute2.frameNStart = frameN;  // exact frame index
@@ -2889,13 +2958,13 @@ function test1RoutineEachFrame(trials) {
       test1Audio2Mute2.setAutoDraw(true);
     }
 
-    frameRemains = 3.5 + 16.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4 + 16 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Audio2Mute2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Audio2Mute2.setAutoDraw(false);
     }
     
     // *test1Response* updates
-    if (t >= 3.5 && test1Response.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 4 && test1Response.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1Response.tStart = t;  // (not accounting for frame time here)
       test1Response.frameNStart = frameN;  // exact frame index
@@ -2906,7 +2975,7 @@ function test1RoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function() { test1Response.clearEvents(); });
     }
 
-    frameRemains = 3.5 + 16.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4 + 16 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1Response.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1Response.status = PsychoJS.Status.FINISHED;
   }
@@ -2938,7 +3007,7 @@ function test1RoutineEachFrame(trials) {
     }
     
     // *test1F* updates
-    if (t >= 3.5 && test1F.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 4 && test1F.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1F.tStart = t;  // (not accounting for frame time here)
       test1F.frameNStart = frameN;  // exact frame index
@@ -2946,13 +3015,13 @@ function test1RoutineEachFrame(trials) {
       test1F.setAutoDraw(true);
     }
 
-    frameRemains = 3.5 + 16.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4 + 16 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1F.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1F.setAutoDraw(false);
     }
     
     // *test1J* updates
-    if (t >= 3.5 && test1J.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 4 && test1J.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       test1J.tStart = t;  // (not accounting for frame time here)
       test1J.frameNStart = frameN;  // exact frame index
@@ -2960,7 +3029,7 @@ function test1RoutineEachFrame(trials) {
       test1J.setAutoDraw(true);
     }
 
-    frameRemains = 3.5 + 16.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4 + 16 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (test1J.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       test1J.setAutoDraw(false);
     }
@@ -4953,6 +5022,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

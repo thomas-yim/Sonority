@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 26, 2020, at 18:49
+    on August 29, 2020, at 18:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.3'
 expName = 'condition1'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '001'}
+expInfo = {'participant': '', 'session': '001', 'Experiment Type': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -88,6 +88,12 @@ instructions = visual.TextStim(win=win, name='instructions',
     languageStyle='LTR',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
+if expInfo['Experiment Type'] == "1":
+    folder = "aoiConditions/"
+elif expInfo['Experiment Type'] == "2":
+    folder = "ioaConditions/"
+elif expInfo['Experiment Type'] == "3":
+    folder = "oiaConditions/"
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
@@ -99,6 +105,13 @@ train1Type = visual.TextStim(win=win, name='train1Type',
     languageStyle='LTR',
     depth=0.0);
 skipTrain1Type = keyboard.Keyboard()
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-3.0);
 
 # Initialize components for Routine "train1"
 train1Clock = core.Clock()
@@ -132,6 +145,13 @@ listenTrain1p1 = visual.TextStim(win=win, name='listenTrain1p1',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-6.0);
+text_4 = visual.TextStim(win=win, name='text_4',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-7.0);
 
 # Initialize components for Routine "train1QuestInstr"
 train1QuestInstrClock = core.Clock()
@@ -831,7 +851,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('aoiConditions\\train1Conditions.xlsx'),
+    trialList=data.importConditions(folder + "train1Conditions.xlsx"),
     seed=None, name='alltrain1')
 thisExp.addLoop(alltrain1)  # add the loop to the experiment
 thisAlltrain1 = alltrain1.trialList[0]  # so we can initialise stimuli with some values
@@ -856,8 +876,9 @@ for thisAlltrain1 in alltrain1:
     skipTrain1Type.rt = []
     _skipTrain1Type_allKeys = []
     myCount = 0
+    text_3.setText(folder)
     # keep track of which components have finished
-    train1InstrComponents = [train1Type, skipTrain1Type]
+    train1InstrComponents = [train1Type, skipTrain1Type, text_3]
     for thisComponent in train1InstrComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -927,6 +948,23 @@ for thisAlltrain1 in alltrain1:
                 # a response ends the routine
                 continueRoutine = False
         
+        # *text_3* updates
+        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.tStart = t  # local t and not account for scr refresh
+            text_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+            text_3.setAutoDraw(True)
+        if text_3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_3.tStartRefresh + 10-frameTolerance:
+                # keep track of stop time/frame for later
+                text_3.tStop = t  # not accounting for scr refresh
+                text_3.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
+                text_3.setAutoDraw(False)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -958,6 +996,8 @@ for thisAlltrain1 in alltrain1:
         alltrain1.addData('skipTrain1Type.rt', skipTrain1Type.rt)
     alltrain1.addData('skipTrain1Type.started', skipTrain1Type.tStartRefresh)
     alltrain1.addData('skipTrain1Type.stopped', skipTrain1Type.tStopRefresh)
+    alltrain1.addData('text_3.started', text_3.tStartRefresh)
+    alltrain1.addData('text_3.stopped', text_3.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
     trial1phases = data.TrialHandler(nReps=1, method='sequential', 
@@ -1011,8 +1051,9 @@ for thisAlltrain1 in alltrain1:
             stimuli4train1p1.setVolume(1, log=False)
             stimuli5train1p1.setSound(audio, hamming=True)
             stimuli5train1p1.setVolume(1, log=False)
+            text_4.setText(audio)
             # keep track of which components have finished
-            train1Components = [imagetrain1p1, stimuli1train1p1, stimuli2train1p1, stimuli3train1p1, stimuli4train1p1, stimuli5train1p1, listenTrain1p1]
+            train1Components = [imagetrain1p1, stimuli1train1p1, stimuli2train1p1, stimuli3train1p1, stimuli4train1p1, stimuli5train1p1, listenTrain1p1, text_4]
             for thisComponent in train1Components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -1104,6 +1145,23 @@ for thisAlltrain1 in alltrain1:
                         win.timeOnFlip(listenTrain1p1, 'tStopRefresh')  # time at next scr refresh
                         listenTrain1p1.setAutoDraw(False)
                 
+                # *text_4* updates
+                if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    text_4.frameNStart = frameN  # exact frame index
+                    text_4.tStart = t  # local t and not account for scr refresh
+                    text_4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
+                    text_4.setAutoDraw(True)
+                if text_4.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > text_4.tStartRefresh + 10-frameTolerance:
+                        # keep track of stop time/frame for later
+                        text_4.tStop = t  # not accounting for scr refresh
+                        text_4.frameNStop = frameN  # exact frame index
+                        win.timeOnFlip(text_4, 'tStopRefresh')  # time at next scr refresh
+                        text_4.setAutoDraw(False)
+                
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                     core.quit()
@@ -1144,6 +1202,8 @@ for thisAlltrain1 in alltrain1:
             train1Words.addData('stimuli5train1p1.stopped', stimuli5train1p1.tStopRefresh)
             train1Words.addData('listenTrain1p1.started', listenTrain1p1.tStartRefresh)
             train1Words.addData('listenTrain1p1.stopped', listenTrain1p1.tStopRefresh)
+            train1Words.addData('text_4.started', text_4.tStartRefresh)
+            train1Words.addData('text_4.stopped', text_4.tStopRefresh)
             # the Routine "train1" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -1975,7 +2035,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test1Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('aoiConditions\\test1Conditions.xlsx'),
+    trialList=data.importConditions(folder + "test1Conditions.xlsx"),
     seed=None, name='test1Loop')
 thisExp.addLoop(test1Loop)  # add the loop to the experiment
 thisTest1Loop = test1Loop.trialList[0]  # so we can initialise stimuli with some values
@@ -2653,7 +2713,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test2Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('aoiConditions\\test2Conditions.xlsx'),
+    trialList=data.importConditions(folder + "test2Conditions.xlsx"),
     seed=None, name='test2Loop')
 thisExp.addLoop(test2Loop)  # add the loop to the experiment
 thisTest2Loop = test2Loop.trialList[0]  # so we can initialise stimuli with some values
@@ -3228,7 +3288,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test3Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('aoiConditions\\test3Conditions.xlsx'),
+    trialList=data.importConditions(folder + "test3Conditions.xlsx"),
     seed=None, name='test3Loop')
 thisExp.addLoop(test3Loop)  # add the loop to the experiment
 thisTest3Loop = test3Loop.trialList[0]  # so we can initialise stimuli with some values
