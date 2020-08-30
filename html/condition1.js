@@ -126,7 +126,6 @@ var trainFile;
 var test1File;
 var test2File;
 var test3File;
-var text_3;
 var train1InstrClock;
 var train1Type;
 var skipTrain1Type;
@@ -138,7 +137,6 @@ var stimuli3train1p1;
 var stimuli4train1p1;
 var stimuli5train1p1;
 var listenTrain1p1;
-var text_4;
 var train1QuestInstrClock;
 var train1QuestText;
 var train1QuestAdvance;
@@ -287,17 +285,6 @@ function experimentInit() {
       }
   }
   
-  text_3 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_3',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
-  });
-  
   // Initialize components for Routine "train1Instr"
   train1InstrClock = new util.Clock();
   train1Type = new visual.TextStim({
@@ -363,17 +350,6 @@ function experimentInit() {
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -6.0 
-  });
-  
-  text_4 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_4',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -7.0 
   });
   
   // Initialize components for Routine "train1QuestInstr"
@@ -1206,12 +1182,10 @@ function instrRoutineBegin(trials) {
     advanceTrain1.keys = undefined;
     advanceTrain1.rt = undefined;
     _advanceTrain1_allKeys = [];
-    text_3.setText(trainFile);
     // keep track of which components have finished
     instrComponents = [];
     instrComponents.push(instructions);
     instrComponents.push(advanceTrain1);
-    instrComponents.push(text_3);
     
     for (const thisComponent of instrComponents)
       if ('status' in thisComponent)
@@ -1265,16 +1239,6 @@ function instrRoutineEachFrame(trials) {
       }
     }
     
-    
-    // *text_3* updates
-    if (t >= 0.0 && text_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_3.tStart = t;  // (not accounting for frame time here)
-      text_3.frameNStart = frameN;  // exact frame index
-      
-      text_3.setAutoDraw(true);
-    }
-
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1813,7 +1777,6 @@ function train1RoutineBegin(trials) {
     secs: -1,
     });
     stimuli5train1p1.setVolume(1);
-    text_4.setText(audio);
     // keep track of which components have finished
     train1Components = [];
     train1Components.push(imagetrain1p1);
@@ -1823,7 +1786,6 @@ function train1RoutineBegin(trials) {
     train1Components.push(stimuli4train1p1);
     train1Components.push(stimuli5train1p1);
     train1Components.push(listenTrain1p1);
-    train1Components.push(text_4);
     
     for (const thisComponent of train1Components)
       if ('status' in thisComponent)
@@ -1934,20 +1896,6 @@ function train1RoutineEachFrame(trials) {
     frameRemains = 0.0 + 11 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (listenTrain1p1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       listenTrain1p1.setAutoDraw(false);
-    }
-    
-    // *text_4* updates
-    if (t >= 0.0 && text_4.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_4.tStart = t;  // (not accounting for frame time here)
-      text_4.frameNStart = frameN;  // exact frame index
-      
-      text_4.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (text_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      text_4.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
