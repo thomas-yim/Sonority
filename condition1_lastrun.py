@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 29, 2020, at 18:23
+    on August 29, 2020, at 19:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -46,7 +46,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'], expName, expInfo['Experiment Type'], expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -94,6 +94,13 @@ elif expInfo['Experiment Type'] == "2":
     folder = "ioaConditions/"
 elif expInfo['Experiment Type'] == "3":
     folder = "oiaConditions/"
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-3.0);
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
@@ -105,13 +112,6 @@ train1Type = visual.TextStim(win=win, name='train1Type',
     languageStyle='LTR',
     depth=0.0);
 skipTrain1Type = keyboard.Keyboard()
-text_3 = visual.TextStim(win=win, name='text_3',
-    text='default text',
-    font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 
 # Initialize components for Routine "train1"
 train1Clock = core.Clock()
@@ -767,8 +767,9 @@ continueRoutine = True
 advanceTrain1.keys = []
 advanceTrain1.rt = []
 _advanceTrain1_allKeys = []
+text_3.setText(folder)
 # keep track of which components have finished
-instrComponents = [instructions, advanceTrain1]
+instrComponents = [instructions, advanceTrain1, text_3]
 for thisComponent in instrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -822,6 +823,15 @@ while continueRoutine:
             # a response ends the routine
             continueRoutine = False
     
+    # *text_3* updates
+    if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_3.frameNStart = frameN  # exact frame index
+        text_3.tStart = t  # local t and not account for scr refresh
+        text_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+        text_3.setAutoDraw(True)
+    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -845,6 +855,8 @@ for thisComponent in instrComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('instructions.started', instructions.tStartRefresh)
 thisExp.addData('instructions.stopped', instructions.tStopRefresh)
+thisExp.addData('text_3.started', text_3.tStartRefresh)
+thisExp.addData('text_3.stopped', text_3.tStopRefresh)
 # the Routine "instr" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -876,9 +888,8 @@ for thisAlltrain1 in alltrain1:
     skipTrain1Type.rt = []
     _skipTrain1Type_allKeys = []
     myCount = 0
-    text_3.setText(folder)
     # keep track of which components have finished
-    train1InstrComponents = [train1Type, skipTrain1Type, text_3]
+    train1InstrComponents = [train1Type, skipTrain1Type]
     for thisComponent in train1InstrComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -948,23 +959,6 @@ for thisAlltrain1 in alltrain1:
                 # a response ends the routine
                 continueRoutine = False
         
-        # *text_3* updates
-        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_3.frameNStart = frameN  # exact frame index
-            text_3.tStart = t  # local t and not account for scr refresh
-            text_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
-            text_3.setAutoDraw(True)
-        if text_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_3.tStartRefresh + 10-frameTolerance:
-                # keep track of stop time/frame for later
-                text_3.tStop = t  # not accounting for scr refresh
-                text_3.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
-                text_3.setAutoDraw(False)
-        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -996,8 +990,6 @@ for thisAlltrain1 in alltrain1:
         alltrain1.addData('skipTrain1Type.rt', skipTrain1Type.rt)
     alltrain1.addData('skipTrain1Type.started', skipTrain1Type.tStartRefresh)
     alltrain1.addData('skipTrain1Type.stopped', skipTrain1Type.tStopRefresh)
-    alltrain1.addData('text_3.started', text_3.tStartRefresh)
-    alltrain1.addData('text_3.stopped', text_3.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
     trial1phases = data.TrialHandler(nReps=1, method='sequential', 
@@ -2091,7 +2083,7 @@ for thisTest1Loop in test1Loop:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         # start/stop test1Audio1
-        if test1Audio1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+        if test1Audio1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
             test1Audio1.frameNStart = frameN  # exact frame index
             test1Audio1.tStart = t  # local t and not account for scr refresh
@@ -2099,7 +2091,7 @@ for thisTest1Loop in test1Loop:
             test1Audio1.play(when=win)  # sync with win flip
         
         # *test1Audio1Sound* updates
-        if test1Audio1Sound.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+        if test1Audio1Sound.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
             test1Audio1Sound.frameNStart = frameN  # exact frame index
             test1Audio1Sound.tStart = t  # local t and not account for scr refresh
@@ -2116,7 +2108,7 @@ for thisTest1Loop in test1Loop:
                 test1Audio1Sound.setAutoDraw(False)
         
         # *test1Audio1Mute* updates
-        if test1Audio1Mute.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
+        if test1Audio1Mute.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
             # keep track of start time/frame for later
             test1Audio1Mute.frameNStart = frameN  # exact frame index
             test1Audio1Mute.tStart = t  # local t and not account for scr refresh
@@ -2125,14 +2117,14 @@ for thisTest1Loop in test1Loop:
             test1Audio1Mute.setAutoDraw(True)
         if test1Audio1Mute.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio1Mute.tStartRefresh + 18.5-frameTolerance:
+            if tThisFlipGlobal > test1Audio1Mute.tStartRefresh + 18-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio1Mute.tStop = t  # not accounting for scr refresh
                 test1Audio1Mute.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(test1Audio1Mute, 'tStopRefresh')  # time at next scr refresh
                 test1Audio1Mute.setAutoDraw(False)
         # start/stop test1Audio2
-        if test1Audio2.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
+        if test1Audio2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2.frameNStart = frameN  # exact frame index
             test1Audio2.tStart = t  # local t and not account for scr refresh
@@ -2140,7 +2132,7 @@ for thisTest1Loop in test1Loop:
             test1Audio2.play(when=win)  # sync with win flip
         
         # *test1Audio2Mute1* updates
-        if test1Audio2Mute1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+        if test1Audio2Mute1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2Mute1.frameNStart = frameN  # exact frame index
             test1Audio2Mute1.tStart = t  # local t and not account for scr refresh
@@ -2157,7 +2149,7 @@ for thisTest1Loop in test1Loop:
                 test1Audio2Mute1.setAutoDraw(False)
         
         # *test1Audio2Sound* updates
-        if test1Audio2Sound.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
+        if test1Audio2Sound.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2Sound.frameNStart = frameN  # exact frame index
             test1Audio2Sound.tStart = t  # local t and not account for scr refresh
@@ -2174,7 +2166,7 @@ for thisTest1Loop in test1Loop:
                 test1Audio2Sound.setAutoDraw(False)
         
         # *test1Audio2Mute2* updates
-        if test1Audio2Mute2.status == NOT_STARTED and tThisFlip >= 3.5-frameTolerance:
+        if test1Audio2Mute2.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             test1Audio2Mute2.frameNStart = frameN  # exact frame index
             test1Audio2Mute2.tStart = t  # local t and not account for scr refresh
@@ -2183,7 +2175,7 @@ for thisTest1Loop in test1Loop:
             test1Audio2Mute2.setAutoDraw(True)
         if test1Audio2Mute2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 16.5-frameTolerance:
+            if tThisFlipGlobal > test1Audio2Mute2.tStartRefresh + 16-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Audio2Mute2.tStop = t  # not accounting for scr refresh
                 test1Audio2Mute2.frameNStop = frameN  # exact frame index
@@ -2192,7 +2184,7 @@ for thisTest1Loop in test1Loop:
         
         # *test1Response* updates
         waitOnFlip = False
-        if test1Response.status == NOT_STARTED and tThisFlip >= 3.5-frameTolerance:
+        if test1Response.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             test1Response.frameNStart = frameN  # exact frame index
             test1Response.tStart = t  # local t and not account for scr refresh
@@ -2205,7 +2197,7 @@ for thisTest1Loop in test1Loop:
             win.callOnFlip(test1Response.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if test1Response.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1Response.tStartRefresh + 16.5-frameTolerance:
+            if tThisFlipGlobal > test1Response.tStartRefresh + 16-frameTolerance:
                 # keep track of stop time/frame for later
                 test1Response.tStop = t  # not accounting for scr refresh
                 test1Response.frameNStop = frameN  # exact frame index
@@ -2238,7 +2230,7 @@ for thisTest1Loop in test1Loop:
                 test1Image.setAutoDraw(False)
         
         # *test1F* updates
-        if test1F.status == NOT_STARTED and tThisFlip >= 3.5-frameTolerance:
+        if test1F.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             test1F.frameNStart = frameN  # exact frame index
             test1F.tStart = t  # local t and not account for scr refresh
@@ -2247,7 +2239,7 @@ for thisTest1Loop in test1Loop:
             test1F.setAutoDraw(True)
         if test1F.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1F.tStartRefresh + 16.5-frameTolerance:
+            if tThisFlipGlobal > test1F.tStartRefresh + 16-frameTolerance:
                 # keep track of stop time/frame for later
                 test1F.tStop = t  # not accounting for scr refresh
                 test1F.frameNStop = frameN  # exact frame index
@@ -2255,7 +2247,7 @@ for thisTest1Loop in test1Loop:
                 test1F.setAutoDraw(False)
         
         # *test1J* updates
-        if test1J.status == NOT_STARTED and tThisFlip >= 3.5-frameTolerance:
+        if test1J.status == NOT_STARTED and tThisFlip >= 4-frameTolerance:
             # keep track of start time/frame for later
             test1J.frameNStart = frameN  # exact frame index
             test1J.tStart = t  # local t and not account for scr refresh
@@ -2264,7 +2256,7 @@ for thisTest1Loop in test1Loop:
             test1J.setAutoDraw(True)
         if test1J.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > test1J.tStartRefresh + 16.5-frameTolerance:
+            if tThisFlipGlobal > test1J.tStartRefresh + 16-frameTolerance:
                 # keep track of stop time/frame for later
                 test1J.tStop = t  # not accounting for scr refresh
                 test1J.frameNStop = frameN  # exact frame index
