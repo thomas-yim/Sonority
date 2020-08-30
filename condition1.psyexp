@@ -74,9 +74,9 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="code_3">
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Experiment Type'] == &quot;1&quot;:&amp;#10;    folder = &quot;aoiConditions/&quot;&amp;#10;elif expInfo['Experiment Type'] == &quot;2&quot;:&amp;#10;    folder = &quot;ioaConditions/&quot;&amp;#10;elif expInfo['Experiment Type'] == &quot;3&quot;:&amp;#10;    folder = &quot;oiaConditions/&quot;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Experiment Type&quot;] === &quot;1&quot;)) {&amp;#10;    folder = &quot;aoiConditions/&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Experiment Type&quot;] === &quot;2&quot;)) {&amp;#10;        folder = &quot;ioaConditions/&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;Experiment Type&quot;] === &quot;3&quot;)) {&amp;#10;            folder = &quot;oiaConditions/&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+      <CodeComponent name="expVersion">
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['Experiment Type'] == &quot;1&quot;:&amp;#10;    trainFile = &quot;aoiConditions/train1Conditions.xlsx&quot;&amp;#10;    test1File = &quot;aoiConditions/test1Conditions.xlsx&quot;&amp;#10;    test2File = &quot;aoiConditions/test2Conditions.xlsx&quot;&amp;#10;    test3File = &quot;aoiConditions/test3Conditions.xlsx&quot;&amp;#10;elif expInfo['Experiment Type'] == &quot;2&quot;:&amp;#10;    trainFile = &quot;ioaConditions/train1Conditions.xlsx&quot;&amp;#10;    test1File = &quot;ioaConditions/test1Conditions.xlsx&quot;&amp;#10;    test2File = &quot;ioaConditions/test2Conditions.xlsx&quot;&amp;#10;    test3File = &quot;ioaConditions/test3Conditions.xlsx&quot;&amp;#10;elif expInfo['Experiment Type'] == &quot;3&quot;:&amp;#10;    trainFile = &quot;oiaConditions/train1Conditions.xlsx&quot;&amp;#10;    test1File = &quot;oiaConditions/test1Conditions.xlsx&quot;&amp;#10;    test2File = &quot;oiaConditions/test2Conditions.xlsx&quot;&amp;#10;    test3File = &quot;oiaConditions/test3Conditions.xlsx&quot;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Experiment Type&quot;] === &quot;1&quot;)) {&amp;#10;    trainFile = &quot;aoiConditions/train1Conditions.xlsx&quot;;&amp;#10;    test1File = &quot;aoiConditions/test1Conditions.xlsx&quot;;&amp;#10;    test2File = &quot;aoiConditions/test2Conditions.xlsx&quot;;&amp;#10;    test3File = &quot;aoiConditions/test3Conditions.xlsx&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Experiment Type&quot;] === &quot;2&quot;)) {&amp;#10;        trainFile = &quot;ioaConditions/train1Conditions.xlsx&quot;;&amp;#10;        test1File = &quot;ioaConditions/test1Conditions.xlsx&quot;;&amp;#10;        test2File = &quot;ioaConditions/test2Conditions.xlsx&quot;;&amp;#10;        test3File = &quot;ioaConditions/test3Conditions.xlsx&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;Experiment Type&quot;] === &quot;3&quot;)) {&amp;#10;            trainFile = &quot;oiaConditions/train1Conditions.xlsx&quot;;&amp;#10;            test1File = &quot;oiaConditions/test1Conditions.xlsx&quot;;&amp;#10;            test2File = &quot;oiaConditions/test2Conditions.xlsx&quot;;&amp;#10;            test3File = &quot;oiaConditions/test3Conditions.xlsx&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -87,7 +87,7 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_3" valType="code"/>
+        <Param name="name" updates="None" val="expVersion" valType="code"/>
       </CodeComponent>
       <TextComponent name="text_3">
         <Param name="color" updates="constant" val="white" valType="str"/>
@@ -109,7 +109,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$folder" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$trainFile" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -3108,7 +3108,7 @@
     <LoopInitiator loopType="TrialHandler" name="alltrain1">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$folder + &quot;train1Conditions.xlsx&quot;" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$trainFile" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -3175,7 +3175,7 @@
     <LoopInitiator loopType="TrialHandler" name="test1Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$folder + &quot;test1Conditions.xlsx&quot;" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$test1File" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -3191,7 +3191,7 @@
     <LoopInitiator loopType="TrialHandler" name="test2Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$folder + &quot;test2Conditions.xlsx&quot;" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$test2File" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -3206,7 +3206,7 @@
     <LoopInitiator loopType="TrialHandler" name="test3Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$folder + &quot;test3Conditions.xlsx&quot;" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$test3File" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>

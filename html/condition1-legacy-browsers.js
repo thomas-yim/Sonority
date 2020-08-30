@@ -114,11 +114,14 @@ function updateInfo() {
 var instrClock;
 var instructions;
 var advanceTrain1;
-var folder;
+var trainFile;
+var test1File;
+var test2File;
+var test3File;
+var text_3;
 var train1InstrClock;
 var train1Type;
 var skipTrain1Type;
-var text_3;
 var train1Clock;
 var imagetrain1p1;
 var stimuli1train1p1;
@@ -256,16 +259,36 @@ function experimentInit() {
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   if ((expInfo["Experiment Type"] === "1")) {
-      folder = "aoiConditions/";
+      trainFile = "aoiConditions/train1Conditions.xlsx";
+      test1File = "aoiConditions/test1Conditions.xlsx";
+      test2File = "aoiConditions/test2Conditions.xlsx";
+      test3File = "aoiConditions/test3Conditions.xlsx";
   } else {
       if ((expInfo["Experiment Type"] === "2")) {
-          folder = "ioaConditions/";
+          trainFile = "ioaConditions/train1Conditions.xlsx";
+          test1File = "ioaConditions/test1Conditions.xlsx";
+          test2File = "ioaConditions/test2Conditions.xlsx";
+          test3File = "ioaConditions/test3Conditions.xlsx";
       } else {
           if ((expInfo["Experiment Type"] === "3")) {
-              folder = "oiaConditions/";
+              trainFile = "oiaConditions/train1Conditions.xlsx";
+              test1File = "oiaConditions/test1Conditions.xlsx";
+              test2File = "oiaConditions/test2Conditions.xlsx";
+              test3File = "oiaConditions/test3Conditions.xlsx";
           }
       }
   }
+  
+  text_3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_3',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
   
   // Initialize components for Routine "train1Instr"
   train1InstrClock = new util.Clock();
@@ -281,17 +304,6 @@ function experimentInit() {
   });
   
   skipTrain1Type = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  text_3 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_3',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
-  });
   
   // Initialize components for Routine "train1"
   train1Clock = new util.Clock();
@@ -1186,10 +1198,12 @@ function instrRoutineBegin(trials) {
     advanceTrain1.keys = undefined;
     advanceTrain1.rt = undefined;
     _advanceTrain1_allKeys = [];
+    text_3.setText(trainFile);
     // keep track of which components have finished
     instrComponents = [];
     instrComponents.push(instructions);
     instrComponents.push(advanceTrain1);
+    instrComponents.push(text_3);
     
     instrComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1244,6 +1258,16 @@ function instrRoutineEachFrame(trials) {
       }
     }
     
+    
+    // *text_3* updates
+    if (t >= 0.0 && text_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_3.tStart = t;  // (not accounting for frame time here)
+      text_3.frameNStart = frameN;  // exact frame index
+      
+      text_3.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1295,7 +1319,7 @@ function alltrain1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: (folder + 'train1Conditions.xlsx'),
+    trialList: trainFile,
     seed: undefined, name: 'alltrain1'
   });
   psychoJS.experiment.addLoop(alltrain1); // add the loop to the experiment
@@ -1486,7 +1510,7 @@ function test1LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: (folder + 'test1Conditions.xlsx'),
+    trialList: test1File,
     seed: undefined, name: 'test1Loop'
   });
   psychoJS.experiment.addLoop(test1Loop); // add the loop to the experiment
@@ -1524,7 +1548,7 @@ function test2LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: (folder + 'test2Conditions.xlsx'),
+    trialList: test2File,
     seed: undefined, name: 'test2Loop'
   });
   psychoJS.experiment.addLoop(test2Loop); // add the loop to the experiment
@@ -1559,7 +1583,7 @@ function test3LoopLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: (folder + 'test3Conditions.xlsx'),
+    trialList: test3File,
     seed: undefined, name: 'test3Loop'
   });
   psychoJS.experiment.addLoop(test3Loop); // add the loop to the experiment
@@ -1639,12 +1663,10 @@ function train1InstrRoutineBegin(trials) {
     _skipTrain1Type_allKeys = [];
     myCount = 0;
     
-    text_3.setText(folder);
     // keep track of which components have finished
     train1InstrComponents = [];
     train1InstrComponents.push(train1Type);
     train1InstrComponents.push(skipTrain1Type);
-    train1InstrComponents.push(text_3);
     
     train1InstrComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1708,20 +1730,6 @@ function train1InstrRoutineEachFrame(trials) {
       }
     }
     
-    
-    // *text_3* updates
-    if (t >= 0.0 && text_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_3.tStart = t;  // (not accounting for frame time here)
-      text_3.frameNStart = frameN;  // exact frame index
-      
-      text_3.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (text_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      text_3.setAutoDraw(false);
-    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);

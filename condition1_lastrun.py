@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 29, 2020, at 19:02
+    on August 29, 2020, at 20:44
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -89,11 +89,20 @@ instructions = visual.TextStim(win=win, name='instructions',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
 if expInfo['Experiment Type'] == "1":
-    folder = "aoiConditions/"
+    trainFile = "aoiConditions/train1Conditions.xlsx"
+    test1File = "aoiConditions/test1Conditions.xlsx"
+    test2File = "aoiConditions/test2Conditions.xlsx"
+    test3File = "aoiConditions/test3Conditions.xlsx"
 elif expInfo['Experiment Type'] == "2":
-    folder = "ioaConditions/"
+    trainFile = "ioaConditions/train1Conditions.xlsx"
+    test1File = "ioaConditions/test1Conditions.xlsx"
+    test2File = "ioaConditions/test2Conditions.xlsx"
+    test3File = "ioaConditions/test3Conditions.xlsx"
 elif expInfo['Experiment Type'] == "3":
-    folder = "oiaConditions/"
+    trainFile = "oiaConditions/train1Conditions.xlsx"
+    test1File = "oiaConditions/test1Conditions.xlsx"
+    test2File = "oiaConditions/test2Conditions.xlsx"
+    test3File = "oiaConditions/test3Conditions.xlsx"
 text_3 = visual.TextStim(win=win, name='text_3',
     text='default text',
     font='Arial',
@@ -767,7 +776,7 @@ continueRoutine = True
 advanceTrain1.keys = []
 advanceTrain1.rt = []
 _advanceTrain1_allKeys = []
-text_3.setText(folder)
+text_3.setText(trainFile)
 # keep track of which components have finished
 instrComponents = [instructions, advanceTrain1, text_3]
 for thisComponent in instrComponents:
@@ -863,7 +872,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(folder + "train1Conditions.xlsx"),
+    trialList=data.importConditions(trainFile),
     seed=None, name='alltrain1')
 thisExp.addLoop(alltrain1)  # add the loop to the experiment
 thisAlltrain1 = alltrain1.trialList[0]  # so we can initialise stimuli with some values
@@ -2027,7 +2036,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test1Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(folder + "test1Conditions.xlsx"),
+    trialList=data.importConditions(test1File),
     seed=None, name='test1Loop')
 thisExp.addLoop(test1Loop)  # add the loop to the experiment
 thisTest1Loop = test1Loop.trialList[0]  # so we can initialise stimuli with some values
@@ -2705,7 +2714,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test2Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(folder + "test2Conditions.xlsx"),
+    trialList=data.importConditions(test2File),
     seed=None, name='test2Loop')
 thisExp.addLoop(test2Loop)  # add the loop to the experiment
 thisTest2Loop = test2Loop.trialList[0]  # so we can initialise stimuli with some values
@@ -3280,7 +3289,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 test3Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(folder + "test3Conditions.xlsx"),
+    trialList=data.importConditions(test3File),
     seed=None, name='test3Loop')
 thisExp.addLoop(test3Loop)  # add the loop to the experiment
 thisTest3Loop = test3Loop.trialList[0]  # so we can initialise stimuli with some values
