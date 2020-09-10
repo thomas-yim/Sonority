@@ -130,7 +130,16 @@ print(toFolder)
 
 for filename in filenames:
     df = pd.read_csv(filename)
-        
+    expType = df['Experiment Type']
+    expNumber = 0
+    for value in expType:
+        if value != None:
+            expNumber = value
+            
+    
+    if expNumber == 0:
+        expNumber = ""
+    
     #Cumulative Results
     phases = []
     numCorrect = []
@@ -138,10 +147,10 @@ for filename in filenames:
     numTotal = []
     percentages = []
     
-    phaseDict = {"train1": "Train 1", "train2": "Train 2", "test1": "Test 1",
+    phaseDict = {"train1": "Train 1", "test1": "Test 1",
               "test2": "Test 2", "test3": "Test 3", "postTest": "PostTest"}
     
-    writer = pd.ExcelWriter(toFolder + "/" + basename(filename)[:-4] + '_results.xlsx', engine='xlsxwriter')
+    writer = pd.ExcelWriter(toFolder + "/" + str(expNumber) + "_" + basename(filename)[:-4] + '_results.xlsx', engine='xlsxwriter')
     for phase in phaseDict.keys():    
         dfPhase, correct, empty, total, percent = calculateAccuracy(df, phase)
         phases.append(phaseDict[phase])

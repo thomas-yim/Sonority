@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 29, 2020, at 20:44
+    on September 09, 2020, at 21:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.3'
 expName = 'condition1'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '001', 'Experiment Type': ''}
+expInfo = {'participant': '', 'session': '001', 'ID Number': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -46,7 +46,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'], expName, expInfo['Experiment Type'], expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'], expName, expInfo['ID Number'], expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -88,28 +88,21 @@ instructions = visual.TextStim(win=win, name='instructions',
     languageStyle='LTR',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
-if expInfo['Experiment Type'] == "1":
+if int(expInfo['ID Number']) >= 1000 and int(expInfo['ID Number']) < 2000:
     trainFile = "aoiConditions/train1Conditions.xlsx"
     test1File = "aoiConditions/test1Conditions.xlsx"
     test2File = "aoiConditions/test2Conditions.xlsx"
     test3File = "aoiConditions/test3Conditions.xlsx"
-elif expInfo['Experiment Type'] == "2":
+elif int(expInfo['ID Number']) >= 2000 and int(expInfo['ID Number']) < 3000:
     trainFile = "ioaConditions/train1Conditions.xlsx"
     test1File = "ioaConditions/test1Conditions.xlsx"
     test2File = "ioaConditions/test2Conditions.xlsx"
     test3File = "ioaConditions/test3Conditions.xlsx"
-elif expInfo['Experiment Type'] == "3":
+elif int(expInfo['ID Number']) >= 3000 and int(expInfo['ID Number']) < 4000:
     trainFile = "oiaConditions/train1Conditions.xlsx"
     test1File = "oiaConditions/test1Conditions.xlsx"
     test2File = "oiaConditions/test2Conditions.xlsx"
     test3File = "oiaConditions/test3Conditions.xlsx"
-text_3 = visual.TextStim(win=win, name='text_3',
-    text='default text',
-    font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
@@ -154,13 +147,6 @@ listenTrain1p1 = visual.TextStim(win=win, name='listenTrain1p1',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-6.0);
-text_4 = visual.TextStim(win=win, name='text_4',
-    text='default text',
-    font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-7.0);
 
 # Initialize components for Routine "train1QuestInstr"
 train1QuestInstrClock = core.Clock()
@@ -776,9 +762,8 @@ continueRoutine = True
 advanceTrain1.keys = []
 advanceTrain1.rt = []
 _advanceTrain1_allKeys = []
-text_3.setText(trainFile)
 # keep track of which components have finished
-instrComponents = [instructions, advanceTrain1, text_3]
+instrComponents = [instructions, advanceTrain1]
 for thisComponent in instrComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -832,15 +817,6 @@ while continueRoutine:
             # a response ends the routine
             continueRoutine = False
     
-    # *text_3* updates
-    if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        text_3.frameNStart = frameN  # exact frame index
-        text_3.tStart = t  # local t and not account for scr refresh
-        text_3.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
-        text_3.setAutoDraw(True)
-    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -864,8 +840,6 @@ for thisComponent in instrComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('instructions.started', instructions.tStartRefresh)
 thisExp.addData('instructions.stopped', instructions.tStopRefresh)
-thisExp.addData('text_3.started', text_3.tStartRefresh)
-thisExp.addData('text_3.stopped', text_3.tStopRefresh)
 # the Routine "instr" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -1052,9 +1026,8 @@ for thisAlltrain1 in alltrain1:
             stimuli4train1p1.setVolume(1, log=False)
             stimuli5train1p1.setSound(audio, hamming=True)
             stimuli5train1p1.setVolume(1, log=False)
-            text_4.setText(audio)
             # keep track of which components have finished
-            train1Components = [imagetrain1p1, stimuli1train1p1, stimuli2train1p1, stimuli3train1p1, stimuli4train1p1, stimuli5train1p1, listenTrain1p1, text_4]
+            train1Components = [imagetrain1p1, stimuli1train1p1, stimuli2train1p1, stimuli3train1p1, stimuli4train1p1, stimuli5train1p1, listenTrain1p1]
             for thisComponent in train1Components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -1146,23 +1119,6 @@ for thisAlltrain1 in alltrain1:
                         win.timeOnFlip(listenTrain1p1, 'tStopRefresh')  # time at next scr refresh
                         listenTrain1p1.setAutoDraw(False)
                 
-                # *text_4* updates
-                if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    text_4.frameNStart = frameN  # exact frame index
-                    text_4.tStart = t  # local t and not account for scr refresh
-                    text_4.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
-                    text_4.setAutoDraw(True)
-                if text_4.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > text_4.tStartRefresh + 10-frameTolerance:
-                        # keep track of stop time/frame for later
-                        text_4.tStop = t  # not accounting for scr refresh
-                        text_4.frameNStop = frameN  # exact frame index
-                        win.timeOnFlip(text_4, 'tStopRefresh')  # time at next scr refresh
-                        text_4.setAutoDraw(False)
-                
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                     core.quit()
@@ -1203,8 +1159,6 @@ for thisAlltrain1 in alltrain1:
             train1Words.addData('stimuli5train1p1.stopped', stimuli5train1p1.tStopRefresh)
             train1Words.addData('listenTrain1p1.started', listenTrain1p1.tStartRefresh)
             train1Words.addData('listenTrain1p1.stopped', listenTrain1p1.tStopRefresh)
-            train1Words.addData('text_4.started', text_4.tStartRefresh)
-            train1Words.addData('text_4.stopped', text_4.tStopRefresh)
             # the Routine "train1" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
