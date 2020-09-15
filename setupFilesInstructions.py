@@ -207,7 +207,7 @@ uniqueTrainAudio = list(dict.fromkeys([x[0:-5] for x in trainingAudioFilenames])
 uniqueNovelAudio = list(dict.fromkeys([y[0:-5] for y in novelAudioFilenames]))
 
 #IMPORTANT!!! if this is set then it will randomize the same way every time.
-random.seed(31)
+random.seed(33)
 
 setupWorks = True
 if ((novelCount + trainingCount) != wordCount):
@@ -247,23 +247,6 @@ if setupWorks:
                                 columns=['condFiles', "testFiles"])
     df.to_excel(toFolder + "train1P2LoopCondition.xlsx", index=False)
 
-
-    """
-    TRAIN 2
-    """
-    #Part 1
-    usedTrue, usedFalse, audioCond, testCond = setupTrain(
-        uniqueTrainAudio, 2, 14, ranking, toFolder, [], [], "train2P1")
-    df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
-                                columns=['condFiles', "testFiles"])
-    df.to_excel(toFolder + "train2P1LoopCondition.xlsx", index=False)
-    
-    #Part 2
-    usedTrue, usedFalse, audioCond, testCond = setupTrain(
-        uniqueTrainAudio, 4, 7, ranking, toFolder, usedTrue, usedFalse, "train2P2")
-    df = pd.DataFrame({"condFiles":audioCond, "testFiles":testCond},
-                                columns=['condFiles', "testFiles"])
-    df.to_excel(toFolder + "train2P2LoopCondition.xlsx", index=False)
 
 
     """
