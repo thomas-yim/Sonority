@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 24, 2020, at 21:06
+    on September 24, 2020, at 21:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -103,6 +103,11 @@ elif expInfo['ID Number'][0] == "3":
     test1File = "oiaConditions/test1Conditions.xlsx"
     test2File = "oiaConditions/test2Conditions.xlsx"
     test3File = "oiaConditions/test3Conditions.xlsx"
+else:
+    trainFile = "aoiConditions/train1Conditions.xlsx"
+    test1File = "aoiConditions/test1Conditions.xlsx"
+    test2File = "aoiConditions/test2Conditions.xlsx"
+    test3File = "aoiConditions/test3Conditions.xlsx"
 
 # Initialize components for Routine "train1Instr"
 train1InstrClock = core.Clock()
