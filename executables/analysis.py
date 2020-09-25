@@ -150,7 +150,7 @@ print(toFolder)
 
 for filename in filenames:
     df = pd.read_csv(filename)
-    expType = df['Experiment Type']
+    expType = df['ID Number']
     expNumber = 0
     for value in expType:
         if value != None:

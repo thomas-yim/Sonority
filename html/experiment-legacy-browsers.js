@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'experiment';  // from the Builder filename that created this script
-let expInfo = {'participant': '', 'session': '001', 'ID Number': ''};
+let expInfo = {'participant': '', 'ID Number': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -256,19 +256,19 @@ function experimentInit() {
   
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  if (((Number.parseInt(expInfo["ID Number"]) >= 1000) && (Number.parseInt(expInfo["ID Number"]) < 2000))) {
+  if ((expInfo["ID Number"][0] === "1")) {
       trainFile = "aoiConditions/train1Conditions.xlsx";
       test1File = "aoiConditions/test1Conditions.xlsx";
       test2File = "aoiConditions/test2Conditions.xlsx";
       test3File = "aoiConditions/test3Conditions.xlsx";
   } else {
-      if (((Number.parseInt(expInfo["ID Number"]) >= 2000) && (Number.parseInt(expInfo["ID Number"]) < 3000))) {
+      if ((expInfo["ID Number"][0] === "2")) {
           trainFile = "ioaConditions/train1Conditions.xlsx";
           test1File = "ioaConditions/test1Conditions.xlsx";
           test2File = "ioaConditions/test2Conditions.xlsx";
           test3File = "ioaConditions/test3Conditions.xlsx";
       } else {
-          if (((Number.parseInt(expInfo["ID Number"]) >= 3000) && (Number.parseInt(expInfo["ID Number"]) < 4000))) {
+          if ((expInfo["ID Number"][0] === "3")) {
               trainFile = "oiaConditions/train1Conditions.xlsx";
               test1File = "oiaConditions/test1Conditions.xlsx";
               test2File = "oiaConditions/test2Conditions.xlsx";
