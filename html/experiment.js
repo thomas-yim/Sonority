@@ -281,6 +281,11 @@ function experimentInit() {
               test1File = "oiaConditions/test1Conditions.xlsx";
               test2File = "oiaConditions/test2Conditions.xlsx";
               test3File = "oiaConditions/test3Conditions.xlsx";
+          } else {
+              trainFile = "aoiConditions/train1Conditions.xlsx";
+              test1File = "aoiConditions/test1Conditions.xlsx";
+              test2File = "aoiConditions/test2Conditions.xlsx";
+              test3File = "aoiConditions/test3Conditions.xlsx";
           }
       }
   }
