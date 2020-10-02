@@ -3486,11 +3486,6 @@
     </LoopInitiator>
     <Routine name="posttest"/>
     <LoopTerminator name="postTestLoop"/>
-    <Routine name="surveyInstructions"/>
-    <Routine name="ageSurvey"/>
-    <Routine name="genderSurvey"/>
-    <Routine name="nativeLangSurvey"/>
-    <Routine name="otherLangSurvey"/>
     <Routine name="thankuser"/>
   </Flow>
 </PsychoPy2experiment>
