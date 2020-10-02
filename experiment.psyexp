@@ -1687,7 +1687,7 @@
       </TextComponent>
     </Routine>
     <Routine name="thankuser">
-      <TextComponent name="text">
+      <TextComponent name="byeText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -1696,7 +1696,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="name" updates="None" val="byeText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -3054,6 +3054,310 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
     </Routine>
+    <Routine name="ageSurvey">
+      <CodeComponent name="setup_age">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="kb = new keyboard.Keyboard();&amp;#10;textStarted = 0;&amp;#10;rt = 0;&amp;#10;modify = false;&amp;#10;age.text = &quot;&quot;;&amp;#10;displayText = &quot;&quot;;&amp;#10;oldDisplayText = &quot;&quot;;&amp;#10;event.clearEvents();&amp;#10;cursorCounter = 0;&amp;#10;cursorVariable = &quot;|&quot;;&amp;#10;typedWords = [];&amp;#10;thisWord = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="kb = keyboard.Keyboard()&amp;#10;textStarted=0&amp;#10;rt=0&amp;#10;modify = False&amp;#10;age.text = ''&amp;#10;displayText=''&amp;#10;oldDisplayText=''&amp;#10;event.clearEvents()&amp;#10;cursorCounter=0&amp;#10;cursorVariable='|'&amp;#10;typedWords=[]&amp;#10;thisWord=0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if cursorCounter &gt;= 30:&amp;#10;    if cursorVariable=='|':&amp;#10;        cursorVariable=' '&amp;#10;    else:&amp;#10;        cursorVariable='|'&amp;#10;    cursorCounter=0&amp;#10;cursorCounter+=1&amp;#10;&amp;#10;keys = event.getKeys()&amp;#10;if len(keys):&amp;#10;#Start the clock on first key&amp;#10;    if textStarted == 0:&amp;#10;        textStarted = 1&amp;#10;    if 'return' in keys:&amp;#10;        continueRoutine = False&amp;#10;    if 'space' in keys:&amp;#10;        displayText+=' '&amp;#10;    elif 'period' in keys:&amp;#10;        displayText+='.'&amp;#10;    elif 'comma' in keys:&amp;#10;        displayText+=','&amp;#10;    elif 'apostrophe' in keys:&amp;#10;        displayText+='\''&amp;#10;    elif 'minus' in keys:&amp;#10;        displayText+='-'&amp;#10;    elif 'backspace' in keys:&amp;#10;        displayText=displayText[:-1]&amp;#10;    elif 'lshift' in keys or 'rshift' in keys:&amp;#10;        modify = True&amp;#10;    elif len(keys[0])&gt;1:&amp;#10;        pass&amp;#10;    else:&amp;#10;        if modify:&amp;#10;            displayText += keys[0].upper()&amp;#10;            modify = False&amp;#10;        else:&amp;#10;            displayText += keys[0]&amp;#10;            &amp;#10;if displayText!=oldDisplayText or cursorCounter == 1:&amp;#10;    age.text=displayText+cursorVariable&amp;#10;    oldDisplayText=displayText&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if ((cursorCounter &gt;= 30)) {&amp;#10;    if ((cursorVariable === &quot;|&quot;)) {&amp;#10;        cursorVariable = &quot; &quot;;&amp;#10;    } else {&amp;#10;        cursorVariable = &quot;|&quot;;&amp;#10;    }&amp;#10;    cursorCounter = 0;&amp;#10;}&amp;#10;cursorCounter += 1;&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if ((textStarted === 0)) {&amp;#10;        textStarted = 1;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;return&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        displayText += &quot; &quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;period&quot;, keys)) {&amp;#10;            displayText += &quot;.&quot;;&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;comma&quot;, keys)) {&amp;#10;                displayText += &quot;,&quot;;&amp;#10;            } else {&amp;#10;                if (_pj.in_es6(&quot;apostrophe&quot;, keys)) {&amp;#10;                    displayText += &quot;'&quot;;&amp;#10;                } else {&amp;#10;                    if (_pj.in_es6(&quot;minus&quot;, keys)) {&amp;#10;                        displayText += &quot;-&quot;;&amp;#10;                    } else {&amp;#10;                        if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;                            displayText = displayText.slice(0, (- 1));&amp;#10;                        } else {&amp;#10;                            if ((_pj.in_es6(&quot;lshift&quot;, keys) || _pj.in_es6(&quot;rshift&quot;, keys))) {&amp;#10;                                modify = true;&amp;#10;                            } else {&amp;#10;                                if ((keys[0].length &gt; 1)) {&amp;#10;                                } else {&amp;#10;                                    if (modify) {&amp;#10;                                        displayText += keys[0].upper();&amp;#10;                                        modify = false;&amp;#10;                                    } else {&amp;#10;                                        displayText += keys[0];&amp;#10;                                    }&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (((displayText !== oldDisplayText) || (cursorCounter === 1))) {&amp;#10;    age.text = (displayText + cursorVariable);&amp;#10;    oldDisplayText = displayText;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Age&quot;, age.text);&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Age&quot;, age.text)&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup_age" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="age">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="age" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="ageInstr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="ageInstr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="What is your age:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="genderSurvey">
+      <CodeComponent name="setup_gender">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="kb = new keyboard.Keyboard();&amp;#10;textStarted = 0;&amp;#10;rt = 0;&amp;#10;modify = false;&amp;#10;gender.text = &quot;&quot;;&amp;#10;displayText = &quot;&quot;;&amp;#10;oldDisplayText = &quot;&quot;;&amp;#10;event.clearEvents();&amp;#10;cursorCounter = 0;&amp;#10;cursorVariable = &quot;|&quot;;&amp;#10;typedWords = [];&amp;#10;thisWord = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="kb = keyboard.Keyboard()&amp;#10;textStarted=0&amp;#10;rt=0&amp;#10;modify = False&amp;#10;gender.text = ''&amp;#10;displayText=''&amp;#10;oldDisplayText=''&amp;#10;event.clearEvents()&amp;#10;cursorCounter=0&amp;#10;cursorVariable='|'&amp;#10;typedWords=[]&amp;#10;thisWord=0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if cursorCounter &gt;= 30:&amp;#10;    if cursorVariable=='|':&amp;#10;        cursorVariable=' '&amp;#10;    else:&amp;#10;        cursorVariable='|'&amp;#10;    cursorCounter=0&amp;#10;cursorCounter+=1&amp;#10;&amp;#10;keys = event.getKeys()&amp;#10;if len(keys):&amp;#10;#Start the clock on first key&amp;#10;    if textStarted == 0:&amp;#10;        textStarted = 1&amp;#10;    if 'return' in keys:&amp;#10;        continueRoutine = False&amp;#10;    if 'space' in keys:&amp;#10;        displayText+=' '&amp;#10;    elif 'period' in keys:&amp;#10;        displayText+='.'&amp;#10;    elif 'comma' in keys:&amp;#10;        displayText+=','&amp;#10;    elif 'apostrophe' in keys:&amp;#10;        displayText+='\''&amp;#10;    elif 'minus' in keys:&amp;#10;        displayText+='-'&amp;#10;    elif 'backspace' in keys:&amp;#10;        displayText=displayText[:-1]&amp;#10;    elif 'lshift' in keys or 'rshift' in keys:&amp;#10;        modify = True&amp;#10;    elif len(keys[0])&gt;1:&amp;#10;        pass&amp;#10;    else:&amp;#10;        if modify:&amp;#10;            displayText += keys[0].upper()&amp;#10;            modify = False&amp;#10;        else:&amp;#10;            displayText += keys[0]&amp;#10;            &amp;#10;if displayText!=oldDisplayText or cursorCounter == 1:&amp;#10;    gender.text=displayText+cursorVariable&amp;#10;    oldDisplayText=displayText" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if ((cursorCounter &gt;= 30)) {&amp;#10;    if ((cursorVariable === &quot;|&quot;)) {&amp;#10;        cursorVariable = &quot; &quot;;&amp;#10;    } else {&amp;#10;        cursorVariable = &quot;|&quot;;&amp;#10;    }&amp;#10;    cursorCounter = 0;&amp;#10;}&amp;#10;cursorCounter += 1;&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if ((textStarted === 0)) {&amp;#10;        textStarted = 1;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;return&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        displayText += &quot; &quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;period&quot;, keys)) {&amp;#10;            displayText += &quot;.&quot;;&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;comma&quot;, keys)) {&amp;#10;                displayText += &quot;,&quot;;&amp;#10;            } else {&amp;#10;                if (_pj.in_es6(&quot;apostrophe&quot;, keys)) {&amp;#10;                    displayText += &quot;'&quot;;&amp;#10;                } else {&amp;#10;                    if (_pj.in_es6(&quot;minus&quot;, keys)) {&amp;#10;                        displayText += &quot;-&quot;;&amp;#10;                    } else {&amp;#10;                        if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;                            displayText = displayText.slice(0, (- 1));&amp;#10;                        } else {&amp;#10;                            if ((_pj.in_es6(&quot;lshift&quot;, keys) || _pj.in_es6(&quot;rshift&quot;, keys))) {&amp;#10;                                modify = true;&amp;#10;                            } else {&amp;#10;                                if ((keys[0].length &gt; 1)) {&amp;#10;                                } else {&amp;#10;                                    if (modify) {&amp;#10;                                        displayText += keys[0].upper();&amp;#10;                                        modify = false;&amp;#10;                                    } else {&amp;#10;                                        displayText += keys[0];&amp;#10;                                    }&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (((displayText !== oldDisplayText) || (cursorCounter === 1))) {&amp;#10;    gender.text = (displayText + cursorVariable);&amp;#10;    oldDisplayText = displayText;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Gender&quot;, gender.text);&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Gender&quot;, gender.text)&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup_gender" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="gender">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="gender" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="genderInstr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="genderInstr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="What is your gender: male/female/other" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="nativeLangSurvey">
+      <CodeComponent name="setup_nativeLang">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="kb = new keyboard.Keyboard();&amp;#10;textStarted = 0;&amp;#10;rt = 0;&amp;#10;modify = false;&amp;#10;nativeLang.text = &quot;&quot;;&amp;#10;displayText = &quot;&quot;;&amp;#10;oldDisplayText = &quot;&quot;;&amp;#10;event.clearEvents();&amp;#10;cursorCounter = 0;&amp;#10;cursorVariable = &quot;|&quot;;&amp;#10;typedWords = [];&amp;#10;thisWord = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="kb = keyboard.Keyboard()&amp;#10;textStarted=0&amp;#10;rt=0&amp;#10;modify = False&amp;#10;nativeLang.text = ''&amp;#10;displayText=''&amp;#10;oldDisplayText=''&amp;#10;event.clearEvents()&amp;#10;cursorCounter=0&amp;#10;cursorVariable='|'&amp;#10;typedWords=[]&amp;#10;thisWord=0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if cursorCounter &gt;= 30:&amp;#10;    if cursorVariable=='|':&amp;#10;        cursorVariable=' '&amp;#10;    else:&amp;#10;        cursorVariable='|'&amp;#10;    cursorCounter=0&amp;#10;cursorCounter+=1&amp;#10;&amp;#10;keys = event.getKeys()&amp;#10;if len(keys):&amp;#10;#Start the clock on first key&amp;#10;    if textStarted == 0:&amp;#10;        textStarted = 1&amp;#10;    if 'return' in keys:&amp;#10;        continueRoutine = False&amp;#10;    if 'space' in keys:&amp;#10;        displayText+=' '&amp;#10;    elif 'period' in keys:&amp;#10;        displayText+='.'&amp;#10;    elif 'comma' in keys:&amp;#10;        displayText+=','&amp;#10;    elif 'apostrophe' in keys:&amp;#10;        displayText+='\''&amp;#10;    elif 'minus' in keys:&amp;#10;        displayText+='-'&amp;#10;    elif 'backspace' in keys:&amp;#10;        displayText=displayText[:-1]&amp;#10;    elif 'lshift' in keys or 'rshift' in keys:&amp;#10;        modify = True&amp;#10;    elif len(keys[0])&gt;1:&amp;#10;        pass&amp;#10;    else:&amp;#10;        if modify:&amp;#10;            displayText += keys[0].upper()&amp;#10;            modify = False&amp;#10;        else:&amp;#10;            displayText += keys[0]&amp;#10;            &amp;#10;if displayText!=oldDisplayText or cursorCounter == 1:&amp;#10;    nativeLang.text=displayText+cursorVariable&amp;#10;    oldDisplayText=displayText" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if ((cursorCounter &gt;= 30)) {&amp;#10;    if ((cursorVariable === &quot;|&quot;)) {&amp;#10;        cursorVariable = &quot; &quot;;&amp;#10;    } else {&amp;#10;        cursorVariable = &quot;|&quot;;&amp;#10;    }&amp;#10;    cursorCounter = 0;&amp;#10;}&amp;#10;cursorCounter += 1;&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if ((textStarted === 0)) {&amp;#10;        textStarted = 1;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;return&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        displayText += &quot; &quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;period&quot;, keys)) {&amp;#10;            displayText += &quot;.&quot;;&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;comma&quot;, keys)) {&amp;#10;                displayText += &quot;,&quot;;&amp;#10;            } else {&amp;#10;                if (_pj.in_es6(&quot;apostrophe&quot;, keys)) {&amp;#10;                    displayText += &quot;'&quot;;&amp;#10;                } else {&amp;#10;                    if (_pj.in_es6(&quot;minus&quot;, keys)) {&amp;#10;                        displayText += &quot;-&quot;;&amp;#10;                    } else {&amp;#10;                        if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;                            displayText = displayText.slice(0, (- 1));&amp;#10;                        } else {&amp;#10;                            if ((_pj.in_es6(&quot;lshift&quot;, keys) || _pj.in_es6(&quot;rshift&quot;, keys))) {&amp;#10;                                modify = true;&amp;#10;                            } else {&amp;#10;                                if ((keys[0].length &gt; 1)) {&amp;#10;                                } else {&amp;#10;                                    if (modify) {&amp;#10;                                        displayText += keys[0].upper();&amp;#10;                                        modify = false;&amp;#10;                                    } else {&amp;#10;                                        displayText += keys[0];&amp;#10;                                    }&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (((displayText !== oldDisplayText) || (cursorCounter === 1))) {&amp;#10;    nativeLang.text = (displayText + cursorVariable);&amp;#10;    oldDisplayText = displayText;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Answer Native Lang&quot;, nativeLang.text);&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Answer Native Lang&quot;, nativeLang.text)&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup_nativeLang" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="nativeLang">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="nativeLang" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="nativeLangInstr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="nativeLangInstr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="What is/are your native language(s):" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="otherLangSurvey">
+      <TextComponent name="otherLang">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="otherLang" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="setup_otherLang">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="kb = new keyboard.Keyboard();&amp;#10;textStarted = 0;&amp;#10;rt = 0;&amp;#10;modify = false;&amp;#10;otherLang.text = &quot;&quot;;&amp;#10;displayText = &quot;&quot;;&amp;#10;oldDisplayText = &quot;&quot;;&amp;#10;event.clearEvents();&amp;#10;cursorCounter = 0;&amp;#10;cursorVariable = &quot;|&quot;;&amp;#10;typedWords = [];&amp;#10;thisWord = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="kb = keyboard.Keyboard()&amp;#10;textStarted=0&amp;#10;rt=0&amp;#10;modify = False&amp;#10;otherLang.text = ''&amp;#10;displayText=''&amp;#10;oldDisplayText=''&amp;#10;event.clearEvents()&amp;#10;cursorCounter=0&amp;#10;cursorVariable='|'&amp;#10;typedWords=[]&amp;#10;thisWord=0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if cursorCounter &gt;= 30:&amp;#10;    if cursorVariable=='|':&amp;#10;        cursorVariable=' '&amp;#10;    else:&amp;#10;        cursorVariable='|'&amp;#10;    cursorCounter=0&amp;#10;cursorCounter+=1&amp;#10;&amp;#10;keys = event.getKeys()&amp;#10;if len(keys):&amp;#10;#Start the clock on first key&amp;#10;    if textStarted == 0:&amp;#10;        textStarted = 1&amp;#10;    if 'return' in keys:&amp;#10;        continueRoutine = False&amp;#10;    if 'space' in keys:&amp;#10;        displayText+=' '&amp;#10;    elif 'period' in keys:&amp;#10;        displayText+='.'&amp;#10;    elif 'comma' in keys:&amp;#10;        displayText+=','&amp;#10;    elif 'apostrophe' in keys:&amp;#10;        displayText+='\''&amp;#10;    elif 'minus' in keys:&amp;#10;        displayText+='-'&amp;#10;    elif 'backspace' in keys:&amp;#10;        displayText=displayText[:-1]&amp;#10;    elif 'lshift' in keys or 'rshift' in keys:&amp;#10;        modify = True&amp;#10;    elif len(keys[0])&gt;1:&amp;#10;        pass&amp;#10;    else:&amp;#10;        if modify:&amp;#10;            displayText += keys[0].upper()&amp;#10;            modify = False&amp;#10;        else:&amp;#10;            displayText += keys[0]&amp;#10;            &amp;#10;if displayText!=oldDisplayText or cursorCounter == 1:&amp;#10;    otherLang.text=displayText+cursorVariable&amp;#10;    oldDisplayText=displayText" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if ((cursorCounter &gt;= 30)) {&amp;#10;    if ((cursorVariable === &quot;|&quot;)) {&amp;#10;        cursorVariable = &quot; &quot;;&amp;#10;    } else {&amp;#10;        cursorVariable = &quot;|&quot;;&amp;#10;    }&amp;#10;    cursorCounter = 0;&amp;#10;}&amp;#10;cursorCounter += 1;&amp;#10;keys = event.getKeys();&amp;#10;if (keys.length) {&amp;#10;    if ((textStarted === 0)) {&amp;#10;        textStarted = 1;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;return&quot;, keys)) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;    if (_pj.in_es6(&quot;space&quot;, keys)) {&amp;#10;        displayText += &quot; &quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;period&quot;, keys)) {&amp;#10;            displayText += &quot;.&quot;;&amp;#10;        } else {&amp;#10;            if (_pj.in_es6(&quot;comma&quot;, keys)) {&amp;#10;                displayText += &quot;,&quot;;&amp;#10;            } else {&amp;#10;                if (_pj.in_es6(&quot;apostrophe&quot;, keys)) {&amp;#10;                    displayText += &quot;'&quot;;&amp;#10;                } else {&amp;#10;                    if (_pj.in_es6(&quot;minus&quot;, keys)) {&amp;#10;                        displayText += &quot;-&quot;;&amp;#10;                    } else {&amp;#10;                        if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;                            displayText = displayText.slice(0, (- 1));&amp;#10;                        } else {&amp;#10;                            if ((_pj.in_es6(&quot;lshift&quot;, keys) || _pj.in_es6(&quot;rshift&quot;, keys))) {&amp;#10;                                modify = true;&amp;#10;                            } else {&amp;#10;                                if ((keys[0].length &gt; 1)) {&amp;#10;                                } else {&amp;#10;                                    if (modify) {&amp;#10;                                        displayText += keys[0].upper();&amp;#10;                                        modify = false;&amp;#10;                                    } else {&amp;#10;                                        displayText += keys[0];&amp;#10;                                    }&amp;#10;                                }&amp;#10;                            }&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (((displayText !== oldDisplayText) || (cursorCounter === 1))) {&amp;#10;    otherLang.text = (displayText + cursorVariable);&amp;#10;    oldDisplayText = displayText;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="thisExp.addData(&quot;Answer Other Language&quot;, otherLang.text);&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="thisExp.addData(&quot;Answer Other Language&quot;, otherLang.text)&amp;#10;thisExp.addData(&quot;typingTime&quot;, rt)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup_otherLang" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="otherLangInstr">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="otherLangInstr" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Do you speak any other languages, and if so, what languages and for how long:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="surveyInstructions">
+      <TextComponent name="surveyInstrText">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="surveyInstrText" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="15" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="This final part contains four questions to collect some demographic information of the test group. Please answer the questions but feel free to leave any blank that you are uncomfortable answering. After typing your answer for a question, press enter to go to the next one. Or, just press enter to skip the question." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="skipSurveyInstr">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="skipSurveyInstr" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="15" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="instr"/>
@@ -3182,6 +3486,11 @@
     </LoopInitiator>
     <Routine name="posttest"/>
     <LoopTerminator name="postTestLoop"/>
+    <Routine name="surveyInstructions"/>
+    <Routine name="ageSurvey"/>
+    <Routine name="genderSurvey"/>
+    <Routine name="nativeLangSurvey"/>
+    <Routine name="otherLangSurvey"/>
     <Routine name="thankuser"/>
   </Flow>
 </PsychoPy2experiment>
