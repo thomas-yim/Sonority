@@ -294,30 +294,37 @@ function experimentInit() {
   
   advanceTrain1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  if ((expInfo["ID Number"][0] === "1")) {
+  if ((expInfo["ID Number"].length > 0)) {
+      if ((expInfo["ID Number"][0] === "1")) {
+          trainFile = "aoiConditions/train1Conditions.xlsx";
+          test1File = "aoiConditions/test1Conditions.xlsx";
+          test2File = "aoiConditions/test2Conditions.xlsx";
+          test3File = "aoiConditions/test3Conditions.xlsx";
+      } else {
+          if ((expInfo["ID Number"][0] === "2")) {
+              trainFile = "ioaConditions/train1Conditions.xlsx";
+              test1File = "ioaConditions/test1Conditions.xlsx";
+              test2File = "ioaConditions/test2Conditions.xlsx";
+              test3File = "ioaConditions/test3Conditions.xlsx";
+          } else {
+              if ((expInfo["ID Number"][0] === "3")) {
+                  trainFile = "oiaConditions/train1Conditions.xlsx";
+                  test1File = "oiaConditions/test1Conditions.xlsx";
+                  test2File = "oiaConditions/test2Conditions.xlsx";
+                  test3File = "oiaConditions/test3Conditions.xlsx";
+              } else {
+                  trainFile = "aoiConditions/train1Conditions.xlsx";
+                  test1File = "aoiConditions/test1Conditions.xlsx";
+                  test2File = "aoiConditions/test2Conditions.xlsx";
+                  test3File = "aoiConditions/test3Conditions.xlsx";
+              }
+          }
+      }
+  } else {
       trainFile = "aoiConditions/train1Conditions.xlsx";
       test1File = "aoiConditions/test1Conditions.xlsx";
       test2File = "aoiConditions/test2Conditions.xlsx";
       test3File = "aoiConditions/test3Conditions.xlsx";
-  } else {
-      if ((expInfo["ID Number"][0] === "2")) {
-          trainFile = "ioaConditions/train1Conditions.xlsx";
-          test1File = "ioaConditions/test1Conditions.xlsx";
-          test2File = "ioaConditions/test2Conditions.xlsx";
-          test3File = "ioaConditions/test3Conditions.xlsx";
-      } else {
-          if ((expInfo["ID Number"][0] === "3")) {
-              trainFile = "oiaConditions/train1Conditions.xlsx";
-              test1File = "oiaConditions/test1Conditions.xlsx";
-              test2File = "oiaConditions/test2Conditions.xlsx";
-              test3File = "oiaConditions/test3Conditions.xlsx";
-          } else {
-              trainFile = "aoiConditions/train1Conditions.xlsx";
-              test1File = "aoiConditions/test1Conditions.xlsx";
-              test2File = "aoiConditions/test2Conditions.xlsx";
-              test3File = "aoiConditions/test3Conditions.xlsx";
-          }
-      }
   }
   
   // Initialize components for Routine "train1Instr"
