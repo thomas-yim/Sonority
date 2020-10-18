@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on October 01, 2020, at 23:17
+    on October 18, 2020, at 15:40
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -88,21 +88,27 @@ instructions = visual.TextStim(win=win, name='instructions',
     languageStyle='LTR',
     depth=0.0);
 advanceTrain1 = keyboard.Keyboard()
-if expInfo['ID Number'][0] == "1":
-    trainFile = "aoiConditions/train1Conditions.xlsx"
-    test1File = "aoiConditions/test1Conditions.xlsx"
-    test2File = "aoiConditions/test2Conditions.xlsx"
-    test3File = "aoiConditions/test3Conditions.xlsx"
-elif expInfo['ID Number'][0] == "2":
-    trainFile = "ioaConditions/train1Conditions.xlsx"
-    test1File = "ioaConditions/test1Conditions.xlsx"
-    test2File = "ioaConditions/test2Conditions.xlsx"
-    test3File = "ioaConditions/test3Conditions.xlsx"
-elif expInfo['ID Number'][0] == "3":
-    trainFile = "oiaConditions/train1Conditions.xlsx"
-    test1File = "oiaConditions/test1Conditions.xlsx"
-    test2File = "oiaConditions/test2Conditions.xlsx"
-    test3File = "oiaConditions/test3Conditions.xlsx"
+if len(expInfo['ID Number']) > 0:
+    if expInfo['ID Number'][0] == "1":
+        trainFile = "aoiConditions/train1Conditions.xlsx"
+        test1File = "aoiConditions/test1Conditions.xlsx"
+        test2File = "aoiConditions/test2Conditions.xlsx"
+        test3File = "aoiConditions/test3Conditions.xlsx"
+    elif expInfo['ID Number'][0] == "2":
+        trainFile = "ioaConditions/train1Conditions.xlsx"
+        test1File = "ioaConditions/test1Conditions.xlsx"
+        test2File = "ioaConditions/test2Conditions.xlsx"
+        test3File = "ioaConditions/test3Conditions.xlsx"
+    elif expInfo['ID Number'][0] == "3":
+        trainFile = "oiaConditions/train1Conditions.xlsx"
+        test1File = "oiaConditions/test1Conditions.xlsx"
+        test2File = "oiaConditions/test2Conditions.xlsx"
+        test3File = "oiaConditions/test3Conditions.xlsx"
+    else:
+        trainFile = "aoiConditions/train1Conditions.xlsx"
+        test1File = "aoiConditions/test1Conditions.xlsx"
+        test2File = "aoiConditions/test2Conditions.xlsx"
+        test3File = "aoiConditions/test3Conditions.xlsx"
 else:
     trainFile = "aoiConditions/train1Conditions.xlsx"
     test1File = "aoiConditions/test1Conditions.xlsx"
@@ -519,21 +525,21 @@ test2Instr = visual.TextStim(win=win, name='test2Instr',
 test3waitClock = core.Clock()
 skipTest3Instr = keyboard.Keyboard()
 test3warning3 = visual.TextStim(win=win, name='test3warning3',
-    text='Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in three minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 test3warning2 = visual.TextStim(win=win, name='test3warning2',
-    text='Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in two minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 test3warning1 = visual.TextStim(win=win, name='test3warning1',
-    text='Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in one minutes.\n\nPress any button to start now',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -745,85 +751,6 @@ jText = visual.TextStim(win=win, name='jText',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-15.0);
-
-# Initialize components for Routine "surveyInstructions"
-surveyInstructionsClock = core.Clock()
-surveyInstrText = visual.TextStim(win=win, name='surveyInstrText',
-    text='This final part contains four questions to collect some demographic information of the test group. Please answer the questions but feel free to leave any blank that you are uncomfortable answering. After typing your answer for a question, press enter to go to the next one. Or, just press enter to skip the question.',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-skipSurveyInstr = keyboard.Keyboard()
-
-# Initialize components for Routine "ageSurvey"
-ageSurveyClock = core.Clock()
-age = visual.TextStim(win=win, name='age',
-    text=None,
-    font='Arial',
-    pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-ageInstr = visual.TextStim(win=win, name='ageInstr',
-    text='What is your age:',
-    font='Arial',
-    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-
-# Initialize components for Routine "genderSurvey"
-genderSurveyClock = core.Clock()
-gender = visual.TextStim(win=win, name='gender',
-    text=None,
-    font='Arial',
-    pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-genderInstr = visual.TextStim(win=win, name='genderInstr',
-    text='What is your gender: male/female/other',
-    font='Arial',
-    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-
-# Initialize components for Routine "nativeLangSurvey"
-nativeLangSurveyClock = core.Clock()
-nativeLang = visual.TextStim(win=win, name='nativeLang',
-    text=None,
-    font='Arial',
-    pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-nativeLangInstr = visual.TextStim(win=win, name='nativeLangInstr',
-    text='What is/are your native language(s):',
-    font='Arial',
-    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-
-# Initialize components for Routine "otherLangSurvey"
-otherLangSurveyClock = core.Clock()
-otherLang = visual.TextStim(win=win, name='otherLang',
-    text=None,
-    font='Arial',
-    pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-otherLangInstr = visual.TextStim(win=win, name='otherLangInstr',
-    text='Do you speak any other languages, and if so, what languages and for how long:',
-    font='Arial',
-    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
 
 # Initialize components for Routine "thankuser"
 thankuserClock = core.Clock()
@@ -3325,7 +3252,7 @@ thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=0, method='sequential', 
+test3Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test3File),
     seed=None, name='test3Loop')
@@ -3637,7 +3564,7 @@ for thisTest3Loop in test3Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test3Loop'
+# completed 1 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------
@@ -3752,7 +3679,7 @@ thisExp.addData('postTestInstrText.started', postTestInstrText.tStartRefresh)
 thisExp.addData('postTestInstrText.stopped', postTestInstrText.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-postTestLoop = data.TrialHandler(nReps=0, method='sequential', 
+postTestLoop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('postTestConditions.xlsx'),
     seed=None, name='postTestLoop')
@@ -4127,632 +4054,8 @@ for thisPostTestLoop in postTestLoop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'postTestLoop'
+# completed 1 repeats of 'postTestLoop'
 
-
-# ------Prepare to start Routine "surveyInstructions"-------
-continueRoutine = True
-routineTimer.add(15.000000)
-# update component parameters for each repeat
-skipSurveyInstr.keys = []
-skipSurveyInstr.rt = []
-_skipSurveyInstr_allKeys = []
-# keep track of which components have finished
-surveyInstructionsComponents = [surveyInstrText, skipSurveyInstr]
-for thisComponent in surveyInstructionsComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-surveyInstructionsClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "surveyInstructions"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = surveyInstructionsClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=surveyInstructionsClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *surveyInstrText* updates
-    if surveyInstrText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        surveyInstrText.frameNStart = frameN  # exact frame index
-        surveyInstrText.tStart = t  # local t and not account for scr refresh
-        surveyInstrText.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(surveyInstrText, 'tStartRefresh')  # time at next scr refresh
-        surveyInstrText.setAutoDraw(True)
-    if surveyInstrText.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > surveyInstrText.tStartRefresh + 15-frameTolerance:
-            # keep track of stop time/frame for later
-            surveyInstrText.tStop = t  # not accounting for scr refresh
-            surveyInstrText.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(surveyInstrText, 'tStopRefresh')  # time at next scr refresh
-            surveyInstrText.setAutoDraw(False)
-    
-    # *skipSurveyInstr* updates
-    waitOnFlip = False
-    if skipSurveyInstr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        skipSurveyInstr.frameNStart = frameN  # exact frame index
-        skipSurveyInstr.tStart = t  # local t and not account for scr refresh
-        skipSurveyInstr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(skipSurveyInstr, 'tStartRefresh')  # time at next scr refresh
-        skipSurveyInstr.status = STARTED
-        # keyboard checking is just starting
-        waitOnFlip = True
-        win.callOnFlip(skipSurveyInstr.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(skipSurveyInstr.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if skipSurveyInstr.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > skipSurveyInstr.tStartRefresh + 15-frameTolerance:
-            # keep track of stop time/frame for later
-            skipSurveyInstr.tStop = t  # not accounting for scr refresh
-            skipSurveyInstr.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(skipSurveyInstr, 'tStopRefresh')  # time at next scr refresh
-            skipSurveyInstr.status = FINISHED
-    if skipSurveyInstr.status == STARTED and not waitOnFlip:
-        theseKeys = skipSurveyInstr.getKeys(keyList=None, waitRelease=False)
-        _skipSurveyInstr_allKeys.extend(theseKeys)
-        if len(_skipSurveyInstr_allKeys):
-            skipSurveyInstr.keys = _skipSurveyInstr_allKeys[-1].name  # just the last key pressed
-            skipSurveyInstr.rt = _skipSurveyInstr_allKeys[-1].rt
-            # a response ends the routine
-            continueRoutine = False
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in surveyInstructionsComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "surveyInstructions"-------
-for thisComponent in surveyInstructionsComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData('surveyInstrText.started', surveyInstrText.tStartRefresh)
-thisExp.addData('surveyInstrText.stopped', surveyInstrText.tStopRefresh)
-# check responses
-if skipSurveyInstr.keys in ['', [], None]:  # No response was made
-    skipSurveyInstr.keys = None
-thisExp.addData('skipSurveyInstr.keys',skipSurveyInstr.keys)
-if skipSurveyInstr.keys != None:  # we had a response
-    thisExp.addData('skipSurveyInstr.rt', skipSurveyInstr.rt)
-thisExp.addData('skipSurveyInstr.started', skipSurveyInstr.tStartRefresh)
-thisExp.addData('skipSurveyInstr.stopped', skipSurveyInstr.tStopRefresh)
-thisExp.nextEntry()
-
-# ------Prepare to start Routine "ageSurvey"-------
-continueRoutine = True
-# update component parameters for each repeat
-kb = keyboard.Keyboard()
-textStarted=0
-rt=0
-modify = False
-age.text = ''
-displayText=''
-oldDisplayText=''
-event.clearEvents()
-cursorCounter=0
-cursorVariable='|'
-typedWords=[]
-thisWord=0
-# keep track of which components have finished
-ageSurveyComponents = [age, ageInstr]
-for thisComponent in ageSurveyComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-ageSurveyClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "ageSurvey"-------
-while continueRoutine:
-    # get current time
-    t = ageSurveyClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=ageSurveyClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    if cursorCounter >= 30:
-        if cursorVariable=='|':
-            cursorVariable=' '
-        else:
-            cursorVariable='|'
-        cursorCounter=0
-    cursorCounter+=1
-    
-    keys = event.getKeys()
-    if len(keys):
-    #Start the clock on first key
-        if textStarted == 0:
-            textStarted = 1
-        if 'return' in keys:
-            continueRoutine = False
-        if 'space' in keys:
-            displayText+=' '
-        elif 'period' in keys:
-            displayText+='.'
-        elif 'comma' in keys:
-            displayText+=','
-        elif 'apostrophe' in keys:
-            displayText+='\''
-        elif 'minus' in keys:
-            displayText+='-'
-        elif 'backspace' in keys:
-            displayText=displayText[:-1]
-        elif 'lshift' in keys or 'rshift' in keys:
-            modify = True
-        elif len(keys[0])>1:
-            pass
-        else:
-            if modify:
-                displayText += keys[0].upper()
-                modify = False
-            else:
-                displayText += keys[0]
-                
-    if displayText!=oldDisplayText or cursorCounter == 1:
-        age.text=displayText+cursorVariable
-        oldDisplayText=displayText
-    
-    
-    # *age* updates
-    if age.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        age.frameNStart = frameN  # exact frame index
-        age.tStart = t  # local t and not account for scr refresh
-        age.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(age, 'tStartRefresh')  # time at next scr refresh
-        age.setAutoDraw(True)
-    
-    # *ageInstr* updates
-    if ageInstr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        ageInstr.frameNStart = frameN  # exact frame index
-        ageInstr.tStart = t  # local t and not account for scr refresh
-        ageInstr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(ageInstr, 'tStartRefresh')  # time at next scr refresh
-        ageInstr.setAutoDraw(True)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in ageSurveyComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "ageSurvey"-------
-for thisComponent in ageSurveyComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData("Age", age.text)
-thisExp.addData("typingTime", rt)
-thisExp.addData('age.started', age.tStartRefresh)
-thisExp.addData('age.stopped', age.tStopRefresh)
-thisExp.addData('ageInstr.started', ageInstr.tStartRefresh)
-thisExp.addData('ageInstr.stopped', ageInstr.tStopRefresh)
-# the Routine "ageSurvey" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
-# ------Prepare to start Routine "genderSurvey"-------
-continueRoutine = True
-# update component parameters for each repeat
-kb = keyboard.Keyboard()
-textStarted=0
-rt=0
-modify = False
-gender.text = ''
-displayText=''
-oldDisplayText=''
-event.clearEvents()
-cursorCounter=0
-cursorVariable='|'
-typedWords=[]
-thisWord=0
-# keep track of which components have finished
-genderSurveyComponents = [gender, genderInstr]
-for thisComponent in genderSurveyComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-genderSurveyClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "genderSurvey"-------
-while continueRoutine:
-    # get current time
-    t = genderSurveyClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=genderSurveyClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    if cursorCounter >= 30:
-        if cursorVariable=='|':
-            cursorVariable=' '
-        else:
-            cursorVariable='|'
-        cursorCounter=0
-    cursorCounter+=1
-    
-    keys = event.getKeys()
-    if len(keys):
-    #Start the clock on first key
-        if textStarted == 0:
-            textStarted = 1
-        if 'return' in keys:
-            continueRoutine = False
-        if 'space' in keys:
-            displayText+=' '
-        elif 'period' in keys:
-            displayText+='.'
-        elif 'comma' in keys:
-            displayText+=','
-        elif 'apostrophe' in keys:
-            displayText+='\''
-        elif 'minus' in keys:
-            displayText+='-'
-        elif 'backspace' in keys:
-            displayText=displayText[:-1]
-        elif 'lshift' in keys or 'rshift' in keys:
-            modify = True
-        elif len(keys[0])>1:
-            pass
-        else:
-            if modify:
-                displayText += keys[0].upper()
-                modify = False
-            else:
-                displayText += keys[0]
-                
-    if displayText!=oldDisplayText or cursorCounter == 1:
-        gender.text=displayText+cursorVariable
-        oldDisplayText=displayText
-    
-    # *gender* updates
-    if gender.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        gender.frameNStart = frameN  # exact frame index
-        gender.tStart = t  # local t and not account for scr refresh
-        gender.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(gender, 'tStartRefresh')  # time at next scr refresh
-        gender.setAutoDraw(True)
-    
-    # *genderInstr* updates
-    if genderInstr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        genderInstr.frameNStart = frameN  # exact frame index
-        genderInstr.tStart = t  # local t and not account for scr refresh
-        genderInstr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(genderInstr, 'tStartRefresh')  # time at next scr refresh
-        genderInstr.setAutoDraw(True)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in genderSurveyComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "genderSurvey"-------
-for thisComponent in genderSurveyComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData("Gender", gender.text)
-thisExp.addData("typingTime", rt)
-thisExp.addData('gender.started', gender.tStartRefresh)
-thisExp.addData('gender.stopped', gender.tStopRefresh)
-thisExp.addData('genderInstr.started', genderInstr.tStartRefresh)
-thisExp.addData('genderInstr.stopped', genderInstr.tStopRefresh)
-# the Routine "genderSurvey" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
-# ------Prepare to start Routine "nativeLangSurvey"-------
-continueRoutine = True
-# update component parameters for each repeat
-kb = keyboard.Keyboard()
-textStarted=0
-rt=0
-modify = False
-nativeLang.text = ''
-displayText=''
-oldDisplayText=''
-event.clearEvents()
-cursorCounter=0
-cursorVariable='|'
-typedWords=[]
-thisWord=0
-# keep track of which components have finished
-nativeLangSurveyComponents = [nativeLang, nativeLangInstr]
-for thisComponent in nativeLangSurveyComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-nativeLangSurveyClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "nativeLangSurvey"-------
-while continueRoutine:
-    # get current time
-    t = nativeLangSurveyClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=nativeLangSurveyClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    if cursorCounter >= 30:
-        if cursorVariable=='|':
-            cursorVariable=' '
-        else:
-            cursorVariable='|'
-        cursorCounter=0
-    cursorCounter+=1
-    
-    keys = event.getKeys()
-    if len(keys):
-    #Start the clock on first key
-        if textStarted == 0:
-            textStarted = 1
-        if 'return' in keys:
-            continueRoutine = False
-        if 'space' in keys:
-            displayText+=' '
-        elif 'period' in keys:
-            displayText+='.'
-        elif 'comma' in keys:
-            displayText+=','
-        elif 'apostrophe' in keys:
-            displayText+='\''
-        elif 'minus' in keys:
-            displayText+='-'
-        elif 'backspace' in keys:
-            displayText=displayText[:-1]
-        elif 'lshift' in keys or 'rshift' in keys:
-            modify = True
-        elif len(keys[0])>1:
-            pass
-        else:
-            if modify:
-                displayText += keys[0].upper()
-                modify = False
-            else:
-                displayText += keys[0]
-                
-    if displayText!=oldDisplayText or cursorCounter == 1:
-        nativeLang.text=displayText+cursorVariable
-        oldDisplayText=displayText
-    
-    # *nativeLang* updates
-    if nativeLang.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        nativeLang.frameNStart = frameN  # exact frame index
-        nativeLang.tStart = t  # local t and not account for scr refresh
-        nativeLang.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(nativeLang, 'tStartRefresh')  # time at next scr refresh
-        nativeLang.setAutoDraw(True)
-    
-    # *nativeLangInstr* updates
-    if nativeLangInstr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        nativeLangInstr.frameNStart = frameN  # exact frame index
-        nativeLangInstr.tStart = t  # local t and not account for scr refresh
-        nativeLangInstr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(nativeLangInstr, 'tStartRefresh')  # time at next scr refresh
-        nativeLangInstr.setAutoDraw(True)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in nativeLangSurveyComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "nativeLangSurvey"-------
-for thisComponent in nativeLangSurveyComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData("Answer Native Lang", nativeLang.text)
-thisExp.addData("typingTime", rt)
-thisExp.addData('nativeLang.started', nativeLang.tStartRefresh)
-thisExp.addData('nativeLang.stopped', nativeLang.tStopRefresh)
-thisExp.addData('nativeLangInstr.started', nativeLangInstr.tStartRefresh)
-thisExp.addData('nativeLangInstr.stopped', nativeLangInstr.tStopRefresh)
-# the Routine "nativeLangSurvey" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
-# ------Prepare to start Routine "otherLangSurvey"-------
-continueRoutine = True
-# update component parameters for each repeat
-kb = keyboard.Keyboard()
-textStarted=0
-rt=0
-modify = False
-otherLang.text = ''
-displayText=''
-oldDisplayText=''
-event.clearEvents()
-cursorCounter=0
-cursorVariable='|'
-typedWords=[]
-thisWord=0
-# keep track of which components have finished
-otherLangSurveyComponents = [otherLang, otherLangInstr]
-for thisComponent in otherLangSurveyComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-otherLangSurveyClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "otherLangSurvey"-------
-while continueRoutine:
-    # get current time
-    t = otherLangSurveyClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=otherLangSurveyClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *otherLang* updates
-    if otherLang.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        otherLang.frameNStart = frameN  # exact frame index
-        otherLang.tStart = t  # local t and not account for scr refresh
-        otherLang.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(otherLang, 'tStartRefresh')  # time at next scr refresh
-        otherLang.setAutoDraw(True)
-    if cursorCounter >= 30:
-        if cursorVariable=='|':
-            cursorVariable=' '
-        else:
-            cursorVariable='|'
-        cursorCounter=0
-    cursorCounter+=1
-    
-    keys = event.getKeys()
-    if len(keys):
-    #Start the clock on first key
-        if textStarted == 0:
-            textStarted = 1
-        if 'return' in keys:
-            continueRoutine = False
-        if 'space' in keys:
-            displayText+=' '
-        elif 'period' in keys:
-            displayText+='.'
-        elif 'comma' in keys:
-            displayText+=','
-        elif 'apostrophe' in keys:
-            displayText+='\''
-        elif 'minus' in keys:
-            displayText+='-'
-        elif 'backspace' in keys:
-            displayText=displayText[:-1]
-        elif 'lshift' in keys or 'rshift' in keys:
-            modify = True
-        elif len(keys[0])>1:
-            pass
-        else:
-            if modify:
-                displayText += keys[0].upper()
-                modify = False
-            else:
-                displayText += keys[0]
-                
-    if displayText!=oldDisplayText or cursorCounter == 1:
-        otherLang.text=displayText+cursorVariable
-        oldDisplayText=displayText
-    
-    # *otherLangInstr* updates
-    if otherLangInstr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        otherLangInstr.frameNStart = frameN  # exact frame index
-        otherLangInstr.tStart = t  # local t and not account for scr refresh
-        otherLangInstr.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(otherLangInstr, 'tStartRefresh')  # time at next scr refresh
-        otherLangInstr.setAutoDraw(True)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in otherLangSurveyComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "otherLangSurvey"-------
-for thisComponent in otherLangSurveyComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData('otherLang.started', otherLang.tStartRefresh)
-thisExp.addData('otherLang.stopped', otherLang.tStopRefresh)
-thisExp.addData("Answer Other Language", otherLang.text)
-thisExp.addData("typingTime", rt)
-thisExp.addData('otherLangInstr.started', otherLangInstr.tStartRefresh)
-thisExp.addData('otherLangInstr.stopped', otherLangInstr.tStopRefresh)
-# the Routine "otherLangSurvey" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
 
 # ------Prepare to start Routine "thankuser"-------
 continueRoutine = True

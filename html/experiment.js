@@ -70,9 +70,6 @@ flowScheduler.add(test2LoopLoopEnd);
 flowScheduler.add(test3waitRoutineBegin());
 flowScheduler.add(test3waitRoutineEachFrame());
 flowScheduler.add(test3waitRoutineEnd());
-flowScheduler.add(test3instrRoutineBegin());
-flowScheduler.add(test3instrRoutineEachFrame());
-flowScheduler.add(test3instrRoutineEnd());
 const test3LoopLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(test3LoopLoopBegin, test3LoopLoopScheduler);
 flowScheduler.add(test3LoopLoopScheduler);
@@ -207,9 +204,6 @@ var skipTest3Instr;
 var test3warning3;
 var test3warning2;
 var test3warning1;
-var test3instrClock;
-var test3Text;
-var key_resp_3;
 var test3Clock;
 var test3Audio1;
 var test3Audio1Sound;
@@ -856,7 +850,7 @@ function experimentInit() {
   test3warning3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning3',
-    text: 'Next part will start automatically\nin less than 3 minutes.\n\nPress any button to start now',
+    text: 'Break. Press any key to resume when you are ready. The experiment will automatically resume in three minutes.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -867,7 +861,7 @@ function experimentInit() {
   test3warning2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning2',
-    text: 'Next part will start automatically\nin less than 2 minutes.\n\nPress any button to start now',
+    text: 'Break. Press any key to resume when you are ready. The experiment will automatically resume in two minutes.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -878,28 +872,13 @@ function experimentInit() {
   test3warning1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'test3warning1',
-    text: 'Next part will start automatically\nin less than 1 minute.\n\nPress any button to start now',
+    text: 'Break. Press any key to resume when you are ready. The experiment will automatically resume in one minutes.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
-  
-  // Initialize components for Routine "test3instr"
-  test3instrClock = new util.Clock();
-  test3Text = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'test3Text',
-    text: 'You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation is the correct one in the language you are learning. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This test will not involve feedback.\n\nPress any key to start now',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
-  });
-  
-  key_resp_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "test3"
   test3Clock = new util.Clock();
@@ -3904,131 +3883,6 @@ function test3waitRoutineEnd(trials) {
         }
     
     skipTest3Instr.stop();
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
-var _key_resp_3_allKeys;
-var test3instrComponents;
-function test3instrRoutineBegin(trials) {
-  return function () {
-    //------Prepare to start Routine 'test3instr'-------
-    t = 0;
-    test3instrClock.reset(); // clock
-    frameN = -1;
-    routineTimer.add(20.000000);
-    // update component parameters for each repeat
-    key_resp_3.keys = undefined;
-    key_resp_3.rt = undefined;
-    _key_resp_3_allKeys = [];
-    // keep track of which components have finished
-    test3instrComponents = [];
-    test3instrComponents.push(test3Text);
-    test3instrComponents.push(key_resp_3);
-    
-    for (const thisComponent of test3instrComponents)
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
-function test3instrRoutineEachFrame(trials) {
-  return function () {
-    //------Loop for each frame of Routine 'test3instr'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = test3instrClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    
-    // *test3Text* updates
-    if (t >= 0.0 && test3Text.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      test3Text.tStart = t;  // (not accounting for frame time here)
-      test3Text.frameNStart = frameN;  // exact frame index
-      
-      test3Text.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (test3Text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      test3Text.setAutoDraw(false);
-    }
-    
-    // *key_resp_3* updates
-    if (t >= 0.0 && key_resp_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      key_resp_3.tStart = t;  // (not accounting for frame time here)
-      key_resp_3.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { key_resp_3.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_3.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_3.clearEvents(); });
-    }
-
-    frameRemains = 0.0 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (key_resp_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      key_resp_3.status = PsychoJS.Status.FINISHED;
-  }
-
-    if (key_resp_3.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_3.getKeys({keyList: [], waitRelease: false});
-      _key_resp_3_allKeys = _key_resp_3_allKeys.concat(theseKeys);
-      if (_key_resp_3_allKeys.length > 0) {
-        key_resp_3.keys = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].name;  // just the last key pressed
-        key_resp_3.rt = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of test3instrComponents)
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-        break;
-      }
-    
-    // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function test3instrRoutineEnd(trials) {
-  return function () {
-    //------Ending Routine 'test3instr'-------
-    for (const thisComponent of test3instrComponents) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    }
-    psychoJS.experiment.addData('key_resp_3.keys', key_resp_3.keys);
-    if (typeof key_resp_3.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('key_resp_3.rt', key_resp_3.rt);
-        routineTimer.reset();
-        }
-    
-    key_resp_3.stop();
     return Scheduler.Event.NEXT;
   };
 }

@@ -30,7 +30,7 @@ def calculateAccuracy(df, phase):
     reactionTime = []
     trueKey = []
     
-    #These are the arrays for train phases
+    #These are the arrays for train phase
     audio = []
     trueImage = []
     falseImage = []

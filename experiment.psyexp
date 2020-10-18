@@ -2761,7 +2761,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="60" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Next part will start automatically&amp;#10;in less than 3 minutes.&amp;#10;&amp;#10;Press any button to start now" valType="str"/>
+        <Param name="text" updates="constant" val="Break. Press any key to resume when you are ready. The experiment will automatically resume in three minutes." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2785,7 +2785,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="60" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Next part will start automatically&amp;#10;in less than 2 minutes.&amp;#10;&amp;#10;Press any button to start now" valType="str"/>
+        <Param name="text" updates="constant" val="Break. Press any key to resume when you are ready. The experiment will automatically resume in two minutes." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2809,7 +2809,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="60" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Next part will start automatically&amp;#10;in less than 1 minute.&amp;#10;&amp;#10;Press any button to start now" valType="str"/>
+        <Param name="text" updates="constant" val="Break. Press any key to resume when you are ready. The experiment will automatically resume in one minutes." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -3458,7 +3458,6 @@
     <Routine name="test2"/>
     <LoopTerminator name="test2Loop"/>
     <Routine name="test3wait"/>
-    <Routine name="test3instr"/>
     <LoopInitiator loopType="TrialHandler" name="test3Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
