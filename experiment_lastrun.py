@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on October 18, 2020, at 15:40
+    on November 06, 2020, at 17:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -525,37 +525,26 @@ test2Instr = visual.TextStim(win=win, name='test2Instr',
 test3waitClock = core.Clock()
 skipTest3Instr = keyboard.Keyboard()
 test3warning3 = visual.TextStim(win=win, name='test3warning3',
-    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in three minutes.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in three minutes.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 test3warning2 = visual.TextStim(win=win, name='test3warning2',
-    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in two minutes.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in two minutes.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 test3warning1 = visual.TextStim(win=win, name='test3warning1',
-    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in one minutes.\n\nPress any button to start now',
+    text='Break. Press any key to resume when you are ready. The experiment will automatically resume in one minutes.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
-
-# Initialize components for Routine "test3instr"
-test3instrClock = core.Clock()
-test3Text = visual.TextStim(win=win, name='test3Text',
-    text='You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation is the correct one in the language you are learning. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This test will not involve feedback.\n\nPress any key to start now',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-key_resp_3 = keyboard.Keyboard()
 
 # Initialize components for Routine "test3"
 test3Clock = core.Clock()
@@ -855,7 +844,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrain1 = data.TrialHandler(nReps=0, method='sequential', 
+alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(trainFile),
     seed=None, name='alltrain1')
@@ -1735,7 +1724,7 @@ for thisAlltrain1 in alltrain1:
     
     thisExp.nextEntry()
     
-# completed 0 repeats of 'alltrain1'
+# completed 1 repeats of 'alltrain1'
 
 
 # ------Prepare to start Routine "test1wait"-------
@@ -1999,7 +1988,7 @@ thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test1Loop = data.TrialHandler(nReps=0, method='sequential', 
+test1Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test1File),
     seed=None, name='test1Loop')
@@ -2413,7 +2402,7 @@ for thisTest1Loop in test1Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test1Loop'
+# completed 1 repeats of 'test1Loop'
 
 
 # ------Prepare to start Routine "test2wait"-------
@@ -2677,7 +2666,7 @@ thisExp.addData('key_resp_2.stopped', key_resp_2.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=0, method='sequential', 
+test2Loop = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test2File),
     seed=None, name='test2Loop')
@@ -2988,7 +2977,7 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'test2Loop'
+# completed 1 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "test3wait"-------
@@ -3139,117 +3128,6 @@ thisExp.addData('test3warning2.started', test3warning2.tStartRefresh)
 thisExp.addData('test3warning2.stopped', test3warning2.tStopRefresh)
 thisExp.addData('test3warning1.started', test3warning1.tStartRefresh)
 thisExp.addData('test3warning1.stopped', test3warning1.tStopRefresh)
-
-# ------Prepare to start Routine "test3instr"-------
-continueRoutine = True
-routineTimer.add(20.000000)
-# update component parameters for each repeat
-key_resp_3.keys = []
-key_resp_3.rt = []
-_key_resp_3_allKeys = []
-# keep track of which components have finished
-test3instrComponents = [test3Text, key_resp_3]
-for thisComponent in test3instrComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-test3instrClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "test3instr"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = test3instrClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=test3instrClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *test3Text* updates
-    if test3Text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        test3Text.frameNStart = frameN  # exact frame index
-        test3Text.tStart = t  # local t and not account for scr refresh
-        test3Text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(test3Text, 'tStartRefresh')  # time at next scr refresh
-        test3Text.setAutoDraw(True)
-    if test3Text.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > test3Text.tStartRefresh + 20-frameTolerance:
-            # keep track of stop time/frame for later
-            test3Text.tStop = t  # not accounting for scr refresh
-            test3Text.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(test3Text, 'tStopRefresh')  # time at next scr refresh
-            test3Text.setAutoDraw(False)
-    
-    # *key_resp_3* updates
-    waitOnFlip = False
-    if key_resp_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        key_resp_3.frameNStart = frameN  # exact frame index
-        key_resp_3.tStart = t  # local t and not account for scr refresh
-        key_resp_3.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(key_resp_3, 'tStartRefresh')  # time at next scr refresh
-        key_resp_3.status = STARTED
-        # keyboard checking is just starting
-        waitOnFlip = True
-        win.callOnFlip(key_resp_3.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(key_resp_3.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if key_resp_3.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > key_resp_3.tStartRefresh + 20-frameTolerance:
-            # keep track of stop time/frame for later
-            key_resp_3.tStop = t  # not accounting for scr refresh
-            key_resp_3.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(key_resp_3, 'tStopRefresh')  # time at next scr refresh
-            key_resp_3.status = FINISHED
-    if key_resp_3.status == STARTED and not waitOnFlip:
-        theseKeys = key_resp_3.getKeys(keyList=None, waitRelease=False)
-        _key_resp_3_allKeys.extend(theseKeys)
-        if len(_key_resp_3_allKeys):
-            key_resp_3.keys = _key_resp_3_allKeys[-1].name  # just the last key pressed
-            key_resp_3.rt = _key_resp_3_allKeys[-1].rt
-            # a response ends the routine
-            continueRoutine = False
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in test3instrComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "test3instr"-------
-for thisComponent in test3instrComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData('test3Text.started', test3Text.tStartRefresh)
-thisExp.addData('test3Text.stopped', test3Text.tStopRefresh)
-# check responses
-if key_resp_3.keys in ['', [], None]:  # No response was made
-    key_resp_3.keys = None
-thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-if key_resp_3.keys != None:  # we had a response
-    thisExp.addData('key_resp_3.rt', key_resp_3.rt)
-thisExp.addData('key_resp_3.started', key_resp_3.tStartRefresh)
-thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
-thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
 test3Loop = data.TrialHandler(nReps=1, method='sequential', 
