@@ -1,0 +1,2 @@
+skipTrain1Type.keys,skipTrain1Type.rt,train1Words.thisRepN,train1Words.thisTrialN,train1Words.thisN,train1Words.thisIndex,train1Words.ran,audio,imageLoc,participant,ID Number,date,expName,psychopyVersion,OS,frameRate
+j,0.89326,0,0,0,0,1,trainingaudio/06_titoka3.wav,pngimages/06_tent.png,Thomas,10234,2020-11-01_12h55.45.328,experiment,2020.1.3,Win32,60
