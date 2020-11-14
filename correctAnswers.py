@@ -17,6 +17,6 @@ def correctAudio(ranking, filename):
     #Our naming convention is not 0 indexed so we add 1
     stressLoc = minIndex + 1
             
-    return filename[:9] + str(stressLoc) + ".ogg"
+    return filename[:9] + str(stressLoc) + ".wav"
 
 #rint(correctAudio(['a','o','i'], "01_kitipi"))

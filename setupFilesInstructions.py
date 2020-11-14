@@ -154,7 +154,7 @@ def setupTest(audioFolder, uniqueAudio, totalQuestions, pastList1, pastList2, ph
         if len(audioCopy) == 0:
             audioCopy = uniqueAudio.copy()
         
-        possibilities = [file + "1.ogg", file + "2.ogg", file + "3.ogg"]
+        possibilities = [file + "1.wav", file + "2.wav", file + "3.wav"]
         correct = correctAudio(ranking, file)
         possibilities.remove(correct)
         incorrectIndex = random.randint(0,1)
