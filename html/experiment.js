@@ -730,7 +730,7 @@ function experimentInit() {
   test2Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2Text',
-    text: 'You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation follows the stress patterns in the language you are learning, that is, places the emphasis on the correct syllable.. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. There will be an optional 3-minute break in the middle. This test will not involve feedback.\n\nPress any key to start now',
+    text: 'You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation follows the stress patterns in the language you are learning, that is, places the emphasis on the correct syllable. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. There will be an optional 3-minute break in the middle. This test will not involve feedback.\n\nPress any key to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
