@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on November 06, 2020, at 18:39
+    on December 01, 2020, at 20:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -844,7 +844,7 @@ thisExp.addData('instructions.stopped', instructions.tStopRefresh)
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-alltrain1 = data.TrialHandler(nReps=1, method='sequential', 
+alltrain1 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(trainFile),
     seed=None, name='alltrain1')
@@ -1724,7 +1724,7 @@ for thisAlltrain1 in alltrain1:
     
     thisExp.nextEntry()
     
-# completed 1 repeats of 'alltrain1'
+# completed 0 repeats of 'alltrain1'
 
 
 # ------Prepare to start Routine "test1wait"-------
@@ -1988,7 +1988,7 @@ thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test1Loop = data.TrialHandler(nReps=1, method='sequential', 
+test1Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test1File),
     seed=None, name='test1Loop')
@@ -2402,7 +2402,7 @@ for thisTest1Loop in test1Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test1Loop'
+# completed 0 repeats of 'test1Loop'
 
 
 # ------Prepare to start Routine "test2wait"-------
@@ -2666,7 +2666,7 @@ thisExp.addData('key_resp_2.stopped', key_resp_2.tStopRefresh)
 thisExp.nextEntry()
 
 # set up handler to look after randomisation of conditions etc
-test2Loop = data.TrialHandler(nReps=1, method='sequential', 
+test2Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test2File),
     seed=None, name='test2Loop')
@@ -2977,7 +2977,7 @@ for thisTest2Loop in test2Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test2Loop'
+# completed 0 repeats of 'test2Loop'
 
 
 # ------Prepare to start Routine "test3wait"-------
@@ -3130,7 +3130,7 @@ thisExp.addData('test3warning1.started', test3warning1.tStartRefresh)
 thisExp.addData('test3warning1.stopped', test3warning1.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-test3Loop = data.TrialHandler(nReps=1, method='sequential', 
+test3Loop = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(test3File),
     seed=None, name='test3Loop')
@@ -3442,7 +3442,7 @@ for thisTest3Loop in test3Loop:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'test3Loop'
+# completed 0 repeats of 'test3Loop'
 
 
 # ------Prepare to start Routine "postTestInstr"-------

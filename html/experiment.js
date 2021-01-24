@@ -248,7 +248,7 @@ function experimentInit() {
   instructions = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions',
-    text: 'This is an experiment about learning words of a foreign language. You will hear the pronunciation of each word a few times, accompanied by a picture of the word. Throughout this experiment, you will answer different types of questions, such as picture matching questions. There will be two training sessions where you familiarize yourself with the language, three test sessions where you hear words you have learned and novel words, and one post test session. The experiment will take between 35 and 60 minutes, with optional breaks at different points. Participation is completely voluntary, and you can quit the experiment at any point using the esc key. \n\nPress any key to advance.',
+    text: 'This is an experiment about learning the stress rules in a foreign language. Stress within words is often described as which syllable has emphasis placed on it, and many languages follow certain rules regarding where stress is placed. During this experiment you will hear the pronunciation of each word a few times. There will be training sessions where you will familiarize yourself with the pronunciation of the language, sessions where you will judge the pronunciation of words you have heard before, sessions where you will judge the pronunciation of words you have not heard before, and one post-test session. The experiment will take between 35 and 60 minutes, with optional breaks at different points. Participation is completely voluntary, and you can quit the experiment at any point using the esc key.\n\nPress any key to advance.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -363,7 +363,7 @@ function experimentInit() {
   train1QuestText = new visual.TextStim({
     win: psychoJS.window,
     name: 'train1QuestText',
-    text: 'Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback. \n\nPress any key to advance',
+    text: 'Choose the image corresponding to the word you just heard by pressing F or J. The correct answer will be indicated by a circle after your response. You have ten seconds to answer each question; if you do not answer, the experiment will proceed automatically. This train session will involve feedback. \n\nPress any key to advance',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -547,7 +547,7 @@ function experimentInit() {
   test1Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test1Text',
-    text: 'You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This section will involve feedback.\n\nPress any key to start now.',
+    text: 'You will now hear two different pronunciations of words you have already heard. Of the two options, try to identify the pronunciation that matches the pronunciation you previously heard. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This train session will involve feedback.\n\nPress any key to start now.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -730,7 +730,7 @@ function experimentInit() {
   test2Text = new visual.TextStim({
     win: psychoJS.window,
     name: 'test2Text',
-    text: 'You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation is the correct one in the language you are learning. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. This test will not involve feedback.\n\nPress any key to start now',
+    text: 'You will now hear two different pronunciations of words you have not heard. Of the two options, try to guess which pronunciation follows the stress patterns in the language you are learning, that is, places the emphasis on the correct syllable.. You have twenty seconds to answer each question; if you do not answer, the experiment will proceed automatically. There will be an optional 3-minute break in the middle. This test will not involve feedback.\n\nPress any key to start now',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
