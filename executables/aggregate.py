@@ -178,7 +178,8 @@ for j in range(1,4):
             rules.append(rule)
             allRules.append(rule)
             
-            if df["Correct"][ii] == "TRUE":
+            if df["Correct"][ii] == True:
+                print("here")
                 chosenVowel.append(vowel)
                 allChosenVowel.append(vowel)
                 
@@ -198,7 +199,7 @@ for j in range(1,4):
                 chosenVowel.append(vowel)
                 allChosenVowel.append(vowel)
                 
-                allFalseImage.append("na")
+            allFalseImage.append("na")
             
     data = {"Participant": participants, "Images": images, "Audio1": audio1, "Audio2": audio2,
                     "TrueAudio": trueAudio, "Correct": correct, "ReactionTime": reactionTime,
